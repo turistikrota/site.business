@@ -41,7 +41,7 @@ const Routes: Record<Locales, RouteType> = {
         vip: '/detay/vip',
         default: '/detay/menu',
       },
-      select: '/',
+      select: `${SiteHosts.account.tr}?redirect=`,
     },
     contracts: {
       terms: 'https://turistikrota.com/sozlesmeler/kullanim-kosullari',
@@ -64,7 +64,7 @@ const Routes: Record<Locales, RouteType> = {
         vip: '/detail/vip',
         default: '/detail/menu',
       },
-      select: '/',
+      select: `${SiteHosts.account.en}?redirect=`,
     },
     contracts: {
       terms: 'https://turistikrota.com/contracts/terms-of-use',

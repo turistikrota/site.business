@@ -14,6 +14,7 @@ export const ApiUrls: Record<Services, string> = {
 
 export enum Sites {
   Auth = 'auth',
+  Account = 'account',
 }
 
 type Hosts = {
@@ -24,6 +25,10 @@ export const SiteHosts: Record<Sites, Hosts> = {
   [Sites.Auth]: {
     tr: import.meta.env.VITE_AUTH_SITE_TR_HOST as string,
     en: import.meta.env.VITE_AUTH_SITE_EN_HOST as string,
+  },
+  [Sites.Account]: {
+    tr: import.meta.env.VITE_ACCOUNT_SITE_TR_HOST as string,
+    en: import.meta.env.VITE_ACCOUNT_SITE_EN_HOST as string,
   },
 }
 
