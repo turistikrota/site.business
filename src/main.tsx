@@ -1,0 +1,33 @@
+import '@turistikrota/ui/assets/config.css'
+import '@turistikrota/ui/fonts/verdana.css'
+import { setDefaultImageSrc } from '@turistikrota/ui/hooks/image'
+import ContentLoader from '@turistikrota/ui/loader'
+import { ToastListProvider, ToastProvider } from '@turistikrota/ui/toast'
+import 'boxicons/css/boxicons.min.css'
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+import { RouterProvider } from 'react-router-dom'
+import 'sspin/dist/index.css'
+import { ErrorBoundary } from './components/ErrorBoundary'
+import ServerError from './components/ServerError'
+import { Config } from './config/config'
+import './config/i18n'
+import './index.css'
+import AuthenticationLayout from './layouts/AuthenticationLayout'
+import { router } from './router/router'
+
+setDefaultImageSrc(Config.cdn.notFound)
+
+ReactDOM.createRoot(document.getElementById('root')!).render(
+  <React.StrictMode>
+    <ErrorBoundary fallback={<ServerError />}>
+      <AuthenticationLayout>
+        <ToastListProvider>
+          <ToastProvider>
+            <RouterProvider router={router} fallbackElement={<ContentLoader />} />
+          </ToastProvider>
+        </ToastListProvider>
+      </AuthenticationLayout>
+    </ErrorBoundary>
+  </React.StrictMode>,
+)
