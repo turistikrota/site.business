@@ -5,7 +5,12 @@ import { RouteObject, createBrowserRouter } from 'react-router-dom'
 const trRoutes: RouteObject[] = []
 const enRoutes: RouteObject[] = []
 
-const routes: RouteObject[] = []
+const routes: RouteObject[] = [
+  {
+    path: '/',
+    lazy: () => import('@/views/select'),
+  },
+]
 
 const locale = getCurrentServeLocale()
 
