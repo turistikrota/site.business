@@ -19,15 +19,13 @@ import { router } from './router/router'
 setDefaultImageSrc(Config.cdn.notFound)
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
-  <React.StrictMode>
-    <ErrorBoundary fallback={<ServerError />}>
-      <AuthenticationLayout>
-        <ToastListProvider>
-          <ToastProvider>
-            <RouterProvider router={router} fallbackElement={<ContentLoader />} />
-          </ToastProvider>
-        </ToastListProvider>
-      </AuthenticationLayout>
-    </ErrorBoundary>
-  </React.StrictMode>,
+  <ErrorBoundary fallback={<ServerError />}>
+    <AuthenticationLayout>
+      <ToastListProvider>
+        <ToastProvider>
+          <RouterProvider router={router} fallbackElement={<ContentLoader />} />
+        </ToastProvider>
+      </ToastListProvider>
+    </AuthenticationLayout>
+  </ErrorBoundary>,
 )

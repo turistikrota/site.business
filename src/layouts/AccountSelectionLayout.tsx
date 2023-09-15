@@ -4,6 +4,7 @@ import { openAccountSelectionWithRedirect } from '@/utils/account'
 import { openLoginWithRedirect } from '@/utils/auth'
 import { createContext, useContext, useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
+import { Spinner } from 'sspin'
 
 enum AccountStorage {
   CurrentAccount = 'currentAccount',
@@ -100,7 +101,7 @@ const AccountFetcher: React.FC<React.PropsWithChildren<ProviderProps>> = ({
       .finally(() => {
         setLoading(false)
       })
-  }, [isAccountCookieExists])
+  }, [])
 
   return <>{children}</>
 }
@@ -130,8 +131,13 @@ export const AccountProvider: React.FC<React.PropsWithChildren<ProviderProps>> =
 }
 
 const AccountSelectionLayout = ({ children }: React.PropsWithChildren) => {
-  const { loading } = useAccount()
-  if (loading) return <></>
+  const { loading, current } = useAccount()
+  if (loading || !current)
+    return (
+      <div className='ease-out w-full h-full flex justify-center items-center'>
+        <Spinner />
+      </div>
+    )
   return <>{children}</>
 }
 
