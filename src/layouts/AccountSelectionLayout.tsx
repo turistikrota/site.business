@@ -17,7 +17,6 @@ export type AccountListItem = {
   fullName: string
   isActive: boolean
   isVerified: boolean
-  userCode: string
   userName: string
 }
 
@@ -66,17 +65,18 @@ const AccountFetcher: React.FC<React.PropsWithChildren<ProviderProps>> = ({
 
   useEffect(() => {
     if (typeof window === 'undefined') return
+    setLoading(true)
     const item = localStorage.getItem(AccountStorage.CurrentAccount)
     if (accessTokenIsExists && (!isAccountCookieExists || !!item)) {
       if (item) {
         const account = JSON.parse(item)
         if (isAccountListItem(account)) {
+          setLoading(false)
           setCurrent(account)
         }
       }
       return
     }
-    setLoading(true)
     httpClient
       .get(apiUrl(Services.Account, '/selected'))
       .then((res) => {
@@ -89,10 +89,13 @@ const AccountFetcher: React.FC<React.PropsWithChildren<ProviderProps>> = ({
         if (err && err.response && err.response.status === 401) {
           return openLoginWithRedirect(i18n.language)
         }
-        // account selection
+
         localStorage.removeItem(AccountStorage.CurrentAccount)
         setCurrent(undefined)
-        return openAccountSelectionWithRedirect(i18n.language)
+
+        if (err.response.data.mustSelect) {
+          return openAccountSelectionWithRedirect(i18n.language)
+        }
       })
       .finally(() => {
         setLoading(false)
@@ -127,13 +130,8 @@ export const AccountProvider: React.FC<React.PropsWithChildren<ProviderProps>> =
 }
 
 const AccountSelectionLayout = ({ children }: React.PropsWithChildren) => {
-  const { i18n } = useTranslation()
-  const { loading, current } = useAccount()
+  const { loading } = useAccount()
   if (loading) return <></>
-  if (!current) {
-    openAccountSelectionWithRedirect(i18n.language)
-    return <></>
-  }
   return <>{children}</>
 }
 

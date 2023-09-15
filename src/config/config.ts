@@ -11,6 +11,10 @@ type config = {
   cdn: {
     notFound: string
   }
+  cookies: {
+    accessToken: string
+    accountName: string
+  }
 }
 
 export const Config: config = {
@@ -25,5 +29,9 @@ export const Config: config = {
   },
   cdn: {
     notFound: 'https://s3.turistikrota.com/ui/404.png',
+  },
+  cookies: {
+    accessToken: 'access_token',
+    accountName: '.s.a.u',
   },
 }
