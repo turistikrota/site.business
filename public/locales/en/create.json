@@ -1,0 +1,48 @@
+{
+    "meta": {},
+    "title": "Seller Application Form",
+    "type-select": {
+        "title": "Type of Seller",
+        "subtitle": "Please select the type of seller you are applying as.",
+        "info": {
+            "title": "Information",
+            "content": "This choice is important for billing purposes. If you cannot issue an invoice with the Turkish Revenue Administration (you do not have a tax identification number registered in the Republic of Turkiye), you can choose individual. In this case, you will need to be a citizen of the Republic of Turkiye."
+        },
+        "corporation": {
+            "title": "Corporation",
+            "subtitle": "I am applying as a corporation."
+        },
+        "individual": {
+            "title": "Individual",
+            "subtitle": "I am applying as an individual."
+        }
+    },
+    "corporation": {
+        "taxNumber": "Tax Number",
+        "taxNumberInfo": "Your tax number is the number on your tax card. This data will be kept encrypted and will not be shared with third parties.",
+        "corpType": "Corporation Type"
+    },
+    "individual": {
+        "firstName": "First Name",
+        "lastName": "Last Name",
+        "identityNumber": "Identity Number",
+        "identityNumberInfo": "Your identity number is the number on your identity card. This data will be kept encrypted and will not be shared with third parties.",
+        "serialNumber": "Serial Number",
+        "serialNumberInfo": "Your serial number is the serial number on your identity card. This data will be kept encrypted and will not be shared with third parties.",
+        "dateOfBirth": "Date of Birth"
+    },
+    "billing": {
+        "title": "Billing Information",
+        "subtitle": "Please enter your billing information.",
+        "province": "Province",
+        "district": "District",
+        "address": "Address"
+    },
+    "general": {
+        "nickName": "Unique Nickname",
+        "realName": "Real Name (Will shown on seller profile)"
+    },
+    "next": "Next",
+    "back": "Back",
+    "submit": "Submit"
+}

@@ -1,0 +1,46 @@
+{
+    "meta": {},
+    "title": "Satıcı Başvuru Formu",
+    "type-select": {
+        "title": "Satıcı Tipi",
+        "subtitle": "Lütfen başvurduğunuz satıcı tipini seçin.",
+        "info": {
+            "title": "Bilgi",
+            "content": "Bu seçim faturalandırma amaçları için önemlidir. Eğer Türkiye Gelir İdaresi ile fatura düzenleyemezseniz (Türkiye Cumhuriyeti'nde kayıtlı bir vergi kimlik numaranız yoksa), bireysel olarak seçebilirsiniz. Bu durumda, Türkiye Cumhuriyeti vatandaşı olmanız gerekmektedir."
+        },
+        "corporation": {
+            "title": "Kurum",
+            "subtitle": "Bir kurum olarak başvuruyorum."
+        },
+        "individual": {
+            "title": "Birey",
+            "subtitle": "Birey olarak başvuruyorum."
+        }
+    },
+    "corporation": {
+        "taxNumber": "Vergi Numarası",
+        "corpType": "Kurum Tipi"
+    },
+    "individual": {
+        "firstName": "Adı",
+        "lastName": "Soyadı",
+        "identityNumber": "Kimlik Numarası",
+        "serialNumber": "Seri Numarası",
+        "dateOfBirth": "Doğum Tarihi"
+    },
+    "billing": {
+        "title": "Fatura Bilgileri",
+        "subtitle": "Lütfen fatura bilgilerinizi girin.",
+        "province": "İl",
+        "district": "İlçe",
+        "address": "Adres"
+    },
+    "general": {
+        "nickName": "Benzersiz Takma Ad",
+        "realName": "Gerçek İsim (Satıcı profilinde gösterilecek)"
+    },
+    "hashInfo": "Bu veri şifrelenmiş olarak saklanacak ve üçüncü taraflarla paylaşılmayacaktır.",
+    "next": "İleri",
+    "back": "Geri",
+    "submit": "Gönder"
+}
