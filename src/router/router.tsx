@@ -2,8 +2,18 @@ import { getCurrentServeLocale } from '@/utils/lang'
 import NotFoundView from '@/views/404'
 import { RouteObject, createBrowserRouter } from 'react-router-dom'
 
-const trRoutes: RouteObject[] = []
-const enRoutes: RouteObject[] = []
+const trRoutes: RouteObject[] = [
+  {
+    path: '/basvuru',
+    lazy: () => import('@/views/create'),
+  },
+]
+const enRoutes: RouteObject[] = [
+  {
+    path: '/apply',
+    lazy: () => import('@/views/create'),
+  },
+]
 
 const routes: RouteObject[] = [
   {

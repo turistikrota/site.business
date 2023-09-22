@@ -15,6 +15,9 @@ export type RouteType = {
     }
     select: string
   }
+  owner: {
+    create: string
+  }
   auth: {
     base: string
   }
@@ -48,6 +51,9 @@ const Routes: Record<Locales, RouteType> = {
       privacyNotify: 'https://turistikrota.com/sozlesmeler/gizlilik-bildirimi',
       privacy: 'https://turistikrota.com/sozlesmeler/kisisel-verilerin-korunmasi-ve-gizlilik-politikasi',
     },
+    owner: {
+      create: '/basvuru',
+    },
   },
   en: {
     auth: {
@@ -70,6 +76,9 @@ const Routes: Record<Locales, RouteType> = {
       terms: 'https://turistikrota.com/contracts/terms-of-use',
       privacyNotify: 'https://turistikrota.com/contracts/privacy-notice',
       privacy: 'https://turistikrota.com/contracts/privacy-and-protection-of-personal-data',
+    },
+    owner: {
+      create: '/apply',
     },
   },
 }

@@ -1,14 +1,15 @@
 import { Services, apiUrl } from '@/config/services'
 import { httpClient } from '@/http/client'
 import { useAccount } from '@/layouts/AccountSelectionLayout'
+import { getStaticRoute } from '@/static/page'
 import { useEffect, useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router-dom'
 import Spin from 'sspin'
 import OwnerSelectionCard from './OwnerSelectionCard'
-import { useTranslation } from 'react-i18next'
 
 const OwnerSelection = () => {
-  const { t } = useTranslation('select')
+  const { t, i18n } = useTranslation('select')
   const { current } = useAccount()
   const [loading, setLoading] = useState<boolean>(false)
   useEffect(() => {
@@ -25,7 +26,7 @@ const OwnerSelection = () => {
         </h1>
         <div>
           <div className='flex flex-col space-y-4'>
-            <Link to='/create'>
+            <Link to={getStaticRoute(i18n.language).owner.create}>
               <OwnerSelectionCard>
                 <OwnerSelectionCard.Image>
                   <i className='bx bx-md bx-plus text-gray-400'></i>
