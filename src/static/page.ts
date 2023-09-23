@@ -19,6 +19,12 @@ export type RouteType = {
     create: string
     details: {
       default: string
+      deluxe: string
+      edit: string
+      notification: string
+      privacy: string
+      security: string
+      settings: string
     }
   }
   auth: {
@@ -58,6 +64,12 @@ const Routes: Record<Locales, RouteType> = {
       create: '/basvuru',
       details: {
         default: '/detay/menu',
+        deluxe: '/detay/deluxe',
+        edit: '/detay/duzenle',
+        notification: '/detay/bildirim-tercihleri',
+        privacy: '/detay/gizlilik',
+        security: '/detay/guvenlik',
+        settings: '/detay/ayarlar',
       },
     },
   },
@@ -87,6 +99,12 @@ const Routes: Record<Locales, RouteType> = {
       create: '/apply',
       details: {
         default: '/detail/menu',
+        deluxe: '/detail/deluxe',
+        edit: '/detail/edit',
+        notification: '/detail/notification-preferences',
+        privacy: '/detail/privacy',
+        security: '/detail/security',
+        settings: '/detail/settings',
       },
     },
   },
