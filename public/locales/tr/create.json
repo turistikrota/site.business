@@ -39,8 +39,21 @@
         "nickName": "Benzersiz Takma Ad",
         "realName": "Gerçek İsim (Satıcı profilinde gösterilecek)"
     },
+    "corporationTypes": {
+        "anonymous": "Anonim Şirket",
+        "soleProprietorship": "Şahıs Şirketi",
+        "limited": "Limited Şirket",
+        "collective": "Kollektif Şirket",
+        "cooperative": "Kooperatif",
+        "ordinaryPartnership": "Adi Ortaklık",
+        "ordinaryLimitedPartnership": "Adi Komandit Ortaklık",
+        "limitedPartnershipShareCapital": "Sermayesi Paylara Bölünmüş Komandit Şirket",
+        "other": "Diğer"
+    },
     "hashInfo": "Bu veri şifrelenmiş olarak saklanacak ve üçüncü taraflarla paylaşılmayacaktır.",
+    "analyticsInfo": "Bu veri, çeşitli analizler için kullanılacaktır. Bu veri, üçüncü taraflarla paylaşılmayacaktır.",
     "next": "İleri",
     "back": "Geri",
-    "submit": "Gönder"
+    "submit": "Gönder",
+    "success": "Başvurunuz başarıyla gönderildi. En kısa sürede sizinle e-posta yoluyla iletişime geçeceğiz."
 }

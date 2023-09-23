@@ -1,8 +1,17 @@
+import { Services, apiUrl } from '@/config/services'
+import { httpClient } from '@/http/client'
+import { useAccount } from '@/layouts/AccountSelectionLayout'
+import { useOwnerCreateSchema } from '@/schemas/owner-create.schema'
 import Alert from '@turistikrota/ui/alert'
 import Input from '@turistikrota/ui/form/input'
+import Select from '@turistikrota/ui/form/select'
 import Textarea from '@turistikrota/ui/form/textarea'
-import React, { useState } from 'react'
+import { useToast } from '@turistikrota/ui/toast'
+import { parseApiError } from '@turistikrota/ui/utils/response'
+import { useFormik } from 'formik'
+import React, { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
+import { useNavigate } from 'react-router-dom'
 import Spin from 'sspin/dist/esm/Spin'
 import { MultiStepForm, Step } from './MultiStepForm'
 
@@ -13,6 +22,50 @@ type OwnerTypeCardProps = {
   onClick: () => void
   selected?: boolean
 }
+
+type CorporationType = {
+  name: string
+  value: string
+}
+
+const corporationTypes: CorporationType[] = [
+  {
+    name: 'corporationTypes.anonymous',
+    value: 'anonymous',
+  },
+  {
+    name: 'corporationTypes.soleProprietorship',
+    value: 'sole_proprietorship',
+  },
+  {
+    name: 'corporationTypes.limited',
+    value: 'limited',
+  },
+  {
+    name: 'corporationTypes.collective',
+    value: 'collective',
+  },
+  {
+    name: 'corporationTypes.cooperative',
+    value: 'cooperative',
+  },
+  {
+    name: 'corporationTypes.ordinaryPartnership',
+    value: 'ordinary_partnership',
+  },
+  {
+    name: 'corporationTypes.ordinaryLimitedPartnership',
+    value: 'ordinary_limited_partnership',
+  },
+  {
+    name: 'corporationTypes.limitedPartnershipShareCapital',
+    value: 'limited_partnership_share_capital',
+  },
+  {
+    name: 'corporationTypes.other',
+    value: 'other',
+  },
+]
 
 const OwnerTypeCard: React.FC<OwnerTypeCardProps> = ({ description, icon, onClick, title, selected }) => {
   return (
@@ -31,41 +84,88 @@ const OwnerTypeCard: React.FC<OwnerTypeCardProps> = ({ description, icon, onClic
 }
 
 const OwnerCreateForm = () => {
+  const schema = useOwnerCreateSchema()
+  const navigate = useNavigate()
   const { t } = useTranslation('create')
-  const [step, setStep] = useState(0)
-  const loading = false
+  const toast = useToast()
+  const { current } = useAccount()
+  const [isLoading, setIsLoading] = useState<boolean>(false)
+  const [currentStep, setCurrentStep] = useState<number>(0)
+  const form = useFormik({
+    initialValues: {
+      nickName: undefined,
+      realName: undefined,
+      ownerType: 'corporation',
+      firstName: undefined,
+      lastName: undefined,
+      identityNumber: undefined,
+      serialNumber: undefined,
+      province: undefined,
+      district: undefined,
+      address: undefined,
+      dateOfBirth: '',
+      taxNumber: undefined,
+      type: 'other',
+    },
+    validationSchema: schema,
+    validateOnBlur: false,
+    validateOnChange: false,
+    validateOnMount: false,
+    onSubmit: (values) => {
+      if (values.ownerType === 'corporation') {
+        values.dateOfBirth = '2006-01-02'
+      }
+      setIsLoading(true)
+      httpClient
+        .post(apiUrl(Services.Owner, `/@${current?.userName}`), values)
+        .then(() => {
+          toast.success(t('success'))
+          navigate('/')
+        })
+        .catch((err) => {
+          parseApiError({
+            error: err.response.data,
+            form,
+            toast,
+          })
+        })
+        .finally(() => {
+          setIsLoading(false)
+        })
+    },
+  })
 
-  const handleSubmit = () => {}
+  useEffect(() => {
+    type StepErrorsType = keyof typeof form.errors
+    const stepErrors: StepErrorsType[][] = [
+      ['ownerType'],
+      ['firstName', 'lastName', 'identityNumber', 'serialNumber', 'dateOfBirth', 'taxNumber', 'type'],
+      ['province', 'district', 'address'],
+      ['nickName', 'realName'],
+    ]
+    for (let i = 0; i < stepErrors.length; i++) {
+      const errors = stepErrors[i]
+      const hasError = errors.some((error) => form.errors[error])
+      if (hasError) {
+        setCurrentStep(i)
+        break
+      }
+    }
+  }, [form.isSubmitting])
 
-  const selectOwnerType = () => {
-    setStep(1)
+  const selectOwnerType = (type: string) => {
+    form.setFieldValue('ownerType', type)
   }
 
-  /*
-  	NickName        string `json:"nickName" validate:"required"`
-	RealName        string `json:"realName" validate:"required"`
-	OwnerType       string `json:"ownerType" validate:"required,oneof=individual corporation"`
-	FirstName       string `json:"firstName" validate:"required_if=OwnerType individual"`
-	LastName        string `json:"lastName" validate:"required_if=OwnerType individual"`
-	IdentityNumber  string `json:"identityNumber" validate:"required_if=OwnerType individual"`
-	SerialNumber    string `json:"serialNumber" validate:"required_if=OwnerType individual"`
-	Province        string `json:"province" validate:"required"`
-	District        string `json:"district" validate:"required"`
-	Address         string `json:"address" validate:"required"`
-	DateOfBirth     string `json:"dateOfBirth" validate:"required_if=OwnerType individual,datetime=2006-01-02"`
-	TaxNumber       string `json:"taxNumber" validate:"required_if=OwnerType corporation"`
-	CorporationType string `json:"type" validate:"required_if=OwnerType corporation"`
-  */
-
   return (
-    <Spin loading={loading}>
+    <Spin loading={isLoading}>
       <div className='py-4 border-b'>
         <h1 className='text-xl text-center font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white'>
           {t('title')}
         </h1>
       </div>
 
-      <MultiStepForm currentStep={step} onStepChange={setStep} onSubmit={handleSubmit}>
+      <MultiStepForm currentStep={currentStep} onStepChange={setCurrentStep} onSubmit={form.handleSubmit}>
         <Step>
           <div className='bg-second pb-4 rounded-t-md'>
             <h2 className='text-lg text-left font-bold lg:block'>{t('type-select.title')}</h2>
@@ -80,95 +180,135 @@ const OwnerCreateForm = () => {
               icon='bx-buildings'
               title={t('type-select.corporation.title')}
               description={t('type-select.corporation.subtitle')}
-              onClick={() => {
-                selectOwnerType()
-              }}
-              selected
+              onClick={() => selectOwnerType('corporation')}
+              selected={form.values.ownerType === 'corporation'}
             />
             <OwnerTypeCard
               icon='bx-user'
               title={t('type-select.individual.title')}
               description={t('type-select.individual.subtitle')}
-              onClick={() => {
-                selectOwnerType()
-              }}
+              onClick={() => selectOwnerType('individual')}
+              selected={form.values.ownerType === 'individual'}
             />
           </div>
         </Step>
-        <Step className='space-y-4 md:space-y-6'>
-          <div className='flex gap-4 md:gap-6'>
+        {form.values.ownerType === 'individual' ? (
+          <Step className='space-y-4 md:space-y-6'>
+            <div className='flex gap-4 md:gap-6'>
+              <div>
+                <Input
+                  label={t('individual.firstName')}
+                  id='firstName'
+                  name='firstName'
+                  type='text'
+                  autoComplete='firstName'
+                  required
+                  value={form.values.firstName}
+                  onChange={form.handleChange}
+                  onBlur={form.handleBlur}
+                  error={form.errors.firstName}
+                  ariaLabel={t('individual.firstName')}
+                />
+              </div>
+              <div>
+                <Input
+                  label={t('individual.lastName')}
+                  id='lastName'
+                  name='lastName'
+                  type='text'
+                  autoComplete='lastName'
+                  required
+                  value={form.values.lastName}
+                  onChange={form.handleChange}
+                  onBlur={form.handleBlur}
+                  error={form.errors.lastName}
+                  ariaLabel={t('individual.lastName')}
+                />
+              </div>
+            </div>
             <Input
-              label={t('individual.firstName')}
-              id='userName'
-              name='userName'
+              label={t('individual.identityNumber')}
+              id='identityNumber'
+              name='identityNumber'
               type='text'
-              autoComplete='user-name'
               required
-              autoFocus
+              autoComplete='identityNumber'
+              value={form.values.identityNumber}
+              onChange={form.handleChange}
+              onBlur={form.handleBlur}
+              error={form.errors.identityNumber}
+              ariaLabel={t('individual.identityNumber')}
             />
+            {form.errors.identityNumber && <br />}
+            <small className='text-secondary'>{t('hashInfo')}</small>
             <Input
-              label={t('individual.lastName')}
-              id='userName'
-              name='userName'
+              label={t('individual.serialNumber')}
+              id='serialNumber'
+              name='serialNumber'
               type='text'
-              autoComplete='user-name'
+              autoComplete='serialNumber'
               required
-              autoFocus
+              value={form.values.serialNumber}
+              onChange={form.handleChange}
+              onBlur={form.handleBlur}
+              error={form.errors.serialNumber}
+              ariaLabel={t('individual.serialNumber')}
             />
-          </div>
-          <Input
-            label={t('individual.identityNumber')}
-            id='userName'
-            name='userName'
-            type='text'
-            autoComplete='user-name'
-            required
-            autoFocus
-          />
-
-          <small className='text-secondary'>{t('hashInfo')}</small>
-          <Input
-            label={t('individual.serialNumber')}
-            id='userName'
-            name='userName'
-            type='text'
-            autoComplete='user-name'
-            required
-            autoFocus
-          />
-
-          <small className='text-secondary'>{t('hashInfo')}</small>
-          <Input
-            label={t('individual.dateOfBirth')}
-            id='userName'
-            name='userName'
-            type='text'
-            autoComplete='user-name'
-            required
-            autoFocus
-          />
-        </Step>
-        <Step className='space-y-4 md:space-y-6'>
-          <Input
-            label={t('corporation.taxNumber')}
-            id='userName'
-            name='userName'
-            type='text'
-            autoComplete='user-name'
-            required
-            autoFocus
-          />
-          <small className='text-secondary'>{t('hashInfo')}</small>
-          <Input
-            label={t('corporation.corpType')}
-            id='userName'
-            name='userName'
-            type='text'
-            autoComplete='user-name'
-            required
-            autoFocus
-          />
-        </Step>
+            {form.errors.serialNumber && <br />}
+            <small className='text-secondary'>{t('hashInfo')}</small>
+            <Input
+              label={t('individual.dateOfBirth')}
+              id='dateOfBirth'
+              name='dateOfBirth'
+              type='date'
+              autoComplete='dateOfBirth'
+              required
+              value={form.values.dateOfBirth}
+              onChange={form.handleChange}
+              onBlur={form.handleBlur}
+              error={form.errors.dateOfBirth}
+              ariaLabel={t('individual.dateOfBirth')}
+            />
+          </Step>
+        ) : (
+          <Step className='space-y-4 md:space-y-6'>
+            <Input
+              label={t('corporation.taxNumber')}
+              id='taxNumber'
+              name='taxNumber'
+              type='text'
+              autoComplete='taxNumber'
+              required
+              value={form.values.taxNumber}
+              onChange={form.handleChange}
+              onBlur={form.handleBlur}
+              error={form.errors.taxNumber}
+              ariaLabel={t('corporation.taxNumber')}
+            />
+            {form.errors.taxNumber && <br />}
+            <small className='text-secondary'>{t('hashInfo')}</small>
+            <Select
+              label={t('corporation.corpType')}
+              name='type'
+              id='type'
+              autoComplete='type'
+              required
+              value={form.values.type}
+              onChange={form.handleChange}
+              error={form.errors.type}
+              ariaLabel={t('corporation.corpType')}
+            >
+              <Select.DefaultOption />
+              {corporationTypes.map((type) => (
+                <option key={type.value} value={type.value}>
+                  {t(type.name)}
+                </option>
+              ))}
+            </Select>
+            {form.errors.type && <br />}
+            <small className='text-secondary'>{t('analyticsInfo')}</small>
+          </Step>
+        )}
         <Step>
           <div className='bg-second pb-4 rounded-t-md'>
             <h2 className='text-lg text-left font-bold lg:block'>{t('billing.title')}</h2>
@@ -176,54 +316,76 @@ const OwnerCreateForm = () => {
           </div>
           <div className='space-y-4 md:space-y-6'>
             <div className='flex gap-4 md:gap-6'>
-              <Input
-                label={t('billing.province')}
-                id='userName'
-                name='userName'
-                type='text'
-                autoComplete='user-name'
-                required
-                autoFocus
-              />
-              <Input
-                label={t('billing.district')}
-                id='userName'
-                name='userName'
-                type='text'
-                autoComplete='user-name'
-                required
-                autoFocus
-              />
+              <div>
+                {' '}
+                <Input
+                  label={t('billing.province')}
+                  id='province'
+                  name='province'
+                  type='text'
+                  autoComplete='province'
+                  required
+                  value={form.values.province}
+                  onChange={form.handleChange}
+                  onBlur={form.handleBlur}
+                  error={form.errors.province}
+                  ariaLabel={t('billing.province')}
+                />
+              </div>
+              <div>
+                <Input
+                  label={t('billing.district')}
+                  id='district'
+                  name='district'
+                  type='text'
+                  autoComplete='district'
+                  required
+                  value={form.values.district}
+                  onChange={form.handleChange}
+                  onBlur={form.handleBlur}
+                  error={form.errors.district}
+                  ariaLabel={t('billing.district')}
+                />
+              </div>
             </div>
             <Textarea
               label={t('billing.address')}
-              id='userName'
-              name='userName'
-              type='textarea'
-              autoComplete='user-name'
+              id='address'
+              name='address'
+              autoComplete='address'
               required
-              autoFocus
+              value={form.values.address}
+              onChange={form.handleChange}
+              onBlur={form.handleBlur}
+              error={form.errors.address}
+              ariaLabel={t('billing.address')}
             />
           </div>
         </Step>
         <Step className='space-y-4 md:space-y-6'>
           <Input
             label={t('general.nickName')}
-            id='userName'
-            name='userName'
-            type='text'
-            autoComplete='user-name'
+            id='nickName'
+            name='nickName'
+            autoComplete='nickName'
             required
-            autoFocus
+            value={form.values.nickName}
+            onChange={form.handleChange}
+            onBlur={form.handleBlur}
+            error={form.errors.nickName}
+            ariaLabel={t('general.nickName')}
           />
           <Input
             label={t('general.realName')}
-            id='userName'
-            name='userName'
-            type='text'
-            autoComplete='user-name'
+            id='realName'
+            name='realName'
+            autoComplete='realName'
             required
-            autoFocus
+            value={form.values.realName}
+            onChange={form.handleChange}
+            onBlur={form.handleBlur}
+            error={form.errors.realName}
+            ariaLabel={t('general.realName')}
           />
         </Step>
       </MultiStepForm>

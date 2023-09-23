@@ -1,0 +1,24 @@
+{
+    "fields": {
+        "nickName": "Takma Ad",
+        "realName": "Gerçek Ad",
+        "ownerType": "Satıcı Tipi",
+        "firstName": "Ad",
+        "lastName": "Soyad",
+        "identityNumber": "TC Kimlik No",
+        "serialNumber": "Seri No",
+        "province": "İl",
+        "district": "İlçe",
+        "address": "Adres",
+        "dateOfBirth": "Doğum Tarihi",
+        "taxNumber": "Vergi No",
+        "corporationType": "Kurum Tipi"
+    },
+    "required": "{{field}} alanı zorunludur",
+    "invalid": "{{field}} alanı geçersizdir",
+    "either": "{{field}} alanı {{value1}} veya {{value2}} olmalıdır",
+    "requiredForIndividual": "{{field}} alanı bireysel satıcılar için zorunludur",
+    "requiredForCorporate": "{{field}} alanı kurumsal satıcılar için zorunludur",
+    "individual": "Bireysel",
+    "corporation": "Kurumsal"
+}
