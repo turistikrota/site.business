@@ -17,6 +17,9 @@ export type RouteType = {
   }
   owner: {
     create: string
+    details: {
+      default: string
+    }
   }
   auth: {
     base: string
@@ -53,6 +56,9 @@ const Routes: Record<Locales, RouteType> = {
     },
     owner: {
       create: '/basvuru',
+      details: {
+        default: '/detay/menu',
+      },
     },
   },
   en: {
@@ -79,6 +85,9 @@ const Routes: Record<Locales, RouteType> = {
     },
     owner: {
       create: '/apply',
+      details: {
+        default: '/detail/menu',
+      },
     },
   },
 }

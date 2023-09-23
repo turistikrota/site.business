@@ -1,4 +1,5 @@
 import { Services, apiUrl } from '@/config/services'
+import { checkUnauthorized } from '@/hooks/error'
 import { httpClient } from '@/http/client'
 import { useAccount } from '@/layouts/AccountSelectionLayout'
 import { getStaticRoute } from '@/static/page'
@@ -9,12 +10,13 @@ import UserName from '@turistikrota/ui/username'
 import { parseApiError } from '@turistikrota/ui/utils/response'
 import { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import Spin from 'sspin'
 import OwnerSelectionCard from './OwnerSelectionCard'
 
 const OwnerSelection = () => {
   const { t, i18n } = useTranslation('select')
+  const navigate = useNavigate()
   const { current } = useAccount()
   const [data, setData] = useState<OwnerListItem[]>([])
   const [loading, setLoading] = useState<boolean>(false)
@@ -39,7 +41,25 @@ const OwnerSelection = () => {
   }, [])
 
   const onOwnerSelect = (item: OwnerListItem) => {
-    console.log('sa::', item)
+    setLoading(true)
+    httpClient
+      .put(apiUrl(Services.Owner, `/@${current?.userName}/~${item.nickName}/select`))
+      .then((res) => {
+        if (res.status === 200) {
+          navigate(getStaticRoute(i18n.language).account.details.default)
+        }
+      })
+      .catch((err: any) => {
+        if (!checkUnauthorized(err, i18n.language)) {
+          parseApiError({
+            error: err?.response?.data,
+            toast,
+          })
+        }
+      })
+      .finally(() => {
+        setLoading(false)
+      })
   }
 
   return (
