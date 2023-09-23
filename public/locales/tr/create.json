@@ -1,5 +1,9 @@
 {
-    "meta": {},
+    "meta": {
+        "title": "Satıcı Başvuru Formu",
+        "description": "Turistikrota'da bireysel veya kurumsal olarak satıcı profili oluşturabilir ve villa, otel, tur, araç kiralama gibi ürünlerinizi kiralayabilir veya satabilirsiniz.",
+        "keywords": "satıcı başvuru formu, satıcı başvuru, Turistikrota, turistikrota satıcı başvuru" 
+    },
     "title": "Satıcı Başvuru Formu",
     "type-select": {
         "title": "Satıcı Tipi",
