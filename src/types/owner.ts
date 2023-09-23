@@ -13,6 +13,10 @@ export type OwnerListItem = {
 }
 export type OwnerListResponse = ListResponse<OwnerListItem>
 
+export type MustSelectResponse = {
+  mustSelect: boolean
+}
+
 type OwnerType = 'individual' | 'corporation'
 
 export function isOwnerListResponse(data: any): data is OwnerListResponse {
@@ -37,4 +41,8 @@ export function isOwnerListItem(data: any): data is OwnerListItem {
     typeof data.isDeleted === 'boolean' &&
     typeof data.updatedAt === 'string'
   )
+}
+
+export function isMustSelectResponse(response: unknown): response is MustSelectResponse {
+  return typeof response === 'object' && response !== null && 'mustSelect' in response
 }
