@@ -11,9 +11,9 @@ type Props = {
 }
 
 export default function OwnerMenuProfileCard({ open }: Props) {
-  const [owner] = useCurrentOwner()
+  const [detail] = useCurrentOwner()
   const { t } = useTranslation('detail')
-  const { src, onError } = useImageSrc(owner.avatarURL)
+  const { src, onError } = useImageSrc(detail.owner.avatarURL)
   return (
     <div className={`flex items-center justify-center gap-2 ${open ? 'flex-col' : ''}`}>
       <div className={`flex ${open ? 'items-center justify-center w-23 h-23' : 'h-12 w-12'}`}>
@@ -22,15 +22,15 @@ export default function OwnerMenuProfileCard({ open }: Props) {
           onError={onError}
           width={`${open ? 110 : 48}px`}
           height={`${open ? 110 : 48}px`}
-          alt={owner.realName}
-          title={owner.realName}
+          alt={detail.owner.realName}
+          title={detail.owner.realName}
           className={`rounded-md bg-second border p-2 lg:p-0`}
         />
       </div>
       <Condition value={open}>
         <div className='flex flex-col items-center justify-center w-full h-full'>
-          <p className='text-md text-gray-500 dark:text-gray-300 font-medium'>{owner.realName}</p>
-          <UserName>{owner.nickName}</UserName>
+          <p className='text-md text-gray-500 dark:text-gray-300 font-medium'>{detail.owner.realName}</p>
+          <UserName>{detail.owner.nickName}</UserName>
         </div>
         <Link to='/' className='my-2' title={t('buttons.change')} aria-label={t('buttons.change')}>
           <Button size='sm'>{t('buttons.change')}</Button>

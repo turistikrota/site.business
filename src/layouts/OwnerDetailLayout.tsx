@@ -2,29 +2,31 @@ import { Services, apiUrl } from '@/config/services'
 import { CurrentOwnerProvider } from '@/contexts/currentOwner'
 import { checkUnauthorized } from '@/hooks/error'
 import { httpClient } from '@/http/client'
-import { OwnerListItem, isMustSelectResponse, isOwnerListItem } from '@/types/owner'
+import { OwnerDetail, isMustSelectResponse, isOwnerDetail } from '@/types/owner'
 import ServerErrorView from '@/views/500'
 import { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Outlet, useNavigate } from 'react-router-dom'
 import { Spinner } from 'sspin'
+import { useAccount } from './AccountSelectionLayout'
 
 function OwnerDetailLayout() {
   const { i18n } = useTranslation()
   const [isLoading, setIsLoading] = useState<boolean>(true)
   const [isServerError, setIsServerError] = useState<boolean>(false)
-  const [owner, setOwner] = useState<OwnerListItem | null>(null)
+  const [detail, setDetail] = useState<OwnerDetail | null>(null)
   const navigate = useNavigate()
+  const { current } = useAccount()
 
   useEffect(() => {
     httpClient
-      .get(apiUrl(Services.Owner, '/selected'))
+      .get(apiUrl(Services.Owner, `/@${current?.userName}/selected`))
       .then((res) => {
         if (res.status === 200) {
           setIsLoading(false)
           setIsServerError(false)
-          if (isOwnerListItem(res.data)) {
-            setOwner(res.data)
+          if (isOwnerDetail(res.data)) {
+            setDetail(res.data)
           }
         }
       })
@@ -37,6 +39,7 @@ function OwnerDetailLayout() {
         setIsServerError(true)
       })
   }, [])
+
   if (isServerError) return <ServerErrorView />
   if (isLoading)
     return (
@@ -45,7 +48,7 @@ function OwnerDetailLayout() {
       </div>
     )
   return (
-    <CurrentOwnerProvider owner={owner!}>
+    <CurrentOwnerProvider detail={detail!}>
       <Outlet />
     </CurrentOwnerProvider>
   )

@@ -1,18 +1,18 @@
-import { OwnerListItem } from '@/types/owner'
+import { OwnerDetail } from '@/types/owner'
 import { createContext, useContext, useState } from 'react'
 
 type ProviderProps = {
-  owner: OwnerListItem
+  detail: OwnerDetail
 }
 
 type CurrentOwnerContext = [
-  OwnerListItem,
-  React.Dispatch<React.SetStateAction<OwnerListItem>>,
+  OwnerDetail,
+  React.Dispatch<React.SetStateAction<OwnerDetail>>,
   (key: string, value: unknown) => void,
 ]
 
 const currentOwnerContext = createContext<CurrentOwnerContext>([
-  {} as OwnerListItem,
+  {} as OwnerDetail,
   () => {
     //
   },
@@ -21,8 +21,8 @@ const currentOwnerContext = createContext<CurrentOwnerContext>([
   },
 ])
 
-export const CurrentOwnerProvider = ({ children, owner }: React.PropsWithChildren<ProviderProps>) => {
-  const [currentOwner, setCurrentOwner] = useState<OwnerListItem>(owner)
+export const CurrentOwnerProvider = ({ children, detail }: React.PropsWithChildren<ProviderProps>) => {
+  const [currentOwner, setCurrentOwner] = useState<OwnerDetail>(detail)
 
   const updateOwner = (key: string, value: unknown) => {
     setCurrentOwner((prev) => ({ ...prev, [key]: value }))

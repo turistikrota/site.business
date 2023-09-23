@@ -4,11 +4,127 @@ import { RouteObject, createBrowserRouter } from 'react-router-dom'
 
 const trRoutes: RouteObject[] = [
   {
+    path: '/detay',
+    lazy: () => import('@/layouts/OwnerLayout'),
+    children: [
+      {
+        path: 'menu',
+        lazy: () => import('@/views/details/menu'),
+      },
+      {
+        path: '',
+        lazy: () => import('@/layouts/OwnerSubDetailLayout'),
+        children: [
+          {
+            path: 'duzenle',
+            lazy: () => import('@/views/details/edit'),
+            handle: {
+              page: 'edit',
+            },
+          },
+          {
+            path: 'ayarlar',
+            lazy: () => import('@/views/details/settings'),
+            handle: {
+              page: 'settings',
+            },
+          },
+          {
+            path: 'bildirimler',
+            lazy: () => import('@/views/details/notification'),
+            handle: {
+              page: 'notifications',
+            },
+          },
+          {
+            path: 'gizlilik',
+            lazy: () => import('@/views/details/privacy'),
+            handle: {
+              page: 'privacy',
+            },
+          },
+          {
+            path: 'guvenlik',
+            lazy: () => import('@/views/details/security'),
+            handle: {
+              page: 'security',
+            },
+          },
+          {
+            path: 'deluxe',
+            lazy: () => import('@/views/details/deluxe'),
+            handle: {
+              page: 'deluxe',
+            },
+          },
+        ],
+      },
+    ],
+  },
+  {
     path: '/basvuru',
     lazy: () => import('@/views/create'),
   },
 ]
 const enRoutes: RouteObject[] = [
+  {
+    path: '/detail',
+    lazy: () => import('@/layouts/OwnerLayout'),
+    children: [
+      {
+        path: 'menu',
+        lazy: () => import('@/views/details/menu'),
+      },
+      {
+        path: '',
+        lazy: () => import('@/layouts/OwnerSubDetailLayout'),
+        children: [
+          {
+            path: 'edit',
+            lazy: () => import('@/views/details/edit'),
+            handle: {
+              page: 'edit',
+            },
+          },
+          {
+            path: 'settings',
+            lazy: () => import('@/views/details/settings'),
+            handle: {
+              page: 'settings',
+            },
+          },
+          {
+            path: 'notifications',
+            lazy: () => import('@/views/details/notification'),
+            handle: {
+              page: 'notifications',
+            },
+          },
+          {
+            path: 'privacy',
+            lazy: () => import('@/views/details/privacy'),
+            handle: {
+              page: 'privacy',
+            },
+          },
+          {
+            path: 'security',
+            lazy: () => import('@/views/details/security'),
+            handle: {
+              page: 'security',
+            },
+          },
+          {
+            path: 'deluxe',
+            lazy: () => import('@/views/details/deluxe'),
+            handle: {
+              page: 'deluxe',
+            },
+          },
+        ],
+      },
+    ],
+  },
   {
     path: '/apply',
     lazy: () => import('@/views/create'),

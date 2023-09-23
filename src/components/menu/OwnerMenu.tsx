@@ -30,35 +30,35 @@ type MenuItem = {
 
 const menuItems: MenuItem[] = [
   {
-    title: 'vip',
+    title: 'deluxe',
     icon: 'bx bxl-sketch',
-    href: (r: RouteType) => r.account.details.vip,
-    color: 'text-vip',
+    href: (r: RouteType) => r.owner.details.deluxe,
+    color: 'text-deluxe',
   },
   {
     title: 'edit',
     icon: 'bx bx-edit',
-    href: (r: RouteType) => r.account.details.edit,
+    href: (r: RouteType) => r.owner.details.edit,
   },
   {
-    title: 'notifications',
+    title: 'notification',
     icon: 'bx bx-bell',
-    href: (r: RouteType) => r.account.details.notifications,
+    href: (r: RouteType) => r.owner.details.notification,
   },
   {
     title: 'settings',
     icon: 'bx bx-cog',
-    href: (r: RouteType) => r.account.details.settings,
+    href: (r: RouteType) => r.owner.details.settings,
   },
   {
     title: 'security',
     icon: 'bx bx-lock',
-    href: (r: RouteType) => r.account.details.security,
+    href: (r: RouteType) => r.owner.details.security,
   },
   {
     title: 'privacy',
     icon: 'bx bx-lock-alt',
-    href: (r: RouteType) => r.account.details.privacy,
+    href: (r: RouteType) => r.owner.details.privacy,
   },
 ]
 
