@@ -22,3 +22,7 @@ body {
   height: 100%;
   width: 100%;
 }
+
+.bx-s {
+  font-size: 1.25rem !important;
+}
