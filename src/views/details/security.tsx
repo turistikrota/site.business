@@ -6,7 +6,7 @@ function OwnershipSecurityView() {
   const { t } = useTranslation('security')
   return (
     <MetaWrapper title={t('meta.title')} description={t('meta.description')} keywords={t('meta.keywords')}>
-      <section className='sm:max-w-md mx-auto min-h-screen h-full flex items-start justify-center'>
+      <section className='p-4 lg:pl-0 max-w-4xl mx-auto'>
         <MaintenanceAlert />
       </section>
     </MetaWrapper>
