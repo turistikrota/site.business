@@ -16,7 +16,7 @@ export default function ConfigurationLayout({
   description,
   keywords,
 }: React.PropsWithChildren<Props>) {
-  const { i18n } = useTranslation('auth')
+  const { i18n } = useTranslation()
 
   return (
     <MetaWrapper title={title} description={description} keywords={keywords}>

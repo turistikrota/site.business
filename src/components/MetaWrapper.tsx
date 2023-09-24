@@ -17,7 +17,7 @@ const updateOrCreateMeta = (name: string, content: string, field = 'name') => {
 }
 
 export default function MetaWrapper({ title, description, keywords, children }: React.PropsWithChildren<Props>) {
-  const { t, i18n } = useTranslation('account')
+  const { t, i18n } = useTranslation('owner')
   document.documentElement.lang = i18n.language
 
   const siteTitle = title || t('title')
