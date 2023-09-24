@@ -30,10 +30,10 @@ const trRoutes: RouteObject[] = [
             },
           },
           {
-            path: 'bildirimler',
+            path: 'bildirim-tercihleri',
             lazy: () => import('@/views/details/notification'),
             handle: {
-              page: 'notifications',
+              page: 'notification',
             },
           },
           {
@@ -94,10 +94,10 @@ const enRoutes: RouteObject[] = [
             },
           },
           {
-            path: 'notifications',
+            path: 'notification-preferences',
             lazy: () => import('@/views/details/notification'),
             handle: {
-              page: 'notifications',
+              page: 'notification',
             },
           },
           {
