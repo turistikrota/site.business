@@ -1,4 +1,10 @@
 {
-    "title": "Choose a ownership",
-    "new": "Create a new ownership"
+    "title": "Select a Seller Profile",
+    "new": "Create New Seller Profile",
+    "waiting": "Waiting for Approval",
+    "meta": {
+        "title": "Select Seller Profile",
+        "description": "Select the seller profile you want to transact with. You can create more than one seller profile on Turistikrota.",
+        "keywords": "tourist route, vendor profile, select vendor profile, create vendor profile"
+    }
 }
