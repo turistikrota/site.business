@@ -65,7 +65,7 @@ const menuItems: MenuItem[] = [
 export default function OwnerMenu({ isDetail }: Props) {
   const menuContext = useContext(OwnerDetailContext)
   const isDesktop = useIsDesktop()
-  const { t, i18n } = useTranslation('detail')
+  const { t, i18n } = useTranslation('menu')
 
   const onMenuClick = () => {
     if (isDetail && isWindowLtLg()) {

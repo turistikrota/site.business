@@ -13,7 +13,7 @@ type Props = {
 }
 
 export default function LogoutButton({ hideContent }: Props) {
-  const { t, i18n } = useTranslation('detail')
+  const { t, i18n } = useTranslation('menu')
   const toast = useToast()
   const [isLoading, setIsLoading] = useState(false)
 

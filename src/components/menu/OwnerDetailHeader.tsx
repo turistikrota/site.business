@@ -16,7 +16,7 @@ type HeaderProps = {
 }
 
 const BackButton = () => {
-  const { t, i18n } = useTranslation('detail')
+  const { t, i18n } = useTranslation('menu')
   return (
     <Link
       to={getStaticRoute(i18n.language).account.details.default}
@@ -31,7 +31,7 @@ const BackButton = () => {
 
 const ToggleButton = () => {
   const menuContext = useContext(OwnerDetailContext)
-  const { t } = useTranslation('detail')
+  const { t } = useTranslation('menu')
   return (
     <button
       className='flex items-center justify-center text-gray-700 dark:text-gray-200 hover:text-gray-900 dark:hover:text-white transition-colors duration-200'
@@ -61,7 +61,7 @@ function FixedHeader({ page }: HeaderProps) {
 }
 
 export function OwnerDetailTitle({ page }: Props) {
-  const { t } = useTranslation('detail')
+  const { t } = useTranslation('menu')
   return (
     <div className='gap-2 mx-auto max-w-4xl'>
       <h1 className='text-2xl font-semibold text-gray-700 dark:text-gray-200'>{t(`links.${page}`)}</h1>
@@ -71,6 +71,6 @@ export function OwnerDetailTitle({ page }: Props) {
 }
 
 export default function OwnerDetailHeader({ page }: Props) {
-  const { t } = useTranslation('detail')
+  const { t } = useTranslation('menu')
   return <FixedHeader page={t(`links.${page}`)} />
 }

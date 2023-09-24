@@ -58,7 +58,7 @@ const BadgeStyles: Record<Colors, string> = {
   danger: 'bg-danger-500',
   warning: 'bg-warning-500',
   info: 'bg-info-500',
-  vip: 'bg-vip-400',
+  deluxe: 'bg-deluxe-400',
 }
 
 const IconWrapper = ({ children, open }: React.PropsWithChildren<IconWrapperProps>) => {

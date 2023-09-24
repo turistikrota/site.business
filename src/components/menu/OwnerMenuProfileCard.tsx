@@ -12,7 +12,7 @@ type Props = {
 
 export default function OwnerMenuProfileCard({ open }: Props) {
   const [detail] = useCurrentOwner()
-  const { t } = useTranslation('detail')
+  const { t } = useTranslation('menu')
   const { src, onError } = useImageSrc(detail.owner.avatarURL)
   return (
     <div className={`flex items-center justify-center gap-2 ${open ? 'flex-col' : ''}`}>

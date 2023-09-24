@@ -4,7 +4,7 @@ import { OwnerDetailContext } from './OwnerMenuLayout'
 
 export default function ToggleButton() {
   const menuContext = useContext(OwnerDetailContext)
-  const { t } = useTranslation('detail')
+  const { t } = useTranslation('menu')
   return (
     <button
       className='flex items-center justify-center text-gray-700 dark:text-gray-200 hover:text-gray-900 dark:hover:text-white transition-colors duration-200'
