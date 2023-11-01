@@ -23,7 +23,6 @@ function OwnerDetailLayout() {
         if (res.status === 200) {
           setIsLoading(false)
           setIsServerError(false)
-          console.log('data::', res.data)
           if (isOwnerDetail(res.data)) {
             setDetail(res.data)
           }
