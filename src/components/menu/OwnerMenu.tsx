@@ -2,6 +2,7 @@ import { RouteType, getStaticRoute } from '@/static/page'
 import { Colors } from '@/types/colors'
 import { isWindowLtLg } from '@/utils/responsive'
 import Condition from '@turistikrota/ui/condition'
+import GlassEffect from '@turistikrota/ui/design/glass'
 import { useIsDesktop } from '@turistikrota/ui/hooks/dom'
 import Logo from '@turistikrota/ui/logo'
 import { lazy, useContext } from 'react'
@@ -82,11 +83,13 @@ export default function OwnerMenu({ isDetail }: Props) {
       </Condition>
       <Condition value={!isDetail || menuContext.openMenu || isDesktop}>
         <Link to={`https://turistikrota.com/${i18n.language}`} className='flex items-center mb-6'>
-          <Logo>
-            <Logo.Badge>beta</Logo.Badge>
-          </Logo>
+          <Logo />
         </Link>
       </Condition>
+      <GlassEffect justify='center' align='center'>
+        <GlassEffect.Item color='bg-primary' size='lg' position='-ml-20 mt-60' />
+        <GlassEffect.Item color='bg-secondary' size='xl' position='ml-10 mt-20' />
+      </GlassEffect>
       <OwnerMenuProfileCard open={isDetail && !isDesktop ? menuContext?.openMenu : true} />
       <div className='grid gap-4 w-full mt-5'>
         {menuItems.map((el, i) => (
