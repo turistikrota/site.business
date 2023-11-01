@@ -4,6 +4,7 @@ import { httpClient } from '@/http/client'
 import { useAccount } from '@/layouts/AccountSelectionLayout'
 import { getStaticRoute } from '@/static/page'
 import { OwnerListItem, isOwnerListResponse } from '@/types/owner'
+import { isAccountErrorResponse } from '@/types/response'
 import Condition from '@turistikrota/ui/condition'
 import { useToast } from '@turistikrota/ui/toast'
 import UserName from '@turistikrota/ui/username'
@@ -25,13 +26,17 @@ const OwnerSelection = () => {
     if (!current) return
     setLoading(true)
     httpClient
-      .get(apiUrl(Services.Owner, `/@${current.userName}`))
+      .get(apiUrl(Services.Owner, ''))
       .then((res) => {
         if (isOwnerListResponse(res.data)) {
           setData(res.data.list)
         }
       })
       .catch((err: any) => {
+        if (err && err.response && err.response.data && isAccountErrorResponse(err.response.data)) {
+          //openAccountSelectionWithRedirect(i18n.language)
+          return
+        }
         parseApiError({
           error: err.response.data,
           toast,
@@ -43,7 +48,7 @@ const OwnerSelection = () => {
   const onOwnerSelect = (item: OwnerListItem) => {
     setLoading(true)
     httpClient
-      .put(apiUrl(Services.Owner, `/@${current?.userName}/~${item.nickName}/select`))
+      .put(apiUrl(Services.Owner, `/~${item.nickName}/select`))
       .then((res) => {
         if (res.status === 200) {
           navigate(getStaticRoute(i18n.language).account.details.default)

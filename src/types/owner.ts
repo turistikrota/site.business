@@ -15,7 +15,6 @@ export type OwnerListItem = {
 export type OwnerUser = {
   uuid: string
   name: string
-  code: string
   roles: string[]
   joinAt: string
 }
@@ -49,7 +48,6 @@ export function isOwnerDetail(data: any): data is OwnerDetail {
     typeof data.user === 'object' &&
     typeof data.user.uuid === 'string' &&
     typeof data.user.name === 'string' &&
-    typeof data.user.code === 'string' &&
     Array.isArray(data.user.roles) &&
     data.user.roles.every((role: any) => typeof role === 'string') &&
     typeof data.user.joinAt === 'string'

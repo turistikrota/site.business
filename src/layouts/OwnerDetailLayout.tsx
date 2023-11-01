@@ -8,7 +8,6 @@ import { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Outlet, useNavigate } from 'react-router-dom'
 import { Spinner } from 'sspin'
-import { useAccount } from './AccountSelectionLayout'
 
 function OwnerDetailLayout() {
   const { i18n } = useTranslation()
@@ -16,15 +15,15 @@ function OwnerDetailLayout() {
   const [isServerError, setIsServerError] = useState<boolean>(false)
   const [detail, setDetail] = useState<OwnerDetail | null>(null)
   const navigate = useNavigate()
-  const { current } = useAccount()
 
   useEffect(() => {
     httpClient
-      .get(apiUrl(Services.Owner, `/@${current?.userName}/selected`))
+      .get(apiUrl(Services.Owner, `/selected`))
       .then((res) => {
         if (res.status === 200) {
           setIsLoading(false)
           setIsServerError(false)
+          console.log('data::', res.data)
           if (isOwnerDetail(res.data)) {
             setDetail(res.data)
           }
@@ -47,6 +46,7 @@ function OwnerDetailLayout() {
         <Spinner />
       </div>
     )
+  if (!detail) return
   return (
     <CurrentOwnerProvider detail={detail!}>
       <Outlet />
