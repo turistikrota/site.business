@@ -1,34 +1,38 @@
 {
-    "buttons": {
-      "change": "Profil Değiştir",
-      "back": "Geri",
-      "toggle": "Menüyü Aç/Kapat"
-    },
-    "logout": {
-      "text": "Çıkış Yap",
-      "success": "Çıkış başarılı!"
-    },
-    "links": {
-      "edit": "Profili Düzenle",
-      "security": "Güvenlik",
-      "privacy": "Gizlilik",
-      "notification": "Bildirim Tercihleri",
-      "settings": "Ayarlar",
-      "delete": "Profili Sil",
-      "deluxe": "Deluxe Üyelik",
-      "subtitles": {
-        "edit": "Satıcı profil resminizi, bilgilerinizi ve sosyal medya hesaplarınızı düzenleyin.",
-        "security": "Şifrenizi değiştirin, iki faktörlü kimlik doğrulamayı etkinleştirin ve oturum açma cihazlarınızı yönetin.",
-        "privacy": "Gizlilik ayarlarınızı düzenleyin ve profilinizi arama sonuçlarında görünür veya görünmez yapın.",
-        "notification": "Bildirim tercihlerinizi düzenleyin.",
-        "settings": "Hesap ayarlarınızı düzenleyin.",
-        "delete": "Profilinizi silin.",
-        "deluxe": "Deluxe üyelik avantajları hakkında bilgi alın ve Deluxe üyeliğinizi yönetin veya oluşturun."
-      }
-    },
-    "meta": {
-        "title": "Satıcı Profili",
-        "description": "Turistikrota satıcı profilinizi düzenleyin, güvenliğinizi ve gizliliğinizi ayarlayın ve hesap ayarlarınızı değiştirin.",
-        "keywords": "satıcı profil, satıcı profil düzenle, satıcı profil ayarları, satıcı profil güvenlik, satıcı profil gizlilik, satıcı profil hesap ayarları"
+  "buttons": {
+    "change": "Profil Değiştir",
+    "back": "Geri",
+    "toggle": "Menüyü Aç/Kapat"
+  },
+  "logout": {
+    "text": "Çıkış Yap",
+    "success": "Çıkış başarılı!"
+  },
+  "links": {
+    "edit": "Profili Düzenle",
+    "security": "Güvenlik",
+    "privacy": "Gizlilik",
+    "notification": "Bildirim Tercihleri",
+    "settings": "Ayarlar",
+    "delete": "Profili Sil",
+    "deluxe": "Deluxe Üyelik",
+    "invite": "Davetler",
+    "invite-create": "Davet Oluştur",
+    "subtitles": {
+      "edit": "Satıcı profil resminizi, bilgilerinizi ve sosyal medya hesaplarınızı düzenleyin.",
+      "security": "Şifrenizi değiştirin, iki faktörlü kimlik doğrulamayı etkinleştirin ve oturum açma cihazlarınızı yönetin.",
+      "privacy": "Gizlilik ayarlarınızı düzenleyin ve profilinizi arama sonuçlarında görünür veya görünmez yapın.",
+      "notification": "Bildirim tercihlerinizi düzenleyin.",
+      "settings": "Hesap ayarlarınızı düzenleyin.",
+      "delete": "Profilinizi silin.",
+      "deluxe": "Deluxe üyelik avantajları hakkında bilgi alın ve Deluxe üyeliğinizi yönetin veya oluşturun.",
+      "invite": "Davetlerinizi görüntüleyin ve yeni davetler oluşturun.",
+      "invite-create": "Bir hesabı bu organizasyona davet edin."
     }
+  },
+  "meta": {
+    "title": "Satıcı Profili",
+    "description": "Turistikrota satıcı profilinizi düzenleyin, güvenliğinizi ve gizliliğinizi ayarlayın ve hesap ayarlarınızı değiştirin.",
+    "keywords": "satıcı profil, satıcı profil düzenle, satıcı profil ayarları, satıcı profil güvenlik, satıcı profil gizlilik, satıcı profil hesap ayarları"
+  }
 }

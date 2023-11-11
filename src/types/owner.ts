@@ -24,6 +24,16 @@ export type OwnerDetail = {
   user: OwnerUser
 }
 
+export type InviteListResponseByAdmin = {
+  creatorUserName: string
+  email: string
+  isDeleted: boolean
+  isUsed: boolean
+  uuid: string
+  createdAt: string
+  updatedAt: string
+}
+
 export type OwnerListResponse = ListResponse<OwnerListItem>
 
 export type MustSelectResponse = {
@@ -89,5 +99,21 @@ export function isAccountErrorResponse(response: unknown): response is AccountEr
     response !== null &&
     'accountNotFound' in response &&
     'accountSelectRequired' in response
+  )
+}
+
+export function isInviteListResponseByAdminListResponse(data: any): data is InviteListResponseByAdmin[] {
+  return Array.isArray(data) && data.every(isInviteListResponseByAdmin)
+}
+
+export function isInviteListResponseByAdmin(data: any): data is InviteListResponseByAdmin {
+  return (
+    typeof data === 'object' &&
+    typeof data.creatorUserName === 'string' &&
+    typeof data.email === 'string' &&
+    typeof data.isDeleted === 'boolean' &&
+    typeof data.isUsed === 'boolean' &&
+    typeof data.uuid === 'string' &&
+    typeof data.createdAt === 'string'
   )
 }
