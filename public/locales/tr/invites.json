@@ -12,12 +12,14 @@
     "created_at": "Oluşturulma Tarihi",
     "updated_at": "Güncellenme Tarihi",
     "delete": "Daveti Geçersiz Kıl",
+    "deleting": "Geçersizleştiriliyor...",
     "today": "Bugün",
     "yesterday": "Dün",
     "days_ago": "{{days}} gün önce",
     "months_ago": "{{months}} ay önce",
     "years_ago": "{{years}} yıl önce"
   },
+  "delete_success": "Davet başarıyla geçersiz kılındı.",
   "states": {
     "used": "Kullanıldı",
     "deleted": "Silindi",

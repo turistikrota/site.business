@@ -28,6 +28,7 @@ function InviteMainView() {
   const dayjs = useDayJS(i18n.language)
   const [invites, setInvites] = useState<InviteItem[]>([])
   const [loading, setLoading] = useState<boolean>(false)
+  const [loadingIds, setLoadingIds] = useState<string[]>([])
   const [current] = useCurrentOwner()
   const toast = useToast()
 
@@ -56,6 +57,27 @@ function InviteMainView() {
   }
 
   if (loading) return <ContentLoader noMargin />
+
+  const deleteInvite = (id: string) => {
+    setLoadingIds([...loadingIds, id])
+    httpClient
+      .delete(apiUrl(Services.Owner, `/~${current.owner.nickName}/invite/${id}`))
+      .then((res) => {
+        if (res.status === 200) {
+          toast.success(t('delete_success'))
+          fetchInvites()
+        }
+      })
+      .catch((err: any) => {
+        parseApiError({
+          error: err?.response?.data,
+          toast,
+        })
+      })
+      .finally(() => {
+        setLoadingIds(loadingIds.filter((item) => item !== id))
+      })
+  }
 
   const calcState = (invite: InviteItem): State => {
     if (invite.isUsed) return 'used'
@@ -107,8 +129,14 @@ function InviteMainView() {
               </KeyValue>
               {calcState(invite) === 'pending' && (
                 <div className='flex justify-center mt-2 border-t pt-2'>
-                  <Button block={false} size='sm' variant='error'>
-                    {t('fields.delete')}
+                  <Button
+                    block={false}
+                    size='sm'
+                    variant='error'
+                    disabled={loadingIds.includes(invite.uuid)}
+                    onClick={() => deleteInvite(invite.uuid)}
+                  >
+                    {t(loadingIds.includes(invite.uuid) ? 'fields.deleting' : 'fields.delete')}
                   </Button>
                 </div>
               )}
