@@ -46,7 +46,7 @@ const ToggleButton = () => {
 
 function FixedHeader({ page }: HeaderProps) {
   return (
-    <MobileHeader className='justify-start gap-3'>
+    <MobileHeader className='justify-start gap-3' defaultFixed>
       <div className='items-center justify-center gap-2 hidden lg:flex'>
         <ToggleButton />
       </div>

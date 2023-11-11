@@ -9,7 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@turistikrota/ui": "^0.4.2",
+    "@turistikrota/ui": "^0.4.3",
     "axios": "^1.5.0",
     "boxicons": "^2.1.4",
     "dayjs": "^1.11.9",
