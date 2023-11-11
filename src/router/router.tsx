@@ -57,7 +57,28 @@ const trRoutes: RouteObject[] = [
               page: 'deluxe',
             },
           },
+          {
+            path: 'davetler',
+            lazy: () => import('@/views/details/invite'),
+            handle: {
+              page: 'invite',
+            },
+          },
+          {
+            path: 'davet-et',
+            lazy: () => import('@/views/details/invite-create'),
+            handle: {
+              page: 'invite-create',
+            },
+          },
         ],
+      },
+      {
+        path: 'davet',
+        lazy: () => import('@/views/invite-use'),
+        handle: {
+          page: 'invite-use',
+        },
       },
     ],
   },
@@ -121,7 +142,28 @@ const enRoutes: RouteObject[] = [
               page: 'deluxe',
             },
           },
+          {
+            path: 'invites',
+            lazy: () => import('@/views/details/invite'),
+            handle: {
+              page: 'invite',
+            },
+          },
+          {
+            path: 'invite',
+            lazy: () => import('@/views/details/invite-create'),
+            handle: {
+              page: 'invite-create',
+            },
+          },
         ],
+      },
+      {
+        path: 'invite',
+        lazy: () => import('@/views/invite-use'),
+        handle: {
+          page: 'invite-use',
+        },
       },
     ],
   },

@@ -30,6 +30,16 @@ export type MustSelectResponse = {
   mustSelect: boolean
 }
 
+export type AccountErrorResponse = {
+  accountNotFound: boolean
+  accountSelectRequired: boolean
+}
+
+export type OwnerErrorResponse = {
+  ownerNotFound: boolean
+  ownerSelectRequired: boolean
+}
+
 type OwnerType = 'individual' | 'corporation'
 
 export function isOwnerListResponse(data: any): data is OwnerListResponse {
@@ -71,4 +81,13 @@ export function isOwnerListItem(data: any): data is OwnerListItem {
 
 export function isMustSelectResponse(response: unknown): response is MustSelectResponse {
   return typeof response === 'object' && response !== null && 'mustSelect' in response
+}
+
+export function isAccountErrorResponse(response: unknown): response is AccountErrorResponse {
+  return (
+    typeof response === 'object' &&
+    response !== null &&
+    'accountNotFound' in response &&
+    'accountSelectRequired' in response
+  )
 }
