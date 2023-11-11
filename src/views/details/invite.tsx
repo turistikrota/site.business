@@ -85,7 +85,7 @@ function InviteMainView() {
           </Link>
         </div>
         <div className='w-full grid grid-cols-12 gap-3'>
-          {invites.map((invite) => (
+          {invites.reverse().map((invite) => (
             <div key={invite.uuid} className='col-span-12 md:col-span-6 bg-second rounded-md p-2'>
               <KeyValue>
                 <KeyValue.Item label={t('fields.email')} value={invite.email} />
