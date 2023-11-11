@@ -1,1 +1,27 @@
-{}
+{
+  "meta": {
+    "title": "Organizasyon Daveti",
+    "description": "Bu sayfada bir davetin detaylarını görebilir ve daveti kabul edebilirsiniz.",
+    "keywords": "davet, organizasyon, daveti kabul et, daveti reddet, davet detayları"
+  },
+  "title": "Organizasyon Daveti",
+  "description": "<0>{{creator}}</0> tarafından <1>{{owner}}</1> organizasyonuna katılmak için davet edildiniz. Daveti kabul etmek için lütfen aşağıdaki butona tıklayın. Daveti kabul etmek istemiyorsanız lütfen bu daveti görmezden gelin.",
+  "notfound": {
+    "title": "Davet Bulunamadı",
+    "description": "Bu davet bulunamadı. Lütfen davetin doğru olduğundan emin olun."
+  },
+  "used": {
+    "title": "Davet Kullanılmış",
+    "description": "Bu davet daha önce kullanılmış. Lütfen yeni bir davet alın."
+  },
+  "deleted": {
+    "title": "Davet Silinmiş",
+    "description": "Bu davet organizasyon yöneticileri tarafından silinmiş. Lütfen yeni bir davet isteyin."
+  },
+  "timeout": {
+    "title": "Davet Süresi Doldu",
+    "description": "Bu davetin süresi doldu. Lütfen yeni bir davet isteyin."
+  },
+  "join": "Daveti Kabul Et",
+  "success": "Davet başarıyla kabul edildi."
+}

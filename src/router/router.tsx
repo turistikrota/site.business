@@ -73,14 +73,14 @@ const trRoutes: RouteObject[] = [
           },
         ],
       },
-      {
-        path: 'davet',
-        lazy: () => import('@/views/invite-use'),
-        handle: {
-          page: 'invite-use',
-        },
-      },
     ],
+  },
+  {
+    path: 'davet/:uuid',
+    lazy: () => import('@/views/invite-use'),
+    handle: {
+      page: 'invite-use',
+    },
   },
   {
     path: '/basvuru',
@@ -158,14 +158,14 @@ const enRoutes: RouteObject[] = [
           },
         ],
       },
-      {
-        path: 'invite',
-        lazy: () => import('@/views/invite-use'),
-        handle: {
-          page: 'invite-use',
-        },
-      },
     ],
+  },
+  {
+    path: 'invite/:uuid',
+    lazy: () => import('@/views/invite-use'),
+    handle: {
+      page: 'invite-use',
+    },
   },
   {
     path: '/apply',

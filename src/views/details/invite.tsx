@@ -4,7 +4,7 @@ import { Services, apiUrl } from '@/config/services'
 import { useCurrentOwner } from '@/contexts/currentOwner'
 import { httpClient } from '@/http/client'
 import { getStaticRoute } from '@/static/page'
-import { InviteListResponseByAdmin, isInviteListResponseByAdminListResponse } from '@/types/owner'
+import { InviteItem, isInviteItemListResponse } from '@/types/owner'
 import { useDayJS } from '@/utils/dayjs'
 import Button from '@turistikrota/ui/button'
 import ContentLoader from '@turistikrota/ui/loader'
@@ -26,7 +26,7 @@ const StateColors: Record<State, string> = {
 function InviteMainView() {
   const { t, i18n } = useTranslation('invites')
   const dayjs = useDayJS(i18n.language)
-  const [invites, setInvites] = useState<InviteListResponseByAdmin[]>([])
+  const [invites, setInvites] = useState<InviteItem[]>([])
   const [loading, setLoading] = useState<boolean>(false)
   const [current] = useCurrentOwner()
   const toast = useToast()
@@ -40,7 +40,7 @@ function InviteMainView() {
     httpClient
       .get(apiUrl(Services.Owner, `/~${current.owner.nickName}/invite`))
       .then((res) => {
-        if (res.data && isInviteListResponseByAdminListResponse(res.data)) {
+        if (res.data && isInviteItemListResponse(res.data)) {
           setInvites(res.data)
         }
       })
@@ -57,7 +57,7 @@ function InviteMainView() {
 
   if (loading) return <ContentLoader noMargin />
 
-  const calcState = (invite: InviteListResponseByAdmin): State => {
+  const calcState = (invite: InviteItem): State => {
     if (invite.isUsed) return 'used'
     if (invite.isDeleted) return 'deleted'
     const createdAt = dayjs(invite.createdAt)

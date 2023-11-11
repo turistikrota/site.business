@@ -1,7 +1,7 @@
+import { Config } from '@/config/config'
 import Cookies from 'js-cookie'
 import AccountSelectionLayout, { AccountProvider } from './AccountSelectionLayout'
 import AuthenticationLayout from './AuthenticationLayout'
-import { Config } from '@/config/config'
 
 const DefaultLayout: React.FC<React.PropsWithChildren> = ({ children }) => {
   const accessToken = Cookies.get(Config.cookies.accessToken)

@@ -24,8 +24,9 @@ export type OwnerDetail = {
   user: OwnerUser
 }
 
-export type InviteListResponseByAdmin = {
+export type InviteItem = {
   creatorUserName: string
+  ownerNickName: string
   email: string
   isDeleted: boolean
   isUsed: boolean
@@ -102,11 +103,11 @@ export function isAccountErrorResponse(response: unknown): response is AccountEr
   )
 }
 
-export function isInviteListResponseByAdminListResponse(data: any): data is InviteListResponseByAdmin[] {
-  return Array.isArray(data) && data.every(isInviteListResponseByAdmin)
+export function isInviteItemListResponse(data: any): data is InviteItem[] {
+  return Array.isArray(data) && data.every(isInviteItem)
 }
 
-export function isInviteListResponseByAdmin(data: any): data is InviteListResponseByAdmin {
+export function isInviteItem(data: any): data is InviteItem {
   return (
     typeof data === 'object' &&
     typeof data.creatorUserName === 'string' &&
