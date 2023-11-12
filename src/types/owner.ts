@@ -24,10 +24,31 @@ export type OwnerDetail = {
   user: OwnerUser
 }
 
+export type InviteItem = {
+  creatorUserName: string
+  ownerNickName: string
+  email: string
+  isDeleted: boolean
+  isUsed: boolean
+  uuid: string
+  createdAt: string
+  updatedAt: string
+}
+
 export type OwnerListResponse = ListResponse<OwnerListItem>
 
 export type MustSelectResponse = {
   mustSelect: boolean
+}
+
+export type AccountErrorResponse = {
+  accountNotFound: boolean
+  accountSelectRequired: boolean
+}
+
+export type OwnerErrorResponse = {
+  ownerNotFound: boolean
+  ownerSelectRequired: boolean
 }
 
 type OwnerType = 'individual' | 'corporation'
@@ -59,8 +80,6 @@ export function isOwnerListItem(data: any): data is OwnerListItem {
     typeof data === 'object' &&
     typeof data.nickName === 'string' &&
     typeof data.realName === 'string' &&
-    typeof data.avatarURL === 'string' &&
-    typeof data.coverURL === 'string' &&
     typeof data.ownerType === 'string' &&
     typeof data.isVerified === 'boolean' &&
     typeof data.isEnabled === 'boolean' &&
@@ -71,4 +90,29 @@ export function isOwnerListItem(data: any): data is OwnerListItem {
 
 export function isMustSelectResponse(response: unknown): response is MustSelectResponse {
   return typeof response === 'object' && response !== null && 'mustSelect' in response
+}
+
+export function isAccountErrorResponse(response: unknown): response is AccountErrorResponse {
+  return (
+    typeof response === 'object' &&
+    response !== null &&
+    'accountNotFound' in response &&
+    'accountSelectRequired' in response
+  )
+}
+
+export function isInviteItemListResponse(data: any): data is InviteItem[] {
+  return Array.isArray(data) && data.every(isInviteItem)
+}
+
+export function isInviteItem(data: any): data is InviteItem {
+  return (
+    typeof data === 'object' &&
+    typeof data.creatorUserName === 'string' &&
+    typeof data.email === 'string' &&
+    typeof data.isDeleted === 'boolean' &&
+    typeof data.isUsed === 'boolean' &&
+    typeof data.uuid === 'string' &&
+    typeof data.createdAt === 'string'
+  )
 }

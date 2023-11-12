@@ -1,7 +1,6 @@
 import { useCurrentOwner } from '@/contexts/currentOwner'
 import Button from '@turistikrota/ui/button'
 import Condition from '@turistikrota/ui/condition'
-import { useImageSrc } from '@turistikrota/ui/hooks/image'
 import UserName from '@turistikrota/ui/username'
 import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router-dom'
@@ -13,15 +12,13 @@ type Props = {
 export default function OwnerMenuProfileCard({ open }: Props) {
   const [detail] = useCurrentOwner()
   const { t } = useTranslation('menu')
-  const { src, onError } = useImageSrc(detail?.owner?.avatarURL)
 
   if (!detail || !detail.owner) return null
   return (
     <div className={`flex items-center justify-center gap-2 ${open ? 'flex-col' : ''}`}>
       <div className={`flex ${open ? 'items-center justify-center w-23 h-23' : 'h-12 w-12'}`}>
         <img
-          src={src}
-          onError={onError}
+          src={`https://avatar.turistikrota.com/~${detail.owner.nickName}.png`}
           width={`${open ? 110 : 48}px`}
           height={`${open ? 110 : 48}px`}
           alt={detail.owner.realName}

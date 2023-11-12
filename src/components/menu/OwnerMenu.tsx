@@ -2,7 +2,6 @@ import { RouteType, getStaticRoute } from '@/static/page'
 import { Colors } from '@/types/colors'
 import { isWindowLtLg } from '@/utils/responsive'
 import Condition from '@turistikrota/ui/condition'
-import GlassEffect from '@turistikrota/ui/design/glass'
 import { useIsDesktop } from '@turistikrota/ui/hooks/dom'
 import Logo from '@turistikrota/ui/logo'
 import { lazy, useContext } from 'react'
@@ -47,6 +46,11 @@ const menuItems: MenuItem[] = [
     href: (r: RouteType) => r.owner.details.notification,
   },
   {
+    title: 'invite',
+    icon: 'bx bx-mail-send',
+    href: (r: RouteType) => r.owner.details.invite,
+  },
+  {
     title: 'settings',
     icon: 'bx bx-cog',
     href: (r: RouteType) => r.owner.details.settings,
@@ -86,7 +90,6 @@ export default function OwnerMenu({ isDetail }: Props) {
           <Logo />
         </Link>
       </Condition>
-      <GlassEffect.Fixed />
       <OwnerMenuProfileCard open={isDetail && !isDesktop ? menuContext?.openMenu : true} />
       <div className='grid gap-4 w-full mt-5'>
         {menuItems.map((el, i) => (

@@ -1,0 +1,18 @@
+{
+  "meta": {
+    "title": "Davet Oluştur",
+    "description": "Bu sayfa aracılığıyla Organizasyonunuza bir kullanıcıyı davet edebilirsiniz.",
+    "keywords": "davet, davet oluştur, davet et, kullanıcı davet et, kullanıcı davet etme"
+  },
+  "fields": {
+    "email": "E-posta Adresi",
+    "locale": "Davet Edilen Kullanıcının Dili"
+  },
+  "info": {
+    "email": "Kullanıcının turistikrota'da kayıtlı e-posta adresi. Eğer kullanıcı turistikrota'da kayıtlı değilse, davet edilen kullanıcı bu e-posta adresiyle turistikrota'ya kayıt olacaktır.",
+    "locale": "Kullanıcıya davet e-postası bu dilde gönderilecektir."
+  },
+  "loading": "Davet oluşturuluyor...",
+  "invite": "Davet Et",
+  "success": "Davet başarıyla gönderildi. Davet edilen kullanıcı e-posta adresine bir davet alacak ve 24 saat içinde davetinizi kabul etmesi gerekecek."
+}

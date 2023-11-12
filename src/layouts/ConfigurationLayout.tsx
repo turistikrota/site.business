@@ -1,5 +1,4 @@
 import MetaWrapper from '@/components/MetaWrapper'
-import GlassEffect from '@turistikrota/ui/design/glass'
 import Logo from '@turistikrota/ui/logo'
 import React from 'react'
 import { useTranslation } from 'react-i18next'
@@ -26,7 +25,6 @@ export default function ConfigurationLayout({
           <Link to={`https://turistikrota.com/${i18n.language}`} target='_blank' className='flex items-center mb-6'>
             <Logo />
           </Link>
-          <GlassEffect.Fixed />
           <div className='w-full bg-second shadow-lg rounded-lg md:mt-0 sm:max-w-md xl:p-0'>{children}</div>
         </div>
       </section>

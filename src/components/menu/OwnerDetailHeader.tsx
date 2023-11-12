@@ -5,7 +5,7 @@ import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router-dom'
 import { OwnerDetailContext } from './OwnerMenuLayout'
 
-export type Pages = 'edit' | 'notification' | 'settings' | 'security' | 'privacy' | 'deluxe'
+export type Pages = 'edit' | 'notification' | 'settings' | 'security' | 'privacy' | 'deluxe' | 'invite'
 
 type Props = {
   page: Pages

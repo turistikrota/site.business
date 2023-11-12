@@ -1,0 +1,38 @@
+{
+  "buttons": {
+    "change": "Change Profile",
+    "back": "Back",
+    "toggle": "Open/Close Menu"
+  },
+  "logout": {
+    "text": "Log Out",
+    "success": "Exit successful!"
+  },
+  "links": {
+    "edit": "Edit Profile",
+    "security": "Security",
+    "privacy": "Privacy",
+    "notification": "Notification Preferences",
+    "settings": "Settings",
+    "delete": "Delete Profile",
+    "deluxe": "Deluxe Membership",
+    "invite": "Invitations",
+    "invite-create": "Create Invitation",
+    "subtitles": {
+      "edit": "Edit your seller profile picture, information and social media accounts.",
+      "security": "Change your password, enable two-factor authentication, and manage your sign-in devices.",
+      "privacy": "Edit your privacy settings and make your profile visible or invisible in search results.",
+      "notification": "Edit your notification preferences.",
+      "settings": "Edit your account settings.",
+      "delete": "Delete your profile.",
+      "deluxe": "Learn about Deluxe membership benefits and manage or create your Deluxe membership.",
+      "invite": "View your invitations and create new invitations.",
+      "invite-create": "Invite an account to this organization."
+    }
+  },
+  "meta": {
+    "title": "Seller Profile",
+    "description": "Edit your Turistikrota seller profile, adjust your security and privacy, and change your account settings.",
+    "keywords": "seller profile, seller profile edit, seller profile settings, seller profile security, seller profile privacy, seller profile account settings"
+  }
+}

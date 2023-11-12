@@ -22,10 +22,13 @@ export type RouteType = {
       deluxe: string
       edit: string
       notification: string
+      invite: string
+      inviteCreate: string
       privacy: string
       security: string
       settings: string
     }
+    inviteUse: string
   }
   auth: {
     base: string
@@ -70,7 +73,10 @@ const Routes: Record<Locales, RouteType> = {
         privacy: '/detay/gizlilik',
         security: '/detay/guvenlik',
         settings: '/detay/ayarlar',
+        invite: '/detay/davetler',
+        inviteCreate: '/detay/davet-et',
       },
+      inviteUse: '/davet',
     },
   },
   en: {
@@ -105,7 +111,10 @@ const Routes: Record<Locales, RouteType> = {
         privacy: '/detail/privacy',
         security: '/detail/security',
         settings: '/detail/settings',
+        invite: '/detail/invites',
+        inviteCreate: '/detail/invite',
       },
+      inviteUse: '/invite',
     },
   },
 }

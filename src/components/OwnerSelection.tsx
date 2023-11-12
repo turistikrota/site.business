@@ -75,41 +75,43 @@ const OwnerSelection = () => {
         </h1>
         <div>
           <div className='flex flex-col space-y-4'>
-            {data.map((item, index) => (
-              <OwnerSelectionCard key={index} {...item} onSelect={() => onOwnerSelect(item)}>
-                <OwnerSelectionCard.Image>
-                  <Condition value={item.avatarURL !== ''}>
-                    <OwnerSelectionCard.Avatar src={item.avatarURL} alt={item.realName}></OwnerSelectionCard.Avatar>
-                  </Condition>
-                  <Condition value={item.avatarURL === ''}>
-                    <Condition value={item.ownerType === 'individual'}>
-                      <i className='bx bx-lg bx-user text-gray-400'></i>
+            <div className='max-h-96 overflow-auto space-y-4'>
+              {data.map((item, index) => (
+                <OwnerSelectionCard key={index} {...item} onSelect={() => onOwnerSelect(item)}>
+                  <OwnerSelectionCard.Image>
+                    <Condition value={item.avatarURL !== ''}>
+                      <OwnerSelectionCard.Avatar src={item.avatarURL} alt={item.realName}></OwnerSelectionCard.Avatar>
                     </Condition>
-                    <Condition value={item.ownerType === 'corporation'}>
-                      <i className='bx bx-lg bx-building text-gray-400'></i>
+                    <Condition value={item.avatarURL === ''}>
+                      <Condition value={item.ownerType === 'individual'}>
+                        <i className='bx bx-lg bx-user text-gray-400'></i>
+                      </Condition>
+                      <Condition value={item.ownerType === 'corporation'}>
+                        <i className='bx bx-lg bx-building text-gray-400'></i>
+                      </Condition>
                     </Condition>
+                  </OwnerSelectionCard.Image>
+                  <OwnerSelectionCard.Content>
+                    <UserName size='xl'>{item.nickName}</UserName>
+                    <OwnerSelectionCard.FullName>{item.realName}</OwnerSelectionCard.FullName>
+                  </OwnerSelectionCard.Content>
+                  <Condition value={item.isVerified}>
+                    <OwnerSelectionCard.VerifiedBadge />
                   </Condition>
-                </OwnerSelectionCard.Image>
-                <OwnerSelectionCard.Content>
-                  <UserName size='xl'>{item.nickName}</UserName>
-                  <OwnerSelectionCard.FullName>{item.realName}</OwnerSelectionCard.FullName>
-                </OwnerSelectionCard.Content>
-                <Condition value={item.isVerified}>
-                  <OwnerSelectionCard.VerifiedBadge />
-                </Condition>
-                <Condition value={!item.isEnabled}>
-                  <div
-                    className='absolute bottom-1 right-2 flex items-center justify-center rounded-full text-secondary gap-1'
-                    role='alert'
-                    aria-label={t('verified')}
-                    title={t('verified_alt')}
-                  >
-                    <i className='bx bx-s bx-timer'></i>
-                    {t('waiting')}
-                  </div>
-                </Condition>
-              </OwnerSelectionCard>
-            ))}
+                  <Condition value={!item.isEnabled}>
+                    <div
+                      className='absolute bottom-1 right-2 flex items-center justify-center rounded-full text-secondary gap-1'
+                      role='alert'
+                      aria-label={t('verified')}
+                      title={t('verified_alt')}
+                    >
+                      <i className='bx bx-s bx-timer'></i>
+                      {t('waiting')}
+                    </div>
+                  </Condition>
+                </OwnerSelectionCard>
+              ))}
+            </div>
             <Link to={getStaticRoute(i18n.language).owner.create}>
               <OwnerSelectionCard>
                 <OwnerSelectionCard.Image>
