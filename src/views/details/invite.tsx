@@ -89,6 +89,9 @@ function InviteMainView() {
   }
 
   const calcRelativeUpdateTime = (date: string): string => {
+    const indayDiff = dayjs().diff(dayjs(date), 'minute')
+    if (indayDiff < 60) return t('fields.minutes_ago', { minutes: indayDiff })
+    if (indayDiff < 1440) return t('fields.hours_ago', { hours: Math.floor(indayDiff / 60) })
     const diff = dayjs().diff(dayjs(date), 'day')
     if (diff === 0) return t('fields.today')
     if (diff === 1) return t('fields.yesterday')

@@ -17,7 +17,9 @@
     "yesterday": "Dün",
     "days_ago": "{{days}} gün önce",
     "months_ago": "{{months}} ay önce",
-    "years_ago": "{{years}} yıl önce"
+    "years_ago": "{{years}} yıl önce",
+    "minutes_ago": "{{minutes}} dakika önce",
+    "hours_ago": "{{hours}} saat önce"
   },
   "delete_success": "Davet başarıyla geçersiz kılındı.",
   "states": {

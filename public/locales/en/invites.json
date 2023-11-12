@@ -1,1 +1,31 @@
-{}
+{
+  "meta": {
+    "title": "Invitations",
+    "description": "You can manage your invitations for your organization here. You can create, edit and delete your invitations.",
+    "keywords": "invitation, invitations, invitation management, create invitation, edit invitation, delete invitation"
+  },
+  "fields": {
+    "email": "Email",
+    "state": "Status",
+    "create": "Create New Invitation",
+    "creator": "Created by",
+    "created_at": "Creation Date",
+    "updated_at": "Updated Date",
+    "delete": "Override Invitation",
+    "deleting": "Invalidating...",
+    "today": "Today",
+    "yesterday": "Yesterday",
+    "days_ago": "{{days}} days ago",
+    "months_ago": "{{months}} months ago",
+    "years_ago": "{{years}} years ago",
+    "minutes_ago": "{{minutes}} minutes ago",
+    "hours_ago": "{{hours}} hours ago"
+  },
+  "delete_success": "Invitation was successfully invalidated.",
+  "states": {
+    "used": "Used",
+    "deleted": "Deleted",
+    "pending": "Pending",
+    "timeout": "Timeout"
+  }
+}
