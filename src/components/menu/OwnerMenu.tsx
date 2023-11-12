@@ -46,6 +46,11 @@ const menuItems: MenuItem[] = [
     href: (r: RouteType) => r.owner.details.notification,
   },
   {
+    title: 'users',
+    icon: 'bx bx-user',
+    href: (r: RouteType) => r.owner.details.users,
+  },
+  {
     title: 'invite',
     icon: 'bx bx-mail-send',
     href: (r: RouteType) => r.owner.details.invite,

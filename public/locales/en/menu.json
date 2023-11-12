@@ -18,6 +18,7 @@
     "deluxe": "Deluxe Membership",
     "invite": "Invitations",
     "invite-create": "Create Invitation",
+    "users": "Users",
     "subtitles": {
       "edit": "Edit your seller profile picture, information and social media accounts.",
       "security": "Change your password, enable two-factor authentication, and manage your sign-in devices.",
@@ -27,7 +28,8 @@
       "delete": "Delete your profile.",
       "deluxe": "Learn about Deluxe membership benefits and manage or create your Deluxe membership.",
       "invite": "View your invitations and create new invitations.",
-      "invite-create": "Invite an account to this organization."
+      "invite-create": "Invite an account to this organization.",
+      "users": "View and manage users in this organization."
     }
   },
   "meta": {
