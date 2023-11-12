@@ -1,0 +1,9 @@
+{
+  "meta": {
+    "title": "Kullanıcılar",
+    "description": "Organizasyona ait kullanıcıları görüntüleyin, düzenleyin ve yönetin.",
+    "keywords": "kullanıcılar, organizasyon kullanıcıları"
+  },
+  "joinAt": "{{date}} tarihinde katıldı.",
+  "totalRole": "Toplam {{total}} rolü var."
+}

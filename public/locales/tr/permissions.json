@@ -1,0 +1,126 @@
+{
+  "titles": {
+    "owner": "Satıcı Modülü",
+    "post": "Gönderi/İlan Modülü",
+    "post_log": "Gönderi/İlan Log Modülü",
+    "owner_log": "Satıcı Log Modülü"
+  },
+  "roles": {
+    "owner": {
+      "super": {
+        "title": "Süper Yetkili",
+        "description": "Süper yetkili, satıcı profilinde tam yetkiye sahiptir."
+      },
+      "member": {
+        "title": "Üye",
+        "description": "Üye, satıcı profilinde sadece kendi bilgilerini görebilir."
+      },
+      "user_remove": {
+        "title": "Kullanıcı Silme",
+        "description": "Kullanıcı silme yetkisi, satıcı profilinde kullanıcı silme yetkisine sahiptir."
+      },
+      "user_perm_add": {
+        "title": "Kullanıcı Yetki Ekleme",
+        "description": "Kullanıcı yetki ekleme yetkisi, satıcı profilinde kullanıcı yetki ekleme yetkisine sahiptir."
+      },
+      "user_perm_remove": {
+        "title": "Kullanıcı Yetki Silme",
+        "description": "Kullanıcı yetki silme yetkisi, satıcı profilinde kullanıcı yetki silme yetkisine sahiptir."
+      },
+      "enable": {
+        "title": "Aktif Etme",
+        "description": "Aktif etme yetkisi, satıcı profilinde aktif etme yetkisine sahiptir."
+      },
+      "disable": {
+        "title": "Pasif Etme",
+        "description": "Pasif etme yetkisi, satıcı profilinde pasif etme yetkisine sahiptir."
+      },
+      "user_list": {
+        "title": "Kullanıcı Listeleme",
+        "description": "Kullanıcı Listeleme yetkisi, satıcı profilindeki kullanıcıları listeleme yetkisine sahiptir."
+      },
+      "invite_create": {
+        "title": "Davetiye Oluşturma",
+        "description": "Davetiye oluşturma yetkisi, satıcı profilinde davetiye oluşturma yetkisine sahiptir."
+      },
+      "invite_delete": {
+        "title": "Davetiye Silme",
+        "description": "Davetiye silme yetkisi, satıcı profilinde davetiye silme yetkisine sahiptir."
+      },
+      "invite_view": {
+        "title": "Davetiye Görüntüleme",
+        "description": "Davetiye görüntüleme yetkisi, satıcı profilinde davetiye görüntüleme yetkisine sahiptir."
+      }
+    },
+    "post": {
+      "super": {
+        "title": "Süper Yetkili",
+        "description": "Süper yetkili, gönderi/ilan profilinde tam yetkiye sahiptir."
+      },
+      "create": {
+        "title": "Gönderi/İlan Oluşturma",
+        "description": "Gönderi/İlan oluşturma yetkisi, gönderi/ilan profilinde gönderi/ilan oluşturma yetkisine sahiptir."
+      },
+      "update": {
+        "title": "Gönderi/İlan Güncelleme",
+        "description": "Gönderi/İlan güncelleme yetkisi, gönderi/ilan profilinde gönderi/ilan güncelleme yetkisine sahiptir."
+      },
+      "delete": {
+        "title": "Gönderi/İlan Silme",
+        "description": "Gönderi/İlan silme yetkisi, gönderi/ilan profilinde gönderi/ilan silme yetkisine sahiptir."
+      },
+      "enable": {
+        "title": "Aktif Etme",
+        "description": "Aktif etme yetkisi, gönderi/ilan profilinde aktif etme yetkisine sahiptir."
+      },
+      "disable": {
+        "title": "Pasif Etme",
+        "description": "Pasif etme yetkisi, gönderi/ilan profilinde pasif etme yetkisine sahiptir."
+      },
+      "re_order": {
+        "title": "Sıralama",
+        "description": "Sıralama yetkisi, gönderi/ilan profilinde sıralama yetkisine sahiptir."
+      },
+      "restore": {
+        "title": "Geri Yükleme",
+        "description": "Geri yükleme yetkisi, gönderi/ilan profilinde geri yükleme yetkisine sahiptir."
+      },
+      "list": {
+        "title": "Listeleme",
+        "description": "Listeleme yetkisi, gönderi/ilan profilinde listeleme yetkisine sahiptir."
+      },
+      "view": {
+        "title": "Görüntüleme",
+        "description": "Görüntüleme yetkisi, gönderi/ilan profilinde görüntüleme yetkisine sahiptir."
+      }
+    },
+    "post_log": {
+      "super": {
+        "title": "Süper Yetkili",
+        "description": "Süper yetkili, gönderi/ilan log profilinde tam yetkiye sahiptir."
+      },
+      "view": {
+        "title": "Görüntüleme",
+        "description": "Görüntüleme yetkisi, gönderi/ilan log profilinde görüntüleme yetkisine sahiptir."
+      },
+      "count": {
+        "title": "Sayma",
+        "description": "Sayma yetkisi, gönderi/ilan log profilinde sayma yetkisine sahiptir."
+      }
+    },
+    "owner_log": {
+      "super": {
+        "title": "Süper Yetkili",
+        "description": "Süper yetkili, satıcı log profilinde tam yetkiye sahiptir."
+      },
+      "view": {
+        "title": "Görüntüleme",
+        "description": "Görüntüleme yetkisi, satıcı log profilinde görüntüleme yetkisine sahiptir."
+      },
+      "count": {
+        "title": "Sayma",
+        "description": "Sayma yetkisi, satıcı log profilinde sayma yetkisine sahiptir."
+      }
+    }
+  }
+}
