@@ -1,1 +1,27 @@
-{}
+{
+  "meta": {
+    "title": "Organization Invitation",
+    "description": "On this page you can see the details of an invitation and accept the invitation.",
+    "keywords": "invitation, organization, accept invitation, decline invitation, invitation details"
+  },
+  "title": "Organization Invitation",
+  "description": "You have been invited by <0>{{creator}}</0> to join the <1>{{owner}}</1> organization. Please click the button below to accept the invitation. If you do not want to accept the invitation, please Ignore this invitation.",
+  "notfound": {
+    "title": "Invitation Not Found",
+    "description": "This invitation was not found. Please make sure the invitation is correct."
+  },
+  "used": {
+    "title": "Invitation Used",
+    "description": "This invitation has been used before. Please get a new invitation."
+  },
+  "deleted": {
+    "title": "Invitation Deleted",
+    "description": "This invitation has been deleted by the organization administrators. Please request a new invitation."
+  },
+  "timeout": {
+    "title": "Invitation Expired",
+    "description": "This invitation has expired. Please request a new invitation."
+  },
+  "join": "Accept Invitation",
+  "success": "Invitation accepted successfully."
+}

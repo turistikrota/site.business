@@ -1,0 +1,26 @@
+{
+  "fields": {
+    "nickName": "Nickname",
+    "realName": "Real Name",
+    "ownerType": "Seller Type",
+    "firstName": "FirstName",
+    "lastName": "Surname",
+    "identityNumber": "TC Identity Number",
+    "serialNumber": "Serial Number",
+    "province": "Province",
+    "district": "District",
+    "address": "Address",
+    "dateOfBirth": "Date of Birth",
+    "taxNumber": "Tax Number",
+    "corporationType": "Corporate Type",
+    "lang": "Language",
+    "email": "Email"
+  },
+  "required": "The {{field}} field is required",
+  "invalid": "The {{field}} field is invalid",
+  "either": "The field {{field}} must be {{value1}} or {{value2}}",
+  "requiredForIndividual": "The {{field}} field is required for individual sellers",
+  "requiredForCorporate": "The {{field}} field is required for enterprise sellers",
+  "individual": "Individual",
+  "corporation": "Corporate"
+}
