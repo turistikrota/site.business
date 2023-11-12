@@ -80,8 +80,6 @@ export function isOwnerListItem(data: any): data is OwnerListItem {
     typeof data === 'object' &&
     typeof data.nickName === 'string' &&
     typeof data.realName === 'string' &&
-    typeof data.avatarURL === 'string' &&
-    typeof data.coverURL === 'string' &&
     typeof data.ownerType === 'string' &&
     typeof data.isVerified === 'boolean' &&
     typeof data.isEnabled === 'boolean' &&

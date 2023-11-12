@@ -1,15 +1,19 @@
 import { Services, apiUrl } from '@/config/services'
 import { httpClient } from '@/http/client'
 import { useAccount } from '@/layouts/AccountSelectionLayout'
+import { getStaticRoute } from '@/static/page'
 import { InviteItem, isInviteItem } from '@/types/owner'
 import { useDayJS } from '@/utils/dayjs'
 import Alert from '@turistikrota/ui/alert'
 import Button from '@turistikrota/ui/button'
 import { useToast } from '@turistikrota/ui/toast'
+import { parseApiError } from '@turistikrota/ui/utils/response'
 import React, { useEffect, useMemo, useState } from 'react'
 import { Trans, useTranslation } from 'react-i18next'
-import { useParams } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 import Spin from 'sspin'
+
+type Callback = () => void
 
 const InviteDetail: React.FC = () => {
   const [loading, setLoading] = useState<boolean>(true)
@@ -17,6 +21,7 @@ const InviteDetail: React.FC = () => {
   const [invite, setInvite] = useState<InviteItem | undefined>(undefined)
   const toast = useToast()
   const params = useParams()
+  const navigate = useNavigate()
   const { t, i18n } = useTranslation('invite-use')
   const dayjs = useDayJS(i18n.language)
 
@@ -38,7 +43,48 @@ const InviteDetail: React.FC = () => {
     fetchInvite()
   }, [])
 
-  const join = () => {}
+  const refreshAuth = (cb: Callback | undefined = undefined) => {
+    setLoading(true)
+    httpClient
+      .put(apiUrl(Services.Auth, `/refresh`))
+      .then((res) => {
+        if (res.status === 200) {
+          if (typeof cb === 'function') cb()
+        }
+      })
+      .catch((err: any) => {
+        parseApiError({
+          error: err?.response?.data,
+          toast,
+        })
+      })
+      .finally(() => {
+        setLoading(false)
+      })
+  }
+
+  const join = () => {
+    setLoading(true)
+    httpClient
+      .post(apiUrl(Services.Owner, `/join/${params.uuid}`))
+      .then((res) => {
+        if (res.status === 200) {
+          toast.success(t('success'))
+          refreshAuth(() => {
+            navigate(getStaticRoute(i18n.language).owner.details.default)
+          })
+        }
+      })
+      .catch((err: any) => {
+        parseApiError({
+          error: err?.response?.data,
+          toast,
+        })
+      })
+      .finally(() => {
+        setLoading(false)
+      })
+  }
 
   const fetchInvite = () => {
     httpClient
