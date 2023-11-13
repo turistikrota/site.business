@@ -3,6 +3,8 @@ import UserCollapseItem from '@/components/UserCollapseItem'
 import { Services, apiUrl } from '@/config/services'
 import { useCurrentOwner } from '@/contexts/currentOwner'
 import { httpClient } from '@/http/client'
+import RoleGuardView from '@/layouts/RoleGuard'
+import { OwnerRoles } from '@/static/role'
 import { OwnerUserListItem, isOwnerUserListResponse } from '@/types/owner'
 import ContentLoader from '@turistikrota/ui/loader'
 import { useToast } from '@turistikrota/ui/toast'
@@ -43,13 +45,15 @@ const UsersView: React.FC = () => {
   if (loading) return <ContentLoader noMargin />
 
   return (
-    <MetaWrapper title={t('meta.title')} description={t('meta.description')} keywords={t('meta.keywords')}>
-      <section className='p-4 lg:pl-0 space-y-5 max-w-4xl mx-auto relative'>
-        {users.map((user) => (
-          <UserCollapseItem user={user} key={user.name} />
-        ))}
-      </section>
-    </MetaWrapper>
+    <RoleGuardView roles={[OwnerRoles.Super, OwnerRoles.UserList]}>
+      <MetaWrapper title={t('meta.title')} description={t('meta.description')} keywords={t('meta.keywords')}>
+        <section className='p-4 lg:pl-0 space-y-5 max-w-4xl mx-auto relative'>
+          {users.map((user) => (
+            <UserCollapseItem user={user} key={user.name} />
+          ))}
+        </section>
+      </MetaWrapper>
+    </RoleGuardView>
   )
 }
 

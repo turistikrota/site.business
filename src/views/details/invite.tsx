@@ -1,9 +1,12 @@
 import KeyValue from '@/components/KeyValue'
 import MetaWrapper from '@/components/MetaWrapper'
+import RoleGuard from '@/components/RoleGuard'
 import { Services, apiUrl } from '@/config/services'
 import { useCurrentOwner } from '@/contexts/currentOwner'
 import { httpClient } from '@/http/client'
+import RoleGuardView from '@/layouts/RoleGuard'
 import { getStaticRoute } from '@/static/page'
+import { OwnerRoles } from '@/static/role'
 import { InviteItem, isInviteItemListResponse } from '@/types/owner'
 import { useDayJS } from '@/utils/dayjs'
 import Button from '@turistikrota/ui/button'
@@ -100,54 +103,60 @@ function InviteMainView() {
     return t('fields.days_ago', { days: diff })
   }
   return (
-    <MetaWrapper title={t('meta.title')} description={t('meta.description')} keywords={t('meta.keywords')}>
-      <section className='p-4 lg:pl-0 space-y-5 max-w-4xl mx-auto relative'>
-        <div className='flex'>
-          <Link to={getStaticRoute(i18n.language).owner.details.inviteCreate}>
-            <Button size='sm' block={false} variant='primary'>
-              {t('fields.create')}
-            </Button>
-          </Link>
-        </div>
-        <div className='w-full grid grid-cols-12 gap-3'>
-          {invites.reverse().map((invite) => (
-            <div key={invite.uuid} className='col-span-12 md:col-span-6 bg-second rounded-md p-2'>
-              <KeyValue>
-                <KeyValue.Item label={t('fields.email')} value={invite.email} />
-                <KeyValue.Item
-                  label={t('fields.state')}
-                  value={t(`states.${calcState(invite)}`)}
-                  valueClassName={StateColors[calcState(invite)]}
-                />
-                <KeyValue.Item
-                  label={t('fields.creator')}
-                  value={`@${invite.creatorUserName}`}
-                  valueClassName='text-secondary'
-                />
-                {invite.updatedAt ? (
-                  <KeyValue.Item label={t('fields.updated_at')} value={calcRelativeUpdateTime(invite.updatedAt)} />
-                ) : (
-                  <KeyValue.Item label={t('fields.created_at')} value={calcRelativeUpdateTime(invite.createdAt)} />
-                )}
-              </KeyValue>
-              {calcState(invite) === 'pending' && (
-                <div className='flex justify-center mt-2 border-t pt-2'>
-                  <Button
-                    block={false}
-                    size='sm'
-                    variant='error'
-                    disabled={loadingIds.includes(invite.uuid)}
-                    onClick={() => deleteInvite(invite.uuid)}
-                  >
-                    {t(loadingIds.includes(invite.uuid) ? 'fields.deleting' : 'fields.delete')}
-                  </Button>
-                </div>
-              )}
+    <RoleGuardView roles={[OwnerRoles.Super, OwnerRoles.InviteView]}>
+      <MetaWrapper title={t('meta.title')} description={t('meta.description')} keywords={t('meta.keywords')}>
+        <section className='p-4 lg:pl-0 space-y-5 max-w-4xl mx-auto relative'>
+          <RoleGuard roles={[OwnerRoles.Super, OwnerRoles.InviteCreate]}>
+            <div className='flex'>
+              <Link to={getStaticRoute(i18n.language).owner.details.inviteCreate}>
+                <Button size='sm' block={false} variant='primary'>
+                  {t('fields.create')}
+                </Button>
+              </Link>
             </div>
-          ))}
-        </div>
-      </section>
-    </MetaWrapper>
+          </RoleGuard>
+          <div className='w-full grid grid-cols-12 gap-3'>
+            {invites.reverse().map((invite) => (
+              <div key={invite.uuid} className='col-span-12 md:col-span-6 bg-second rounded-md p-2'>
+                <KeyValue>
+                  <KeyValue.Item label={t('fields.email')} value={invite.email} />
+                  <KeyValue.Item
+                    label={t('fields.state')}
+                    value={t(`states.${calcState(invite)}`)}
+                    valueClassName={StateColors[calcState(invite)]}
+                  />
+                  <KeyValue.Item
+                    label={t('fields.creator')}
+                    value={`@${invite.creatorUserName}`}
+                    valueClassName='text-secondary'
+                  />
+                  {invite.updatedAt ? (
+                    <KeyValue.Item label={t('fields.updated_at')} value={calcRelativeUpdateTime(invite.updatedAt)} />
+                  ) : (
+                    <KeyValue.Item label={t('fields.created_at')} value={calcRelativeUpdateTime(invite.createdAt)} />
+                  )}
+                </KeyValue>
+                <RoleGuard roles={[OwnerRoles.Super, OwnerRoles.InviteDelete]}>
+                  {calcState(invite) === 'pending' && (
+                    <div className='flex justify-center mt-2 border-t pt-2'>
+                      <Button
+                        block={false}
+                        size='sm'
+                        variant='error'
+                        disabled={loadingIds.includes(invite.uuid)}
+                        onClick={() => deleteInvite(invite.uuid)}
+                      >
+                        {t(loadingIds.includes(invite.uuid) ? 'fields.deleting' : 'fields.delete')}
+                      </Button>
+                    </div>
+                  )}
+                </RoleGuard>
+              </div>
+            ))}
+          </div>
+        </section>
+      </MetaWrapper>
+    </RoleGuardView>
   )
 }
 

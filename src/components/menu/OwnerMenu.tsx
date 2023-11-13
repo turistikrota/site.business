@@ -1,4 +1,6 @@
+import { useBodyguard } from '@/hooks/permission'
 import { RouteType, getStaticRoute } from '@/static/page'
+import { OwnerRoles } from '@/static/role'
 import { Colors } from '@/types/colors'
 import { isWindowLtLg } from '@/utils/responsive'
 import Condition from '@turistikrota/ui/condition'
@@ -23,6 +25,7 @@ type MenuItem = {
   title: Pages
   icon: string
   href: (r: RouteType) => string
+  roles?: string[]
   badge?: number
   badgeType?: Colors
   color?: string
@@ -48,11 +51,13 @@ const menuItems: MenuItem[] = [
   {
     title: 'users',
     icon: 'bx bx-user',
+    roles: [OwnerRoles.Super, OwnerRoles.UserList],
     href: (r: RouteType) => r.owner.details.users,
   },
   {
     title: 'invite',
     icon: 'bx bx-mail-send',
+    roles: [OwnerRoles.Super, OwnerRoles.InviteView],
     href: (r: RouteType) => r.owner.details.invite,
   },
   {
@@ -75,6 +80,7 @@ const menuItems: MenuItem[] = [
 export default function OwnerMenu({ isDetail }: Props) {
   const menuContext = useContext(OwnerDetailContext)
   const isDesktop = useIsDesktop()
+  const bodyguard = useBodyguard()
   const { t, i18n } = useTranslation('menu')
 
   const onMenuClick = () => {
@@ -97,26 +103,31 @@ export default function OwnerMenu({ isDetail }: Props) {
       </Condition>
       <OwnerMenuProfileCard open={isDetail && !isDesktop ? menuContext?.openMenu : true} />
       <div className='grid gap-4 w-full mt-5'>
-        {menuItems.map((el, i) => (
-          <OwnerMenuItem
-            key={i}
-            isLink={!!el.href}
-            title={t(`links.${el.title}`)}
-            aria-label={t(`links.${el.title}`)}
-            href={el.href(getStaticRoute(i18n.language))}
-            onClick={onMenuClick}
-          >
-            <OwnerMenuItem.IconWrapper open={isDetail && !isDesktop ? !menuContext?.openMenu : false}>
-              <OwnerMenuItem.Icon icon={el.icon} className={el.color} />
-              <OwnerMenuItem.Badge type={el.badgeType as Colors} visible={!!el.badge}>
-                {el.badge}
-              </OwnerMenuItem.Badge>
-            </OwnerMenuItem.IconWrapper>
-            <OwnerMenuItem.Content isLink={!!el.href} hidden={isDetail && !isDesktop ? !menuContext?.openMenu : false}>
-              {t(`links.${el.title}`)}
-            </OwnerMenuItem.Content>
-          </OwnerMenuItem>
-        ))}
+        {menuItems
+          .filter((m) => (m.roles ? bodyguard.check(...m.roles) : true))
+          .map((el, i) => (
+            <OwnerMenuItem
+              key={i}
+              isLink={!!el.href}
+              title={t(`links.${el.title}`)}
+              aria-label={t(`links.${el.title}`)}
+              href={el.href(getStaticRoute(i18n.language))}
+              onClick={onMenuClick}
+            >
+              <OwnerMenuItem.IconWrapper open={isDetail && !isDesktop ? !menuContext?.openMenu : false}>
+                <OwnerMenuItem.Icon icon={el.icon} className={el.color} />
+                <OwnerMenuItem.Badge type={el.badgeType as Colors} visible={!!el.badge}>
+                  {el.badge}
+                </OwnerMenuItem.Badge>
+              </OwnerMenuItem.IconWrapper>
+              <OwnerMenuItem.Content
+                isLink={!!el.href}
+                hidden={isDetail && !isDesktop ? !menuContext?.openMenu : false}
+              >
+                {t(`links.${el.title}`)}
+              </OwnerMenuItem.Content>
+            </OwnerMenuItem>
+          ))}
         <LogoutButton hideContent={isDetail && !isDesktop ? !menuContext?.openMenu : false} />
       </div>
     </div>

@@ -1,5 +1,6 @@
 import { Services, apiUrl } from '@/config/services'
 import { httpClient } from '@/http/client'
+import { OwnerLogRoles, OwnerRoles, PostLogRoles, PostRoles } from '@/static/role'
 import LineForm from '@turistikrota/ui/form/line'
 import ToggleButton from '@turistikrota/ui/form/toggle'
 import { useToast } from '@turistikrota/ui/toast'
@@ -36,42 +37,19 @@ type ItemProps = {
 const StaticData: RoleGroups[] = [
   {
     key: 'owner',
-    roles: [
-      'owner.super',
-      'owner.member',
-      'owner.user_remove',
-      'owner.user_perm_add',
-      'owner.user_perm_remove',
-      'owner.enable',
-      'owner.disable',
-      'owner.user_list',
-      'owner.invite_create',
-      'owner.invite_delete',
-      'owner.invite_view',
-    ],
+    roles: Object.values(OwnerRoles),
   },
   {
     key: 'post',
-    roles: [
-      'post.super',
-      'post.create',
-      'post.update',
-      'post.delete',
-      'post.enable',
-      'post.disable',
-      'post.re_order',
-      'post.restore',
-      'post.list',
-      'post.view',
-    ],
+    roles: Object.values(PostRoles),
   },
   {
     key: 'post_log',
-    roles: ['post_log.super', 'post_log.view', 'post_log.count'],
+    roles: Object.values(PostLogRoles),
   },
   {
     key: 'owner_log',
-    roles: ['owner_log.super', 'owner_log.view', 'owner_log.count'],
+    roles: Object.values(OwnerLogRoles),
   },
 ]
 
