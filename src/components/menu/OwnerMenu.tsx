@@ -44,11 +44,6 @@ const menuItems: MenuItem[] = [
     href: (r: RouteType) => r.owner.details.edit,
   },
   {
-    title: 'notification',
-    icon: 'bx bx-bell',
-    href: (r: RouteType) => r.owner.details.notification,
-  },
-  {
     title: 'posts',
     icon: 'bx bx-grid',
     roles: [OwnerRoles.Super, PostRoles.Super, PostRoles.List],
@@ -65,6 +60,11 @@ const menuItems: MenuItem[] = [
     icon: 'bx bx-mail-send',
     roles: [OwnerRoles.Super, OwnerRoles.InviteView],
     href: (r: RouteType) => r.owner.details.invite,
+  },
+  {
+    title: 'notification',
+    icon: 'bx bx-bell',
+    href: (r: RouteType) => r.owner.details.notification,
   },
   {
     title: 'settings',
