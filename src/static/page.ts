@@ -28,6 +28,10 @@ export type RouteType = {
       users: string
       security: string
       settings: string
+      post: {
+        list: string
+        create: string
+      }
     }
     inviteUse: string
   }
@@ -77,6 +81,10 @@ const Routes: Record<Locales, RouteType> = {
         invite: '/detay/davetler',
         inviteCreate: '/detay/davet-et',
         users: '/detay/kullanicilar',
+        post: {
+          create: '/detay/ilan-ekle',
+          list: '/detay/ilanlar',
+        },
       },
       inviteUse: '/davet',
     },
@@ -116,6 +124,10 @@ const Routes: Record<Locales, RouteType> = {
         invite: '/detail/invites',
         inviteCreate: '/detail/invite',
         users: '/detail/users',
+        post: {
+          create: '/detail/add-post',
+          list: '/detail/posts',
+        },
       },
       inviteUse: '/invite',
     },
