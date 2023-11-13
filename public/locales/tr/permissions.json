@@ -17,39 +17,39 @@
       },
       "user_remove": {
         "title": "Kullanıcı Silme",
-        "description": "Kullanıcı silme yetkisi, satıcı profilinde kullanıcı silme yetkisine sahiptir."
+        "description": "Bu yetki ile satıcı profilinde kullanıcı silinebilir."
       },
       "user_perm_add": {
         "title": "Kullanıcı Yetki Ekleme",
-        "description": "Kullanıcı yetki ekleme yetkisi, satıcı profilinde kullanıcı yetki ekleme yetkisine sahiptir."
+        "description": "Bu yetki ile satıcı profilinde herhangi bir kullanıcıya yetki eklenebilir."
       },
       "user_perm_remove": {
         "title": "Kullanıcı Yetki Silme",
-        "description": "Kullanıcı yetki silme yetkisi, satıcı profilinde kullanıcı yetki silme yetkisine sahiptir."
+        "description": "Bu yetki ile satıcı profilinde herhangi bir kullanıcıdan yetki silinebilir."
       },
       "enable": {
         "title": "Aktif Etme",
-        "description": "Aktif etme yetkisi, satıcı profilinde aktif etme yetkisine sahiptir."
+        "description": "Bu yetki ile satıcı profili aktif edilebilir."
       },
       "disable": {
         "title": "Pasif Etme",
-        "description": "Pasif etme yetkisi, satıcı profilinde pasif etme yetkisine sahiptir."
+        "description": "Bu yetki ile satıcı profili pasif edilebilir."
       },
       "user_list": {
         "title": "Kullanıcı Listeleme",
-        "description": "Kullanıcı Listeleme yetkisi, satıcı profilindeki kullanıcıları listeleme yetkisine sahiptir."
+        "description": "Bu yetki ile satıcı profilinde kullanıcı listesi görüntülenebilir."
       },
       "invite_create": {
         "title": "Davetiye Oluşturma",
-        "description": "Davetiye oluşturma yetkisi, satıcı profilinde davetiye oluşturma yetkisine sahiptir."
+        "description": "Bu yetki ile satıcı profilinde başka kullanıcıları satıcı profiline davet etmek için davetiye oluşturulabilir."
       },
       "invite_delete": {
         "title": "Davetiye Silme",
-        "description": "Davetiye silme yetkisi, satıcı profilinde davetiye silme yetkisine sahiptir."
+        "description": "Bu yetki ile satıcı profilinde davetiye silinebilir."
       },
       "invite_view": {
         "title": "Davetiye Görüntüleme",
-        "description": "Davetiye görüntüleme yetkisi, satıcı profilinde davetiye görüntüleme yetkisine sahiptir."
+        "description": "Bu yetki ile satıcı profilinde davetiyeler görüntülenebilir."
       }
     },
     "post": {
@@ -59,39 +59,39 @@
       },
       "create": {
         "title": "Gönderi/İlan Oluşturma",
-        "description": "Gönderi/İlan oluşturma yetkisi, gönderi/ilan profilinde gönderi/ilan oluşturma yetkisine sahiptir."
+        "description": "Bu yetki ile gönderi/ilan profilinde gönderi/ilan oluşturulabilir."
       },
       "update": {
         "title": "Gönderi/İlan Güncelleme",
-        "description": "Gönderi/İlan güncelleme yetkisi, gönderi/ilan profilinde gönderi/ilan güncelleme yetkisine sahiptir."
+        "description": "Bu yetki ile gönderi/ilan profilinde gönderi/ilan güncellenebilir."
       },
       "delete": {
         "title": "Gönderi/İlan Silme",
-        "description": "Gönderi/İlan silme yetkisi, gönderi/ilan profilinde gönderi/ilan silme yetkisine sahiptir."
+        "description": "Bu yetki ile gönderi/ilan profilinde gönderi/ilan silinebilir."
       },
       "enable": {
         "title": "Aktif Etme",
-        "description": "Aktif etme yetkisi, gönderi/ilan profilinde aktif etme yetkisine sahiptir."
+        "description": "Bu yetki ile gönderi/ilan profilinde gönderi/ilan aktif edilebilir."
       },
       "disable": {
         "title": "Pasif Etme",
-        "description": "Pasif etme yetkisi, gönderi/ilan profilinde pasif etme yetkisine sahiptir."
+        "description": "Bu yetki ile gönderi/ilan profilinde gönderi/ilan pasif edilebilir."
       },
       "re_order": {
         "title": "Sıralama",
-        "description": "Sıralama yetkisi, gönderi/ilan profilinde sıralama yetkisine sahiptir."
+        "description": "Bu yetki ile gönderi/ilan profilinde gönderi/ilan sıralaması değiştirilebilir."
       },
       "restore": {
         "title": "Geri Yükleme",
-        "description": "Geri yükleme yetkisi, gönderi/ilan profilinde geri yükleme yetkisine sahiptir."
+        "description": "Bu yetki ile gönderi/ilan profilinde silinen bir gönderi/ilan geri yüklenebilir."
       },
       "list": {
         "title": "Listeleme",
-        "description": "Listeleme yetkisi, gönderi/ilan profilinde listeleme yetkisine sahiptir."
+        "description": "Bu yetki ile gönderi/ilan profilinde gönderi/ilan listesi görüntülenebilir."
       },
       "view": {
         "title": "Görüntüleme",
-        "description": "Görüntüleme yetkisi, gönderi/ilan profilinde görüntüleme yetkisine sahiptir."
+        "description": "Bu yetki ile gönderi/ilan profilinde gönderi/ilan detayı görüntülenebilir."
       }
     },
     "post_log": {
@@ -101,11 +101,11 @@
       },
       "view": {
         "title": "Görüntüleme",
-        "description": "Görüntüleme yetkisi, gönderi/ilan log profilinde görüntüleme yetkisine sahiptir."
+        "description": "Bu yetki ile gönderi/ilan log profilinde görüntüleme yapılabilir."
       },
       "count": {
         "title": "Sayma",
-        "description": "Sayma yetkisi, gönderi/ilan log profilinde sayma yetkisine sahiptir."
+        "description": "Bu yetki ile gönderi/ilan log profilinde sayma yapılabilir."
       }
     },
     "owner_log": {
@@ -115,11 +115,11 @@
       },
       "view": {
         "title": "Görüntüleme",
-        "description": "Görüntüleme yetkisi, satıcı log profilinde görüntüleme yetkisine sahiptir."
+        "description": "Bu yetki ile satıcı log profilinde görüntüleme yapılabilir."
       },
       "count": {
         "title": "Sayma",
-        "description": "Sayma yetkisi, satıcı log profilinde sayma yetkisine sahiptir."
+        "description": "Bu yetki ile satıcı log profilinde sayma yapılabilir."
       }
     }
   },
