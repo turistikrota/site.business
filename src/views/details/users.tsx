@@ -4,7 +4,6 @@ import { Services, apiUrl } from '@/config/services'
 import { useCurrentOwner } from '@/contexts/currentOwner'
 import { httpClient } from '@/http/client'
 import { OwnerUserListItem, isOwnerUserListResponse } from '@/types/owner'
-import { useDayJS } from '@/utils/dayjs'
 import ContentLoader from '@turistikrota/ui/loader'
 import { useToast } from '@turistikrota/ui/toast'
 import { parseApiError } from '@turistikrota/ui/utils/response'
@@ -12,11 +11,9 @@ import React, { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 
 const UsersView: React.FC = () => {
-  const { t, i18n } = useTranslation('users')
-  const dayjs = useDayJS(i18n.language)
+  const { t } = useTranslation('users')
   const [users, setUsers] = useState<OwnerUserListItem[]>([])
   const [loading, setLoading] = useState<boolean>(false)
-  const [loadingIds, setLoadingIds] = useState<string[]>([])
   const [current] = useCurrentOwner()
   const toast = useToast()
 

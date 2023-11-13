@@ -4,6 +4,14 @@
     "description": "Organizasyona ait kullanıcıları görüntüleyin, düzenleyin ve yönetin.",
     "keywords": "kullanıcılar, organizasyon kullanıcıları"
   },
+  "role": {
+    "title": "Rol Yönetimi",
+    "description": "Aşağıdaki alanda bu kullanıcının hangi modüllerde hangi yetkilere sahip olduğunu görebilir ve düzenleyebilirsiniz.",
+    "info": {
+      "title": "Rol Düzenleme Hk.",
+      "desc": "Rol ekleme veya kaldırma rolünüz olmayabilir. Rol eklemeye veya kaldırmaya çalıştığınızda bir hata ile karşılaşırsanız lütfen organizasyon yöneticiniz ile iletişime geçin."
+    }
+  },
   "joinAt": "{{date}} tarihinde katıldı.",
   "totalRole": "Toplam {{total}} rolü var."
 }

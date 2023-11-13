@@ -79,7 +79,7 @@ const RoleGroup: React.FC<React.PropsWithChildren<GroupProps>> = ({ title, child
   const { t } = useTranslation('permissions')
   return (
     <div className='w-full flex flex-col mb-2 border-b pb-2'>
-      <div className='text-lg text-left font-bold text-gray-800 dark:text-gray-200 mb-2'>{t(`titles.${title}`)}</div>
+      <div className='text-md text-left font-bold text-gray-800 dark:text-gray-200 mb-2'>{t(`titles.${title}`)}</div>
       <div className='grid grid-cols-12'>{children}</div>
     </div>
   )
