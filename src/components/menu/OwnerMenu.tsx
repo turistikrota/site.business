@@ -1,6 +1,6 @@
 import { useBodyguard } from '@/hooks/permission'
 import { RouteType, getStaticRoute } from '@/static/page'
-import { OwnerRoles } from '@/static/role'
+import { OwnerRoles, PostRoles } from '@/static/role'
 import { Colors } from '@/types/colors'
 import { isWindowLtLg } from '@/utils/responsive'
 import Condition from '@turistikrota/ui/condition'
@@ -47,6 +47,12 @@ const menuItems: MenuItem[] = [
     title: 'notification',
     icon: 'bx bx-bell',
     href: (r: RouteType) => r.owner.details.notification,
+  },
+  {
+    title: 'posts',
+    icon: 'bx bx-grid',
+    roles: [OwnerRoles.Super, PostRoles.Super, PostRoles.List],
+    href: (r: RouteType) => r.owner.details.post.list,
   },
   {
     title: 'users',
