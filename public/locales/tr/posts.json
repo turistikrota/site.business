@@ -1,0 +1,21 @@
+{
+  "create": {
+    "meta": {
+      "title": "İlan Oluştur",
+      "description": "Bu sayfayı kullanarak yeni bir ilan oluşturabilirsiniz.",
+      "keywords": "ilan, oluştur, yeni, yeni ilan, ilan oluştur"
+    }
+  },
+  "form": {
+    "title": "Başlık",
+    "description": "Açıklama",
+    "meta": {
+      "title": "Meta Bilgileri",
+      "subtitle": "Bu bölümde ilanınızın meta bilgilerini girebilirsiniz."
+    }
+  },
+  "config": {
+    "tr": "Türkçe",
+    "en": "İngilizce"
+  }
+}

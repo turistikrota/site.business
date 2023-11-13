@@ -6,6 +6,8 @@ import { initReactI18next } from 'react-i18next'
 
 export const locale = getCurrentServeLocale() ?? 'tr'
 
+export const Locales = ['tr', 'en'] as const
+
 i18n
   .use(Backend)
   .use(LanguageDetector)
