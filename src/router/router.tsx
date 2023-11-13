@@ -75,7 +75,7 @@ const trRoutes: RouteObject[] = [
             path: 'ilanlar',
             lazy: () => import('@/views/details/post/posts'),
             handle: {
-              page: 'post-list',
+              page: 'posts',
             },
           },
           {
@@ -181,7 +181,7 @@ const enRoutes: RouteObject[] = [
             path: 'posts',
             lazy: () => import('@/views/details/post/posts'),
             handle: {
-              page: 'post-list',
+              page: 'posts',
             },
           },
           {
