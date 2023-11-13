@@ -19,3 +19,8 @@ export const useBodyguard = (): Bodyguard => {
     check,
   }
 }
+
+export const useGuard = (...roles: string[]): boolean => {
+  const { check } = useBodyguard()
+  return check(...roles)
+}
