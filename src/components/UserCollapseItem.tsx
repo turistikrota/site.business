@@ -1,3 +1,4 @@
+import { useCurrentOwner } from '@/contexts/currentOwner'
 import { OwnerUserListItem } from '@/types/owner'
 import { useDayJS } from '@/utils/dayjs'
 import React, { useState } from 'react'
@@ -11,6 +12,7 @@ type Props = {
 const UserCollapseItem: React.FC<Props> = ({ user }) => {
   const { t, i18n } = useTranslation('users')
   const dayjs = useDayJS(i18n.language)
+  const [current] = useCurrentOwner()
   const [open, setOpen] = useState<boolean>(false)
   return (
     <div className='flex flex-col  bg-second rounded-md p-2'>
@@ -47,7 +49,12 @@ const UserCollapseItem: React.FC<Props> = ({ user }) => {
       </div>
       <div className={` transition-all duration-200 ${open ? 'opacity-100 block' : 'opacity-0 hidden'}`}>
         <div className='flex flex-col gap-2 mt-2'>
-          <OwnerRoleToggle roles={user.roles} />
+          <OwnerRoleToggle
+            roles={user.roles}
+            userRoles={current.user.roles}
+            userName={user.name}
+            ownerName={current.owner.nickName}
+          />
         </div>
       </div>
     </div>

@@ -1,7 +1,12 @@
+import { Services, apiUrl } from '@/config/services'
+import { httpClient } from '@/http/client'
 import LineForm from '@turistikrota/ui/form/line'
 import ToggleButton from '@turistikrota/ui/form/toggle'
-import React from 'react'
+import { useToast } from '@turistikrota/ui/toast'
+import { parseApiError } from '@turistikrota/ui/utils/response'
+import React, { useState } from 'react'
 import { useTranslation } from 'react-i18next'
+import Spin from 'sspin'
 
 type RoleGroups = {
   key: string
@@ -10,6 +15,9 @@ type RoleGroups = {
 
 type Props = {
   roles: string[]
+  userRoles: string[]
+  userName: string
+  ownerName: string
 }
 
 type GroupProps = {
@@ -21,6 +29,8 @@ type ItemProps = {
   isExists: boolean
   canPermissionAdd: boolean
   canPermissionRemove: boolean
+  userName: string
+  ownerName: string
 }
 
 const StaticData: RoleGroups[] = [
@@ -75,53 +85,99 @@ const RoleGroup: React.FC<React.PropsWithChildren<GroupProps>> = ({ title, child
   )
 }
 
-const RoleItem: React.FC<ItemProps> = ({ role, isExists, canPermissionAdd, canPermissionRemove }) => {
+const RoleItem: React.FC<ItemProps> = ({
+  role,
+  isExists,
+  canPermissionAdd,
+  canPermissionRemove,
+  ownerName,
+  userName,
+}) => {
+  const [loading, setLoading] = useState<boolean>(false)
+  const toast = useToast()
   const { t } = useTranslation('permissions')
 
   const handleChange = (checked: boolean) => {
     if (checked && canPermissionAdd) {
-      console.log('add permission')
-      //   addPermission(role)
+      setLoading(true)
+      httpClient
+        .patch(apiUrl(Services.Owner, `/~${ownerName}/user/@${userName}/add-role`), {
+          permission: role,
+        })
+        .then(() => {
+          toast.success(t('add-success'))
+        })
+        .catch((err: any) => {
+          parseApiError({
+            error: err?.response?.data,
+            toast,
+          })
+        })
+        .finally(() => {
+          setLoading(false)
+        })
     }
     if (!checked && canPermissionRemove) {
-      console.log('remove permission')
-      // removePermission(role)
+      setLoading(true)
+      httpClient
+        .patch(apiUrl(Services.Owner, `/~${ownerName}/user/@${userName}/rm-role`), {
+          permission: role,
+        })
+        .then(() => {
+          toast.success(t('rm-success'))
+        })
+        .catch((err: any) => {
+          parseApiError({
+            error: err?.response?.data,
+            toast,
+          })
+        })
+        .finally(() => {
+          setLoading(false)
+        })
     }
   }
   return (
-    <LineForm className='rounded-md col-span-12 hover:bg-third p-2'>
-      <LineForm.Left>
-        <div className='text-md text-left font-semibold text-gray-800 dark:text-gray-200'>
-          {t(`roles.${role}.title`)}
-        </div>
-        <LineForm.Left.Description>{t(`roles.${role}.description`)}</LineForm.Left.Description>
-      </LineForm.Left>
-      <LineForm.Right>
-        <ToggleButton
-          defaultChecked={isExists}
-          title={t(`roles.${role}.title`)}
-          variant='primary'
-          onChange={handleChange}
-          disabled={isExists ? !canPermissionRemove : !canPermissionAdd}
-          size='sm'
-        />
-      </LineForm.Right>
-    </LineForm>
+    <div className='col-span-12'>
+      <Spin loading={loading}>
+        <LineForm className='rounded-md hover:bg-third p-2'>
+          <LineForm.Left>
+            <div className='text-md text-left font-semibold text-gray-800 dark:text-gray-200'>
+              {t(`roles.${role}.title`)}
+            </div>
+            <LineForm.Left.Description>{t(`roles.${role}.description`)}</LineForm.Left.Description>
+          </LineForm.Left>
+          <LineForm.Right>
+            <ToggleButton
+              defaultChecked={isExists}
+              title={t(`roles.${role}.title`)}
+              variant='primary'
+              onChange={handleChange}
+              disabled={loading ? true : isExists ? !canPermissionRemove : !canPermissionAdd}
+              size='sm'
+            />
+          </LineForm.Right>
+        </LineForm>
+      </Spin>
+    </div>
   )
 }
 
-const OwnerRoleToggle: React.FC<Props> = ({ roles }) => {
+const OwnerRoleToggle: React.FC<Props> = ({ roles, userRoles, ownerName, userName }) => {
   return (
     <>
       {StaticData.map((d) => (
         <RoleGroup key={d.key} title={d.key}>
+          {}
           {d.roles.map((r) => (
             <RoleItem
               key={r}
               role={r}
+              ownerName={ownerName}
+              userName={userName}
               isExists={roles.includes(r)}
-              canPermissionAdd={roles.includes('owner.user_perm_add') || roles.includes('owner.super')}
-              canPermissionRemove={roles.includes('owner.user_perm_remove') || roles.includes('owner.super')}
+              canPermissionAdd={userRoles.includes('owner.user_perm_add') || userRoles.includes('owner.super')}
+              canPermissionRemove={userRoles.includes('owner.user_perm_remove') || userRoles.includes('owner.super')}
             />
           ))}
         </RoleGroup>

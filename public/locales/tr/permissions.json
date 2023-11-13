@@ -122,5 +122,7 @@
         "description": "Sayma yetkisi, satıcı log profilinde sayma yetkisine sahiptir."
       }
     }
-  }
+  },
+  "add-success": "Yetki başarıyla eklendi.",
+  "rm-success": "Yetki başarıyla silindi."
 }

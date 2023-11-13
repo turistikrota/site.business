@@ -4,7 +4,7 @@ import LanguageDetector from 'i18next-browser-languagedetector'
 import Backend from 'i18next-http-backend'
 import { initReactI18next } from 'react-i18next'
 
-const locale = getCurrentServeLocale() ?? 'tr'
+export const locale = getCurrentServeLocale() ?? 'tr'
 
 i18n
   .use(Backend)
