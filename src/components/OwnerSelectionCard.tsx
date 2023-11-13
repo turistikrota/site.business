@@ -1,6 +1,6 @@
-import { useTranslation } from 'react-i18next'
-import { PropsWithChildren, useState } from 'react'
 import { Config } from '@/config/config'
+import { PropsWithChildren, useState } from 'react'
+import { useTranslation } from 'react-i18next'
 
 type OwnerSelectionProps = {
   onSelect?: () => void
@@ -70,7 +70,7 @@ const Avatar = ({ src, alt }: AvatarProps) => {
       src={avatar}
       alt={alt}
       onError={() => setAvatar(Config.cdn.notFound)}
-      className='w-full max-h-16 min-h-16 h-16 object-contain'
+      className='w-full max-h-16 min-h-16 h-16 object-contain rounded-md'
     />
   )
 }

@@ -71,6 +71,13 @@ const trRoutes: RouteObject[] = [
               page: 'invite-create',
             },
           },
+          {
+            path: 'kullanicilar',
+            lazy: () => import('@/views/details/users'),
+            handle: {
+              page: 'users',
+            },
+          },
         ],
       },
     ],
@@ -154,6 +161,13 @@ const enRoutes: RouteObject[] = [
             lazy: () => import('@/views/details/invite-create'),
             handle: {
               page: 'invite-create',
+            },
+          },
+          {
+            path: 'users',
+            lazy: () => import('@/views/details/users'),
+            handle: {
+              page: 'users',
             },
           },
         ],

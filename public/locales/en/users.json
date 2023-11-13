@@ -1,0 +1,17 @@
+{
+  "meta": {
+    "title": "Users",
+    "description": "View, edit and manage users belonging to the organization.",
+    "keywords": "users, organization users"
+  },
+  "role": {
+    "title": "Role Management",
+    "description": "In the field below, you can see and edit which privileges this user has in which modules.",
+    "info": {
+      "title": "About Role Editing.",
+      "desc": "You may not have a role to add or remove roles. If you encounter an error when you try to add or remove roles, please contact your organization administrator."
+    }
+  },
+  "joinAt": "Joined on {{date}}.",
+  "totalRole": "There are a total of {{total}} roles."
+}

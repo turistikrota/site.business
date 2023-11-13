@@ -1,0 +1,128 @@
+{
+  "titles": {
+    "owner": "Seller Module",
+    "post": "Post/Announcement Module",
+    "post_log": "Post/Advertising Log Module",
+    "owner_log": "Seller Log Module"
+  },
+  "roles": {
+    "owner": {
+      "Super": {
+        "title": "Super Authority",
+        "description": "The super administrator has full authority on the seller profile."
+      },
+      "member": {
+        "title": "Member",
+        "description": "The member can only see his/her own information in the seller profile."
+      },
+      "user_remove": {
+        "title": "User Deletion",
+        "description": "With this authorization, the user can be deleted in the seller profile."
+      },
+      "user_perm_add": {
+        "title": "Adding User Authorization",
+        "description": "With this authorization, authorization can be added to any user in the seller profile."
+      },
+      "user_perm_remove": {
+        "title": "Delete User Authorization",
+        "description": "With this authorization, authorization can be deleted from any user in the seller profile."
+      },
+      "enable": {
+        "title": "Activation",
+        "description": "With this authorization, the seller profile can be activated."
+      },
+      "disable": {
+        "title": "Inactivation",
+        "description": "With this authorization, the seller profile can be disabled."
+      },
+      "user_list": {
+        "title": "User Listing",
+        "description": "With this authorization, the user list can be displayed in the seller profile."
+      },
+      "invite_create": {
+        "title": "Creating Invitation",
+        "description": "With this authority, an invitation can be created in the seller profile to invite other users to the seller profile."
+      },
+      "invite_delete": {
+        "title": "Deleting Invitation",
+        "description": "With this authority, the invitation can be deleted in the seller profile."
+      },
+      "invite_view": {
+        "title": "Viewing Invitation",
+        "description": "With this authorization, invitations can be displayed in the seller profile."
+      }
+    },
+    "post": {
+      "Super": {
+        "title": "Super Authority",
+        "description": "The super administrator has full authority on the post/advertisement profile."
+      },
+      "create": {
+        "title": "Creating a Post/Advertisement",
+        "description": "With this authority, a post/advertisement can be created in the post/advertisement profile."
+      },
+      "update": {
+        "title": "Post/Ad Update",
+        "description": "With this authorization, the post/advertisement can be updated in the post/advertisement profile."
+      },
+      "delete": {
+        "title": "Delete Post/Ad",
+        "description": "With this authority, the post/advertisement can be deleted in the post/advertisement profile."
+      },
+      "enable": {
+        "title": "Activation",
+        "description": "With this authorization, the post/advertisement can be activated in the post/advertisement profile."
+      },
+      "disable": {
+        "title": "Inactivation",
+        "description": "With this authority, the post/advertisement can be deactivated in the post/advertisement profile."
+      },
+      "re_order": {
+        "title": "Sorting",
+        "description": "With this authority, the post/advertisement order can be changed in the post/advertisement profile."
+      },
+      "restore": {
+        "title": "Restore",
+        "description": "With this authority, a deleted post/advertisement in the post/advertisement profile can be restored."
+      },
+      "list": {
+        "title": "Listing",
+        "description": "With this authorization, the post/advertisement list can be displayed in the post/advertisement profile."
+      },
+      "view": {
+        "title": "Views",
+        "description": "With this authorization, post/advertisement details can be viewed in the post/advertisement profile."
+      }
+    },
+    "post_log": {
+      "Super": {
+        "title": "Super Authority",
+        "description": "The super administrator has full authority on the post/advertisement log profile."
+      },
+      "view": {
+        "title": "Views",
+        "description": "With this authorization, the post/advertisement log profile can be viewed."
+      },
+      "count": {
+        "title": "Counting",
+        "description": "With this authority, counting can be done in the post/advertisement log profile."
+      }
+    },
+    "owner_log": {
+      "Super": {
+        "title": "Super Authority",
+        "description": "The super administrator has full authority on the seller log profile."
+      },
+      "view": {
+        "title": "Views",
+        "description": "With this authorization, the seller log profile can be viewed."
+      },
+      "count": {
+        "title": "Counting",
+        "description": "With this authority, counting can be done in the seller log profile."
+      }
+    }
+  },
+  "add-success": "Permission added successfully.",
+  "rm-success": "Permission deleted successfully."
+}

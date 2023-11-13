@@ -24,6 +24,18 @@ export type OwnerDetail = {
   user: OwnerUser
 }
 
+export type OwnerUserListItem = {
+  name: string
+  fullName: string
+  avatarUrl: string
+  roles: string[]
+  isVerified: boolean
+  isCurrent: false
+  joinAt: string
+  birthDate: string
+  createdAt: string
+}
+
 export type InviteItem = {
   creatorUserName: string
   ownerNickName: string
@@ -113,6 +125,26 @@ export function isInviteItem(data: any): data is InviteItem {
     typeof data.isDeleted === 'boolean' &&
     typeof data.isUsed === 'boolean' &&
     typeof data.uuid === 'string' &&
+    typeof data.createdAt === 'string'
+  )
+}
+
+export function isOwnerUserListResponse(data: any): data is OwnerUserListItem[] {
+  return Array.isArray(data) && data.every(isOwnerUserListItem)
+}
+
+export function isOwnerUserListItem(data: any) {
+  return (
+    typeof data === 'object' &&
+    typeof data.name === 'string' &&
+    typeof data.fullName === 'string' &&
+    typeof data.avatarUrl === 'string' &&
+    Array.isArray(data.roles) &&
+    data.roles.every((role: any) => typeof role === 'string') &&
+    typeof data.isVerified === 'boolean' &&
+    typeof data.isCurrent === 'boolean' &&
+    typeof data.joinAt === 'string' &&
+    typeof data.birthDate === 'string' &&
     typeof data.createdAt === 'string'
   )
 }
