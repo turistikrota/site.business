@@ -1,0 +1,98 @@
+import { Locales } from '@turistikrota/ui/types'
+import { useTranslation } from 'react-i18next'
+
+type Day = {
+  isPrevMonth: boolean
+  isNextMonth: boolean
+  isToday: boolean
+  value: number
+}
+
+type Week = {
+  days: Day[]
+}
+
+type Weeks = Week[]
+
+type Result = {
+  labels: string[]
+  weeks: Weeks
+  firstDay: Date
+  lastDay: Date
+  daysInMonth: number
+  dayOfWeek: number
+  daysInWeek: number
+  weeksInMonth: number
+  makeDateStr: (day: number, month: number, year: number) => string
+}
+
+const firstDays: Record<Locales, number> = {
+  tr: 1,
+  en: 7,
+}
+
+export const useCalendar = (date?: Date): Result => {
+  const { t, i18n } = useTranslation('calendar')
+  const now = date ? date : new Date()
+  const month = now.getMonth()
+  const year = now.getFullYear()
+  const weeks: Weeks = []
+  const firstDay = new Date(year, month, firstDays[i18n.language as Locales])
+  const lastDay = new Date(year, month + 1, 0)
+  const prevMonthsLastDay = new Date(year, month, 0)
+  const daysInMonth = lastDay.getDate()
+  const prevDaysInMonth = prevMonthsLastDay.getDate()
+  const dayOfWeek = firstDay.getDay()
+  const daysInWeek = 7
+  const weeksInMonth = Math.ceil((daysInMonth + dayOfWeek) / daysInWeek)
+  for (let week = 0; week < weeksInMonth; week++) {
+    weeks.push({
+      days: [],
+    })
+  }
+  let day = 1
+  let nextMonth = 0
+  const prevMonth = prevDaysInMonth - dayOfWeek + 1
+  for (let week = 0; week < weeksInMonth; week++) {
+    for (let dayOfWeek = 0; dayOfWeek < daysInWeek; dayOfWeek++) {
+      if (week === 0 && dayOfWeek < firstDay.getDay()) {
+        weeks[week].days.push({
+          isPrevMonth: true,
+          isNextMonth: false,
+          isToday: false,
+          value: prevMonth + dayOfWeek,
+        })
+      } else if (day > daysInMonth) {
+        nextMonth++
+        weeks[week].days.push({
+          isPrevMonth: false,
+          isNextMonth: true,
+          isToday: false,
+          value: nextMonth,
+        })
+      } else {
+        weeks[week].days.push({
+          isPrevMonth: false,
+          isNextMonth: false,
+          isToday: day === now.getDate(),
+          value: day,
+        })
+        day++
+      }
+    }
+  }
+  const labels: string[] = t('labels', { returnObjects: true })
+  return {
+    labels,
+    weeks,
+    firstDay,
+    lastDay,
+    daysInMonth,
+    dayOfWeek,
+    daysInWeek,
+    weeksInMonth,
+    makeDateStr: (day: number, month: number, year: number) => {
+      return `${day}.${month + 1}.${year}`
+    },
+  }
+}

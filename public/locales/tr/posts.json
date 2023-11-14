@@ -17,6 +17,10 @@
       "title": "İlan Görselleri",
       "subtitle": "Bu bölümde ilanınızın görsellerini yükleyebilirsiniz."
     },
+    "calendar": {
+      "title": "Takvim & Fiyatlandırma",
+      "subtitle": "Bu bölümde ilanınızın takvimini ve fiyatlandırmasını belirleyebilirsiniz."
+    },
     "location": {
       "title": "İlan Konumu",
       "subtitle": "Bu bölümde ilanınızın konumunu belirleyebilirsiniz.",

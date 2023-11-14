@@ -185,7 +185,7 @@ const PostFormLocationSection: React.FC<Props> = ({ values, errors, onChange, se
             {t('form.location.info.descriptionTwo')}
           </Alert.Description>
         </Alert>
-        <div className='relative h-96'>
+        <div className='relative h-80 md:h-144'>
           <MapDynamic position={position} key={mapKey}>
             <MapDefaultConfig />
             <DraggableMarker position={position} setPosition={setPosition} />

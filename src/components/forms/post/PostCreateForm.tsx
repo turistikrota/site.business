@@ -2,6 +2,7 @@ import Button from '@turistikrota/ui/button'
 import { Coordinates, Locales } from '@turistikrota/ui/types'
 import { useFormik } from 'formik'
 import React, { useState } from 'react'
+import PostFormCalendarSection from './PostFormCalendarSection'
 import PostFormImageSection from './PostFormImageSection'
 import PostFormLocationSection from './PostFormLocationSection'
 import PostFormMetaSection from './PostFormMetaSection'
@@ -107,6 +108,7 @@ const PostCreateForm: React.FC = () => {
           form.setFieldValue(field, value)
         }}
       />
+      <PostFormCalendarSection />
       <PostFormValidationSection
         values={form.values}
         errors={form.errors}
