@@ -1,7 +1,8 @@
 import Button from '@turistikrota/ui/button'
 import { Locales } from '@turistikrota/ui/types'
 import { useFormik } from 'formik'
-import React from 'react'
+import React, { useState } from 'react'
+import PostFormImageSection from './PostFormImageSection'
 import PostFormMetaSection from './PostFormMetaSection'
 import PostFormValidationSection from './PostFormValidationSection'
 
@@ -32,6 +33,8 @@ export type PostCreateFormValues = {
 }
 
 const PostCreateForm: React.FC = () => {
+  const [images, setImages] = useState<string[]>([])
+  const [files, setFiles] = useState<File[]>([])
   const form = useFormik<PostCreateFormValues>({
     initialValues: {
       meta: {
@@ -69,9 +72,16 @@ const PostCreateForm: React.FC = () => {
     e.preventDefault()
     form.handleSubmit()
   }
+
+  const onFileChange = (files: File[]) => {
+    setFiles(files)
+    setImages(files.map((f) => URL.createObjectURL(f)))
+  }
+
   return (
     <form onSubmit={onSubmit} className='flex flex-col gap-8 pb-10'>
       <PostFormMetaSection values={form.values} errors={form.errors} onChange={form.handleChange} />
+      <PostFormImageSection images={images} setImages={setImages} files={files} setFiles={onFileChange} />
       <PostFormValidationSection
         values={form.values}
         errors={form.errors}

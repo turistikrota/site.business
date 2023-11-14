@@ -1,0 +1,45 @@
+.dropzone-previews {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.dropzone-previews .dropzone-preview {
+  min-width: 150px;
+  max-width: 150px;
+  min-height: 200px;
+  max-height: 200px;
+
+
+}
+
+.dropzone-previews .dropzone-preview img {
+  width: 150px;
+  height: 150px;
+  min-width: 150px;
+  max-width: 150px;
+  min-height: 150px;
+  max-height: 150px;
+  object-fit: cover;
+  cursor: zoom-in;
+}
+
+.dropzone-previews .dropzone-preview button {
+  margin-top: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 0.5rem;
+}
+
+.dropzone-previews .dropzone,
+.dz-message {
+  cursor: pointer;
+  border-color: var(--border-color) !important;
+}
+
+.sdraggable {
+  width: auto !important;
+  flex: unset !important;
+}

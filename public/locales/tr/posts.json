@@ -13,6 +13,10 @@
       "title": "Meta Bilgileri",
       "subtitle": "Bu bölümde ilanınızın meta bilgilerini girebilirsiniz."
     },
+    "images": {
+      "title": "İlan Görselleri",
+      "subtitle": "Bu bölümde ilanınızın görsellerini yükleyebilirsiniz."
+    },
     "validation": {
       "title": "Özel Kurallar",
       "subtitle": "Bu bölümde ilanınızın özel kurallarını girebilirsiniz.",
