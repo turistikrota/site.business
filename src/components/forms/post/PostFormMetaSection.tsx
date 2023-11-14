@@ -1,26 +1,18 @@
 import { Locales as LocaleConstant } from '@/config/i18n'
 import Input from '@turistikrota/ui/form/input'
 import FormSection from '@turistikrota/ui/form/section'
-import { Locales } from '@turistikrota/ui/types'
+import { FormikErrors } from 'formik'
 import React from 'react'
 import { useTranslation } from 'react-i18next'
-
-type Item = {
-  value: string
-  error?: string
-}
+import { PostCreateFormValues } from './PostCreateForm'
 
 type Props = {
-  title: {
-    [key in Locales]: Item
-  }
-  description: {
-    [key in Locales]: Item
-  }
+  values: PostCreateFormValues
+  errors: FormikErrors<PostCreateFormValues>
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void
 }
 
-const PostFormMetaSection: React.FC<Props> = ({ title, description, onChange }) => {
+const PostFormMetaSection: React.FC<Props> = ({ values, errors, onChange }) => {
   const { t } = useTranslation('posts')
   return (
     <FormSection>
@@ -41,8 +33,8 @@ const PostFormMetaSection: React.FC<Props> = ({ title, description, onChange }) 
               autoComplete={`meta.${locale}.title`}
               label={t('form.title')}
               ariaLabel={t('form.title')}
-              value={title[locale].value}
-              error={title[locale].error}
+              value={values.meta[locale].title}
+              error={errors.meta?.[locale]?.title}
               onChange={onChange}
               onBlur={onChange}
             />
@@ -53,8 +45,8 @@ const PostFormMetaSection: React.FC<Props> = ({ title, description, onChange }) 
               autoComplete={`meta.${locale}.description`}
               label={t('form.description')}
               ariaLabel={t('form.description')}
-              value={description[locale].value}
-              error={description[locale].error}
+              value={values.meta[locale].description}
+              error={errors.meta?.[locale]?.description}
               onChange={onChange}
               onBlur={onChange}
             />

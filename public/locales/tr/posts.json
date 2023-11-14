@@ -12,6 +12,46 @@
     "meta": {
       "title": "Meta Bilgileri",
       "subtitle": "Bu bölümde ilanınızın meta bilgilerini girebilirsiniz."
+    },
+    "validation": {
+      "title": "Özel Kurallar",
+      "subtitle": "Bu bölümde ilanınızın özel kurallarını girebilirsiniz.",
+      "minAdult": "En az yetişkin sayısı",
+      "maxAdult": "En çok yetişkin sayısı",
+      "minKid": "En az çocuk sayısı",
+      "maxKid": "En çok çocuk sayısı",
+      "minBaby": "En az bebek sayısı",
+      "maxBaby": "En çok bebek sayısı",
+      "minDate": "En az gün sayısı",
+      "maxDate": "En çok gün sayısı",
+      "onlyFamily": {
+        "title": "Sadece Aileler",
+        "description": "Bu ilan sadece ailelere özeldir. Aile dışı kişiler bu ilanı rezerve edemezler."
+      },
+      "noPet": {
+        "title": "Evcil Hayvan Yok",
+        "description": "Bu ilan evcil hayvan kabul etmemektedir."
+      },
+      "noSmoke": {
+        "title": "Sigara İçmek Yasak",
+        "description": "Bu ilanı rezerve eden kişiler rezervasyon süresince sigara içemezler."
+      },
+      "noAlcohol": {
+        "title": "Alkol Yasak",
+        "description": "Bu ilanı rezerve eden kişiler rezervasyon süresince alkol tüketemezler."
+      },
+      "noParty": {
+        "title": "Parti Yasak",
+        "description": "Bu ilanı rezerve eden kişiler burada parti düzenleyemezler."
+      },
+      "noUnmarried": {
+        "title": "Evli Olmayanlar Yasak",
+        "description": "Bu ilanı rezerve eden kişiler evli olmalıdır."
+      },
+      "noGuest": {
+        "title": "Misafir Yasak",
+        "description": "Bu ilanı rezerve eden kişiler misafir kabul edemezler."
+      }
     }
   },
   "config": {
