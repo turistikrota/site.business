@@ -29,7 +29,7 @@ const BackButton = () => {
   return (
     <Link
       to={getStaticRoute(i18n.language).account.details.default}
-      className='text-gray-700 dark:text-gray-200 hover:text-gray-900 dark:hover:text-white transition-colors duration-200'
+      className='text-gray-700 transition-colors duration-200 hover:text-gray-900 dark:text-gray-200 dark:hover:text-white'
       title={t('buttons.back')}
       aria-label={t('buttons.back')}
     >
@@ -43,7 +43,7 @@ const ToggleButton = () => {
   const { t } = useTranslation('menu')
   return (
     <button
-      className='flex items-center justify-center text-gray-700 dark:text-gray-200 hover:text-gray-900 dark:hover:text-white transition-colors duration-200'
+      className='flex items-center justify-center text-gray-700 transition-colors duration-200 hover:text-gray-900 dark:text-gray-200 dark:hover:text-white'
       title={t('buttons.toggle')}
       aria-label={t('buttons.toggle')}
       onClick={() => menuContext.setOpenMenu(!menuContext.openMenu)}
@@ -56,7 +56,7 @@ const ToggleButton = () => {
 function FixedHeader({ page }: HeaderProps) {
   return (
     <MobileHeader className='justify-start gap-3' defaultFixed>
-      <div className='items-center justify-center gap-2 hidden lg:flex'>
+      <div className='hidden items-center justify-center gap-2 lg:flex'>
         <ToggleButton />
       </div>
       <div className='flex items-center justify-center gap-2 lg:hidden'>
@@ -72,7 +72,7 @@ function FixedHeader({ page }: HeaderProps) {
 export function OwnerDetailTitle({ page }: Props) {
   const { t } = useTranslation('menu')
   return (
-    <div className='gap-2 mx-auto max-w-4xl'>
+    <div className='mx-auto max-w-4xl gap-2'>
       <h1 className='text-2xl font-semibold text-gray-700 dark:text-gray-200'>{t(`links.${page}`)}</h1>
       <p className='text-gray-500 dark:text-gray-400'>{t(`links.subtitles.${page}`)}</p>
     </div>

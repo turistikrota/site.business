@@ -81,7 +81,7 @@ const PostFormLocationSection: React.FC<Props> = ({ values, errors, onChange, se
         <FormSection.Head.Title>{t('form.location.title')}</FormSection.Head.Title>
         <FormSection.Head.Subtitle>{t('form.location.subtitle')}</FormSection.Head.Subtitle>
       </FormSection.Head>
-      <FormSection.Body className='rounded-b-md space-y-4 md:space-y-4'>
+      <FormSection.Body className='space-y-4 rounded-b-md md:space-y-4'>
         <Input
           id={`location.country`}
           type='text'
@@ -118,7 +118,7 @@ const PostFormLocationSection: React.FC<Props> = ({ values, errors, onChange, se
           onChange={onChange}
           onBlur={onChange}
         />
-        <div className='w-full grid grid-cols-12 gap-4'>
+        <div className='grid w-full grid-cols-12 gap-4'>
           <div className='col-span-6'>
             <Input
               id={`location.coordinates[0]`}
@@ -185,13 +185,13 @@ const PostFormLocationSection: React.FC<Props> = ({ values, errors, onChange, se
             {t('form.location.info.descriptionTwo')}
           </Alert.Description>
         </Alert>
-        <div className='h-96 relative'>
+        <div className='relative h-96'>
           <MapDynamic position={position} key={mapKey}>
             <MapDefaultConfig />
             <DraggableMarker position={position} setPosition={setPosition} />
           </MapDynamic>
           {!grant && (
-            <div className='absolute inset-0 bg-white dark:bg-black bg-opacity-80 dark:bg-opacity-80 z-5000 w-full h-full flex items-center justify-center'>
+            <div className='absolute inset-0 z-5000 flex h-full w-full items-center justify-center bg-white bg-opacity-80 dark:bg-black dark:bg-opacity-80'>
               <Button onClick={getLocation} variant='success' size='lg' block={false}>
                 {t('form.location.grant')}
               </Button>

@@ -13,7 +13,7 @@ const PostCreateView: React.FC = () => {
         description={t('create.meta.description')}
         keywords={t('create.meta.keywords')}
       >
-        <section className='p-4 lg:pl-0 max-w-4xl mx-auto relative'>
+        <section className='relative mx-auto max-w-4xl p-4 lg:pl-0'>
           <PostCreateForm />
         </section>
       </MetaWrapper>

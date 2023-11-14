@@ -6,7 +6,7 @@ function OwnershipEditView() {
   const { t } = useTranslation('edit')
   return (
     <MetaWrapper title={t('meta.title')} description={t('meta.description')} keywords={t('meta.keywords')}>
-      <section className='p-4 lg:pl-0 max-w-4xl mx-auto'>
+      <section className='mx-auto max-w-4xl p-4 lg:pl-0'>
         <MaintenanceAlert />
       </section>
     </MetaWrapper>

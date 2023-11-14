@@ -6,7 +6,7 @@ function OwnershipMenuView() {
   const { t } = useTranslation('menu')
   return (
     <MetaWrapper title={t('meta.title')} description={t('meta.description')} keywords={t('meta.keywords')}>
-      <section className='sm:max-w-md mx-auto min-h-screen h-full flex items-start justify-center'>
+      <section className='mx-auto flex h-full min-h-screen items-start justify-center sm:max-w-md'>
         <OwnerMenu isDetail={false} />
       </section>
     </MetaWrapper>

@@ -98,7 +98,7 @@ function OwnerDetailLayout() {
       <ErrorPage
         button={
           <Button
-            className='inline-flex justify-center text-white bg-primary-600 hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:focus:ring-primary-900 my-4'
+            className='my-4 inline-flex justify-center rounded-lg bg-primary-600 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-primary-800 focus:outline-none focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900'
             onClick={() => errorView.callback()}
             block={false}
           >
@@ -113,7 +113,7 @@ function OwnerDetailLayout() {
   if (isServerError) return <ServerErrorView />
   if (isLoading)
     return (
-      <div className='ease-out w-full h-full flex justify-center items-center'>
+      <div className='flex h-full w-full items-center justify-center ease-out'>
         <Spinner />
       </div>
     )

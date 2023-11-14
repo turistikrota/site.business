@@ -30,7 +30,7 @@ export default function OwnerMenuLayout({ open = false, page, children }: React.
         setOpenMenu: setMenuOpen,
       }}
     >
-      <div className='flex flex-col min-h-screen h-full w-full 2xl:container 2xl:mx-auto'>
+      <div className='flex h-full min-h-screen w-full flex-col 2xl:container 2xl:mx-auto'>
         <div className={`lg:hidden ${menuOpen ? 'hidden' : 'block'}`}>
           <OwnerDetailHeader page={page} />
         </div>
@@ -39,16 +39,16 @@ export default function OwnerMenuLayout({ open = false, page, children }: React.
           <aside
             className={`${
               menuOpen || isDesktop
-                ? 'block w-full lg:w-3/12 xl:max-w-sm sticky top-0 h-screen overflow-y-auto'
-                : 'w-0 hidden lg:block lg:w-fit h-full'
+                ? 'sticky top-0 block h-screen w-full overflow-y-auto lg:w-3/12 xl:max-w-sm'
+                : 'hidden h-full w-0 lg:block lg:w-fit'
             } transition-all duration-200`}
           >
             <OwnerMenu isDetail={true} />
           </aside>
           <div
-            className={`${menuOpen ? 'w-0 hidden lg:block lg:w-9/12' : 'w-full'} transition-all duration-200 h-full`}
+            className={`${menuOpen ? 'hidden w-0 lg:block lg:w-9/12' : 'w-full'} h-full transition-all duration-200`}
           >
-            <div className={`lg:block pt-4 ${menuOpen ? 'block' : 'hidden'}`}>
+            <div className={`pt-4 lg:block ${menuOpen ? 'block' : 'hidden'}`}>
               <OwnerDetailTitle page={page} />
             </div>
             {children}

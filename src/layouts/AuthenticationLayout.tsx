@@ -26,7 +26,7 @@ export default function AuthenticationLayout({ children }: React.PropsWithChildr
   if (isServerError) return <ServerErrorView />
   if (isLoading)
     return (
-      <div className='ease-out w-full h-full flex justify-center items-center'>
+      <div className='flex h-full w-full items-center justify-center ease-out'>
         <Spinner />
       </div>
     )

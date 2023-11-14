@@ -1,63 +1,63 @@
 {
-    "meta": {
-        "title": "Satıcı Başvuru Formu",
-        "description": "Turistikrota'da bireysel veya kurumsal olarak satıcı profili oluşturabilir ve villa, otel, tur, araç kiralama gibi ürünlerinizi kiralayabilir veya satabilirsiniz.",
-        "keywords": "satıcı başvuru formu, satıcı başvuru, Turistikrota, turistikrota satıcı başvuru" 
-    },
+  "meta": {
     "title": "Satıcı Başvuru Formu",
-    "type-select": {
-        "title": "Satıcı Tipi",
-        "subtitle": "Lütfen başvurduğunuz satıcı tipini seçin.",
-        "info": {
-            "title": "Bilgi",
-            "content": "Bu seçim faturalandırma amaçları için önemlidir. Eğer Türkiye Gelir İdaresi ile fatura düzenleyemezseniz (Türkiye Cumhuriyeti'nde kayıtlı bir vergi kimlik numaranız yoksa), bireysel olarak seçebilirsiniz. Bu durumda, Türkiye Cumhuriyeti vatandaşı olmanız gerekmektedir."
-        },
-        "corporation": {
-            "title": "Kurum",
-            "subtitle": "Bir kurum olarak başvuruyorum."
-        },
-        "individual": {
-            "title": "Birey",
-            "subtitle": "Birey olarak başvuruyorum."
-        }
+    "description": "Turistikrota'da bireysel veya kurumsal olarak satıcı profili oluşturabilir ve villa, otel, tur, araç kiralama gibi ürünlerinizi kiralayabilir veya satabilirsiniz.",
+    "keywords": "satıcı başvuru formu, satıcı başvuru, Turistikrota, turistikrota satıcı başvuru"
+  },
+  "title": "Satıcı Başvuru Formu",
+  "type-select": {
+    "title": "Satıcı Tipi",
+    "subtitle": "Lütfen başvurduğunuz satıcı tipini seçin.",
+    "info": {
+      "title": "Bilgi",
+      "content": "Bu seçim faturalandırma amaçları için önemlidir. Eğer Türkiye Gelir İdaresi ile fatura düzenleyemezseniz (Türkiye Cumhuriyeti'nde kayıtlı bir vergi kimlik numaranız yoksa), bireysel olarak seçebilirsiniz. Bu durumda, Türkiye Cumhuriyeti vatandaşı olmanız gerekmektedir."
     },
     "corporation": {
-        "taxNumber": "Vergi Numarası",
-        "corpType": "Kurum Tipi"
+      "title": "Kurum",
+      "subtitle": "Bir kurum olarak başvuruyorum."
     },
     "individual": {
-        "firstName": "Adı",
-        "lastName": "Soyadı",
-        "identityNumber": "Kimlik Numarası",
-        "serialNumber": "Seri Numarası",
-        "dateOfBirth": "Doğum Tarihi"
-    },
-    "billing": {
-        "title": "Fatura Bilgileri",
-        "subtitle": "Lütfen fatura bilgilerinizi girin.",
-        "province": "İl",
-        "district": "İlçe",
-        "address": "Adres"
-    },
-    "general": {
-        "nickName": "Benzersiz Takma Ad",
-        "realName": "Gerçek İsim (Satıcı profilinde gösterilecek)"
-    },
-    "corporationTypes": {
-        "anonymous": "Anonim Şirket",
-        "soleProprietorship": "Şahıs Şirketi",
-        "limited": "Limited Şirket",
-        "collective": "Kollektif Şirket",
-        "cooperative": "Kooperatif",
-        "ordinaryPartnership": "Adi Ortaklık",
-        "ordinaryLimitedPartnership": "Adi Komandit Ortaklık",
-        "limitedPartnershipShareCapital": "Sermayesi Paylara Bölünmüş Komandit Şirket",
-        "other": "Diğer"
-    },
-    "hashInfo": "Bu veri şifrelenmiş olarak saklanacak ve üçüncü taraflarla paylaşılmayacaktır.",
-    "analyticsInfo": "Bu veri, çeşitli analizler için kullanılacaktır. Bu veri, üçüncü taraflarla paylaşılmayacaktır.",
-    "next": "İleri",
-    "back": "Geri",
-    "submit": "Gönder",
-    "success": "Başvurunuz başarıyla gönderildi. En kısa sürede sizinle e-posta yoluyla iletişime geçeceğiz."
+      "title": "Birey",
+      "subtitle": "Birey olarak başvuruyorum."
+    }
+  },
+  "corporation": {
+    "taxNumber": "Vergi Numarası",
+    "corpType": "Kurum Tipi"
+  },
+  "individual": {
+    "firstName": "Adı",
+    "lastName": "Soyadı",
+    "identityNumber": "Kimlik Numarası",
+    "serialNumber": "Seri Numarası",
+    "dateOfBirth": "Doğum Tarihi"
+  },
+  "billing": {
+    "title": "Fatura Bilgileri",
+    "subtitle": "Lütfen fatura bilgilerinizi girin.",
+    "province": "İl",
+    "district": "İlçe",
+    "address": "Adres"
+  },
+  "general": {
+    "nickName": "Benzersiz Takma Ad",
+    "realName": "Gerçek İsim (Satıcı profilinde gösterilecek)"
+  },
+  "corporationTypes": {
+    "anonymous": "Anonim Şirket",
+    "soleProprietorship": "Şahıs Şirketi",
+    "limited": "Limited Şirket",
+    "collective": "Kollektif Şirket",
+    "cooperative": "Kooperatif",
+    "ordinaryPartnership": "Adi Ortaklık",
+    "ordinaryLimitedPartnership": "Adi Komandit Ortaklık",
+    "limitedPartnershipShareCapital": "Sermayesi Paylara Bölünmüş Komandit Şirket",
+    "other": "Diğer"
+  },
+  "hashInfo": "Bu veri şifrelenmiş olarak saklanacak ve üçüncü taraflarla paylaşılmayacaktır.",
+  "analyticsInfo": "Bu veri, çeşitli analizler için kullanılacaktır. Bu veri, üçüncü taraflarla paylaşılmayacaktır.",
+  "next": "İleri",
+  "back": "Geri",
+  "submit": "Gönder",
+  "success": "Başvurunuz başarıyla gönderildi. En kısa sürede sizinle e-posta yoluyla iletişime geçeceğiz."
 }

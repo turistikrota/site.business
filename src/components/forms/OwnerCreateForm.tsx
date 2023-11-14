@@ -70,15 +70,15 @@ const corporationTypes: CorporationType[] = [
 const OwnerTypeCard: React.FC<OwnerTypeCardProps> = ({ description, icon, onClick, title, selected }) => {
   return (
     <div
-      className={`w-40 h-40 rounded-md p-4 flex flex-col items-center justify-center hover:bg-input transition-colors cursor-pointer relative ${
+      className={`relative flex h-40 w-40 cursor-pointer flex-col items-center justify-center rounded-md p-4 transition-colors hover:bg-input ${
         selected ? 'bg-input' : 'bg-third'
       }`}
       onClick={onClick}
     >
-      {selected && <span className='absolute top-2 left-2 p-2 rounded-full bg-primary text-white'></span>}
+      {selected && <span className='absolute left-2 top-2 rounded-full bg-primary p-2 text-white'></span>}
       <i className={`bx bx-2xl ${icon}`}></i>
-      <div className='font-medium text-gray-900 dark:text-white mt-1'>{title}</div>
-      <p className='text-sm text-gray-500 dark:text-gray-400 text-center'>{description}</p>
+      <div className='mt-1 font-medium text-gray-900 dark:text-white'>{title}</div>
+      <p className='text-center text-sm text-gray-500 dark:text-gray-400'>{description}</p>
     </div>
   )
 }
@@ -159,23 +159,23 @@ const OwnerCreateForm = () => {
 
   return (
     <Spin loading={isLoading}>
-      <div className='py-4 border-b'>
-        <h1 className='text-xl text-center font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white'>
+      <div className='border-b py-4'>
+        <h1 className='text-center text-xl font-bold leading-tight tracking-tight text-gray-900 dark:text-white md:text-2xl'>
           {t('title')}
         </h1>
       </div>
 
       <MultiStepForm currentStep={currentStep} onStepChange={setCurrentStep} onSubmit={form.handleSubmit}>
         <Step>
-          <div className='bg-second pb-4 rounded-t-md'>
-            <h2 className='text-lg text-left font-bold lg:block'>{t('type-select.title')}</h2>
-            <p className='text-gray-600 text-left text-sm dark:text-gray-400 lg:block'>{t('type-select.subtitle')}</p>
+          <div className='rounded-t-md bg-second pb-4'>
+            <h2 className='text-left text-lg font-bold lg:block'>{t('type-select.title')}</h2>
+            <p className='text-left text-sm text-gray-600 dark:text-gray-400 lg:block'>{t('type-select.subtitle')}</p>
           </div>
           <Alert type='warning' className='mb-4'>
             <Alert.Title>{t('type-select.info.title')}</Alert.Title>
             <Alert.Description>{t('type-select.info.content')}</Alert.Description>
           </Alert>
-          <div className='w-full flex justify-center gap-3'>
+          <div className='flex w-full justify-center gap-3'>
             <OwnerTypeCard
               icon='bx-buildings'
               title={t('type-select.corporation.title')}
@@ -310,9 +310,9 @@ const OwnerCreateForm = () => {
           </Step>
         )}
         <Step>
-          <div className='bg-second pb-4 rounded-t-md'>
-            <h2 className='text-lg text-left font-bold lg:block'>{t('billing.title')}</h2>
-            <p className='text-gray-600 text-left text-sm dark:text-gray-400 lg:block'>{t('billing.subtitle')}</p>
+          <div className='rounded-t-md bg-second pb-4'>
+            <h2 className='text-left text-lg font-bold lg:block'>{t('billing.title')}</h2>
+            <p className='text-left text-sm text-gray-600 dark:text-gray-400 lg:block'>{t('billing.subtitle')}</p>
           </div>
           <div className='space-y-4 md:space-y-6'>
             <div className='flex gap-4 md:gap-6'>

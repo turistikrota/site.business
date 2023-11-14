@@ -56,8 +56,8 @@ const StaticData: RoleGroups[] = [
 const RoleGroup: React.FC<React.PropsWithChildren<GroupProps>> = ({ title, children }) => {
   const { t } = useTranslation('permissions')
   return (
-    <div className='w-full flex flex-col mb-2 border-b pb-2'>
-      <div className='text-md text-left font-bold text-gray-800 dark:text-gray-200 mb-2'>{t(`titles.${title}`)}</div>
+    <div className='mb-2 flex w-full flex-col border-b pb-2'>
+      <div className='text-md mb-2 text-left font-bold text-gray-800 dark:text-gray-200'>{t(`titles.${title}`)}</div>
       <div className='grid grid-cols-12'>{children}</div>
     </div>
   )
@@ -118,7 +118,7 @@ const RoleItem: React.FC<ItemProps> = ({
   return (
     <div className='col-span-12'>
       <Spin loading={loading}>
-        <LineForm className='rounded-md hover:bg-third p-2'>
+        <LineForm className='rounded-md p-2 hover:bg-third'>
           <LineForm.Left>
             <div className='text-md text-left font-semibold text-gray-800 dark:text-gray-200'>
               {t(`roles.${role}.title`)}

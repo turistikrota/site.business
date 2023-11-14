@@ -39,10 +39,10 @@ const ImagePreview: React.FC<PreviewProps> = ({ list, onChange, onRemove }) => {
     <>
       <DraggableContainer onOrderChange={onOrderChange}>
         {list.map((li, idx) => (
-          <div key={idx} className='w-40 flex flex-col gap-2'>
+          <div key={idx} className='flex w-40 flex-col gap-2'>
             <img
               data-dz-thumbnail=''
-              className='rounded h-40 w-40 object-cover'
+              className='h-40 w-40 rounded object-cover'
               src={li}
               onClick={() => openPreview(idx)}
             />
@@ -71,9 +71,9 @@ const ImageUploader: UploaderType = ({ invalid = false, value, error, onChange }
     <Dropzone onDrop={(f: File[]) => handleAcceptedFiles(f)}>
       {({ getRootProps, getInputProps }) => (
         <div className='dropzone w-full'>
-          <div className='dz-message needsclick border-dashed border-2 rounded-md h-56' {...getRootProps()}>
+          <div className='dz-message needsclick h-56 rounded-md border-2 border-dashed' {...getRootProps()}>
             <input {...getInputProps()} className={invalid ? `is-invalid` : ''} aria-invalid={invalid} />
-            <div className='dz-message needsclick w-full h-full flex flex-col justify-center items-center'>
+            <div className='dz-message needsclick flex h-full w-full flex-col items-center justify-center'>
               <i className='bx bx-2xl bxs-cloud-upload' />
               <p className='text-md'>{t('text')}</p>
             </div>

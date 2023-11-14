@@ -20,10 +20,10 @@ const PostFormMetaSection: React.FC<Props> = ({ values, errors, onChange }) => {
         <FormSection.Head.Title>{t('form.meta.title')}</FormSection.Head.Title>
         <FormSection.Head.Subtitle>{t('form.meta.subtitle')}</FormSection.Head.Subtitle>
       </FormSection.Head>
-      <FormSection.Body className='rounded-b-md space-y-4 md:space-y-4'>
+      <FormSection.Body className='space-y-4 rounded-b-md md:space-y-4'>
         {LocaleConstant.map((locale) => (
           <React.Fragment key={locale}>
-            <div className='text-md text-left font-semibold text-gray-800 dark:text-gray-200 mb-2'>
+            <div className='text-md mb-2 text-left font-semibold text-gray-800 dark:text-gray-200'>
               {t(`config.${locale}`)}
             </div>
             <Input
