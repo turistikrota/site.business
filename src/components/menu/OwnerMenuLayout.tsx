@@ -35,10 +35,12 @@ export default function OwnerMenuLayout({ open = false, page, children }: React.
           <OwnerDetailHeader page={page} />
         </div>
 
-        <div className='flex h-full w-full flex-grow'>
+        <div className='flex flex-grow'>
           <aside
             className={`${
-              menuOpen || isDesktop ? 'block w-full lg:w-3/12 xl:max-w-sm' : 'w-0 hidden lg:block lg:w-fit h-full'
+              menuOpen || isDesktop
+                ? 'block w-full lg:w-3/12 xl:max-w-sm sticky top-0 h-screen overflow-y-auto'
+                : 'w-0 hidden lg:block lg:w-fit h-full'
             } transition-all duration-200`}
           >
             <OwnerMenu isDetail={true} />

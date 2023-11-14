@@ -108,7 +108,7 @@ export default function OwnerMenu({ isDetail }: Props) {
         </Link>
       </Condition>
       <OwnerMenuProfileCard open={isDetail && !isDesktop ? menuContext?.openMenu : true} />
-      <div className='grid gap-4 w-full mt-5'>
+      <div className='grid gap-4 w-full mt-5 pb-10'>
         {menuItems
           .filter((m) => (m.roles ? bodyguard.check(...m.roles) : true))
           .map((el, i) => (
