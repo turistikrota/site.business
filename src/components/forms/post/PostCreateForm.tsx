@@ -1,8 +1,9 @@
 import Button from '@turistikrota/ui/button'
-import { Locales } from '@turistikrota/ui/types'
+import { Coordinates, Locales } from '@turistikrota/ui/types'
 import { useFormik } from 'formik'
 import React, { useState } from 'react'
 import PostFormImageSection from './PostFormImageSection'
+import PostFormLocationSection from './PostFormLocationSection'
 import PostFormMetaSection from './PostFormMetaSection'
 import PostFormValidationSection from './PostFormValidationSection'
 
@@ -12,6 +13,14 @@ export type PostCreateFormValues = {
       title: string
       description: string
     }
+  }
+  location: {
+    country: string
+    city: string
+    street: string
+    address: string
+    isStrict: boolean
+    coordinates: Coordinates
   }
   validation: {
     minAdult: number
@@ -46,6 +55,14 @@ const PostCreateForm: React.FC = () => {
           title: '',
           description: '',
         },
+      },
+      location: {
+        address: '',
+        city: '',
+        coordinates: [0, 0],
+        country: 'Türkiye',
+        isStrict: false,
+        street: '',
       },
       validation: {
         minAdult: 1,
@@ -82,6 +99,14 @@ const PostCreateForm: React.FC = () => {
     <form onSubmit={onSubmit} className='flex flex-col gap-8 pb-10'>
       <PostFormMetaSection values={form.values} errors={form.errors} onChange={form.handleChange} />
       <PostFormImageSection images={images} setImages={setImages} files={files} setFiles={onFileChange} />
+      <PostFormLocationSection
+        values={form.values}
+        errors={form.errors}
+        onChange={form.handleChange}
+        setFieldValue={(field, value) => {
+          form.setFieldValue(field, value)
+        }}
+      />
       <PostFormValidationSection
         values={form.values}
         errors={form.errors}

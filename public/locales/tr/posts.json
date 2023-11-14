@@ -17,6 +17,26 @@
       "title": "İlan Görselleri",
       "subtitle": "Bu bölümde ilanınızın görsellerini yükleyebilirsiniz."
     },
+    "location": {
+      "title": "İlan Konumu",
+      "subtitle": "Bu bölümde ilanınızın konumunu belirleyebilirsiniz.",
+      "city": "Şehir",
+      "street": "İlçe",
+      "address": "Adres",
+      "latitude": "Enlem",
+      "longitude": "Boylam",
+      "isStrict": {
+        "title": "Kesin Konum",
+        "description": "Bu ilanın konumu kesin mi?"
+      },
+      "error": "Konum seçimi başarısız oldu. Lütfen tekrar deneyin.",
+      "notSupported": "Tarayıcınız konum seçimini desteklemiyor.",
+      "info": {
+        "title": "Harita İpucu",
+        "description": "Haritada konum seçmek için tıklayın. Mavi işaretçi konumu gösterir. Konumu değiştirmek için işaretçiyi sürükleyin.",
+        "descriptionTwo": "Not: Şehir ve İlçe tahmini konum bilgileri kullanılarak değiştirilir. Eğer yanlışsa şehir ve ilçe bilgisini elle değiştirebilirsiniz."
+      }
+    },
     "validation": {
       "title": "Özel Kurallar",
       "subtitle": "Bu bölümde ilanınızın özel kurallarını girebilirsiniz.",
