@@ -47,7 +47,7 @@ const UsersView: React.FC = () => {
   return (
     <RoleGuardView roles={[OwnerRoles.Super, OwnerRoles.UserList]}>
       <MetaWrapper title={t('meta.title')} description={t('meta.description')} keywords={t('meta.keywords')}>
-        <section className='relative mx-auto max-w-4xl space-y-5 p-4 lg:pl-0'>
+        <section className='relative mx-auto container space-y-5 p-4'>
           {users.map((user) => (
             <UserCollapseItem user={user} key={user.name} />
           ))}

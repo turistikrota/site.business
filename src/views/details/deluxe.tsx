@@ -6,7 +6,7 @@ function OwnershipDeluxeView() {
   const { t } = useTranslation('deluxe')
   return (
     <MetaWrapper title={t('meta.title')} description={t('meta.description')} keywords={t('meta.keywords')}>
-      <section className='mx-auto max-w-4xl p-4 lg:pl-0'>
+      <section className='mx-auto container p-4'>
         <MaintenanceAlert />
       </section>
     </MetaWrapper>

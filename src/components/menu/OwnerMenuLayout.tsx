@@ -48,7 +48,7 @@ export default function OwnerMenuLayout({ open = false, page, children }: React.
           <div
             className={`${menuOpen ? 'hidden w-0 lg:block lg:w-9/12' : 'w-full'} h-full transition-all duration-200`}
           >
-            <div className={`pt-4 lg:block ${menuOpen ? 'block' : 'hidden'}`}>
+            <div className={`pt-4 pl-4 lg:block ${menuOpen ? 'block' : 'hidden'}`}>
               <OwnerDetailTitle page={page} />
             </div>
             {children}
