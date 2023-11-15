@@ -118,6 +118,8 @@ const PostFormPriceRangeSection: React.FC<Props> = ({ onAdd, prices }) => {
             id='startDate'
             name='startDate'
             type='date'
+            min={new Date().toISOString().split('T')[0]}
+            max={endDate}
             autoComplete='start-date'
             label={t('form.calendar.startDate')}
             ariaLabel={t('form.calendar.startDate')}
@@ -133,6 +135,7 @@ const PostFormPriceRangeSection: React.FC<Props> = ({ onAdd, prices }) => {
             id='endDate'
             name='endDate'
             type='date'
+            min={startDate}
             autoComplete='end-date'
             label={t('form.calendar.endDate')}
             ariaLabel={t('form.calendar.endDate')}
