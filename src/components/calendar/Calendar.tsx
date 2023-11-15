@@ -1,5 +1,6 @@
 import { useCalendar } from '@/hooks/calendar'
 import React, { useMemo, useState } from 'react'
+import { useTranslation } from 'react-i18next'
 
 type Data<T> = Record<string, T[]>
 
@@ -31,7 +32,10 @@ type DayProps<T> = {
   onClick?: () => void
 }
 
-type MonthProps = {}
+type HeadProps = {
+  year: number
+  month: number
+}
 
 type DayLabelProps = {
   name: string
@@ -126,6 +130,18 @@ function Day<T = any>({
   )
 }
 
+function Head({ year, month }: HeadProps) {
+  const { t } = useTranslation('calendar')
+  return (
+    <div className='flex justify-between items-center'>
+      <div className='flex items-center'>
+        <div className='text-lg font-bold'>{t(`months.${month}`)}</div>
+      </div>
+      <div className='text-lg font-bold'>{year}</div>
+    </div>
+  )
+}
+
 function Calendar<T = any>({ data, DetailRender, onDayClick, variantCalc }: Props<T>) {
   const [month, setMonth] = useState<number>(new Date().getMonth())
   const [year, setYear] = useState<number>(new Date().getFullYear())
@@ -138,36 +154,39 @@ function Calendar<T = any>({ data, DetailRender, onDayClick, variantCalc }: Prop
     onDayClick && onDayClick()
   }
 
-  const onPrevMonth = () => {
+  const onPrevMonth = (date: number) => {
     if (month === 0) {
       setMonth(11)
       setYear(year - 1)
     } else {
       setMonth(month - 1)
     }
+    setDay(date)
   }
 
-  const onNextMonth = () => {
+  const onNextMonth = (date: number) => {
     if (month === 11) {
       setMonth(0)
       setYear(year + 1)
     } else {
       setMonth(month + 1)
     }
+    setDay(date)
   }
 
   return (
     <div className='w-full flex flex-col gap-y-2'>
+      <Head year={year} month={month} />
       <div className='w-full'>
-        <div className='grid grid-cols-7 gap-x-2'>
+        <div className='grid grid-cols-7 gap-x-1'>
           {calendar.labels.map((label) => (
             <DayLabel key={label} name={label} />
           ))}
         </div>
       </div>
-      <div className='flex flex-col gap-2'>
+      <div className='flex flex-col gap-1'>
         {calendar.weeks.map((week, index) => (
-          <div key={index} className='grid grid-cols-7 gap-x-2'>
+          <div key={index} className='grid grid-cols-7 gap-x-1'>
             {week.days.map((day, index) => (
               <Day<T>
                 key={index}
@@ -175,11 +194,11 @@ function Calendar<T = any>({ data, DetailRender, onDayClick, variantCalc }: Prop
                 DetailRender={DetailRender}
                 data={data[calendar.makeDateStr(day.value, month, year)]}
                 onClick={() => onDayDetailClick(day.value)}
-                isActive={day.value === currentDate.getDate()}
+                isActive={!day.isNextMonth && !day.isPrevMonth && day.value === currentDate.getDate()}
                 isNextMonth={day.isNextMonth}
                 isPrevMonth={day.isPrevMonth}
-                onNextMonth={onNextMonth}
-                onPrevMonth={onPrevMonth}
+                onNextMonth={() => onNextMonth(day.value)}
+                onPrevMonth={() => onPrevMonth(day.value)}
                 variant={
                   variantCalc && data[calendar.makeDateStr(day.value, month, year)]
                     ? variantCalc(data[calendar.makeDateStr(day.value, month, year)]) ?? 'default'
