@@ -3,6 +3,7 @@ import { Coordinates, Locales } from '@turistikrota/ui/types'
 import { useFormik } from 'formik'
 import React, { useState } from 'react'
 import PostFormCalendarSection from './PostFormCalendarSection'
+import PostFormCategorySection from './PostFormCategorySection'
 import PostFormImageSection from './PostFormImageSection'
 import PostFormLocationSection from './PostFormLocationSection'
 import PostFormMetaSection from './PostFormMetaSection'
@@ -109,6 +110,7 @@ const PostCreateForm: React.FC = () => {
   return (
     <form onSubmit={onSubmit} className='flex flex-col gap-8 pb-10'>
       <PostFormMetaSection values={form.values} errors={form.errors} onChange={form.handleChange} />
+      <PostFormCategorySection values={form.values} errors={form.errors} onChange={form.handleChange} />
       <PostFormImageSection images={images} setImages={setImages} files={files} setFiles={onFileChange} />
       <PostFormLocationSection
         values={form.values}

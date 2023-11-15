@@ -4,7 +4,7 @@ import { RouteObject, createBrowserRouter } from 'react-router-dom'
 
 const trRoutes: RouteObject[] = [
   {
-    path: '/detay',
+    path: '/',
     lazy: () => import('@/layouts/OwnerLayout'),
     children: [
       {
@@ -107,10 +107,15 @@ const trRoutes: RouteObject[] = [
     path: '/basvuru',
     lazy: () => import('@/views/create'),
   },
+
+  {
+    path: '/sec',
+    lazy: () => import('@/views/select'),
+  },
 ]
 const enRoutes: RouteObject[] = [
   {
-    path: '/detail',
+    path: '/',
     lazy: () => import('@/layouts/OwnerLayout'),
     children: [
       {
@@ -213,14 +218,13 @@ const enRoutes: RouteObject[] = [
     path: '/apply',
     lazy: () => import('@/views/create'),
   },
-]
-
-const routes: RouteObject[] = [
   {
-    path: '/',
+    path: '/select',
     lazy: () => import('@/views/select'),
   },
 ]
+
+const routes: RouteObject[] = []
 
 const locale = getCurrentServeLocale()
 

@@ -51,7 +51,7 @@ const OwnerSelection = () => {
       .put(apiUrl(Services.Owner, `/~${item.nickName}/select`))
       .then((res) => {
         if (res.status === 200) {
-          navigate(getStaticRoute(i18n.language).account.details.default)
+          navigate(getStaticRoute(i18n.language).owner.details.default)
         }
       })
       .catch((err: any) => {

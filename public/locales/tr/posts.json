@@ -40,6 +40,10 @@
         "priceNegative": "Fiyat alanı negatif olamaz."
       }
     },
+    "category": {
+      "title": "Kategori Bilgileri",
+      "subtitle": "Bu bölümde ilanınızın kategori bilgilerini girebilirsiniz."
+    },
     "location": {
       "title": "İlan Konumu",
       "subtitle": "Bu bölümde ilanınızın konumunu belirleyebilirsiniz.",

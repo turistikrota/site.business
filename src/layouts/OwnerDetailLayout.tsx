@@ -2,6 +2,7 @@ import { Services, apiUrl } from '@/config/services'
 import { CurrentOwnerProvider } from '@/contexts/currentOwner'
 import { checkUnauthorized } from '@/hooks/error'
 import { httpClient } from '@/http/client'
+import { getStaticRoute } from '@/static/page'
 import { OwnerDetail, isAccountErrorResponse, isMustSelectResponse, isOwnerDetail } from '@/types/owner'
 import { openAccountSelectionWithRedirect } from '@/utils/account'
 import ServerErrorView from '@/views/500'
@@ -48,6 +49,10 @@ function OwnerDetailLayout() {
       .catch((err) => {
         if (checkUnauthorized(err, i18n.language)) return
         if (err && err.response && err.response.data) {
+          if (isMustSelectResponse(err.response.data)) {
+            navigate(getStaticRoute(i18n.language).owner.select)
+            return
+          }
           if (isAccountErrorResponse(err.response.data)) {
             if (err.response.data.accountNotFound) {
               setErrorView({

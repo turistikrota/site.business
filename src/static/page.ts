@@ -16,6 +16,7 @@ export type RouteType = {
     select: string
   }
   owner: {
+    select: string
     create: string
     details: {
       default: string
@@ -53,13 +54,13 @@ const Routes: Record<Locales, RouteType> = {
     account: {
       create: '/olustur',
       details: {
-        edit: '/detay/duzenle',
-        notifications: '/detay/bildirim-tercihleri',
-        privacy: '/detay/gizlilik',
-        security: '/detay/guvenlik',
-        settings: '/detay/ayarlar',
-        vip: '/detay/vip',
-        default: '/detay/menu',
+        edit: '/duzenle',
+        notifications: '/bildirim-tercihleri',
+        privacy: '/gizlilik',
+        security: '/guvenlik',
+        settings: '/ayarlar',
+        vip: '/vip',
+        default: '/menu',
       },
       select: `${SiteHosts.account.tr}?redirect=`,
     },
@@ -69,21 +70,22 @@ const Routes: Record<Locales, RouteType> = {
       privacy: 'https://turistikrota.com/sozlesmeler/kisisel-verilerin-korunmasi-ve-gizlilik-politikasi',
     },
     owner: {
+      select: '/sec',
       create: '/basvuru',
       details: {
-        default: '/detay/menu',
-        deluxe: '/detay/deluxe',
-        edit: '/detay/duzenle',
-        notification: '/detay/bildirim-tercihleri',
-        privacy: '/detay/gizlilik',
-        security: '/detay/guvenlik',
-        settings: '/detay/ayarlar',
-        invite: '/detay/davetler',
-        inviteCreate: '/detay/davet-et',
-        users: '/detay/kullanicilar',
+        default: '/menu',
+        deluxe: '/deluxe',
+        edit: '/duzenle',
+        notification: '/bildirim-tercihleri',
+        privacy: '/gizlilik',
+        security: '/guvenlik',
+        settings: '/ayarlar',
+        invite: '/davetler',
+        inviteCreate: '/davet-et',
+        users: '/kullanicilar',
         post: {
-          create: '/detay/ilan-ekle',
-          list: '/detay/ilanlar',
+          create: '/ilan-ekle',
+          list: '/ilanlar',
         },
       },
       inviteUse: '/davet',
@@ -112,6 +114,7 @@ const Routes: Record<Locales, RouteType> = {
       privacy: 'https://turistikrota.com/contracts/privacy-and-protection-of-personal-data',
     },
     owner: {
+      select: '/select',
       create: '/apply',
       details: {
         default: '/detail/menu',
