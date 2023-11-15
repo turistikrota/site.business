@@ -69,7 +69,7 @@ const RichSelectionItem: React.FC<ItemProps> = ({ image, name, selected, onClick
       onClick={onClick}
     >
       <div className='flex items-center justify-center'>
-        <img src={image} alt={name} className='min-w-10 h-10 w-full max-w-min rounded-md object-cover' />
+        <img src={image} alt={name} className='min-w-10 h-10 w-10 max-w-min rounded-md object-cover' />
       </div>
       <div className='w-full'>
         <div className='flex items-center justify-between'>
