@@ -1,4 +1,5 @@
 import { useCurrentOwner } from '@/contexts/currentOwner'
+import { getStaticRoute } from '@/static/page'
 import Button from '@turistikrota/ui/button'
 import Condition from '@turistikrota/ui/condition'
 import UserName from '@turistikrota/ui/username'
@@ -11,7 +12,7 @@ type Props = {
 
 export default function OwnerMenuProfileCard({ open }: Props) {
   const [detail] = useCurrentOwner()
-  const { t } = useTranslation('menu')
+  const { t, i18n } = useTranslation('menu')
 
   if (!detail || !detail.owner) return null
   return (
@@ -37,7 +38,12 @@ export default function OwnerMenuProfileCard({ open }: Props) {
             @{detail.user.name} | ~{detail.owner.nickName}
           </UserName>
         </div>
-        <Link to='/' className='my-2' title={t('buttons.change')} aria-label={t('buttons.change')}>
+        <Link
+          to={getStaticRoute(i18n.language).owner.select}
+          className='my-2'
+          title={t('buttons.change')}
+          aria-label={t('buttons.change')}
+        >
           <Button size='sm'>{t('buttons.change')}</Button>
         </Link>
       </Condition>
