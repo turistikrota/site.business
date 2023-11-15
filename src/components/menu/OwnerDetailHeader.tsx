@@ -55,7 +55,7 @@ const ToggleButton = () => {
 
 function FixedHeader({ page }: HeaderProps) {
   return (
-    <MobileHeader className='justify-start gap-3' defaultFixed>
+    <MobileHeader className='justify-start gap-3' zIndex='z-9999' defaultFixed>
       <div className='hidden items-center justify-center gap-2 lg:flex'>
         <ToggleButton />
       </div>
@@ -72,7 +72,7 @@ function FixedHeader({ page }: HeaderProps) {
 export function OwnerDetailTitle({ page }: Props) {
   const { t } = useTranslation('menu')
   return (
-    <div className='mx-auto container gap-2'>
+    <div className='container mx-auto gap-2'>
       <h1 className='text-2xl font-semibold text-gray-700 dark:text-gray-200'>{t(`links.${page}`)}</h1>
       <p className='text-gray-500 dark:text-gray-400'>{t(`links.subtitles.${page}`)}</p>
     </div>

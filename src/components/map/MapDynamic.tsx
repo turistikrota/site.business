@@ -48,7 +48,7 @@ export default function MapDynamic({
       ref={setMap}
       center={position}
       zoom={zoom}
-      className={`h-full min-h-full w-full ${className}`}
+      className={`!z-1 h-full min-h-full w-full ${className ? className : ''}`}
     >
       {children}
     </MapContainer>
