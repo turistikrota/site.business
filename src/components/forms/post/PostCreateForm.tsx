@@ -24,6 +24,7 @@ export type PostCreateFormValues = {
       description: string
     }
   }
+  categoryUUIDs: string[]
   location: {
     country: string
     city: string
@@ -57,6 +58,7 @@ const PostCreateForm: React.FC = () => {
   const [files, setFiles] = useState<File[]>([])
   const form = useFormik<PostCreateFormValues>({
     initialValues: {
+      categoryUUIDs: [],
       meta: {
         tr: {
           title: '',
@@ -110,7 +112,14 @@ const PostCreateForm: React.FC = () => {
   return (
     <form onSubmit={onSubmit} className='flex flex-col gap-8 pb-10'>
       <PostFormMetaSection values={form.values} errors={form.errors} onChange={form.handleChange} />
-      <PostFormCategorySection values={form.values} errors={form.errors} onChange={form.handleChange} />
+      <PostFormCategorySection
+        values={form.values}
+        errors={form.errors}
+        onChange={form.handleChange}
+        setFieldValue={(field, value) => {
+          form.setFieldValue(field, value)
+        }}
+      />
       <PostFormImageSection images={images} setImages={setImages} files={files} setFiles={onFileChange} />
       <PostFormLocationSection
         values={form.values}

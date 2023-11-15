@@ -67,14 +67,14 @@ type Image = {
   order: number
 }
 
-type CategoryMeta = {
+export type CategoryMeta = {
   name: string
   slug: string
   description: string
   title: string
 }
 
-type CategoryListDto = {
+export type CategoryListItem = {
   uuid: string
   mainUUIDs: string[]
   images: Image[]
@@ -92,15 +92,15 @@ export const fetchCategoryFields = async (uuids: string[]): Promise<InputFieldsR
   return res.data
 }
 
-export const fetchMainCategories = async (): Promise<CategoryListDto[]> => {
+export const fetchMainCategories = async (): Promise<CategoryListItem[]> => {
   const res = await httpClient.get(apiUrl(Services.Category, '/')).catch(() => ({
     data: [],
   }))
   return res.data
 }
 
-export const fetchChildCategories = async (uuid: string): Promise<CategoryListDto[]> => {
-  const res = await httpClient.get(apiUrl(Services.Category, `/${uuid}`)).catch(() => ({
+export const fetchChildCategories = async (uuid: string): Promise<CategoryListItem[]> => {
+  const res = await httpClient.get(apiUrl(Services.Category, `/${uuid}/child`)).catch(() => ({
     data: [],
   }))
   return res.data
