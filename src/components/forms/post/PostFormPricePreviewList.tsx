@@ -1,4 +1,5 @@
 import { useDayJS } from '@/utils/dayjs'
+import Button from '@turistikrota/ui/button'
 import ErrorText from '@turistikrota/ui/text/error'
 import { FormikErrors } from 'formik'
 import React from 'react'
@@ -8,11 +9,13 @@ import { Price, Prices } from './PostCreateForm'
 type Props = {
   prices: Prices
   errors?: FormikErrors<Price>[]
+  setFieldValue: (field: string, value: any) => void
 }
 
-const PostFormPricePreviewList: React.FC<Props> = ({ prices, errors }) => {
+const PostFormPricePreviewList: React.FC<Props> = ({ prices, errors, setFieldValue }) => {
   const { i18n } = useTranslation('posts')
   const dayjs = useDayJS(i18n.language)
+
   return (
     <div className='flex flex-col gap-4'>
       {prices.map((price, idx) => (
@@ -27,11 +30,24 @@ const PostFormPricePreviewList: React.FC<Props> = ({ prices, errors }) => {
             <div className='flex w-full items-center justify-center rounded-md bg-default p-2 text-secondary'>
               {dayjs(price.endDate).format('DD MMMM YYYY')}
             </div>
-            <div className='flex items-center justify-center'>
-              <i className='bx bx-arrow-to-right text-2xl text-gray-700 dark:text-gray-300' />
+            <div className='flex  justify-center'>
+              <span className='text-2xl text-gray-700 dark:text-gray-300'>=</span>
             </div>
             <div className='flex w-full items-center justify-center rounded-md bg-default p-2 text-primary'>
-              {price.price} ₺
+              {Intl.NumberFormat('tr-TR').format(price.price)} ₺
+            </div>
+            <div className='flex items-center justify-center'>
+              <Button
+                size='sm'
+                variant='error'
+                onClick={() => {
+                  const newPrices = [...prices]
+                  newPrices.splice(idx, 1)
+                  setFieldValue('prices', newPrices)
+                }}
+              >
+                <i className='bx bx-trash text-xl' />
+              </Button>
             </div>
           </div>
           <ErrorText>{errors?.[idx]?.price}</ErrorText>

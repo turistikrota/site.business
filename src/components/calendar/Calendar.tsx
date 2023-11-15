@@ -14,6 +14,7 @@ type Props<T = any> = {
   }>
   onDayClick?: () => void
   variantCalc?: (data: T[]) => Variant
+  availableCalc?: (date: Date, data: T[]) => boolean
 }
 
 type DayProps<T> = {
@@ -26,7 +27,9 @@ type DayProps<T> = {
   data: T[]
   isPrevMonth: boolean
   isNextMonth: boolean
+  isToday?: boolean
   isActive?: boolean
+  isAvailable?: boolean
   onPrevMonth?: () => void
   onNextMonth?: () => void
   onClick?: () => void
@@ -91,12 +94,16 @@ function Day<T = any>({
   variant = 'default',
   DetailRender,
   isActive,
+  isToday = false,
+  isAvailable = true,
   isNextMonth,
   isPrevMonth,
   onClick,
   onNextMonth,
   onPrevMonth,
 }: DayProps<T>) {
+  const { t } = useTranslation('calendar')
+
   const onDetailClick = () => {
     if (isNextMonth) {
       onNextMonth && onNextMonth()
@@ -111,7 +118,7 @@ function Day<T = any>({
   return (
     <div
       className={`relative col-span-1 h-12 cursor-pointer rounded-b-md border-t-2 transition-colors duration-200 hover:bg-default md:h-36 ${
-        isNextMonth || isPrevMonth ? 'opacity-20' : ''
+        isNextMonth || isPrevMonth || !isAvailable ? 'opacity-20' : ''
       } ${isActive ? 'border-primary bg-default' : ''} ${DayVariants[variant].border}`}
       onClick={onDetailClick}
     >
@@ -123,6 +130,13 @@ function Day<T = any>({
           </div>
           <div className='h-full w-full px-1 pt-4 opacity-0 md:opacity-100'>
             <DetailRender day={day} data={data} />
+          </div>
+        </>
+      )}
+      {!data && isActive && (
+        <>
+          <div className='hidden h-full w-full items-center justify-center text-secondary opacity-0 md:flex md:opacity-100'>
+            {isToday ? t('today') : t('selected')}
           </div>
         </>
       )}
@@ -142,7 +156,7 @@ function Head({ year, month }: HeadProps) {
   )
 }
 
-function Calendar<T = any>({ data, DetailRender, onDayClick, variantCalc }: Props<T>) {
+function Calendar<T = any>({ data, DetailRender, onDayClick, variantCalc, availableCalc }: Props<T>) {
   const [month, setMonth] = useState<number>(new Date().getMonth())
   const [year, setYear] = useState<number>(new Date().getFullYear())
   const [day, setDay] = useState<number>(new Date().getDate())
@@ -196,6 +210,15 @@ function Calendar<T = any>({ data, DetailRender, onDayClick, variantCalc }: Prop
                 onClick={() => onDayDetailClick(day.value)}
                 isActive={!day.isNextMonth && !day.isPrevMonth && day.value === currentDate.getDate()}
                 isNextMonth={day.isNextMonth}
+                isAvailable={
+                  availableCalc
+                    ? availableCalc(
+                        new Date(year, month, day.value),
+                        data[calendar.makeDateStr(day.value, month, year)],
+                      )
+                    : true
+                }
+                isToday={day.value === new Date().getDate() && month === new Date().getMonth()}
                 isPrevMonth={day.isPrevMonth}
                 onNextMonth={() => onNextMonth(day.value)}
                 onPrevMonth={() => onPrevMonth(day.value)}

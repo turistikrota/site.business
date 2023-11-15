@@ -24,7 +24,21 @@
       "endDate": "Bitiş Tarihi",
       "price": "Fiyat",
       "add": "Ekle",
-      "price-list-item": "<0>{{startDate}}</0> - <1>{{endDate}}</1> arası <2>{{price}}</2> ₺"
+      "price-list-item": "<0>{{startDate}}</0> - <1>{{endDate}}</1> arası <2>{{price}}</2> ₺",
+      "info": {
+        "title": "Fiyat Aralığı İpucu",
+        "description": "Aşağıdaki alanları kullanarak belirli tarih aralıkları için farklı fiyatlar belirleyebilirsiniz.",
+        "example": "Örneğin, 1 Haziran - 30 Haziran arası 100 ₺, 1 Temmuz - 31 Temmuz arası 200 ₺ gibi.",
+        "float": "Ondalıklı sayılar için noktalı kullanın. Örneğin, 100.50 ₺ gibi."
+      },
+      "error": {
+        "startDateGreaterThanEndDate": "Başlangıç tarihi bitiş tarihinden büyük olamaz.",
+        "endDateLessThanNow": "Bitiş tarihi şu anki tarihten küçük olamaz.",
+        "startDateLessThanNow": "Başlangıç tarihi şu anki tarihten küçük olamaz.",
+        "unique": "Bu tarih aralığındaki günlerden en az biri zaten eklenmiş.",
+        "priceNaN": "Fiyat alanı hatalı. Bu alan şu şekilde olmalı: 10.000 (on bin ₺) veya 10.000,50 (on bin ₺ 50 kuruş) gibi.",
+        "priceNegative": "Fiyat alanı negatif olamaz."
+      }
     },
     "location": {
       "title": "İlan Konumu",

@@ -1,24 +1,112 @@
 import Button from '@turistikrota/ui/button'
 import Input from '@turistikrota/ui/form/input'
+import ErrorText from '@turistikrota/ui/text/error'
 import React, { useState } from 'react'
 import { useTranslation } from 'react-i18next'
+import { Prices } from './PostCreateForm'
 
 type Props = {
+  prices: Prices
   onAdd: (from: string, to: string, price: number) => void
 }
 
-const PostFormPriceRangeSection: React.FC<Props> = ({ onAdd }) => {
+const PostFormPriceRangeSection: React.FC<Props> = ({ onAdd, prices }) => {
   const [startDate, setStartDate] = useState<string | undefined>(undefined)
   const [endDate, setEndDate] = useState<string | undefined>(undefined)
-  const [price, setPrice] = useState<Float64Array>(new Float64Array([0]))
+  const [price, setPrice] = useState<string>('')
+  const [error, setError] = useState<string | undefined>(undefined)
   const { t } = useTranslation('posts')
 
+  const fixPrice = (p: string): [number, boolean] => {
+    let str = p
+    if (str.includes('.')) {
+      str = str.replace('.', '')
+    }
+    if (str.includes(',')) {
+      str = str.replace(',', '.')
+    }
+    const arr = new Float64Array([parseFloat(str)])
+    return [arr[0], !Number.isNaN(arr[0])]
+  }
+
+  const ruleDate = (): boolean => {
+    if (!startDate || !endDate) return false
+    const start = new Date(startDate)
+    const end = new Date(endDate)
+    if (start > end) {
+      setError(t('form.calendar.error.startDateGreaterThanEndDate'))
+      return true
+    }
+    const now = new Date()
+    now.setHours(0, 0, 0, 0)
+    if (start.getTime() < now.getTime()) {
+      setError(t('form.calendar.error.startDateLessThanNow'))
+      return true
+    }
+    if (end < now) {
+      setError(t('form.calendar.error.endDateLessThanNow'))
+      return true
+    }
+    setError(undefined)
+    return false
+  }
+
+  const ruleUnique = (): boolean => {
+    if (!startDate || !endDate) return false
+    const start = new Date(startDate)
+    start.setHours(0, 0, 0, 0)
+    const end = new Date(endDate)
+    end.setHours(0, 0, 0, 0)
+    let isUnique = true
+    prices.forEach((price) => {
+      const s = new Date(price.startDate)
+      s.setHours(0, 0, 0, 0)
+      const e = new Date(price.endDate)
+      e.setHours(0, 0, 0, 0)
+      if (start >= s && start <= e) {
+        isUnique = false
+      }
+      if (end >= s && end <= e) {
+        isUnique = false
+      }
+    })
+    if (!isUnique) {
+      setError(t('form.calendar.error.unique'))
+      return true
+    }
+    setError(undefined)
+    return false
+  }
+
+  const rulePrice = (): boolean => {
+    if (!price) return false
+    const [p, valid] = fixPrice(price)
+    if (!valid) {
+      setError(t('form.calendar.error.priceNaN'))
+      return true
+    }
+    if (p < 0) {
+      setError(t('form.calendar.error.priceNegative'))
+      return true
+    }
+    setError(undefined)
+    return false
+  }
+
+  const validateLogic = (): boolean => {
+    if (ruleDate()) return true
+    if (ruleUnique()) return true
+    if (rulePrice()) return true
+    return false
+  }
+
   const add = () => {
-    if (startDate && endDate && price[0]) {
-      onAdd(startDate, endDate, price[0])
-      setStartDate(undefined)
-      setEndDate(undefined)
-      setPrice(new Float64Array([0]))
+    if (startDate && endDate && price && !validateLogic()) {
+      const [p] = fixPrice(price)
+      onAdd(startDate, endDate, p)
+      setStartDate('')
+      setEndDate('')
+      setPrice('')
     }
   }
 
@@ -56,13 +144,13 @@ const PostFormPriceRangeSection: React.FC<Props> = ({ onAdd }) => {
       <Input
         id='price'
         name='price'
-        type='number'
         autoComplete='price'
         label={t('form.calendar.price')}
         ariaLabel={t('form.calendar.price')}
-        value={price[0]}
-        onChange={(e) => setPrice(new Float64Array([e.target.valueAsNumber]))}
+        value={price}
+        onChange={(e) => setPrice(e.target.value)}
       />
+      <ErrorText>{error}</ErrorText>
       <Button onClick={add}>{t('form.calendar.add')}</Button>
     </>
   )

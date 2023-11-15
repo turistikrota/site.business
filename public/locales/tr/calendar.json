@@ -13,5 +13,7 @@
     "Ekim",
     "Kasım",
     "Aralık"
-  ]
+  ],
+  "today": "Bugün",
+  "selected": "Seçili Tarih"
 }
