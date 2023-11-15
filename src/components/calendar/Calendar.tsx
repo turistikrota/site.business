@@ -2,12 +2,12 @@ import { useCalendar } from '@/hooks/calendar'
 import React, { useMemo, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 
-type Data<T> = Record<string, T[]>
+export type CalendarData<T> = Record<string, T[]>
 
 type Variant = 'default' | 'primary' | 'secondary' | 'success' | 'danger' | 'warning' | 'info'
 
 type Props<T = any> = {
-  data: Data<T>
+  data: CalendarData<T>
   DetailRender: React.FC<{
     day: number
     data: T[]
@@ -80,7 +80,7 @@ const DayVariants: Record<Variant, DayDesign> = {
 const DayLabel: React.FC<DayLabelProps> = ({ name }) => {
   return (
     <div className='col-span-1'>
-      <div className='text-xs font-normal justify-end flex w-full text-gray-700 dark:text-gray-300'>{name}</div>
+      <div className='flex w-full justify-end text-xs font-normal text-gray-700 dark:text-gray-300'>{name}</div>
     </div>
   )
 }
@@ -110,18 +110,18 @@ function Day<T = any>({
   }
   return (
     <div
-      className={`col-span-1 border-t-2 hover:bg-default transition-colors duration-200 cursor-pointer h-12 md:h-36 rounded-b-md relative ${
+      className={`relative col-span-1 h-12 cursor-pointer rounded-b-md border-t-2 transition-colors duration-200 hover:bg-default md:h-36 ${
         isNextMonth || isPrevMonth ? 'opacity-20' : ''
-      } ${isActive ? 'bg-default border-primary' : ''} ${DayVariants[variant].border}`}
+      } ${isActive ? 'border-primary bg-default' : ''} ${DayVariants[variant].border}`}
       onClick={onDetailClick}
     >
-      <div className='absolute top-0 right-1 text-gray-600 dark:text-gray-400'>{day}</div>
+      <div className='absolute right-1 top-0 text-gray-600 dark:text-gray-400'>{day}</div>
       {data && (
         <>
-          <div className='w-full h-full flex items-end justify-center md:hidden opacity-100 md:opacity-0 text-secondary'>
-            <span className={`w-2 h-2 rounded-full ${DayVariants[variant].badge}`} />
+          <div className='flex h-full w-full items-end justify-center text-secondary opacity-100 md:hidden md:opacity-0'>
+            <span className={`h-2 w-2 rounded-full ${DayVariants[variant].badge}`} />
           </div>
-          <div className='w-full h-full pt-4 px-1 md:opacity-100 opacity-0'>
+          <div className='h-full w-full px-1 pt-4 opacity-0 md:opacity-100'>
             <DetailRender day={day} data={data} />
           </div>
         </>
@@ -133,7 +133,7 @@ function Day<T = any>({
 function Head({ year, month }: HeadProps) {
   const { t } = useTranslation('calendar')
   return (
-    <div className='flex justify-between items-center'>
+    <div className='flex items-center justify-between'>
       <div className='flex items-center'>
         <div className='text-lg font-bold'>{t(`months.${month}`)}</div>
       </div>
@@ -175,7 +175,7 @@ function Calendar<T = any>({ data, DetailRender, onDayClick, variantCalc }: Prop
   }
 
   return (
-    <div className='w-full flex flex-col gap-y-2'>
+    <div className='flex w-full flex-col gap-y-2'>
       <Head year={year} month={month} />
       <div className='w-full'>
         <div className='grid grid-cols-7 gap-x-1'>

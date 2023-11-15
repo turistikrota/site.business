@@ -8,6 +8,14 @@ import PostFormLocationSection from './PostFormLocationSection'
 import PostFormMetaSection from './PostFormMetaSection'
 import PostFormValidationSection from './PostFormValidationSection'
 
+export type Price = {
+  startDate: string
+  endDate: string
+  price: number
+}
+
+export type Prices = Price[]
+
 export type PostCreateFormValues = {
   meta: {
     [key in Locales]: {
@@ -40,6 +48,7 @@ export type PostCreateFormValues = {
     noUnmarried: boolean
     noGuest: boolean
   }
+  prices: Prices
 }
 
 const PostCreateForm: React.FC = () => {
@@ -82,6 +91,7 @@ const PostCreateForm: React.FC = () => {
         noUnmarried: false,
         noGuest: false,
       },
+      prices: [],
     },
     onSubmit: () => {},
   })
@@ -108,7 +118,13 @@ const PostCreateForm: React.FC = () => {
           form.setFieldValue(field, value)
         }}
       />
-      <PostFormCalendarSection />
+      <PostFormCalendarSection
+        values={form.values}
+        errors={form.errors}
+        setFieldValue={(field, value) => {
+          form.setFieldValue(field, value)
+        }}
+      />
       <PostFormValidationSection
         values={form.values}
         errors={form.errors}

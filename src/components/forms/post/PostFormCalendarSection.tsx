@@ -1,13 +1,39 @@
-import Calendar from '@/components/calendar/Calendar'
+import Calendar, { CalendarData } from '@/components/calendar/Calendar'
 import FormSection from '@turistikrota/ui/form/section'
+import { FormikErrors } from 'formik'
+import { useMemo } from 'react'
 import { useTranslation } from 'react-i18next'
+import { PostCreateFormValues, Price } from './PostCreateForm'
+import PostFormPricePreviewList from './PostFormPricePreviewList'
+import PostFormPriceRangeSection from './PostFormPriceRangeSection'
 
 type Props = {
-  // use
+  values: PostCreateFormValues
+  errors: FormikErrors<PostCreateFormValues>
+  setFieldValue: (field: string, value: any) => void
 }
 
-const PostFormCalendarSection: React.FC<Props> = () => {
+const PostFormCalendarSection: React.FC<Props> = ({ errors, values, setFieldValue }) => {
   const { t } = useTranslation('posts')
+  const priceCalendarData = useMemo<CalendarData<string>>(() => {
+    const data: CalendarData<string> = {}
+    values.prices.forEach((price) => {
+      const startDate = new Date(price.startDate)
+      const endDate = new Date(price.endDate)
+      while (startDate <= endDate) {
+        const date = `${startDate.getDate()}.${startDate.getMonth() + 1}.${startDate.getFullYear()}`
+        if (!data[date]) data[date] = []
+        data[date].push(price.price + ' ₺')
+        startDate.setDate(startDate.getDate() + 1)
+      }
+    })
+    return data
+  }, [values])
+
+  const onAdd = (from: string, to: string, price: number) => {
+    setFieldValue('prices', [...values.prices, { startDate: from, endDate: to, price }])
+  }
+
   return (
     <FormSection>
       <FormSection.Head>
@@ -15,13 +41,12 @@ const PostFormCalendarSection: React.FC<Props> = () => {
         <FormSection.Head.Subtitle>{t('form.calendar.subtitle')}</FormSection.Head.Subtitle>
       </FormSection.Head>
       <FormSection.Body className='space-y-4 rounded-b-md md:space-y-4'>
+        <PostFormPriceRangeSection onAdd={onAdd} />
+        <PostFormPricePreviewList prices={values.prices} errors={errors?.prices as FormikErrors<Price>[]} />
         <Calendar<string>
-          data={{
-            '15.11.2023': ['aa', 'bb'],
-            '14.11.2023': ['500₺'],
-          }}
+          data={priceCalendarData}
           DetailRender={({ data }) => (
-            <div className='flex flex-col gap-1 items-center justify-center h-full w-full'>
+            <div className='flex h-full w-full flex-col items-center justify-center gap-1'>
               {data.map((d) => (
                 <div key={d} className='text-lg text-gray-800 dark:text-gray-200'>
                   {d}
@@ -29,10 +54,8 @@ const PostFormCalendarSection: React.FC<Props> = () => {
               ))}
             </div>
           )}
-          variantCalc={(data: string[]) => {
-            if (data.length === 0) return 'danger'
-            if (data.length === 1) return 'success'
-            return 'secondary'
+          variantCalc={() => {
+            return 'primary'
           }}
         />
       </FormSection.Body>

@@ -19,7 +19,12 @@
     },
     "calendar": {
       "title": "Takvim & Fiyatlandırma",
-      "subtitle": "Bu bölümde ilanınızın takvimini ve fiyatlandırmasını belirleyebilirsiniz."
+      "subtitle": "Bu bölümde ilanınızın takvimini ve fiyatlandırmasını belirleyebilirsiniz.",
+      "startDate": "Başlangıç Tarihi",
+      "endDate": "Bitiş Tarihi",
+      "price": "Fiyat",
+      "add": "Ekle",
+      "price-list-item": "<0>{{startDate}}</0> - <1>{{endDate}}</1> arası <2>{{price}}</2> ₺"
     },
     "location": {
       "title": "İlan Konumu",
