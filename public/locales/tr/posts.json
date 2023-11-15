@@ -49,6 +49,11 @@
       "subtitle": "Bu bölümde ilanınızın kategori uyarılarını girebilirsiniz.",
       "category": "{{name}} kategorisi"
     },
+    "category-rules": {
+      "title": "Kategori Kuralları",
+      "subtitle": "Lütfen kategori kurallarını okuyunuz ve kabul ediniz.",
+      "category": "{{name}} kategorisi"
+    },
     "location": {
       "title": "İlan Konumu",
       "subtitle": "Bu bölümde ilanınızın konumunu belirleyebilirsiniz.",

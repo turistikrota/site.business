@@ -5,6 +5,7 @@ import { useFormik } from 'formik'
 import React, { useEffect, useState } from 'react'
 import { debounce } from 'react-advanced-cropper'
 import PostCategoryAlertSection from './PostCategoryAlertSection'
+import PostCategoryRuleSection from './PostCategoryRuleSection'
 import PostFormCalendarSection from './PostFormCalendarSection'
 import PostFormCategorySection from './PostFormCategorySection'
 import PostFormImageSection from './PostFormImageSection'
@@ -19,6 +20,20 @@ export type Price = {
 }
 
 export type Prices = Price[]
+
+type BoolRuleType = 'onlyFamily' | 'noPet' | 'noSmoke' | 'noAlcohol' | 'noParty' | 'noUnmarried' | 'noGuest'
+
+export const BoolRules: BoolRuleType[] = [
+  'onlyFamily',
+  'noPet',
+  'noSmoke',
+  'noAlcohol',
+  'noParty',
+  'noUnmarried',
+  'noGuest',
+] as const
+
+export type BoolRule = (typeof BoolRules)[number]
 
 export type PostCreateFormValues = {
   meta: {
@@ -45,13 +60,8 @@ export type PostCreateFormValues = {
     maxBaby: number
     minDate: number
     maxDate: number
-    onlyFamily: boolean
-    noPet: boolean
-    noSmoke: boolean
-    noAlcohol: boolean
-    noParty: boolean
-    noUnmarried: boolean
-    noGuest: boolean
+  } & {
+    [key in BoolRule]: boolean
   }
   prices: Prices
 }
@@ -171,6 +181,7 @@ const PostCreateForm: React.FC = () => {
           form.setFieldValue(field, value)
         }}
       />
+      <PostCategoryRuleSection rules={categoryFields.rules} toggleRule={() => {}} />
       <Button htmlType='submit' variant='primary'>
         Submit
       </Button>

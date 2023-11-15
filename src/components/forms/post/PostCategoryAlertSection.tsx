@@ -14,7 +14,6 @@ const PostCategoryAlertSection: React.FC<Props> = ({ alerts }) => {
     <FormSection
       className={`transition-opacity duration-200 ${alerts.length > 0 ? 'opacity-100' : 'hidden opacity-0'}`}
     >
-      {' '}
       <FormSection.Head>
         <FormSection.Head.Title>{t('form.category-alerts.title')}</FormSection.Head.Title>
         <FormSection.Head.Subtitle>{t('form.category-alerts.subtitle')}</FormSection.Head.Subtitle>

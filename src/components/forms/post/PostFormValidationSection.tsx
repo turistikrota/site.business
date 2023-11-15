@@ -4,7 +4,7 @@ import FormSection from '@turistikrota/ui/form/section'
 import ToggleButton from '@turistikrota/ui/form/toggle'
 import { FormikErrors } from 'formik'
 import { useTranslation } from 'react-i18next'
-import { PostCreateFormValues } from './PostCreateForm'
+import { BoolRules, PostCreateFormValues } from './PostCreateForm'
 
 type Props = {
   values: PostCreateFormValues
@@ -134,104 +134,23 @@ const PostFormValidationSection: React.FC<Props> = ({ values, errors, onBoolFiel
             onBlur={onChange}
           />
         </div>
-        <LineForm className='col-span-12'>
-          <LineForm.Left>
-            <LineForm.Left.Title>{t('form.validation.onlyFamily.title')}</LineForm.Left.Title>
-            <LineForm.Left.Description>{t('form.validation.onlyFamily.description')}</LineForm.Left.Description>
-          </LineForm.Left>
-          <LineForm.Right>
-            <ToggleButton
-              defaultChecked={values.validation.onlyFamily}
-              variant='error'
-              title={t('form.validation.onlyFamily.alt')}
-              onChange={(e) => onBoolFieldChange('validation.onlyFamily', e)}
-            />
-          </LineForm.Right>
-        </LineForm>
-        <LineForm className='col-span-12'>
-          <LineForm.Left>
-            <LineForm.Left.Title>{t('form.validation.noPet.title')}</LineForm.Left.Title>
-            <LineForm.Left.Description>{t('form.validation.noPet.description')}</LineForm.Left.Description>
-          </LineForm.Left>
-          <LineForm.Right>
-            <ToggleButton
-              defaultChecked={values.validation.noPet}
-              variant='error'
-              title={t('form.validation.noPet.alt')}
-              onChange={(e) => onBoolFieldChange('validation.noPet', e)}
-            />
-          </LineForm.Right>
-        </LineForm>
-        <LineForm className='col-span-12'>
-          <LineForm.Left>
-            <LineForm.Left.Title>{t('form.validation.noSmoke.title')}</LineForm.Left.Title>
-            <LineForm.Left.Description>{t('form.validation.noSmoke.description')}</LineForm.Left.Description>
-          </LineForm.Left>
-          <LineForm.Right>
-            <ToggleButton
-              defaultChecked={values.validation.noSmoke}
-              variant='error'
-              title={t('form.validation.noSmoke.alt')}
-              onChange={(e) => onBoolFieldChange('validation.noSmoke', e)}
-            />
-          </LineForm.Right>
-        </LineForm>
-        <LineForm className='col-span-12'>
-          <LineForm.Left>
-            <LineForm.Left.Title>{t('form.validation.noAlcohol.title')}</LineForm.Left.Title>
-            <LineForm.Left.Description>{t('form.validation.noAlcohol.description')}</LineForm.Left.Description>
-          </LineForm.Left>
-          <LineForm.Right>
-            <ToggleButton
-              defaultChecked={values.validation.noAlcohol}
-              variant='error'
-              title={t('form.validation.noAlcohol.alt')}
-              onChange={(e) => onBoolFieldChange('validation.noAlcohol', e)}
-            />
-          </LineForm.Right>
-        </LineForm>
-        <LineForm className='col-span-12'>
-          <LineForm.Left>
-            <LineForm.Left.Title>{t('form.validation.noParty.title')}</LineForm.Left.Title>
-            <LineForm.Left.Description>{t('form.validation.noParty.description')}</LineForm.Left.Description>
-          </LineForm.Left>
-          <LineForm.Right>
-            <ToggleButton
-              defaultChecked={values.validation.noParty}
-              variant='error'
-              title={t('form.validation.noParty.alt')}
-              onChange={(e) => onBoolFieldChange('validation.noParty', e)}
-            />
-          </LineForm.Right>
-        </LineForm>
-        <LineForm className='col-span-12'>
-          <LineForm.Left>
-            <LineForm.Left.Title>{t('form.validation.noUnmarried.title')}</LineForm.Left.Title>
-            <LineForm.Left.Description>{t('form.validation.noUnmarried.description')}</LineForm.Left.Description>
-          </LineForm.Left>
-          <LineForm.Right>
-            <ToggleButton
-              defaultChecked={values.validation.noUnmarried}
-              variant='error'
-              title={t('form.validation.noUnmarried.alt')}
-              onChange={(e) => onBoolFieldChange('validation.noUnmarried', e)}
-            />
-          </LineForm.Right>
-        </LineForm>
-        <LineForm className='col-span-12'>
-          <LineForm.Left>
-            <LineForm.Left.Title>{t('form.validation.noGuest.title')}</LineForm.Left.Title>
-            <LineForm.Left.Description>{t('form.validation.noGuest.description')}</LineForm.Left.Description>
-          </LineForm.Left>
-          <LineForm.Right>
-            <ToggleButton
-              defaultChecked={values.validation.noGuest}
-              variant='error'
-              title={t('form.validation.noGuest.alt')}
-              onChange={(e) => onBoolFieldChange('validation.noGuest', e)}
-            />
-          </LineForm.Right>
-        </LineForm>
+
+        {BoolRules.map((field) => (
+          <LineForm key={field} className='col-span-12 rounded-md p-2 hover:bg-third'>
+            <LineForm.Left>
+              <LineForm.Left.Title>{t(`form.validation.${field}.title`)}</LineForm.Left.Title>
+              <LineForm.Left.Description>{t(`form.validation.${field}.description`)}</LineForm.Left.Description>
+            </LineForm.Left>
+            <LineForm.Right>
+              <ToggleButton
+                defaultChecked={values.validation[field]}
+                variant='error'
+                title={t(`form.validation.${field}.alt`)}
+                onChange={(e) => onBoolFieldChange(`validation.${field}`, e)}
+              />
+            </LineForm.Right>
+          </LineForm>
+        ))}
       </FormSection.Body>
     </FormSection>
   )
