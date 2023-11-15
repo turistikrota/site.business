@@ -44,6 +44,11 @@
       "title": "Kategori Bilgileri",
       "subtitle": "Bu bölümde ilanınızın kategori bilgilerini girebilirsiniz."
     },
+    "category-alerts": {
+      "title": "Kategori Uyarları",
+      "subtitle": "Bu bölümde ilanınızın kategori uyarılarını girebilirsiniz.",
+      "category": "{{name}} kategorisi"
+    },
     "location": {
       "title": "İlan Konumu",
       "subtitle": "Bu bölümde ilanınızın konumunu belirleyebilirsiniz.",

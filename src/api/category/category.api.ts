@@ -26,40 +26,40 @@ type InputTranslation = {
   help: string
 }
 
-type BaseTranslation = {
+export type BaseTranslation = {
   name: string
   description: string
 }
 
-type InputGroup = {
+export type InputGroup = {
   uuid: string
   icon: string
   translations: I18nTranslation<BaseTranslation>
   inputs: Input[]
 }
 
-type CategoryMiniMeta = {
+export type CategoryMiniMeta = {
   name: string
   slug: string
 }
 
-type Rule = {
+export type CategoryRule = {
   uuid: string
   categoryMeta: I18nTranslation<CategoryMiniMeta>
   translations: I18nTranslation<BaseTranslation>
 }
 
-type Alert = {
+export type CategoryAlert = {
   uuid: string
   categoryMeta: I18nTranslation<CategoryMiniMeta>
   translations: I18nTranslation<BaseTranslation>
   type: 'info' | 'warning' | 'error'
 }
 
-type InputFieldsResponse = {
+export type CategoryFields = {
   inputGroups: InputGroup[]
-  alerts: Alert[]
-  rules: Rule[]
+  alerts: CategoryAlert[]
+  rules: CategoryRule[]
 }
 
 type Image = {
@@ -81,8 +81,8 @@ export type CategoryListItem = {
   meta: I18nTranslation<CategoryMeta>
 }
 
-export const fetchCategoryFields = async (uuids: string[]): Promise<InputFieldsResponse[]> => {
-  const res = await httpClient.get(apiUrl(Services.Category, `/fields?=uuids=${uuids.join(',')}`)).catch(() => ({
+export const fetchCategoryFields = async (uuids: string[]): Promise<CategoryFields> => {
+  const res = await httpClient.get(apiUrl(Services.Category, `/fields?uuids=${uuids.join(',')}`)).catch(() => ({
     data: {
       inputGroups: [],
       alerts: [],

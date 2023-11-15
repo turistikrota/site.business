@@ -1,7 +1,10 @@
+import { CategoryFields, fetchCategoryFields } from '@/api/category/category.api'
 import Button from '@turistikrota/ui/button'
 import { Coordinates, Locales } from '@turistikrota/ui/types'
 import { useFormik } from 'formik'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
+import { debounce } from 'react-advanced-cropper'
+import PostCategoryAlertSection from './PostCategoryAlertSection'
 import PostFormCalendarSection from './PostFormCalendarSection'
 import PostFormCategorySection from './PostFormCategorySection'
 import PostFormImageSection from './PostFormImageSection'
@@ -56,6 +59,11 @@ export type PostCreateFormValues = {
 const PostCreateForm: React.FC = () => {
   const [images, setImages] = useState<string[]>([])
   const [files, setFiles] = useState<File[]>([])
+  const [categoryFields, setCategoryFields] = useState<CategoryFields>({
+    alerts: [],
+    inputGroups: [],
+    rules: [],
+  })
   const form = useFormik<PostCreateFormValues>({
     initialValues: {
       categoryUUIDs: [],
@@ -99,6 +107,24 @@ const PostCreateForm: React.FC = () => {
     onSubmit: () => {},
   })
 
+  useEffect(() => {
+    if (form.values.categoryUUIDs.length > 0) {
+      debouncedCategoryFieldFetcher(form.values.categoryUUIDs)
+    } else {
+      setCategoryFields({
+        alerts: [],
+        inputGroups: [],
+        rules: [],
+      })
+    }
+  }, [form.values.categoryUUIDs])
+
+  const debouncedCategoryFieldFetcher = debounce((categoryIds: string[]) => {
+    fetchCategoryFields(categoryIds).then((res) => {
+      setCategoryFields(res)
+    })
+  }, 300)
+
   const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     form.handleSubmit()
@@ -120,6 +146,7 @@ const PostCreateForm: React.FC = () => {
           form.setFieldValue(field, value)
         }}
       />
+      <PostCategoryAlertSection alerts={categoryFields.alerts} />
       <PostFormImageSection images={images} setImages={setImages} files={files} setFiles={onFileChange} />
       <PostFormLocationSection
         values={form.values}
