@@ -7,10 +7,11 @@ import { useTranslation } from 'react-i18next'
 
 type Props = {
   rules: CategoryRule[]
+  acceptedRules: Record<string, boolean>
   toggleRule: (rule: CategoryRule, direction: boolean) => void
 }
 
-const PostCategoryRuleSection: React.FC<Props> = ({ rules, toggleRule }) => {
+const PostCategoryRuleSection: React.FC<Props> = ({ rules, acceptedRules, toggleRule }) => {
   const { t, i18n } = useTranslation('posts')
   return (
     <FormSection className={`transition-opacity duration-200 ${rules.length > 0 ? 'opacity-100' : 'hidden opacity-0'}`}>
@@ -37,6 +38,7 @@ const PostCategoryRuleSection: React.FC<Props> = ({ rules, toggleRule }) => {
             <LineForm.Right>
               <ToggleButton
                 defaultChecked={false}
+                checked={acceptedRules[rule.uuid]}
                 variant='success'
                 title={getI18nTranslation<BaseTranslation>(rule.translations, i18n.language).name}
                 onChange={(e) => toggleRule(rule, e)}

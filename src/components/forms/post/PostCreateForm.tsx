@@ -36,7 +36,7 @@ const PostCreateForm: React.FC = () => {
     inputGroups: [],
     rules: [],
   })
-  const [acceptedRules, setAcceptedRules] = useState<string[]>([])
+  const [acceptedRules, setAcceptedRules] = useState<Record<string, boolean>>({})
   const toast = useToast()
   const schema = usePostCreateSchema()
   const autoSave = useAutoSave<PostCreateFormValues>('post-create-form')
@@ -73,8 +73,7 @@ const PostCreateForm: React.FC = () => {
   })
 
   const isAllRulesAccepted = useMemo(() => {
-    const uniqueAcceptedRules = [...new Set(acceptedRules)]
-    return uniqueAcceptedRules.length === categoryFields.rules.length
+    return Object.keys(acceptedRules).length === categoryFields.rules.length
   }, [acceptedRules, categoryFields.rules])
 
   useEffect(() => {
@@ -124,7 +123,7 @@ const PostCreateForm: React.FC = () => {
 
   const debouncedCategoryFieldFetcher = debounce((categoryIds: string[]) => {
     fetchCategoryFields(categoryIds).then((res) => {
-      setAcceptedRules([])
+      setAcceptedRules({})
       setCategoryFields(res)
       calcInputIndexes(res.inputGroups)
     })
@@ -218,12 +217,12 @@ const PostCreateForm: React.FC = () => {
       />
       <PostCategoryRuleSection
         rules={categoryFields.rules}
+        acceptedRules={acceptedRules}
         toggleRule={(rule: CategoryRule, direction: boolean) => {
-          if (direction) {
-            setAcceptedRules([...acceptedRules, rule.uuid])
-          } else {
-            setAcceptedRules(acceptedRules.filter((r) => r !== rule.uuid))
-          }
+          setAcceptedRules({
+            ...acceptedRules,
+            [rule.uuid]: direction,
+          })
         }}
       />
       <Button
