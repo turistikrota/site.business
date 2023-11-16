@@ -1,9 +1,11 @@
-import { CategoryFields, InputGroup, fetchCategoryFields } from '@/api/category/category.api'
+import { CategoryFields, CategoryRule, InputGroup, fetchCategoryFields } from '@/api/category/category.api'
+import { usePostCreateSchema } from '@/schemas/post-create.schema'
 import Button from '@turistikrota/ui/button'
 import { Coordinates, Locales } from '@turistikrota/ui/types'
 import { FormikErrors, useFormik } from 'formik'
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useMemo, useState } from 'react'
 import { debounce } from 'react-advanced-cropper'
+import { useTranslation } from 'react-i18next'
 import PostCategoryAlertSection from './PostCategoryAlertSection'
 import PostCategoryInputGroupSection from './PostCategoryInputGroupSection'
 import PostCategoryRuleSection from './PostCategoryRuleSection'
@@ -62,13 +64,13 @@ export type PostCreateFormValues = {
   features: PostFeature[]
   validation: {
     minAdult: number
-    maxAdult: number
-    minKid: number
-    maxKid: number
-    minBaby: number
-    maxBaby: number
-    minDate: number
-    maxDate: number
+    maxAdult?: number
+    minKid?: number
+    maxKid?: number
+    minBaby?: number
+    maxBaby?: number
+    minDate?: number
+    maxDate?: number
   } & {
     [key in BoolRule]: boolean
   }
@@ -76,14 +78,18 @@ export type PostCreateFormValues = {
 }
 
 const PostCreateForm: React.FC = () => {
+  const { t } = useTranslation('posts')
   const [images, setImages] = useState<string[]>([])
   const [files, setFiles] = useState<File[]>([])
+  const [loading, setLoading] = useState(false)
   const [inputIndexes, setInputIndexes] = useState<Record<string, number>>({})
   const [categoryFields, setCategoryFields] = useState<CategoryFields>({
     alerts: [],
     inputGroups: [],
     rules: [],
   })
+  const [acceptedRules, setAcceptedRules] = useState<string[]>([])
+  const schema = usePostCreateSchema()
   const form = useFormik<PostCreateFormValues>({
     initialValues: {
       categoryUUIDs: [],
@@ -107,13 +113,13 @@ const PostCreateForm: React.FC = () => {
       },
       validation: {
         minAdult: 1,
-        maxAdult: 0,
-        minKid: 0,
-        maxKid: 0,
-        minBaby: 0,
-        maxBaby: 0,
-        minDate: 0,
-        maxDate: 0,
+        maxAdult: undefined,
+        minKid: undefined,
+        maxKid: undefined,
+        minBaby: undefined,
+        maxBaby: undefined,
+        minDate: undefined,
+        maxDate: undefined,
         onlyFamily: false,
         noPet: false,
         noSmoke: false,
@@ -125,12 +131,20 @@ const PostCreateForm: React.FC = () => {
       features: [],
       prices: [],
     },
-    onSubmit: () => {},
+
+    validationSchema: schema,
+    validateOnBlur: false,
+    validateOnChange: false,
+    validateOnMount: false,
+    onSubmit: () => {
+      setLoading(true)
+    },
   })
 
-  useEffect(() => {
-    console.log('sa::', form.values)
-  }, [form.values])
+  const isAllRulesAccepted = useMemo(() => {
+    const uniqueAcceptedRules = [...new Set(acceptedRules)]
+    return uniqueAcceptedRules.length === categoryFields.rules.length
+  }, [acceptedRules, categoryFields.rules])
 
   useEffect(() => {
     if (form.values.categoryUUIDs.length > 0) {
@@ -141,11 +155,13 @@ const PostCreateForm: React.FC = () => {
         inputGroups: [],
         rules: [],
       })
+      setAcceptedRules([])
     }
   }, [form.values.categoryUUIDs])
 
   const debouncedCategoryFieldFetcher = debounce((categoryIds: string[]) => {
     fetchCategoryFields(categoryIds).then((res) => {
+      setAcceptedRules([])
       setCategoryFields(res)
       calcInputIndexes(res.inputGroups)
     })
@@ -225,9 +241,30 @@ const PostCreateForm: React.FC = () => {
           form.setFieldValue(field, value)
         }}
       />
-      <PostCategoryRuleSection rules={categoryFields.rules} toggleRule={() => {}} />
-      <Button htmlType='submit' variant='primary'>
-        Submit
+      <PostCategoryRuleSection
+        rules={categoryFields.rules}
+        toggleRule={(rule: CategoryRule, direction: boolean) => {
+          if (direction) {
+            setAcceptedRules([...acceptedRules, rule.uuid])
+          } else {
+            setAcceptedRules(acceptedRules.filter((r) => r !== rule.uuid))
+          }
+        }}
+      />
+      <Button
+        htmlType='submit'
+        variant='primary'
+        disabled={!isAllRulesAccepted || loading}
+        className='disabled:opacity-50'
+      >
+        {isAllRulesAccepted
+          ? t('button.create')
+          : loading
+          ? t('button.loading')
+          : t('button.disabled', {
+              total: categoryFields.rules.length,
+              accepted: acceptedRules.length,
+            })}
       </Button>
     </form>
   )

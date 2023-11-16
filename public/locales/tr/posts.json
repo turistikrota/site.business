@@ -1,4 +1,9 @@
 {
+  "button": {
+    "create": "İlanı Oluştur",
+    "loading": "İlan Oluşturuluyor...",
+    "disabled": "Lütfen tüm kategori kurallarını kabul ediniz. ({{accepted}}/{{total}})"
+  },
   "create": {
     "meta": {
       "title": "İlan Oluştur",

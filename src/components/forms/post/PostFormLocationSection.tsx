@@ -35,7 +35,8 @@ const PostFormLocationSection: React.FC<Props> = ({ values, errors, onChange, se
   const toast = useToast()
 
   const debouncedSync = debounce((position: Coordinates) => {
-    setFieldValue('location.coordinates', position)
+    const fixedPosition = position.map((p) => parseFloat(p.toFixed(6).replace(',', '.')))
+    setFieldValue('location.coordinates', fixedPosition)
     const district = findNearestDistrict(position)
     if (!district) {
       setFieldValue('location.city', '')
@@ -131,6 +132,7 @@ const PostFormLocationSection: React.FC<Props> = ({ values, errors, onChange, se
               error={errors.location?.coordinates?.[0]}
               max={90}
               min={-90}
+              step='0.000001'
               onChange={onChange}
               onBlur={onChange}
             />
@@ -147,6 +149,7 @@ const PostFormLocationSection: React.FC<Props> = ({ values, errors, onChange, se
               error={errors.location?.coordinates?.[1]}
               max={180}
               min={-180}
+              step='0.000001'
               onChange={onChange}
               onBlur={onChange}
             />

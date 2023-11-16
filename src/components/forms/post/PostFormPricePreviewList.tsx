@@ -18,6 +18,7 @@ const PostFormPricePreviewList: React.FC<Props> = ({ prices, errors, setFieldVal
 
   return (
     <div className='flex flex-col gap-x-4'>
+      {typeof errors === 'string' && <ErrorText>{errors}</ErrorText>}
       {prices.map((price, idx) => (
         <div key={idx} className='flex flex-col gap-x-2 gap-y-1'>
           <div key={idx} className='flex w-full gap-x-4'>
