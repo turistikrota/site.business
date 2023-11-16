@@ -17,9 +17,9 @@ const PostFormPricePreviewList: React.FC<Props> = ({ prices, errors, setFieldVal
   const dayjs = useDayJS(i18n.language)
 
   return (
-    <div className='flex flex-col gap-4'>
+    <div className='flex flex-col gap-x-4'>
       {prices.map((price, idx) => (
-        <div key={idx} className='flex flex-col gap-2'>
+        <div key={idx} className='flex flex-col gap-x-2 gap-y-1'>
           <div key={idx} className='flex w-full gap-x-4'>
             <div className='flex w-full items-center justify-center rounded-md bg-default p-2 text-secondary'>
               {dayjs(price.startDate).format('DD MMMM YYYY')}
