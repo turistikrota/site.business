@@ -26,6 +26,7 @@ type UploaderType = React.FC<Props> & {
 }
 
 const ImagePreview: React.FC<PreviewProps> = ({ list, onChange, onRemove }) => {
+  const { t } = useTranslation('dropzone')
   const preview = useImagePreview()
 
   const onOrderChange = (current: number, to: number) => {
@@ -52,7 +53,7 @@ const ImagePreview: React.FC<PreviewProps> = ({ list, onChange, onRemove }) => {
               }}
               size='sm'
             >
-              Remove
+              {t('remove')}
             </Button>
           </div>
         ))}

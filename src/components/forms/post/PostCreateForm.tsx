@@ -61,6 +61,7 @@ export type PostCreateFormValues = {
     isStrict: boolean
     coordinates: Coordinates
   }
+  images: []
   features: PostFeature[]
   validation: {
     minAdult: number
@@ -103,6 +104,7 @@ const PostCreateForm: React.FC = () => {
           description: '',
         },
       },
+      images: [],
       location: {
         address: '',
         city: '',
@@ -217,7 +219,13 @@ const PostCreateForm: React.FC = () => {
           form.setFieldValue(field, value)
         }}
       />
-      <PostFormImageSection images={images} setImages={setImages} files={files} setFiles={onFileChange} />
+      <PostFormImageSection
+        images={images}
+        errors={form.errors}
+        setImages={setImages}
+        files={files}
+        setFiles={onFileChange}
+      />
       <PostFormLocationSection
         values={form.values}
         errors={form.errors}

@@ -1,16 +1,20 @@
 import ImageUploader from '@/components/image/ImageUploader'
 import FormSection from '@turistikrota/ui/form/section'
 import ImagePreviewProvider from '@turistikrota/ui/image/preview'
+import ErrorText from '@turistikrota/ui/text/error'
+import { FormikErrors } from 'formik'
 import { useTranslation } from 'react-i18next'
+import { PostCreateFormValues } from './PostCreateForm'
 
 type Props = {
   images: string[]
   files: File[]
+  errors: FormikErrors<PostCreateFormValues>
   setImages: (images: string[]) => void
   setFiles: (files: File[]) => void
 }
 
-const PostFormImageSection: React.FC<Props> = ({ files, images, setFiles, setImages }) => {
+const PostFormImageSection: React.FC<Props> = ({ files, errors, images, setFiles, setImages }) => {
   const { t } = useTranslation('posts')
   return (
     <FormSection>
@@ -30,6 +34,7 @@ const PostFormImageSection: React.FC<Props> = ({ files, images, setFiles, setIma
             }}
           ></ImageUploader.Preview>
         </ImagePreviewProvider>
+        {typeof errors?.images === 'string' && <ErrorText>{errors.images}</ErrorText>}
       </FormSection.Body>
     </FormSection>
   )
