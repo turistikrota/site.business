@@ -2,7 +2,7 @@ import { Services, apiUrl } from '@/config/services'
 import { httpClient } from '@/http/client'
 import { I18nTranslation } from '@turistikrota/ui/types'
 
-type Input = {
+export type CategoryInput = {
   uuid: string
   groupUUID: string
   type: string
@@ -20,7 +20,7 @@ type InputExtra = {
   value: string
 }
 
-type InputTranslation = {
+export type InputTranslation = {
   name: string
   placeholder: string
   help: string
@@ -35,7 +35,7 @@ export type InputGroup = {
   uuid: string
   icon: string
   translations: I18nTranslation<BaseTranslation>
-  inputs: Input[]
+  inputs: CategoryInput[]
 }
 
 export type CategoryMiniMeta = {

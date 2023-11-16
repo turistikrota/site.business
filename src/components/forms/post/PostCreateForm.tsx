@@ -1,10 +1,11 @@
-import { CategoryFields, fetchCategoryFields } from '@/api/category/category.api'
+import { CategoryFields, InputGroup, fetchCategoryFields } from '@/api/category/category.api'
 import Button from '@turistikrota/ui/button'
 import { Coordinates, Locales } from '@turistikrota/ui/types'
-import { useFormik } from 'formik'
+import { FormikErrors, useFormik } from 'formik'
 import React, { useEffect, useState } from 'react'
 import { debounce } from 'react-advanced-cropper'
 import PostCategoryAlertSection from './PostCategoryAlertSection'
+import PostCategoryInputGroupSection from './PostCategoryInputGroupSection'
 import PostCategoryRuleSection from './PostCategoryRuleSection'
 import PostFormCalendarSection from './PostFormCalendarSection'
 import PostFormCategorySection from './PostFormCategorySection'
@@ -35,6 +36,13 @@ export const BoolRules: BoolRuleType[] = [
 
 export type BoolRule = (typeof BoolRules)[number]
 
+export type PostFeature<T = any> = {
+  categoryInputUUID: string
+  value: T
+  isPayed: boolean
+  price: number
+}
+
 export type PostCreateFormValues = {
   meta: {
     [key in Locales]: {
@@ -51,6 +59,7 @@ export type PostCreateFormValues = {
     isStrict: boolean
     coordinates: Coordinates
   }
+  features: PostFeature[]
   validation: {
     minAdult: number
     maxAdult: number
@@ -69,6 +78,7 @@ export type PostCreateFormValues = {
 const PostCreateForm: React.FC = () => {
   const [images, setImages] = useState<string[]>([])
   const [files, setFiles] = useState<File[]>([])
+  const [inputIndexes, setInputIndexes] = useState<Record<string, number>>({})
   const [categoryFields, setCategoryFields] = useState<CategoryFields>({
     alerts: [],
     inputGroups: [],
@@ -112,6 +122,7 @@ const PostCreateForm: React.FC = () => {
         noUnmarried: false,
         noGuest: false,
       },
+      features: [],
       prices: [],
     },
     onSubmit: () => {},
@@ -132,8 +143,27 @@ const PostCreateForm: React.FC = () => {
   const debouncedCategoryFieldFetcher = debounce((categoryIds: string[]) => {
     fetchCategoryFields(categoryIds).then((res) => {
       setCategoryFields(res)
+      calcInputIndexes(res.inputGroups)
     })
   }, 300)
+
+  const calcInputIndexes = (inputGroups: InputGroup[]) => {
+    const newIndex: Record<string, number> = {}
+    const features: PostFeature[] = []
+    inputGroups.forEach((group) => {
+      group.inputs.forEach((input, index) => {
+        features.push({
+          categoryInputUUID: input.uuid,
+          value: '',
+          isPayed: false,
+          price: 0,
+        })
+        newIndex[input.uuid] = index
+      })
+    })
+    form.setFieldValue('features', features)
+    setInputIndexes(newIndex)
+  }
 
   const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
@@ -157,6 +187,16 @@ const PostCreateForm: React.FC = () => {
         }}
       />
       <PostCategoryAlertSection alerts={categoryFields.alerts} />
+      <PostCategoryInputGroupSection
+        inputGroups={categoryFields.inputGroups}
+        errors={form.errors?.features as FormikErrors<PostFeature>[]}
+        values={form.values}
+        inputIndex={inputIndexes}
+        onChange={form.handleChange}
+        setFieldValue={(field, value) => {
+          form.setFieldValue(field, value)
+        }}
+      />
       <PostFormImageSection images={images} setImages={setImages} files={files} setFiles={onFileChange} />
       <PostFormLocationSection
         values={form.values}
