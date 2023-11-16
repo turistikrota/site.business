@@ -144,7 +144,8 @@ const Renderer: Record<string, InputRender> = {
               value={value}
               onChange={(e: boolean) => {
                 if (e) {
-                  setFieldValue(formName, [...value, option])
+                  const newVal = value ? [...value, option] : [option]
+                  setFieldValue(formName, newVal)
                 } else {
                   setFieldValue(
                     formName,

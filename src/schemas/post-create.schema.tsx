@@ -53,7 +53,6 @@ export const usePostCreateSchema = () => {
     features: yup.array().of(
       yup.object().shape({
         categoryInputUUID: yup.string().required(t('required', { field: t('fields.categoryInput') })),
-        value: yup.string().required(t('required', { field: t('fields.value') })),
         isPayed: yup.boolean(),
         price: yup.number(),
       }),

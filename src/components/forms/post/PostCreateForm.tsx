@@ -53,7 +53,7 @@ const PostCreateForm: React.FC = () => {
     onSubmit: (values) => {
       setLoading(true)
       httpClient
-        .post(apiUrl(Services.Post, `/owner}`), values)
+        .post(apiUrl(Services.Post, `/owner`), values)
         .then(() => {
           autoSave.remove()
           toast.success(t('success'))
@@ -97,6 +97,9 @@ const PostCreateForm: React.FC = () => {
           })
           setInitialCategories(existsData.categoryUUIDs)
         },
+        onCancel: () => {
+          autoSave.remove()
+        },
       })
     }
   }, [])
@@ -131,8 +134,8 @@ const PostCreateForm: React.FC = () => {
     const newIndex: Record<string, number> = {}
     const features: PostFeature[] = []
     inputGroups.forEach((group) => {
-      group.inputs.forEach((input, index) => {
-        newIndex[input.uuid] = index
+      group.inputs.forEach((input) => {
+        newIndex[input.uuid] = features.length
         const already = form.values.features.find((f) => f.categoryInputUUID === input.uuid)
         if (already) {
           features.push(already)
