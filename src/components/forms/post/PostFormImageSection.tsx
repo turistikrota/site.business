@@ -1,10 +1,10 @@
 import ImageUploader from '@/components/image/ImageUploader'
+import { PostCreateFormValues } from '@/types/post'
 import FormSection from '@turistikrota/ui/form/section'
 import ImagePreviewProvider from '@turistikrota/ui/image/preview'
 import ErrorText from '@turistikrota/ui/text/error'
 import { FormikErrors } from 'formik'
 import { useTranslation } from 'react-i18next'
-import { PostCreateFormValues } from './PostCreateForm'
 
 type Props = {
   images: string[]

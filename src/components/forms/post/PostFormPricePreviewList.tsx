@@ -1,10 +1,10 @@
+import { Price, Prices } from '@/types/post'
 import { useDayJS } from '@/utils/dayjs'
 import Button from '@turistikrota/ui/button'
 import ErrorText from '@turistikrota/ui/text/error'
 import { FormikErrors } from 'formik'
 import React from 'react'
 import { useTranslation } from 'react-i18next'
-import { Price, Prices } from './PostCreateForm'
 
 type Props = {
   prices: Prices

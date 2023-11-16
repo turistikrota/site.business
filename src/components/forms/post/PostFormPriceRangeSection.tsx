@@ -1,9 +1,9 @@
+import { Prices } from '@/types/post'
 import Button from '@turistikrota/ui/button'
 import Input from '@turistikrota/ui/form/input'
 import ErrorText from '@turistikrota/ui/text/error'
 import React, { useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import { Prices } from './PostCreateForm'
 
 type Props = {
   prices: Prices

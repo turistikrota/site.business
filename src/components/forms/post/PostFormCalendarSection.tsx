@@ -1,10 +1,10 @@
 import Calendar, { CalendarData } from '@/components/calendar/Calendar'
+import { PostCreateFormValues, Price } from '@/types/post'
 import Alert from '@turistikrota/ui/alert'
 import FormSection from '@turistikrota/ui/form/section'
 import { FormikErrors } from 'formik'
 import { useMemo } from 'react'
 import { useTranslation } from 'react-i18next'
-import { PostCreateFormValues, Price } from './PostCreateForm'
 import PostFormPricePreviewList from './PostFormPricePreviewList'
 import PostFormPriceRangeSection from './PostFormPriceRangeSection'
 

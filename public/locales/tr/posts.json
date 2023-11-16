@@ -11,6 +11,14 @@
       "keywords": "ilan, oluştur, yeni, yeni ilan, ilan oluştur"
     }
   },
+  "autosave": {
+    "ask": {
+      "title": "Otomatik Kaydedilmiş Veriler Bulundu",
+      "description": "Bu ilan için otomatik kaydedilmiş veriler bulundu. Bu verileri yüklemek ister misiniz?",
+      "cancel": "Hayır",
+      "confirm": "Evet"
+    }
+  },
   "form": {
     "title": "Başlık",
     "description": "Açıklama",

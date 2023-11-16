@@ -1,7 +1,10 @@
 import { CategoryFields, CategoryRule, InputGroup, fetchCategoryFields } from '@/api/category/category.api'
+import useAutoSave from '@/hooks/autosave'
 import { usePostCreateSchema } from '@/schemas/post-create.schema'
+import { EmptyPostCreateValues, PostCreateFormValues, PostFeature, isEmptyPostCreateFormValues } from '@/types/post'
 import Button from '@turistikrota/ui/button'
-import { Coordinates, Locales } from '@turistikrota/ui/types'
+import { useToast } from '@turistikrota/ui/toast'
+import { deepEqual } from '@turistikrota/ui/utils'
 import { FormikErrors, useFormik } from 'formik'
 import React, { useEffect, useMemo, useState } from 'react'
 import { debounce } from 'react-advanced-cropper'
@@ -16,68 +19,6 @@ import PostFormLocationSection from './PostFormLocationSection'
 import PostFormMetaSection from './PostFormMetaSection'
 import PostFormValidationSection from './PostFormValidationSection'
 
-export type Price = {
-  startDate: string
-  endDate: string
-  price: number
-}
-
-export type Prices = Price[]
-
-type BoolRuleType = 'onlyFamily' | 'noPet' | 'noSmoke' | 'noAlcohol' | 'noParty' | 'noUnmarried' | 'noGuest'
-
-export const BoolRules: BoolRuleType[] = [
-  'onlyFamily',
-  'noPet',
-  'noSmoke',
-  'noAlcohol',
-  'noParty',
-  'noUnmarried',
-  'noGuest',
-] as const
-
-export type BoolRule = (typeof BoolRules)[number]
-
-export type PostFeature<T = any> = {
-  categoryInputUUID: string
-  value: T
-  isPayed: boolean
-  price: number
-}
-
-export type PostCreateFormValues = {
-  meta: {
-    [key in Locales]: {
-      title: string
-      description: string
-    }
-  }
-  categoryUUIDs: string[]
-  location: {
-    country: string
-    city: string
-    street: string
-    address: string
-    isStrict: boolean
-    coordinates: Coordinates
-  }
-  images: []
-  features: PostFeature[]
-  validation: {
-    minAdult: number
-    maxAdult?: number
-    minKid?: number
-    maxKid?: number
-    minBaby?: number
-    maxBaby?: number
-    minDate?: number
-    maxDate?: number
-  } & {
-    [key in BoolRule]: boolean
-  }
-  prices: Prices
-}
-
 const PostCreateForm: React.FC = () => {
   const { t } = useTranslation('posts')
   const [images, setImages] = useState<string[]>([])
@@ -90,50 +31,15 @@ const PostCreateForm: React.FC = () => {
     rules: [],
   })
   const [acceptedRules, setAcceptedRules] = useState<string[]>([])
+  const toast = useToast()
   const schema = usePostCreateSchema()
+  const autoSave = useAutoSave<PostCreateFormValues>('post-create-form')
+  const [initialCategories, setInitialCategories] = useState<string[]>([])
+  const existsData = useMemo(() => autoSave.get(), [])
   const form = useFormik<PostCreateFormValues>({
     initialValues: {
-      categoryUUIDs: [],
-      meta: {
-        tr: {
-          title: '',
-          description: '',
-        },
-        en: {
-          title: '',
-          description: '',
-        },
-      },
-      images: [],
-      location: {
-        address: '',
-        city: '',
-        coordinates: [0, 0],
-        country: 'Türkiye',
-        isStrict: false,
-        street: '',
-      },
-      validation: {
-        minAdult: 1,
-        maxAdult: undefined,
-        minKid: undefined,
-        maxKid: undefined,
-        minBaby: undefined,
-        maxBaby: undefined,
-        minDate: undefined,
-        maxDate: undefined,
-        onlyFamily: false,
-        noPet: false,
-        noSmoke: false,
-        noAlcohol: false,
-        noParty: false,
-        noUnmarried: false,
-        noGuest: false,
-      },
-      features: [],
-      prices: [],
+      ...EmptyPostCreateValues,
     },
-
     validationSchema: schema,
     validateOnBlur: false,
     validateOnChange: false,
@@ -147,6 +53,35 @@ const PostCreateForm: React.FC = () => {
     const uniqueAcceptedRules = [...new Set(acceptedRules)]
     return uniqueAcceptedRules.length === categoryFields.rules.length
   }, [acceptedRules, categoryFields.rules])
+
+  useEffect(() => {
+    if (
+      existsData &&
+      JSON.stringify(existsData) !== JSON.stringify(form.values) &&
+      !deepEqual(existsData, form.values) &&
+      !isEmptyPostCreateFormValues(existsData)
+    ) {
+      toast.askPrimary({
+        title: t('autosave.ask.title'),
+        cancelText: t('autosave.ask.cancel'),
+        confirmText: t('autosave.ask.confirm'),
+        description: t('autosave.ask.description'),
+        onConfirm: () => {
+          Object.entries(existsData).forEach(([key, value]) => {
+            // @ts-ignore
+            if (key === 'location' && value.coordinates[0] === 0 && value.coordinates[1] === 0) return
+            form.setFieldValue(key, value)
+          })
+          setInitialCategories(existsData.categoryUUIDs)
+        },
+      })
+    }
+  }, [])
+
+  useEffect(() => {
+    if (isEmptyPostCreateFormValues(form.values)) return
+    autoSave.set(form.values)
+  }, [form.values])
 
   useEffect(() => {
     if (form.values.categoryUUIDs.length > 0) {
@@ -174,13 +109,18 @@ const PostCreateForm: React.FC = () => {
     const features: PostFeature[] = []
     inputGroups.forEach((group) => {
       group.inputs.forEach((input, index) => {
+        newIndex[input.uuid] = index
+        const already = form.values.features.find((f) => f.categoryInputUUID === input.uuid)
+        if (already) {
+          features.push(already)
+          return
+        }
         features.push({
           categoryInputUUID: input.uuid,
           value: undefined,
           isPayed: false,
           price: 0,
         })
-        newIndex[input.uuid] = index
       })
     })
     form.setFieldValue('features', features)
@@ -201,6 +141,7 @@ const PostCreateForm: React.FC = () => {
     <form onSubmit={onSubmit} className='flex flex-col gap-8 pb-10'>
       <PostFormMetaSection values={form.values} errors={form.errors} onChange={form.handleChange} />
       <PostFormCategorySection
+        initialSelectedCategories={initialCategories}
         values={form.values}
         errors={form.errors}
         onChange={form.handleChange}

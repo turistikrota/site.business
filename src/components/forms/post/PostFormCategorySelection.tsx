@@ -8,6 +8,7 @@ import Spin from 'sspin'
 
 type Props = {
   selectedCategories: string[]
+  initialSelectedCategories?: string[]
   setSelectedCategories: (categories: string[]) => void
   error?: React.ReactNode
 }
@@ -18,7 +19,12 @@ type CategoryState = CategoryListItem & {
 
 type CategoryList = CategoryState[]
 
-const PostFormCategorySelection: React.FC<Props> = ({ selectedCategories, setSelectedCategories, error }) => {
+const PostFormCategorySelection: React.FC<Props> = ({
+  initialSelectedCategories,
+  selectedCategories,
+  setSelectedCategories,
+  error,
+}) => {
   const { i18n } = useTranslation('posts')
   const [allCategories, setAllCategories] = useState<CategoryList[]>([])
   const [loading, setLoading] = useState(true)
@@ -29,6 +35,34 @@ const PostFormCategorySelection: React.FC<Props> = ({ selectedCategories, setSel
       setLoading(false)
     })
   }, [])
+
+  useEffect(() => {
+    if (initialSelectedCategories && initialSelectedCategories.length > 0) {
+      syncCategories(initialSelectedCategories)
+    }
+  }, [initialSelectedCategories])
+
+  const syncCategories = async (initialSelectedCategories: string[]) => {
+    if (!initialSelectedCategories || initialSelectedCategories.length === 0 || allCategories.length === 0) {
+      return
+    }
+    setLoading(true)
+    const promises = initialSelectedCategories.map((c) => fetchChildCategories(c))
+    const responses = await Promise.all(promises)
+    const _allCategories: CategoryList[] = []
+    if (allCategories.length > 0) {
+      _allCategories.push(allCategories[0]) // main categories
+    }
+    responses.forEach((r) => {
+      if (r.length > 0) {
+        _allCategories.push(r.map((c) => ({ ...c, selected: false })))
+      }
+    })
+    setAllCategories(_allCategories)
+    setSelectedCategories(initialSelectedCategories)
+    setLoading(false)
+  }
+
   const getChildCategories = (parentId: string, parentIdx: number) => {
     setLoading(true)
     const clearedNextCategories = allCategories.slice(0, parentIdx + 1)

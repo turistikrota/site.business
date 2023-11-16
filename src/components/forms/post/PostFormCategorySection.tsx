@@ -1,18 +1,19 @@
+import { PostCreateFormValues } from '@/types/post'
 import FormSection from '@turistikrota/ui/form/section'
 import { FormikErrors } from 'formik'
 import React from 'react'
 import { useTranslation } from 'react-i18next'
-import { PostCreateFormValues } from './PostCreateForm'
 import PostFormCategorySelection from './PostFormCategorySelection'
 
 type Props = {
+  initialSelectedCategories?: string[]
   values: PostCreateFormValues
   errors: FormikErrors<PostCreateFormValues>
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void
   setFieldValue: (field: string, value: any) => void
 }
 
-const PostFormCategorySection: React.FC<Props> = ({ values, errors, setFieldValue }) => {
+const PostFormCategorySection: React.FC<Props> = ({ initialSelectedCategories, values, errors, setFieldValue }) => {
   const { t } = useTranslation('posts')
   return (
     <FormSection>
@@ -22,6 +23,7 @@ const PostFormCategorySection: React.FC<Props> = ({ values, errors, setFieldValu
       </FormSection.Head>
       <FormSection.Body className='space-y-4 rounded-b-md md:space-y-4'>
         <PostFormCategorySelection
+          initialSelectedCategories={initialSelectedCategories}
           selectedCategories={values.categoryUUIDs}
           setSelectedCategories={(categories) => {
             setFieldValue('categoryUUIDs', categories)

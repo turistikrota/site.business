@@ -1,10 +1,10 @@
+import { BoolRules, PostCreateFormValues } from '@/types/post'
 import Input from '@turistikrota/ui/form/input'
 import LineForm from '@turistikrota/ui/form/line'
 import FormSection from '@turistikrota/ui/form/section'
 import ToggleButton from '@turistikrota/ui/form/toggle'
 import { FormikErrors } from 'formik'
 import { useTranslation } from 'react-i18next'
-import { BoolRules, PostCreateFormValues } from './PostCreateForm'
 
 type Props = {
   values: PostCreateFormValues

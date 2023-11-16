@@ -1,10 +1,10 @@
 import { Locales as LocaleConstant } from '@/config/i18n'
+import { PostCreateFormValues } from '@/types/post'
 import Input from '@turistikrota/ui/form/input'
 import FormSection from '@turistikrota/ui/form/section'
 import { FormikErrors } from 'formik'
 import React from 'react'
 import { useTranslation } from 'react-i18next'
-import { PostCreateFormValues } from './PostCreateForm'
 
 type Props = {
   values: PostCreateFormValues

@@ -2,6 +2,7 @@ import DraggableMarker from '@/components/map/DraggableMarker'
 import MapDefaultConfig from '@/components/map/MapDefaultConfig'
 import MapDynamic from '@/components/map/MapDynamic'
 import { findNearestDistrict } from '@/static/location/districts'
+import { PostCreateFormValues } from '@/types/post'
 import Alert from '@turistikrota/ui/alert'
 import Button from '@turistikrota/ui/button'
 import Input from '@turistikrota/ui/form/input'
@@ -16,7 +17,6 @@ import { FormikErrors } from 'formik'
 import { LatLngTuple } from 'leaflet'
 import { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import { PostCreateFormValues } from './PostCreateForm'
 
 type Props = {
   values: PostCreateFormValues
