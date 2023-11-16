@@ -129,6 +129,10 @@ const PostCreateForm: React.FC = () => {
   })
 
   useEffect(() => {
+    console.log('sa::', form.values)
+  }, [form.values])
+
+  useEffect(() => {
     if (form.values.categoryUUIDs.length > 0) {
       debouncedCategoryFieldFetcher(form.values.categoryUUIDs)
     } else {

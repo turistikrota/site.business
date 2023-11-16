@@ -57,7 +57,9 @@
     "category-inputs": {
       "options": {
         "option 1": "Option 1",
-        "option 2": "Option 2"
+        "option 2": "Option 2",
+        "rich": "Zengin",
+        "electro": "Elektronik"
       }
     },
     "location": {

@@ -1,11 +1,19 @@
-import { CategoryInput, InputGroup, InputTranslation } from '@/api/category/category.api'
+import { InputGroup, InputTranslation } from '@/api/category/category.api'
 import { getI18nTranslation } from '@/types/base'
+import Checkbox from '@turistikrota/ui/form/checkbox'
 import Input from '@turistikrota/ui/form/input'
+import Radio from '@turistikrota/ui/form/radio'
 import FormSection from '@turistikrota/ui/form/section'
 import Select from '@turistikrota/ui/form/select'
+import Textarea from '@turistikrota/ui/form/textarea'
+import { useIsDesktop } from '@turistikrota/ui/hooks/dom'
+import ErrorText from '@turistikrota/ui/text/error'
 import { FormikErrors } from 'formik'
+import { Fragment } from 'react'
 import { useTranslation } from 'react-i18next'
 import { PostCreateFormValues, PostFeature } from './PostCreateForm'
+import CategoryDateInput from './category-inputs/DateInput'
+import { InputRender } from './category-inputs/types'
 
 type Props = {
   values: PostCreateFormValues
@@ -15,18 +23,6 @@ type Props = {
   setFieldValue: (field: string, value: any) => void
   onChange: (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => void
 }
-
-type RenderProps = {
-  formName: string
-  value: any
-  error?: string
-  translator: (key: string) => string
-  translation: InputTranslation
-  onChange: (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => void
-  setFieldValue: (field: string, value: any) => void
-}
-
-type InputRender = React.FC<CategoryInput & RenderProps>
 
 const Renderer: Record<string, InputRender> = {
   text: ({ formName, translation, value, error, onChange }) => {
@@ -69,6 +65,124 @@ const Renderer: Record<string, InputRender> = {
       </div>
     )
   },
+  textarea: ({ formName, translation, value, error, onChange }) => {
+    return (
+      <div className='col-span-12 sm:col-span-6'>
+        <Textarea
+          id={formName}
+          name={formName}
+          autoComplete={formName}
+          label={translation.name}
+          ariaLabel={translation.name}
+          value={value}
+          error={error}
+          rows={3}
+          onChange={onChange}
+          onBlur={onChange}
+        />
+      </div>
+    )
+  },
+  number: ({ formName, translation, value, error, onChange, extra }) => {
+    return (
+      <div className='col-span-12 sm:col-span-6'>
+        <Input
+          id={formName}
+          type='number'
+          name={formName}
+          autoComplete={formName}
+          label={translation.name}
+          ariaLabel={translation.name}
+          value={value}
+          error={error}
+          min={extra?.find((e) => e.name === 'min')?.value}
+          max={extra?.find((e) => e.name === 'max')?.value}
+          onChange={onChange}
+          onBlur={onChange}
+        />
+      </div>
+    )
+  },
+  radio: ({ formName, translator, isDesktop, translation, value, error, setFieldValue, extra, options }) => {
+    return (
+      <div className='col-span-12'>
+        <div className='text-sm font-medium text-gray-700 dark:text-gray-300'>{translation.name}</div>
+        <div className='text-xs text-gray-500 dark:text-gray-400'>{translation.help}</div>
+        {options.map((option) => (
+          <Radio
+            key={option}
+            id={option}
+            name={formName}
+            reverse={!isDesktop}
+            effect={isDesktop ? 'hover' : undefined}
+            checked={value === option}
+            onChange={(e: boolean) => {
+              if (e) setFieldValue(formName, option)
+              else setFieldValue(formName, undefined)
+            }}
+          >
+            {extra.find((e) => e.name === 'no-translate')?.value ? option : translator(option)}
+          </Radio>
+        ))}
+        <ErrorText>{error}</ErrorText>
+      </div>
+    )
+  },
+  checkbox: ({ formName, translator, isDesktop, translation, value, error, setFieldValue, extra, options }) => {
+    return (
+      <div className='col-span-12'>
+        <div className='text-sm font-medium text-gray-700 dark:text-gray-300'>{translation.name}</div>
+        <div className='text-xs text-gray-500 dark:text-gray-400'>{translation.help}</div>
+        <div className='mt-2 space-y-4'>
+          {options.map((option) => (
+            <Checkbox
+              key={option}
+              id={option}
+              name={formName}
+              reversed={!isDesktop}
+              effect={isDesktop ? 'hover' : undefined}
+              value={value}
+              onChange={(e: boolean) => {
+                if (e) {
+                  setFieldValue(formName, [...value, option])
+                } else {
+                  setFieldValue(
+                    formName,
+                    value.filter((v: string) => v !== option),
+                  )
+                }
+              }}
+            >
+              {extra.find((e) => e.name === 'no-translate')?.value ? option : translator(option)}
+            </Checkbox>
+          ))}
+        </div>
+        <ErrorText>{error}</ErrorText>
+      </div>
+    )
+  },
+  date: CategoryDateInput,
+  price: ({ formName, translation, value, error, onChange, extra }) => {
+    return (
+      <div className='col-span-12 sm:col-span-6'>
+        <Input
+          id={formName}
+          name={formName}
+          type='number'
+          pattern='[0-9]*'
+          autoComplete={formName}
+          label={translation.name}
+          ariaLabel={translation.name}
+          value={value}
+          error={error}
+          min={extra?.find((e) => e.name === 'min')?.value}
+          max={extra?.find((e) => e.name === 'max')?.value}
+          onChange={onChange}
+          onBlur={onChange}
+        />
+      </div>
+    )
+  },
 }
 
 const PostCategoryInputGroupSection: React.FC<Props> = ({
@@ -80,6 +194,7 @@ const PostCategoryInputGroupSection: React.FC<Props> = ({
   setFieldValue,
 }) => {
   const { t, i18n } = useTranslation('posts')
+  const isDesktop = useIsDesktop()
   return (
     <>
       {inputGroups.map((group) => (
@@ -93,21 +208,30 @@ const PostCategoryInputGroupSection: React.FC<Props> = ({
             </FormSection.Head.Subtitle>
           </FormSection.Head>
           <FormSection.Body className='space-y-4 rounded-b-md md:space-y-4'>
-            {group.inputs.map((input) => {
+            {group.inputs.map((input, idx) => {
               const InputRender = Renderer[input.type]
               if (!InputRender) return null
               return (
-                <InputRender
-                  key={input.uuid}
-                  formName={`features.${inputIndex[input.uuid]}.value`}
-                  {...input}
-                  value={values.features[inputIndex[input.uuid]].value}
-                  error={errors[inputIndex[input.uuid]]?.value as string}
-                  translation={getI18nTranslation<InputTranslation>(input.translations, i18n.language)}
-                  onChange={onChange}
-                  setFieldValue={setFieldValue}
-                  translator={(key: string) => t(`form.category-inputs.options.${key}`)}
-                />
+                <Fragment key={input.uuid}>
+                  <InputRender
+                    formName={`features.${inputIndex[input.uuid]}.value`}
+                    {...input}
+                    isDesktop={isDesktop}
+                    value={values.features[inputIndex[input.uuid]].value}
+                    error={errors[inputIndex[input.uuid]]?.value as string}
+                    translation={getI18nTranslation<InputTranslation>(input.translations, i18n.language)}
+                    onChange={onChange}
+                    setFieldValue={setFieldValue}
+                    translator={(key: string) => t(`form.category-inputs.options.${key}`)}
+                  />
+                  {['checkbox', 'radio'].includes(input.type) &&
+                    group.inputs.length > 1 &&
+                    group.inputs.length - 1 !== idx && (
+                      <div className='col-span-12'>
+                        <hr className='mx-auto my-4' />
+                      </div>
+                    )}
+                </Fragment>
               )
             })}
           </FormSection.Body>
