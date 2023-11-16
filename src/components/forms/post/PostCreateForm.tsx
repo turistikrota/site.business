@@ -189,7 +189,7 @@ const PostCreateForm: React.FC = () => {
       <PostCategoryAlertSection alerts={categoryFields.alerts} />
       <PostCategoryInputGroupSection
         inputGroups={categoryFields.inputGroups}
-        errors={form.errors?.features as FormikErrors<PostFeature>[]}
+        errors={(form.errors?.features as FormikErrors<PostFeature>[]) || []}
         values={form.values}
         inputIndex={inputIndexes}
         onChange={form.handleChange}
