@@ -2,6 +2,7 @@ import { CategoryInput, InputGroup, InputTranslation } from '@/api/category/cate
 import { getI18nTranslation } from '@/types/base'
 import Input from '@turistikrota/ui/form/input'
 import FormSection from '@turistikrota/ui/form/section'
+import Select from '@turistikrota/ui/form/select'
 import { FormikErrors } from 'formik'
 import { useTranslation } from 'react-i18next'
 import { PostCreateFormValues, PostFeature } from './PostCreateForm'
@@ -12,15 +13,16 @@ type Props = {
   inputGroups: InputGroup[]
   inputIndex: Record<string, number>
   setFieldValue: (field: string, value: any) => void
-  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void
+  onChange: (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => void
 }
 
 type RenderProps = {
   formName: string
   value: any
   error?: string
+  translator: (key: string) => string
   translation: InputTranslation
-  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void
+  onChange: (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => void
   setFieldValue: (field: string, value: any) => void
 }
 
@@ -45,6 +47,28 @@ const Renderer: Record<string, InputRender> = {
       </div>
     )
   },
+  select: ({ formName, translator, translation, value, error, onChange, options }) => {
+    return (
+      <div className='col-span-12 sm:col-span-6'>
+        <Select
+          id={formName}
+          name={formName}
+          label={translation.name}
+          ariaLabel={translation.name}
+          value={value}
+          error={error}
+          onChange={onChange}
+        >
+          <Select.DefaultOption />
+          {options.map((option) => (
+            <option key={option} value={option}>
+              {translator(option)}
+            </option>
+          ))}
+        </Select>
+      </div>
+    )
+  },
 }
 
 const PostCategoryInputGroupSection: React.FC<Props> = ({
@@ -55,7 +79,7 @@ const PostCategoryInputGroupSection: React.FC<Props> = ({
   onChange,
   setFieldValue,
 }) => {
-  const { i18n } = useTranslation('posts')
+  const { t, i18n } = useTranslation('posts')
   return (
     <>
       {inputGroups.map((group) => (
@@ -82,6 +106,7 @@ const PostCategoryInputGroupSection: React.FC<Props> = ({
                   translation={getI18nTranslation<InputTranslation>(input.translations, i18n.language)}
                   onChange={onChange}
                   setFieldValue={setFieldValue}
+                  translator={(key: string) => t(`form.category-inputs.options.${key}`)}
                 />
               )
             })}

@@ -154,7 +154,7 @@ const PostCreateForm: React.FC = () => {
       group.inputs.forEach((input, index) => {
         features.push({
           categoryInputUUID: input.uuid,
-          value: '',
+          value: undefined,
           isPayed: false,
           price: 0,
         })
