@@ -1,14 +1,19 @@
 import { CategoryFields, CategoryRule, InputGroup, fetchCategoryFields } from '@/api/category/category.api'
+import { Services, apiUrl } from '@/config/services'
 import useAutoSave from '@/hooks/autosave'
+import { httpClient } from '@/http/client'
 import { usePostCreateSchema } from '@/schemas/post-create.schema'
+import { getStaticRoute } from '@/static/page'
 import { EmptyPostCreateValues, PostCreateFormValues, PostFeature, isEmptyPostCreateFormValues } from '@/types/post'
 import Button from '@turistikrota/ui/button'
 import { useToast } from '@turistikrota/ui/toast'
 import { deepEqual } from '@turistikrota/ui/utils'
+import { parseApiError } from '@turistikrota/ui/utils/response'
 import { FormikErrors, useFormik } from 'formik'
 import React, { useEffect, useMemo, useState } from 'react'
 import { debounce } from 'react-advanced-cropper'
 import { useTranslation } from 'react-i18next'
+import { useNavigate } from 'react-router-dom'
 import PostCategoryAlertSection from './PostCategoryAlertSection'
 import PostCategoryInputGroupSection from './PostCategoryInputGroupSection'
 import PostCategoryRuleSection from './PostCategoryRuleSection'
@@ -20,9 +25,10 @@ import PostFormMetaSection from './PostFormMetaSection'
 import PostFormValidationSection from './PostFormValidationSection'
 
 const PostCreateForm: React.FC = () => {
-  const { t } = useTranslation('posts')
+  const { t, i18n } = useTranslation('posts')
   const [images, setImages] = useState<string[]>([])
   const [files, setFiles] = useState<File[]>([])
+  const navigate = useNavigate()
   const [loading, setLoading] = useState(false)
   const [inputIndexes, setInputIndexes] = useState<Record<string, number>>({})
   const [categoryFields, setCategoryFields] = useState<CategoryFields>({
@@ -44,8 +50,25 @@ const PostCreateForm: React.FC = () => {
     validateOnBlur: false,
     validateOnChange: false,
     validateOnMount: false,
-    onSubmit: () => {
+    onSubmit: (values) => {
       setLoading(true)
+      httpClient
+        .post(apiUrl(Services.Post, `/owner}`), values)
+        .then(() => {
+          autoSave.remove()
+          toast.success(t('success'))
+          navigate(getStaticRoute(i18n.language).owner.details.post.list)
+        })
+        .catch((err) => {
+          parseApiError({
+            error: err.response.data,
+            form,
+            toast,
+          })
+        })
+        .finally(() => {
+          setLoading(false)
+        })
     },
   })
 
@@ -61,7 +84,7 @@ const PostCreateForm: React.FC = () => {
       !deepEqual(existsData, form.values) &&
       !isEmptyPostCreateFormValues(existsData)
     ) {
-      toast.askPrimary({
+      toast.askSuccess({
         title: t('autosave.ask.title'),
         cancelText: t('autosave.ask.cancel'),
         confirmText: t('autosave.ask.confirm'),
