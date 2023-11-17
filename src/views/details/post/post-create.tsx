@@ -7,13 +7,13 @@ import { useTranslation } from 'react-i18next'
 const PostCreateView: React.FC = () => {
   const { t } = useTranslation('posts')
   return (
-    <RoleGuardView roles={[OwnerRoles.Super, PostRoles.Super, PostRoles.List]}>
+    <RoleGuardView roles={[OwnerRoles.Super, PostRoles.Super, PostRoles.Create]}>
       <MetaWrapper
         title={t('create.meta.title')}
         description={t('create.meta.description')}
         keywords={t('create.meta.keywords')}
       >
-        <section className='relative container mx-auto p-4 '>
+        <section className='container relative mx-auto p-4 '>
           <PostCreateForm />
         </section>
       </MetaWrapper>
