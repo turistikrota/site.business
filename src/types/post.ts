@@ -19,7 +19,7 @@ export const BoolRules: BoolRuleType[] = [
   'noParty',
   'noUnmarried',
   'noGuest',
-] as const
+]
 
 export type BoolRule = (typeof BoolRules)[number]
 
