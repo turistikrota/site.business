@@ -116,7 +116,7 @@ const PostCreateForm: React.FC = () => {
         inputGroups: [],
         rules: [],
       })
-      setAcceptedRules([])
+      setAcceptedRules({})
     }
   }, [form.values.categoryUUIDs])
 
