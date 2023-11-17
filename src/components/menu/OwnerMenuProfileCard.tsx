@@ -1,4 +1,5 @@
 import { useCurrentOwner } from '@/contexts/currentOwner'
+import { getStaticRoute } from '@/static/page'
 import Button from '@turistikrota/ui/button'
 import Condition from '@turistikrota/ui/condition'
 import UserName from '@turistikrota/ui/username'
@@ -11,12 +12,12 @@ type Props = {
 
 export default function OwnerMenuProfileCard({ open }: Props) {
   const [detail] = useCurrentOwner()
-  const { t } = useTranslation('menu')
+  const { t, i18n } = useTranslation('menu')
 
   if (!detail || !detail.owner) return null
   return (
     <div className={`flex items-center justify-center gap-2 ${open ? 'flex-col' : ''}`}>
-      <div className={`flex relative ${open ? 'items-center justify-center w-23 h-23' : 'h-12 w-12'}`}>
+      <div className={`relative flex ${open ? 'w-23 h-23 items-center justify-center' : 'h-12 w-12'}`}>
         <img
           src={`https://avatar.turistikrota.com/~${detail.owner.nickName}.png`}
           width={`${open ? 110 : 48}px`}
@@ -27,17 +28,22 @@ export default function OwnerMenuProfileCard({ open }: Props) {
         />
         <img
           src={`https://avatar.turistikrota.com/@${detail.user.name}.png`}
-          className='w-12 h-12 rounded-full absolute -left-5 -bottom-2'
+          className='absolute -bottom-2 -left-5 h-12 w-12 rounded-full'
         />
       </div>
       <Condition value={open}>
-        <div className='flex flex-col items-center justify-center w-full h-full'>
-          <p className='text-md text-gray-500 dark:text-gray-300 font-medium'>{detail.owner.realName}</p>
+        <div className='flex h-full w-full flex-col items-center justify-center'>
+          <p className='text-md font-medium text-gray-500 dark:text-gray-300'>{detail.owner.realName}</p>
           <UserName>
             @{detail.user.name} | ~{detail.owner.nickName}
           </UserName>
         </div>
-        <Link to='/' className='my-2' title={t('buttons.change')} aria-label={t('buttons.change')}>
+        <Link
+          to={getStaticRoute(i18n.language).owner.select}
+          className='my-2'
+          title={t('buttons.change')}
+          aria-label={t('buttons.change')}
+        >
           <Button size='sm'>{t('buttons.change')}</Button>
         </Link>
       </Condition>

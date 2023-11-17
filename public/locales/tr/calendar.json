@@ -1,0 +1,19 @@
+{
+  "labels": ["Pzt", "Sal", "Çar", "Per", "Cum", "Cmt", "Paz"],
+  "months": [
+    "Ocak",
+    "Şubat",
+    "Mart",
+    "Nisan",
+    "Mayıs",
+    "Haziran",
+    "Temmuz",
+    "Ağustos",
+    "Eylül",
+    "Ekim",
+    "Kasım",
+    "Aralık"
+  ],
+  "today": "Bugün",
+  "selected": "Seçili Tarih"
+}

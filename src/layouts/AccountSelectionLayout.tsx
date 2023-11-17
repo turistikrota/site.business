@@ -134,7 +134,7 @@ const AccountSelectionLayout = ({ children }: React.PropsWithChildren) => {
   const { loading, current } = useAccount()
   if (loading || !current)
     return (
-      <div className='ease-out w-full h-full py-20 flex justify-center items-center'>
+      <div className='flex h-full w-full items-center justify-center py-20 ease-out'>
         <Spinner />
       </div>
     )

@@ -4,7 +4,7 @@ import { RouteObject, createBrowserRouter } from 'react-router-dom'
 
 const trRoutes: RouteObject[] = [
   {
-    path: '/detay',
+    path: '/',
     lazy: () => import('@/layouts/OwnerLayout'),
     children: [
       {
@@ -59,16 +59,30 @@ const trRoutes: RouteObject[] = [
           },
           {
             path: 'davetler',
-            lazy: () => import('@/views/details/invite'),
+            lazy: () => import('@/views/details/invite/invite.tsx'),
             handle: {
               page: 'invite',
             },
           },
           {
             path: 'davet-et',
-            lazy: () => import('@/views/details/invite-create'),
+            lazy: () => import('@/views/details/invite/invite-create'),
             handle: {
               page: 'invite-create',
+            },
+          },
+          {
+            path: 'ilanlar',
+            lazy: () => import('@/views/details/post/posts'),
+            handle: {
+              page: 'posts',
+            },
+          },
+          {
+            path: 'ilan-ekle',
+            lazy: () => import('@/views/details/post/post-create'),
+            handle: {
+              page: 'post-create',
             },
           },
           {
@@ -93,10 +107,15 @@ const trRoutes: RouteObject[] = [
     path: '/basvuru',
     lazy: () => import('@/views/create'),
   },
+
+  {
+    path: '/sec',
+    lazy: () => import('@/views/select'),
+  },
 ]
 const enRoutes: RouteObject[] = [
   {
-    path: '/detail',
+    path: '/',
     lazy: () => import('@/layouts/OwnerLayout'),
     children: [
       {
@@ -151,16 +170,30 @@ const enRoutes: RouteObject[] = [
           },
           {
             path: 'invites',
-            lazy: () => import('@/views/details/invite'),
+            lazy: () => import('@/views/details/invite/invite.tsx'),
             handle: {
               page: 'invite',
             },
           },
           {
             path: 'invite',
-            lazy: () => import('@/views/details/invite-create'),
+            lazy: () => import('@/views/details/invite/invite-create'),
             handle: {
               page: 'invite-create',
+            },
+          },
+          {
+            path: 'posts',
+            lazy: () => import('@/views/details/post/posts'),
+            handle: {
+              page: 'posts',
+            },
+          },
+          {
+            path: 'add-post',
+            lazy: () => import('@/views/details/post/post-create'),
+            handle: {
+              page: 'post-create',
             },
           },
           {
@@ -185,14 +218,13 @@ const enRoutes: RouteObject[] = [
     path: '/apply',
     lazy: () => import('@/views/create'),
   },
-]
-
-const routes: RouteObject[] = [
   {
-    path: '/',
+    path: '/select',
     lazy: () => import('@/views/select'),
   },
 ]
+
+const routes: RouteObject[] = []
 
 const locale = getCurrentServeLocale()
 

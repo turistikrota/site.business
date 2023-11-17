@@ -101,8 +101,8 @@ const InviteDetail: React.FC = () => {
   }
   return (
     <Spin loading={loading}>
-      <div className='p-6 space-y-4 md:space-y-6 sm:p-8 ease-in'>
-        <h1 className='text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white'>
+      <div className='space-y-4 p-6 ease-in sm:p-8 md:space-y-6'>
+        <h1 className='text-xl font-bold leading-tight tracking-tight text-gray-900 dark:text-white md:text-2xl'>
           {t('title')}
         </h1>
         <div>
@@ -133,25 +133,25 @@ const InviteDetail: React.FC = () => {
           {available && invite && (
             <>
               <div className='grid grid-cols-5'>
-                <div className='col-span-2 flex flex-col justify-center items-center'>
+                <div className='col-span-2 flex flex-col items-center justify-center'>
                   <img
                     src={`https://avatar.turistikrota.com/@${current?.userName}.png`}
-                    className='w-24 h-24 rounded-full'
+                    className='h-24 w-24 rounded-full'
                   />
                   <span className='mt-2 font-semibold text-primary'>@{current?.userName}</span>
                 </div>
-                <div className='col-span-1  flex justify-center items-center'>
+                <div className='col-span-1  flex items-center justify-center'>
                   <i className='bx bx-2xl bxs-chevrons-right'></i>
                 </div>
-                <div className='col-span-2  flex  flex-col justify-center items-center relative'>
+                <div className='relative  col-span-2  flex flex-col items-center justify-center'>
                   <div className='relative'>
                     <img
                       src={`https://avatar.turistikrota.com/~${invite.ownerNickName}.png`}
-                      className='w-24 h-24 rounded-md z-10'
+                      className='z-10 h-24 w-24 rounded-md'
                     />
                     <img
                       src={`https://avatar.turistikrota.com/@${invite.creatorUserName}.png`}
-                      className='w-12 h-12 rounded-full  absolute -left-5 -bottom-3'
+                      className='absolute -bottom-3 -left-5  h-12 w-12 rounded-full'
                     />
                   </div>
                   <span className='mt-2 font-semibold text-secondary'>~{invite.ownerNickName}</span>

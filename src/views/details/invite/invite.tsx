@@ -105,7 +105,7 @@ function InviteMainView() {
   return (
     <RoleGuardView roles={[OwnerRoles.Super, OwnerRoles.InviteView]}>
       <MetaWrapper title={t('meta.title')} description={t('meta.description')} keywords={t('meta.keywords')}>
-        <section className='p-4 lg:pl-0 space-y-5 max-w-4xl mx-auto relative'>
+        <section className='relative mx-auto max-w-4xl space-y-5 p-4 lg:pl-0'>
           <RoleGuard roles={[OwnerRoles.Super, OwnerRoles.InviteCreate]}>
             <div className='flex'>
               <Link to={getStaticRoute(i18n.language).owner.details.inviteCreate}>
@@ -115,9 +115,9 @@ function InviteMainView() {
               </Link>
             </div>
           </RoleGuard>
-          <div className='w-full grid grid-cols-12 gap-3'>
+          <div className='grid w-full grid-cols-12 gap-3'>
             {invites.reverse().map((invite) => (
-              <div key={invite.uuid} className='col-span-12 md:col-span-6 bg-second rounded-md p-2'>
+              <div key={invite.uuid} className='col-span-12 rounded-md bg-second p-2 md:col-span-6'>
                 <KeyValue>
                   <KeyValue.Item label={t('fields.email')} value={invite.email} />
                   <KeyValue.Item
@@ -138,7 +138,7 @@ function InviteMainView() {
                 </KeyValue>
                 <RoleGuard roles={[OwnerRoles.Super, OwnerRoles.InviteDelete]}>
                   {calcState(invite) === 'pending' && (
-                    <div className='flex justify-center mt-2 border-t pt-2'>
+                    <div className='mt-2 flex justify-center border-t pt-2'>
                       <Button
                         block={false}
                         size='sm'

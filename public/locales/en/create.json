@@ -1,63 +1,63 @@
 {
-    "meta": {
-        "title": "Seller Application Form",
-        "description": "You can create an individual or corporate seller profile on Turistikrota and rent or sell your products such as villas, hotels, tours, car rentals.",
-        "keywords": "vendor application form, vendor application, Turistikrota, Turistikrota vendor application"
-    },
+  "meta": {
     "title": "Seller Application Form",
-    "type-select": {
-        "title": "Seller Type",
-        "subtitle": "Please select the type of vendor you are applying for.",
-        "info": {
-            "title": "Information",
-            "content": "This selection is important for invoicing purposes. If you cannot issue an invoice with the Turkish Revenue Administration (you do not have a tax identification number registered in the Republic of Turkey), you can choose it individually. In this case, you must be a citizen of the Republic of Turkey."
-        },
-        "corporation": {
-            "title": "Institution",
-            "subtitle": "I am applying as an institution."
-        },
-        "individual": {
-            "title": "Individual",
-            "subtitle": "I am applying as an individual."
-        }
+    "description": "You can create an individual or corporate seller profile on Turistikrota and rent or sell your products such as villas, hotels, tours, car rentals.",
+    "keywords": "vendor application form, vendor application, Turistikrota, Turistikrota vendor application"
+  },
+  "title": "Seller Application Form",
+  "type-select": {
+    "title": "Seller Type",
+    "subtitle": "Please select the type of vendor you are applying for.",
+    "info": {
+      "title": "Information",
+      "content": "This selection is important for invoicing purposes. If you cannot issue an invoice with the Turkish Revenue Administration (you do not have a tax identification number registered in the Republic of Turkey), you can choose it individually. In this case, you must be a citizen of the Republic of Turkey."
     },
     "corporation": {
-        "taxNumber": "Tax Number",
-        "corpType": "Corporation Type"
+      "title": "Institution",
+      "subtitle": "I am applying as an institution."
     },
     "individual": {
-        "firstName": "FirstName",
-        "lastName": "Surname",
-        "identityNumber": "Identity Number",
-        "serialNumber": "Serial Number",
-        "dateOfBirth": "Date of Birth"
-    },
-    "billing": {
-        "title": "Invoice Information",
-        "subtitle": "Please enter your billing information.",
-        "province": "Province",
-        "district": "District",
-        "address": "Address"
-    },
-    "general":{
-        "nickName": "Unique Nickname",
-        "realName": "Real Name (will be shown on Seller profile)"
-    },
-    "corporationTypes": {
-        "anonymous": "Joint Stock Company",
-        "soleProprietorship": "Sole Proprietorship",
-        "limited": "Limited Company",
-        "collective": "Collective Company",
-        "cooperative": "Cooperative",
-        "ordinaryPartnership": "Ordinary Partnership",
-        "ordinaryLimitedPartnership": "Ordinary Limited Partnership",
-        "limitedPartnershipShareCapital": "Limited Company with Capital Divided into Shares",
-        "other": "Other"
-    },
-    "hashInfo": "This data will be stored encrypted and will not be shared with third parties.",
-    "analyticsInfo": "This data will be used for various analyses. This data will not be shared with third parties.",
-    "next": "Next",
-    "back": "Back",
-    "submit": "Send",
-    "success": "Your application has been sent successfully. We will contact you via email as soon as possible."
+      "title": "Individual",
+      "subtitle": "I am applying as an individual."
+    }
+  },
+  "corporation": {
+    "taxNumber": "Tax Number",
+    "corpType": "Corporation Type"
+  },
+  "individual": {
+    "firstName": "FirstName",
+    "lastName": "Surname",
+    "identityNumber": "Identity Number",
+    "serialNumber": "Serial Number",
+    "dateOfBirth": "Date of Birth"
+  },
+  "billing": {
+    "title": "Invoice Information",
+    "subtitle": "Please enter your billing information.",
+    "province": "Province",
+    "district": "District",
+    "address": "Address"
+  },
+  "general": {
+    "nickName": "Unique Nickname",
+    "realName": "Real Name (will be shown on Seller profile)"
+  },
+  "corporationTypes": {
+    "anonymous": "Joint Stock Company",
+    "soleProprietorship": "Sole Proprietorship",
+    "limited": "Limited Company",
+    "collective": "Collective Company",
+    "cooperative": "Cooperative",
+    "ordinaryPartnership": "Ordinary Partnership",
+    "ordinaryLimitedPartnership": "Ordinary Limited Partnership",
+    "limitedPartnershipShareCapital": "Limited Company with Capital Divided into Shares",
+    "other": "Other"
+  },
+  "hashInfo": "This data will be stored encrypted and will not be shared with third parties.",
+  "analyticsInfo": "This data will be used for various analyses. This data will not be shared with third parties.",
+  "next": "Next",
+  "back": "Back",
+  "submit": "Send",
+  "success": "Your application has been sent successfully. We will contact you via email as soon as possible."
 }

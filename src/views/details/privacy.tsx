@@ -6,7 +6,7 @@ function OwnershipPrivacyView() {
   const { t } = useTranslation('privacy')
   return (
     <MetaWrapper title={t('meta.title')} description={t('meta.description')} keywords={t('meta.keywords')}>
-      <section className='p-4 lg:pl-0 max-w-4xl mx-auto'>
+      <section className='mx-auto container p-4'>
         <MaintenanceAlert />
       </section>
     </MetaWrapper>

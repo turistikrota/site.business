@@ -1,0 +1,4867 @@
+[
+  {
+    "cityName": "Gaziantep",
+    "name": "Araban",
+    "coordinates": [37.4449851, 37.9350759]
+  },
+  {
+    "cityName": "Gaziantep",
+    "name": "İslahiye",
+    "coordinates": [36.973501, 36.5895]
+  },
+  {
+    "cityName": "Gaziantep",
+    "name": "Karkamış",
+    "coordinates": [36.8317711, 37.870212]
+  },
+  {
+    "cityName": "Gaziantep",
+    "name": "Nizip",
+    "coordinates": [37.0413526, 37.8883633]
+  },
+  {
+    "cityName": "Gaziantep",
+    "name": "Nurdağı",
+    "coordinates": [37.1860933, 36.7476057]
+  },
+  {
+    "cityName": "Gaziantep",
+    "name": "Oğuzeli",
+    "coordinates": [36.926916, 37.623765]
+  },
+  {
+    "cityName": "Gaziantep",
+    "name": "Şahinbey",
+    "coordinates": [37.0472228, 37.3312907]
+  },
+  {
+    "cityName": "Gaziantep",
+    "name": "Şehitkamil",
+    "coordinates": [37.065953, 37.37811]
+  },
+  {
+    "cityName": "Gaziantep",
+    "name": "Yavuzeli",
+    "coordinates": [37.384001, 37.566014]
+  },
+  {
+    "cityName": "Giresun",
+    "name": "Alucra",
+    "coordinates": [40.337201, 38.874704]
+  },
+  {
+    "cityName": "Giresun",
+    "name": "Bulancak",
+    "coordinates": [40.660946, 38.085674]
+  },
+  {
+    "cityName": "Giresun",
+    "name": "Çamoluk",
+    "coordinates": [40.169624, 38.7188461]
+  },
+  {
+    "cityName": "Giresun",
+    "name": "Çanakçı",
+    "coordinates": [40.9212342, 39.0085076]
+  },
+  {
+    "cityName": "Giresun",
+    "name": "Dereli",
+    "coordinates": [40.734475, 38.388455]
+  },
+  {
+    "cityName": "Giresun",
+    "name": "Doğankent",
+    "coordinates": [40.810153, 38.916161]
+  },
+  {
+    "cityName": "Giresun",
+    "name": "Espiye",
+    "coordinates": [40.9431266, 38.7089746]
+  },
+  {
+    "cityName": "Giresun",
+    "name": "Eynesil",
+    "coordinates": [40.998482, 39.0968501]
+  },
+  {
+    "cityName": "Giresun",
+    "name": "GiresunMerkez",
+    "coordinates": [40.801139, 38.412191]
+  },
+  {
+    "cityName": "Giresun",
+    "name": "Görele",
+    "coordinates": [41.04005129999999, 39.0666704]
+  },
+  {
+    "cityName": "Giresun",
+    "name": "Güce",
+    "coordinates": [40.850838, 38.822468]
+  },
+  {
+    "cityName": "Giresun",
+    "name": "Keşap",
+    "coordinates": [40.8928442, 38.5152082]
+  },
+  {
+    "cityName": "Giresun",
+    "name": "Piraziz",
+    "coordinates": [40.851859, 38.11756099999999]
+  },
+  {
+    "cityName": "Giresun",
+    "name": "Şebinkarahisar",
+    "coordinates": [40.281145, 38.315013]
+  },
+  {
+    "cityName": "Giresun",
+    "name": "Tirebolu",
+    "coordinates": [40.994293, 38.918862]
+  },
+  {
+    "cityName": "Giresun",
+    "name": "Yağlıdere",
+    "coordinates": [40.8642169, 38.62244099999999]
+  },
+  {
+    "cityName": "Ağrı",
+    "name": "AğrıMerkez",
+    "coordinates": [39.7008435, 43.0389057]
+  },
+  {
+    "cityName": "Ağrı",
+    "name": "Diyadin",
+    "coordinates": [39.5401, 43.6773]
+  },
+  {
+    "cityName": "Ağrı",
+    "name": "Doğubayazıt",
+    "coordinates": [39.5373347, 44.0795865]
+  },
+  {
+    "cityName": "Ağrı",
+    "name": "Eleşkirt",
+    "coordinates": [39.7287, 42.5505]
+  },
+  {
+    "cityName": "Ağrı",
+    "name": "Hamur",
+    "coordinates": [39.4066, 43.1374]
+  },
+  {
+    "cityName": "Ağrı",
+    "name": "Patnos",
+    "coordinates": [39.1774814, 43.0600002]
+  },
+  {
+    "cityName": "Ağrı",
+    "name": "Taşlıçay",
+    "coordinates": [39.6374662, 43.3790269]
+  },
+  {
+    "cityName": "Ağrı",
+    "name": "Tutak",
+    "coordinates": [39.4129859, 42.51668799999999]
+  },
+  {
+    "cityName": "Denizli",
+    "name": "Acıpayam",
+    "coordinates": [37.3683369, 29.348262]
+  },
+  {
+    "cityName": "Denizli",
+    "name": "Babadağ",
+    "coordinates": [37.816136, 28.852458]
+  },
+  {
+    "cityName": "Denizli",
+    "name": "Baklan",
+    "coordinates": [37.9928738, 29.5710676]
+  },
+  {
+    "cityName": "Denizli",
+    "name": "Bekilli",
+    "coordinates": [38.2319878, 29.4222855]
+  },
+  {
+    "cityName": "Denizli",
+    "name": "Beyağaç",
+    "coordinates": [37.1910262, 28.9062794]
+  },
+  {
+    "cityName": "Denizli",
+    "name": "Bozkurt",
+    "coordinates": [37.8431799, 29.4578191]
+  },
+  {
+    "cityName": "Denizli",
+    "name": "Buldan",
+    "coordinates": [38.0201257, 28.7489523]
+  },
+  {
+    "cityName": "Denizli",
+    "name": "Çal",
+    "coordinates": [38.15377, 29.376055]
+  },
+  {
+    "cityName": "Denizli",
+    "name": "Çameli",
+    "coordinates": [37.008469, 29.143425]
+  },
+  {
+    "cityName": "Denizli",
+    "name": "Çardak",
+    "coordinates": [37.737569, 29.758517]
+  },
+  {
+    "cityName": "Denizli",
+    "name": "Çivril",
+    "coordinates": [38.244487, 29.713452]
+  },
+  {
+    "cityName": "Denizli",
+    "name": "Güney",
+    "coordinates": [38.150853, 29.18085]
+  },
+  {
+    "cityName": "Denizli",
+    "name": "Honaz",
+    "coordinates": [37.75696, 29.264256]
+  },
+  {
+    "cityName": "Denizli",
+    "name": "Kale",
+    "coordinates": [37.557277, 28.7605111]
+  },
+  {
+    "cityName": "Denizli",
+    "name": "Merkezefendi",
+    "coordinates": [37.7736687, 29.06053889999999]
+  },
+  {
+    "cityName": "Denizli",
+    "name": "Pamukkale",
+    "coordinates": [37.777189, 29.0881728]
+  },
+  {
+    "cityName": "Denizli",
+    "name": "Sarayköy",
+    "coordinates": [37.859325, 28.872789]
+  },
+  {
+    "cityName": "Denizli",
+    "name": "Serinhisar",
+    "coordinates": [37.5798384, 29.2683964]
+  },
+  {
+    "cityName": "Denizli",
+    "name": "Tavas",
+    "coordinates": [37.655564, 28.832042]
+  },
+  {
+    "cityName": "Kilis",
+    "name": "Elbeyli",
+    "coordinates": [36.79412, 37.436346]
+  },
+  {
+    "cityName": "Kilis",
+    "name": "KilisMerkez",
+    "coordinates": [36.7131238, 37.1193254]
+  },
+  {
+    "cityName": "Kilis",
+    "name": "Musabeyli",
+    "coordinates": [36.965435, 36.971633]
+  },
+  {
+    "cityName": "Kilis",
+    "name": "Polateli",
+    "coordinates": [36.8369806, 37.1553383]
+  },
+  {
+    "cityName": "Manisa",
+    "name": "Ahmetli",
+    "coordinates": [38.493516, 27.896024]
+  },
+  {
+    "cityName": "Manisa",
+    "name": "Akhisar",
+    "coordinates": [38.811273, 27.981146]
+  },
+  {
+    "cityName": "Manisa",
+    "name": "Alaşehir",
+    "coordinates": [38.379835, 28.486616]
+  },
+  {
+    "cityName": "Manisa",
+    "name": "Demirci",
+    "coordinates": [38.9094539, 28.647484]
+  },
+  {
+    "cityName": "Manisa",
+    "name": "Gölmarmara",
+    "coordinates": [38.713913, 27.918426]
+  },
+  {
+    "cityName": "Manisa",
+    "name": "Gördes",
+    "coordinates": [38.933029, 28.288668]
+  },
+  {
+    "cityName": "Manisa",
+    "name": "Kırkağaç",
+    "coordinates": [39.2030109, 27.837847]
+  },
+  {
+    "cityName": "Manisa",
+    "name": "Köprübaşı",
+    "coordinates": [38.831112, 28.406936]
+  },
+  {
+    "cityName": "Manisa",
+    "name": "Kula",
+    "coordinates": [38.54558979999999, 28.6323132]
+  },
+  {
+    "cityName": "Manisa",
+    "name": "Salihli",
+    "coordinates": [38.54969, 28.325399]
+  },
+  {
+    "cityName": "Manisa",
+    "name": "Sarıgöl",
+    "coordinates": [38.2209069, 28.625096]
+  },
+  {
+    "cityName": "Manisa",
+    "name": "Saruhanlı",
+    "coordinates": [38.756166, 27.5511811]
+  },
+  {
+    "cityName": "Manisa",
+    "name": "Şehzadeler",
+    "coordinates": [38.6152836, 27.4328794]
+  },
+  {
+    "cityName": "Manisa",
+    "name": "Selendi",
+    "coordinates": [38.80292000000001, 28.820559]
+  },
+  {
+    "cityName": "Manisa",
+    "name": "Soma",
+    "coordinates": [39.1916865, 27.4850018]
+  },
+  {
+    "cityName": "Manisa",
+    "name": "Turgutlu",
+    "coordinates": [38.49236519999999, 27.7058138]
+  },
+  {
+    "cityName": "Manisa",
+    "name": "Yunusemre",
+    "coordinates": [38.6143596, 27.4101174]
+  },
+  {
+    "cityName": "Hatay",
+    "name": "Altınözü",
+    "coordinates": [36.09099700000001, 36.232209]
+  },
+  {
+    "cityName": "Hatay",
+    "name": "Antakya",
+    "coordinates": [36.2193399, 36.259766]
+  },
+  {
+    "cityName": "Hatay",
+    "name": "Arsuz",
+    "coordinates": [36.4122745, 35.890322]
+  },
+  {
+    "cityName": "Hatay",
+    "name": "Belen",
+    "coordinates": [36.509809, 36.22107099999999]
+  },
+  {
+    "cityName": "Hatay",
+    "name": "Defne",
+    "coordinates": [36.190932, 36.1484303]
+  },
+  {
+    "cityName": "Hatay",
+    "name": "Dörtyol",
+    "coordinates": [36.8846018, 36.1925483]
+  },
+  {
+    "cityName": "Hatay",
+    "name": "Erzin",
+    "coordinates": [36.925568, 36.071178]
+  },
+  {
+    "cityName": "Hatay",
+    "name": "Hassa",
+    "coordinates": [36.7791845, 36.517559]
+  },
+  {
+    "cityName": "Hatay",
+    "name": "İskenderun",
+    "coordinates": [36.6623935, 36.2441004]
+  },
+  {
+    "cityName": "Hatay",
+    "name": "Kırıkhan",
+    "coordinates": [36.5083644, 36.3647057]
+  },
+  {
+    "cityName": "Hatay",
+    "name": "Kumlu",
+    "coordinates": [36.3647669, 36.4100421]
+  },
+  {
+    "cityName": "Hatay",
+    "name": "Payas",
+    "coordinates": [36.7867841, 36.24352289999999]
+  },
+  {
+    "cityName": "Hatay",
+    "name": "Reyhanlı",
+    "coordinates": [36.274447, 36.5675412]
+  },
+  {
+    "cityName": "Hatay",
+    "name": "Samandağ",
+    "coordinates": [36.147039, 36.067695]
+  },
+  {
+    "cityName": "Hatay",
+    "name": "Yayladağı",
+    "coordinates": [35.945027, 36.163906]
+  },
+  {
+    "cityName": "Kayseri",
+    "name": "Akkışla",
+    "coordinates": [38.9934211, 36.2000162]
+  },
+  {
+    "cityName": "Kayseri",
+    "name": "Bünyan",
+    "coordinates": [38.7567039, 36.013675]
+  },
+  {
+    "cityName": "Kayseri",
+    "name": "Develi",
+    "coordinates": [38.215556, 35.791111]
+  },
+  {
+    "cityName": "Kayseri",
+    "name": "Felahiye",
+    "coordinates": [39.0245869, 35.4353861]
+  },
+  {
+    "cityName": "Kayseri",
+    "name": "Hacılar",
+    "coordinates": [38.649458, 35.468478]
+  },
+  {
+    "cityName": "Kayseri",
+    "name": "İncesu",
+    "coordinates": [38.646364, 35.245133]
+  },
+  {
+    "cityName": "Kayseri",
+    "name": "Kocasinan",
+    "coordinates": [38.7646692, 35.5698898]
+  },
+  {
+    "cityName": "Kayseri",
+    "name": "Melikgazi",
+    "coordinates": [38.7431344, 35.380908]
+  },
+  {
+    "cityName": "Kayseri",
+    "name": "Özvatan",
+    "coordinates": [39.115868, 35.696376]
+  },
+  {
+    "cityName": "Kayseri",
+    "name": "Pınarbaşı",
+    "coordinates": [38.999193, 36.649594]
+  },
+  {
+    "cityName": "Kayseri",
+    "name": "Sarıoğlan",
+    "coordinates": [39.263056, 35.858333]
+  },
+  {
+    "cityName": "Kayseri",
+    "name": "Sarız",
+    "coordinates": [38.541099, 36.745564]
+  },
+  {
+    "cityName": "Kayseri",
+    "name": "Talas",
+    "coordinates": [38.6523899, 35.572303]
+  },
+  {
+    "cityName": "Kayseri",
+    "name": "Tomarza",
+    "coordinates": [38.484554, 35.6778581]
+  },
+  {
+    "cityName": "Kayseri",
+    "name": "Yahyalı",
+    "coordinates": [38.1100171, 35.3617115]
+  },
+  {
+    "cityName": "Kayseri",
+    "name": "Yeşilhisar",
+    "coordinates": [38.3373, 35.033002]
+  },
+  {
+    "cityName": "Ordu",
+    "name": "Akkuş",
+    "coordinates": [40.7926568, 37.0169202]
+  },
+  {
+    "cityName": "Ordu",
+    "name": "Altınordu",
+    "coordinates": [40.962651, 37.958645]
+  },
+  {
+    "cityName": "Ordu",
+    "name": "Aybastı",
+    "coordinates": [40.684756, 37.4502581]
+  },
+  {
+    "cityName": "Ordu",
+    "name": "Çamaş",
+    "coordinates": [40.9087124, 37.4924365]
+  },
+  {
+    "cityName": "Ordu",
+    "name": "Çatalpınar",
+    "coordinates": [40.881305, 37.452225]
+  },
+  {
+    "cityName": "Ordu",
+    "name": "Çaybaşı",
+    "coordinates": [40.97766, 37.085418]
+  },
+  {
+    "cityName": "Ordu",
+    "name": "Fatsa",
+    "coordinates": [41.031231, 37.50036]
+  },
+  {
+    "cityName": "Ordu",
+    "name": "Gölköy",
+    "coordinates": [40.72717, 37.54771]
+  },
+  {
+    "cityName": "Ordu",
+    "name": "Gülyalı",
+    "coordinates": [40.9357587, 38.05641689999999]
+  },
+  {
+    "cityName": "Ordu",
+    "name": "Gürgentepe",
+    "coordinates": [40.7876737, 37.6184783]
+  },
+  {
+    "cityName": "Ordu",
+    "name": "İkizce",
+    "coordinates": [41.05682789999999, 37.08011339999999]
+  },
+  {
+    "cityName": "Ordu",
+    "name": "Kabadüz",
+    "coordinates": [40.809123, 37.89367]
+  },
+  {
+    "cityName": "Ordu",
+    "name": "Kabataş",
+    "coordinates": [40.7517505, 37.4507343]
+  },
+  {
+    "cityName": "Ordu",
+    "name": "Korgan",
+    "coordinates": [40.782811, 37.3216431]
+  },
+  {
+    "cityName": "Ordu",
+    "name": "Kumru",
+    "coordinates": [40.9387619, 37.296297]
+  },
+  {
+    "cityName": "Ordu",
+    "name": "Mesudiye",
+    "coordinates": [40.4624757, 37.774884]
+  },
+  {
+    "cityName": "Ordu",
+    "name": "Perşembe",
+    "coordinates": [41.067089, 37.773469]
+  },
+  {
+    "cityName": "Ordu",
+    "name": "Ulubey",
+    "coordinates": [40.832604, 37.698096]
+  },
+  {
+    "cityName": "Ordu",
+    "name": "Ünye",
+    "coordinates": [41.001436, 37.318758]
+  },
+  {
+    "cityName": "Siirt",
+    "name": "Baykan",
+    "coordinates": [38.06246, 41.662214]
+  },
+  {
+    "cityName": "Siirt",
+    "name": "Eruh",
+    "coordinates": [37.743253, 42.037825]
+  },
+  {
+    "cityName": "Siirt",
+    "name": "Kurtalan",
+    "coordinates": [37.893973, 41.705091]
+  },
+  {
+    "cityName": "Siirt",
+    "name": "Pervari",
+    "coordinates": [37.926156, 42.594071]
+  },
+  {
+    "cityName": "Siirt",
+    "name": "SiirtMerkez",
+    "coordinates": [37.9489003, 41.9061585]
+  },
+  {
+    "cityName": "Siirt",
+    "name": "Şirvan",
+    "coordinates": [38.03391, 42.260134]
+  },
+  {
+    "cityName": "Siirt",
+    "name": "Tillo",
+    "coordinates": [37.916142, 42.1353]
+  },
+  {
+    "cityName": "Sinop",
+    "name": "Ayancık",
+    "coordinates": [41.918643, 34.756236]
+  },
+  {
+    "cityName": "Sinop",
+    "name": "Boyabat",
+    "coordinates": [41.46610500000001, 34.77112]
+  },
+  {
+    "cityName": "Sinop",
+    "name": "Dikmen",
+    "coordinates": [41.5689039, 35.291325]
+  },
+  {
+    "cityName": "Sinop",
+    "name": "Durağan",
+    "coordinates": [41.4199618, 35.0607697]
+  },
+  {
+    "cityName": "Sinop",
+    "name": "Erfelek",
+    "coordinates": [41.880095, 34.909527]
+  },
+  {
+    "cityName": "Sinop",
+    "name": "Gerze",
+    "coordinates": [41.800599, 35.19201]
+  },
+  {
+    "cityName": "Sinop",
+    "name": "Saraydüzü",
+    "coordinates": [41.32553790000001, 34.8480693]
+  },
+  {
+    "cityName": "Sinop",
+    "name": "SinopMerkez",
+    "coordinates": [42.023147, 34.9760049]
+  },
+  {
+    "cityName": "Sinop",
+    "name": "Türkeli",
+    "coordinates": [41.900107, 34.411302]
+  },
+  {
+    "cityName": "Uşak",
+    "name": "Banaz",
+    "coordinates": [38.7477494, 29.7512903]
+  },
+  {
+    "cityName": "Uşak",
+    "name": "Eşme",
+    "coordinates": [38.3873144, 28.9528645]
+  },
+  {
+    "cityName": "Uşak",
+    "name": "Karahallı",
+    "coordinates": [38.441642, 29.520171]
+  },
+  {
+    "cityName": "Uşak",
+    "name": "Sivaslı",
+    "coordinates": [38.4297707, 29.6373911]
+  },
+  {
+    "cityName": "Uşak",
+    "name": "Ulubey",
+    "coordinates": [38.5650234, 29.2763284]
+  },
+  {
+    "cityName": "Uşak",
+    "name": "UşakMerkez",
+    "coordinates": [38.738918, 29.167463]
+  },
+  {
+    "cityName": "Adıyaman",
+    "name": "AdıyamanMerkez",
+    "coordinates": [37.8403835, 38.0790126]
+  },
+  {
+    "cityName": "Adıyaman",
+    "name": "Besni",
+    "coordinates": [37.6933587, 37.8608708]
+  },
+  {
+    "cityName": "Adıyaman",
+    "name": "Çelikhan",
+    "coordinates": [38.0975549, 38.2744009]
+  },
+  {
+    "cityName": "Adıyaman",
+    "name": "Gerger",
+    "coordinates": [38.028856, 39.0322699]
+  },
+  {
+    "cityName": "Adıyaman",
+    "name": "Gölbaşı",
+    "coordinates": [37.63541, 37.593361]
+  },
+  {
+    "cityName": "Adıyaman",
+    "name": "Kahta",
+    "coordinates": [37.78672299999999, 38.926558]
+  },
+  {
+    "cityName": "Adıyaman",
+    "name": "Samsat",
+    "coordinates": [37.622699, 38.4786]
+  },
+  {
+    "cityName": "Adıyaman",
+    "name": "Sincik",
+    "coordinates": [38.14385499999999, 38.507312]
+  },
+  {
+    "cityName": "Adıyaman",
+    "name": "Tut",
+    "coordinates": [37.8137688, 38.0049345]
+  },
+  {
+    "cityName": "Isparta",
+    "name": "Aksu",
+    "coordinates": [38.259133, 31.0498279]
+  },
+  {
+    "cityName": "Isparta",
+    "name": "Atabey",
+    "coordinates": [37.9619827, 30.6458749]
+  },
+  {
+    "cityName": "Isparta",
+    "name": "Eğirdir",
+    "coordinates": [37.8731164, 30.8466643]
+  },
+  {
+    "cityName": "Isparta",
+    "name": "Gelendost",
+    "coordinates": [38.1227336, 31.0062721]
+  },
+  {
+    "cityName": "Isparta",
+    "name": "Gönen",
+    "coordinates": [37.9544114, 30.5117168]
+  },
+  {
+    "cityName": "Isparta",
+    "name": "IspartaMerkez",
+    "coordinates": [37.7626487, 30.55370499999999]
+  },
+  {
+    "cityName": "Isparta",
+    "name": "Keçiborlu",
+    "coordinates": [37.802497, 30.203741]
+  },
+  {
+    "cityName": "Isparta",
+    "name": "Şarkikaraağaç",
+    "coordinates": [38.0949846, 31.3570222]
+  },
+  {
+    "cityName": "Isparta",
+    "name": "Senirkent",
+    "coordinates": [38.1134017, 30.5494968]
+  },
+  {
+    "cityName": "Isparta",
+    "name": "Sütçüler",
+    "coordinates": [37.554311, 31.308128]
+  },
+  {
+    "cityName": "Isparta",
+    "name": "Uluborlu",
+    "coordinates": [38.117862, 30.4638154]
+  },
+  {
+    "cityName": "Isparta",
+    "name": "Yalvaç",
+    "coordinates": [38.285478, 31.1746182]
+  },
+  {
+    "cityName": "Isparta",
+    "name": "Yenişarbademli",
+    "coordinates": [37.705863, 31.424149]
+  },
+  {
+    "cityName": "İzmir",
+    "name": "Aliağa",
+    "coordinates": [38.9229389, 27.0972781]
+  },
+  {
+    "cityName": "İzmir",
+    "name": "Balçova",
+    "coordinates": [38.4005668, 27.0529283]
+  },
+  {
+    "cityName": "İzmir",
+    "name": "Bayındır",
+    "coordinates": [38.2876671, 27.628416]
+  },
+  {
+    "cityName": "İzmir",
+    "name": "Bayraklı",
+    "coordinates": [38.4741879, 27.156622]
+  },
+  {
+    "cityName": "İzmir",
+    "name": "Bergama",
+    "coordinates": [39.161529, 27.2617329]
+  },
+  {
+    "cityName": "İzmir",
+    "name": "Beydağ",
+    "coordinates": [38.072341, 28.2003911]
+  },
+  {
+    "cityName": "İzmir",
+    "name": "Bornova",
+    "coordinates": [38.4167494, 27.1985259]
+  },
+  {
+    "cityName": "İzmir",
+    "name": "Buca",
+    "coordinates": [38.360081, 27.3028803]
+  },
+  {
+    "cityName": "İzmir",
+    "name": "Çeşme",
+    "coordinates": [38.3401555, 26.2983744]
+  },
+  {
+    "cityName": "İzmir",
+    "name": "Çiğli",
+    "coordinates": [38.504456, 26.959444]
+  },
+  {
+    "cityName": "İzmir",
+    "name": "Dikili",
+    "coordinates": [39.0290999, 26.8270001]
+  },
+  {
+    "cityName": "İzmir",
+    "name": "Foça",
+    "coordinates": [38.670378, 26.757918]
+  },
+  {
+    "cityName": "İzmir",
+    "name": "Gaziemir",
+    "coordinates": [38.3520838, 27.1250046]
+  },
+  {
+    "cityName": "İzmir",
+    "name": "Güzelbahçe",
+    "coordinates": [38.3591307, 26.8895619]
+  },
+  {
+    "cityName": "İzmir",
+    "name": "Karabağlar",
+    "coordinates": [38.3669278, 27.1169157]
+  },
+  {
+    "cityName": "İzmir",
+    "name": "Karaburun",
+    "coordinates": [38.6424942, 26.4960979]
+  },
+  {
+    "cityName": "İzmir",
+    "name": "Karşıyaka",
+    "coordinates": [38.4517198, 27.1073556]
+  },
+  {
+    "cityName": "İzmir",
+    "name": "Kemalpaşa",
+    "coordinates": [38.386816, 27.495748]
+  },
+  {
+    "cityName": "İzmir",
+    "name": "Kınık",
+    "coordinates": [38.998955, 27.463265]
+  },
+  {
+    "cityName": "İzmir",
+    "name": "Kiraz",
+    "coordinates": [38.113197, 28.412184]
+  },
+  {
+    "cityName": "İzmir",
+    "name": "Konak",
+    "coordinates": [38.4067296, 27.1433874]
+  },
+  {
+    "cityName": "İzmir",
+    "name": "Menderes",
+    "coordinates": [37.9943963, 27.1885768]
+  },
+  {
+    "cityName": "İzmir",
+    "name": "Menemen",
+    "coordinates": [38.6176415, 27.1455932]
+  },
+  {
+    "cityName": "İzmir",
+    "name": "Narlıdere",
+    "coordinates": [38.37988929999999, 27.0132021]
+  },
+  {
+    "cityName": "İzmir",
+    "name": "Ödemiş",
+    "coordinates": [38.2302764, 27.971047]
+  },
+  {
+    "cityName": "İzmir",
+    "name": "Seferihisar",
+    "coordinates": [38.087469, 26.855757]
+  },
+  {
+    "cityName": "İzmir",
+    "name": "Selçuk",
+    "coordinates": [37.9444945, 27.3836808]
+  },
+  {
+    "cityName": "İzmir",
+    "name": "Tire",
+    "coordinates": [38.0885937, 27.7263414]
+  },
+  {
+    "cityName": "İzmir",
+    "name": "Torbalı",
+    "coordinates": [38.1069, 27.439723]
+  },
+  {
+    "cityName": "İzmir",
+    "name": "Urla",
+    "coordinates": [38.321183, 26.7452251]
+  },
+  {
+    "cityName": "Muğla",
+    "name": "Bodrum",
+    "coordinates": [37.0139042, 27.2808381]
+  },
+  {
+    "cityName": "Muğla",
+    "name": "Dalaman",
+    "coordinates": [36.7745591, 28.7751843]
+  },
+  {
+    "cityName": "Muğla",
+    "name": "Datça",
+    "coordinates": [36.69817, 27.458157]
+  },
+  {
+    "cityName": "Muğla",
+    "name": "Fethiye",
+    "coordinates": [36.6522824, 29.12452549999999]
+  },
+  {
+    "cityName": "Muğla",
+    "name": "Kavaklıdere",
+    "coordinates": [37.4485466, 28.3644569]
+  },
+  {
+    "cityName": "Muğla",
+    "name": "Köyceğiz",
+    "coordinates": [36.955731, 28.92631]
+  },
+  {
+    "cityName": "Muğla",
+    "name": "Marmaris",
+    "coordinates": [36.819294, 28.314094]
+  },
+  {
+    "cityName": "Muğla",
+    "name": "Menteşe",
+    "coordinates": [37.235383, 28.296208]
+  },
+  {
+    "cityName": "Muğla",
+    "name": "Milas",
+    "coordinates": [37.220824, 27.746138]
+  },
+  {
+    "cityName": "Muğla",
+    "name": "Ortaca",
+    "coordinates": [36.786807, 28.765358]
+  },
+  {
+    "cityName": "Muğla",
+    "name": "Seydikemer",
+    "coordinates": [36.530214, 29.328942]
+  },
+  {
+    "cityName": "Muğla",
+    "name": "Ula",
+    "coordinates": [37.025951, 28.355761]
+  },
+  {
+    "cityName": "Muğla",
+    "name": "Yatağan",
+    "coordinates": [37.274567, 28.21396]
+  },
+  {
+    "cityName": "Niğde",
+    "name": "Altunhisar",
+    "coordinates": [38.017774, 34.277007]
+  },
+  {
+    "cityName": "Niğde",
+    "name": "Bor",
+    "coordinates": [37.85758620000001, 34.5417619]
+  },
+  {
+    "cityName": "Niğde",
+    "name": "Çamardı",
+    "coordinates": [37.920428, 35.068055]
+  },
+  {
+    "cityName": "Niğde",
+    "name": "Çiftlik",
+    "coordinates": [38.149518, 34.49482]
+  },
+  {
+    "cityName": "Niğde",
+    "name": "NiğdeMerkez",
+    "coordinates": [38.32068, 34.727359]
+  },
+  {
+    "cityName": "Niğde",
+    "name": "Ulukışla",
+    "coordinates": [37.49307599999999, 34.716174]
+  },
+  {
+    "cityName": "Aksaray",
+    "name": "Ağaçören",
+    "coordinates": [38.85926, 33.8114769]
+  },
+  {
+    "cityName": "Aksaray",
+    "name": "AksarayMerkez",
+    "coordinates": [38.5264221, 33.8521357]
+  },
+  {
+    "cityName": "Aksaray",
+    "name": "Eskil",
+    "coordinates": [38.5325019, 33.4831906]
+  },
+  {
+    "cityName": "Aksaray",
+    "name": "Gülağaç",
+    "coordinates": [38.461481, 34.313602]
+  },
+  {
+    "cityName": "Aksaray",
+    "name": "Güzelyurt",
+    "coordinates": [38.28779, 34.383942]
+  },
+  {
+    "cityName": "Aksaray",
+    "name": "Ortaköy",
+    "coordinates": [38.763483, 34.012897]
+  },
+  {
+    "cityName": "Aksaray",
+    "name": "Sarıyahşi",
+    "coordinates": [38.98491, 33.844517]
+  },
+  {
+    "cityName": "Aksaray",
+    "name": "Sultanhanı",
+    "coordinates": [38.242161, 33.559292]
+  },
+  {
+    "cityName": "Antalya",
+    "name": "Akseki",
+    "coordinates": [37.067428, 31.699335]
+  },
+  {
+    "cityName": "Antalya",
+    "name": "Aksu",
+    "coordinates": [37.055875, 30.891177]
+  },
+  {
+    "cityName": "Antalya",
+    "name": "Alanya",
+    "coordinates": [36.573002, 32.139746]
+  },
+  {
+    "cityName": "Antalya",
+    "name": "Demre",
+    "coordinates": [36.2550313, 29.9885061]
+  },
+  {
+    "cityName": "Antalya",
+    "name": "Döşemealtı",
+    "coordinates": [37.2139835, 30.7005044]
+  },
+  {
+    "cityName": "Antalya",
+    "name": "Elmalı",
+    "coordinates": [36.5680529, 29.748989]
+  },
+  {
+    "cityName": "Antalya",
+    "name": "Finike",
+    "coordinates": [36.482246, 30.210888]
+  },
+  {
+    "cityName": "Antalya",
+    "name": "Gazipaşa",
+    "coordinates": [36.285881, 32.578372]
+  },
+  {
+    "cityName": "Antalya",
+    "name": "Gündoğmuş",
+    "coordinates": [36.7514949, 32.210938]
+  },
+  {
+    "cityName": "Antalya",
+    "name": "İbradı",
+    "coordinates": [37.0864813, 31.59693039999999]
+  },
+  {
+    "cityName": "Antalya",
+    "name": "Kaş",
+    "coordinates": [36.216704, 29.683015]
+  },
+  {
+    "cityName": "Antalya",
+    "name": "Kemer",
+    "coordinates": [36.5928439, 30.5682028]
+  },
+  {
+    "cityName": "Antalya",
+    "name": "Kepez",
+    "coordinates": [36.92368829999999, 30.6516265]
+  },
+  {
+    "cityName": "Antalya",
+    "name": "Konyaaltı",
+    "coordinates": [36.869453, 30.523638]
+  },
+  {
+    "cityName": "Antalya",
+    "name": "Korkuteli",
+    "coordinates": [37.159789, 30.18068]
+  },
+  {
+    "cityName": "Antalya",
+    "name": "Kumluca",
+    "coordinates": [36.371205, 30.2880476]
+  },
+  {
+    "cityName": "Antalya",
+    "name": "Manavgat",
+    "coordinates": [36.7835703, 31.4441895]
+  },
+  {
+    "cityName": "Antalya",
+    "name": "Muratpaşa",
+    "coordinates": [36.8910865, 30.6911616]
+  },
+  {
+    "cityName": "Antalya",
+    "name": "Serik",
+    "coordinates": [36.923458, 31.0851019]
+  },
+  {
+    "cityName": "Bursa",
+    "name": "Büyükorhan",
+    "coordinates": [39.660241, 28.91708999999999]
+  },
+  {
+    "cityName": "Bursa",
+    "name": "Gemlik",
+    "coordinates": [40.3889, 29.2051]
+  },
+  {
+    "cityName": "Bursa",
+    "name": "Gürsu",
+    "coordinates": [40.229209, 29.21791199999999]
+  },
+  {
+    "cityName": "Bursa",
+    "name": "Harmancık",
+    "coordinates": [39.6854076, 29.1565087]
+  },
+  {
+    "cityName": "Bursa",
+    "name": "İnegöl",
+    "coordinates": [40.097883, 29.594209]
+  },
+  {
+    "cityName": "Bursa",
+    "name": "İznik",
+    "coordinates": [40.374, 29.6453]
+  },
+  {
+    "cityName": "Bursa",
+    "name": "Karacabey",
+    "coordinates": [40.21879980000001, 28.3611698]
+  },
+  {
+    "cityName": "Bursa",
+    "name": "Keles",
+    "coordinates": [39.872649, 29.166432]
+  },
+  {
+    "cityName": "Bursa",
+    "name": "Kestel",
+    "coordinates": [40.282745, 29.288169]
+  },
+  {
+    "cityName": "Bursa",
+    "name": "Mudanya",
+    "coordinates": [40.3277, 28.8424]
+  },
+  {
+    "cityName": "Bursa",
+    "name": "Mustafakemalpaşa",
+    "coordinates": [40.0394409, 28.405177]
+  },
+  {
+    "cityName": "Bursa",
+    "name": "Nilüfer",
+    "coordinates": [40.1885281, 29.0609636]
+  },
+  {
+    "cityName": "Bursa",
+    "name": "Orhaneli",
+    "coordinates": [39.907207, 28.98051779999999]
+  },
+  {
+    "cityName": "Bursa",
+    "name": "Orhangazi",
+    "coordinates": [40.41636, 29.335128]
+  },
+  {
+    "cityName": "Bursa",
+    "name": "Osmangazi",
+    "coordinates": [40.2958224, 29.0561752]
+  },
+  {
+    "cityName": "Bursa",
+    "name": "Yenişehir",
+    "coordinates": [40.2941999, 29.6808]
+  },
+  {
+    "cityName": "Bursa",
+    "name": "Yıldırım",
+    "coordinates": [40.1884212, 29.1056232]
+  },
+  {
+    "cityName": "Bilecik",
+    "name": "BilecikMerkez",
+    "coordinates": [40.1685769, 29.734519]
+  },
+  {
+    "cityName": "Bilecik",
+    "name": "Bozüyük",
+    "coordinates": [39.9003372, 30.0809664]
+  },
+  {
+    "cityName": "Bilecik",
+    "name": "Gölpazarı",
+    "coordinates": [40.32714, 30.333637]
+  },
+  {
+    "cityName": "Bilecik",
+    "name": "İnhisar",
+    "coordinates": [40.107129, 30.449101]
+  },
+  {
+    "cityName": "Bilecik",
+    "name": "Osmaneli",
+    "coordinates": [40.493074, 29.940742]
+  },
+  {
+    "cityName": "Bilecik",
+    "name": "Pazaryeri",
+    "coordinates": [40.0210431, 29.952377]
+  },
+  {
+    "cityName": "Bilecik",
+    "name": "Söğüt",
+    "coordinates": [40.084201, 30.308106]
+  },
+  {
+    "cityName": "Bilecik",
+    "name": "Yenipazar",
+    "coordinates": [40.2314359, 30.586917]
+  },
+  {
+    "cityName": "Çankırı",
+    "name": "Atkaracalar",
+    "coordinates": [40.853402, 33.1433961]
+  },
+  {
+    "cityName": "Çankırı",
+    "name": "Bayramören",
+    "coordinates": [40.94408, 33.199784]
+  },
+  {
+    "cityName": "Çankırı",
+    "name": "ÇankırıMerkez",
+    "coordinates": [40.5811825, 33.6212461]
+  },
+  {
+    "cityName": "Çankırı",
+    "name": "Çerkeş",
+    "coordinates": [40.915638, 33.003746]
+  },
+  {
+    "cityName": "Çankırı",
+    "name": "Eldivan",
+    "coordinates": [40.48395, 33.523473]
+  },
+  {
+    "cityName": "Çankırı",
+    "name": "Ilgaz",
+    "coordinates": [40.96093, 33.509512]
+  },
+  {
+    "cityName": "Çankırı",
+    "name": "Kızılırmak",
+    "coordinates": [40.3617514, 33.9348806]
+  },
+  {
+    "cityName": "Çankırı",
+    "name": "Korgun",
+    "coordinates": [40.68509, 33.530361]
+  },
+  {
+    "cityName": "Çankırı",
+    "name": "Kurşunlu",
+    "coordinates": [40.861354, 33.3986779]
+  },
+  {
+    "cityName": "Çankırı",
+    "name": "Orta",
+    "coordinates": [40.604736, 33.053275]
+  },
+  {
+    "cityName": "Çankırı",
+    "name": "Şabanözü",
+    "coordinates": [40.467594, 33.377819]
+  },
+  {
+    "cityName": "Çankırı",
+    "name": "Yapraklı",
+    "coordinates": [40.748058, 33.8277661]
+  },
+  {
+    "cityName": "Samsun",
+    "name": "19May",
+    "coordinates": [41.2797031, 36.3360667]
+  },
+  {
+    "cityName": "Samsun",
+    "name": "Alaçam",
+    "coordinates": [41.58054, 35.6487111]
+  },
+  {
+    "cityName": "Samsun",
+    "name": "Asarcık",
+    "coordinates": [41.015109, 36.2842141]
+  },
+  {
+    "cityName": "Samsun",
+    "name": "Atakum",
+    "coordinates": [41.410379, 36.1294711]
+  },
+  {
+    "cityName": "Samsun",
+    "name": "Ayvacık",
+    "coordinates": [40.919894, 36.605216]
+  },
+  {
+    "cityName": "Samsun",
+    "name": "Bafra",
+    "coordinates": [41.5980429, 35.8923711]
+  },
+  {
+    "cityName": "Samsun",
+    "name": "Canik",
+    "coordinates": [41.196563, 36.320378]
+  },
+  {
+    "cityName": "Samsun",
+    "name": "Çarşamba",
+    "coordinates": [41.2085997, 36.7708924]
+  },
+  {
+    "cityName": "Samsun",
+    "name": "Havza",
+    "coordinates": [40.9750904, 35.6729241]
+  },
+  {
+    "cityName": "Samsun",
+    "name": "İlkadım",
+    "coordinates": [41.2869007, 36.3368825]
+  },
+  {
+    "cityName": "Samsun",
+    "name": "Kavak",
+    "coordinates": [41.0672727, 36.029193]
+  },
+  {
+    "cityName": "Samsun",
+    "name": "Ladik",
+    "coordinates": [40.912064, 35.8111229]
+  },
+  {
+    "cityName": "Samsun",
+    "name": "Salıpazarı",
+    "coordinates": [41.08229, 36.825255]
+  },
+  {
+    "cityName": "Samsun",
+    "name": "Tekkeköy",
+    "coordinates": [41.2204582, 36.4602716]
+  },
+  {
+    "cityName": "Samsun",
+    "name": "Terme",
+    "coordinates": [41.1809803, 36.9833088]
+  },
+  {
+    "cityName": "Samsun",
+    "name": "Vezirköprü",
+    "coordinates": [41.1418992, 35.4546054]
+  },
+  {
+    "cityName": "Samsun",
+    "name": "Yakakent",
+    "coordinates": [41.6266196, 35.52293969999999]
+  },
+  {
+    "cityName": "Şırnak",
+    "name": "Beytüşşebap",
+    "coordinates": [37.63515, 43.2803929]
+  },
+  {
+    "cityName": "Şırnak",
+    "name": "Cizre",
+    "coordinates": [37.3251397, 42.1942431]
+  },
+  {
+    "cityName": "Şırnak",
+    "name": "Güçlükonak",
+    "coordinates": [37.50310700000001, 41.88437]
+  },
+  {
+    "cityName": "Şırnak",
+    "name": "İdil",
+    "coordinates": [37.188436, 41.7990581]
+  },
+  {
+    "cityName": "Şırnak",
+    "name": "Silopi",
+    "coordinates": [37.161523, 42.528645]
+  },
+  {
+    "cityName": "Şırnak",
+    "name": "ŞırnakMerkez",
+    "coordinates": [37.437838, 42.1159699]
+  },
+  {
+    "cityName": "Şırnak",
+    "name": "Uludere",
+    "coordinates": [37.35575, 43.260908]
+  },
+  {
+    "cityName": "Adana",
+    "name": "Aladağ",
+    "coordinates": [37.456204, 35.447078]
+  },
+  {
+    "cityName": "Adana",
+    "name": "Ceyhan",
+    "coordinates": [37.139783, 35.845534]
+  },
+  {
+    "cityName": "Adana",
+    "name": "Çukurova",
+    "coordinates": [37.045668, 35.2642885]
+  },
+  {
+    "cityName": "Adana",
+    "name": "Feke",
+    "coordinates": [37.756395, 35.893849]
+  },
+  {
+    "cityName": "Adana",
+    "name": "İmamoğlu",
+    "coordinates": [37.2818505, 35.6778767]
+  },
+  {
+    "cityName": "Adana",
+    "name": "Karaisalı",
+    "coordinates": [37.384958, 35.214951]
+  },
+  {
+    "cityName": "Adana",
+    "name": "Karataş",
+    "coordinates": [36.6326, 35.57263]
+  },
+  {
+    "cityName": "Adana",
+    "name": "Kozan",
+    "coordinates": [37.466667, 35.9]
+  },
+  {
+    "cityName": "Adana",
+    "name": "Pozantı",
+    "coordinates": [37.383333, 34.833333]
+  },
+  {
+    "cityName": "Adana",
+    "name": "Saimbeyli",
+    "coordinates": [37.9, 36.2000001]
+  },
+  {
+    "cityName": "Adana",
+    "name": "Sarıçam",
+    "coordinates": [36.9849779, 35.620484]
+  },
+  {
+    "cityName": "Adana",
+    "name": "Seyhan",
+    "coordinates": [37.0284656, 35.2629155]
+  },
+  {
+    "cityName": "Adana",
+    "name": "Tufanbeyli",
+    "coordinates": [38.206786, 36.323039]
+  },
+  {
+    "cityName": "Adana",
+    "name": "Yumurtalık",
+    "coordinates": [36.7952845, 35.8089055]
+  },
+  {
+    "cityName": "Adana",
+    "name": "Yüreğir",
+    "coordinates": [36.9774009, 35.3644541]
+  },
+  {
+    "cityName": "Erzurum",
+    "name": "Aşkale",
+    "coordinates": [39.920188, 40.694704]
+  },
+  {
+    "cityName": "Erzurum",
+    "name": "Aziziye",
+    "coordinates": [39.871402, 41.1263709]
+  },
+  {
+    "cityName": "Erzurum",
+    "name": "Çat",
+    "coordinates": [39.60506, 41.012025]
+  },
+  {
+    "cityName": "Erzurum",
+    "name": "Hınıs",
+    "coordinates": [39.398698, 41.617299]
+  },
+  {
+    "cityName": "Erzurum",
+    "name": "Horasan",
+    "coordinates": [40.0310079, 42.1664478]
+  },
+  {
+    "cityName": "Erzurum",
+    "name": "İspir",
+    "coordinates": [40.585262, 41.2899079]
+  },
+  {
+    "cityName": "Erzurum",
+    "name": "Karaçoban",
+    "coordinates": [39.2721999, 41.996541]
+  },
+  {
+    "cityName": "Erzurum",
+    "name": "Karayazı",
+    "coordinates": [39.596962, 42.495803]
+  },
+  {
+    "cityName": "Erzurum",
+    "name": "Köprüköy",
+    "coordinates": [39.915291, 41.982295]
+  },
+  {
+    "cityName": "Erzurum",
+    "name": "Narman",
+    "coordinates": [40.429772, 41.93592]
+  },
+  {
+    "cityName": "Erzurum",
+    "name": "Oltu",
+    "coordinates": [40.632571, 41.79380800000001]
+  },
+  {
+    "cityName": "Erzurum",
+    "name": "Olur",
+    "coordinates": [40.820736, 42.1309693]
+  },
+  {
+    "cityName": "Erzurum",
+    "name": "Palandöken",
+    "coordinates": [39.8955537, 41.2867561]
+  },
+  {
+    "cityName": "Erzurum",
+    "name": "Pasinler",
+    "coordinates": [40.052886, 41.580355]
+  },
+  {
+    "cityName": "Erzurum",
+    "name": "Pazaryolu",
+    "coordinates": [40.4199223, 40.7757975]
+  },
+  {
+    "cityName": "Erzurum",
+    "name": "Şenkaya",
+    "coordinates": [40.649657, 42.349004]
+  },
+  {
+    "cityName": "Erzurum",
+    "name": "Tekman",
+    "coordinates": [39.7630242, 41.5483802]
+  },
+  {
+    "cityName": "Erzurum",
+    "name": "Tortum",
+    "coordinates": [40.241415, 41.484009]
+  },
+  {
+    "cityName": "Erzurum",
+    "name": "Uzundere",
+    "coordinates": [40.5300687, 41.5480711]
+  },
+  {
+    "cityName": "Erzurum",
+    "name": "Yakutiye",
+    "coordinates": [40.103503, 41.34799]
+  },
+  {
+    "cityName": "Gümüşhane",
+    "name": "GümüşhaneMerkez",
+    "coordinates": [40.38144399999999, 39.781508]
+  },
+  {
+    "cityName": "Gümüşhane",
+    "name": "Kelkit",
+    "coordinates": [40.128748, 39.432256]
+  },
+  {
+    "cityName": "Gümüşhane",
+    "name": "Köse",
+    "coordinates": [40.188343, 39.598014]
+  },
+  {
+    "cityName": "Gümüşhane",
+    "name": "Kürtün",
+    "coordinates": [40.585761, 39.059959]
+  },
+  {
+    "cityName": "Gümüşhane",
+    "name": "Şiran",
+    "coordinates": [40.2779, 39.09648600000001]
+  },
+  {
+    "cityName": "Gümüşhane",
+    "name": "Torul",
+    "coordinates": [40.5609847, 39.2884307]
+  },
+  {
+    "cityName": "Kars",
+    "name": "Akyaka",
+    "coordinates": [40.8282, 43.654844]
+  },
+  {
+    "cityName": "Kars",
+    "name": "Arpaçay",
+    "coordinates": [40.752854, 43.284514]
+  },
+  {
+    "cityName": "Kars",
+    "name": "Digor",
+    "coordinates": [40.3750829, 43.41417800000001]
+  },
+  {
+    "cityName": "Kars",
+    "name": "Kağızman",
+    "coordinates": [40.173795, 43.2763009]
+  },
+  {
+    "cityName": "Kars",
+    "name": "KarsMerkez",
+    "coordinates": [40.610622, 43.1006244]
+  },
+  {
+    "cityName": "Kars",
+    "name": "Sarıkamış",
+    "coordinates": [40.1504585, 42.7268377]
+  },
+  {
+    "cityName": "Kars",
+    "name": "Selim",
+    "coordinates": [40.464118, 42.790625]
+  },
+  {
+    "cityName": "Kars",
+    "name": "Susuz",
+    "coordinates": [40.7796329, 43.129804]
+  },
+  {
+    "cityName": "Kocaeli",
+    "name": "Başiskele",
+    "coordinates": [40.62779099999999, 29.988339]
+  },
+  {
+    "cityName": "Kocaeli",
+    "name": "Çayırova",
+    "coordinates": [40.8359257, 29.4005185]
+  },
+  {
+    "cityName": "Kocaeli",
+    "name": "Darıca",
+    "coordinates": [40.7792896, 29.4164813]
+  },
+  {
+    "cityName": "Kocaeli",
+    "name": "Derince",
+    "coordinates": [40.915109, 29.821128]
+  },
+  {
+    "cityName": "Kocaeli",
+    "name": "Dilovası",
+    "coordinates": [40.81513899999999, 29.582108]
+  },
+  {
+    "cityName": "Kocaeli",
+    "name": "Gebze",
+    "coordinates": [40.8176435, 29.3787483]
+  },
+  {
+    "cityName": "Kocaeli",
+    "name": "Gölcük",
+    "coordinates": [40.7206525, 29.7882012]
+  },
+  {
+    "cityName": "Kocaeli",
+    "name": "İzmit",
+    "coordinates": [40.7778075, 30.0044022]
+  },
+  {
+    "cityName": "Kocaeli",
+    "name": "Kandıra",
+    "coordinates": [41.07167099999999, 30.034469]
+  },
+  {
+    "cityName": "Kocaeli",
+    "name": "Karamürsel",
+    "coordinates": [40.68921280000001, 29.6180407]
+  },
+  {
+    "cityName": "Kocaeli",
+    "name": "Kartepe",
+    "coordinates": [40.7195576, 30.1069594]
+  },
+  {
+    "cityName": "Kocaeli",
+    "name": "Körfez",
+    "coordinates": [40.7939933, 29.6412236]
+  },
+  {
+    "cityName": "Rize",
+    "name": "Ardeşen",
+    "coordinates": [41.1928385, 40.9928762]
+  },
+  {
+    "cityName": "Rize",
+    "name": "Çamlıhemşin",
+    "coordinates": [41.0517461, 41.0043881]
+  },
+  {
+    "cityName": "Rize",
+    "name": "Çayeli",
+    "coordinates": [41.016562, 40.67220890000001]
+  },
+  {
+    "cityName": "Rize",
+    "name": "Derepazarı",
+    "coordinates": [41.0252123, 40.425082]
+  },
+  {
+    "cityName": "Rize",
+    "name": "Fındıklı",
+    "coordinates": [41.2702149, 41.1447785]
+  },
+  {
+    "cityName": "Rize",
+    "name": "Güneysu",
+    "coordinates": [40.977728, 40.612585]
+  },
+  {
+    "cityName": "Rize",
+    "name": "Hemşin",
+    "coordinates": [41.043931, 40.918538]
+  },
+  {
+    "cityName": "Rize",
+    "name": "İkizdere",
+    "coordinates": [40.796916, 40.5183942]
+  },
+  {
+    "cityName": "Rize",
+    "name": "İyidere",
+    "coordinates": [41.0252123, 40.425082]
+  },
+  {
+    "cityName": "Rize",
+    "name": "Kalkandere",
+    "coordinates": [40.9204551, 40.451867]
+  },
+  {
+    "cityName": "Rize",
+    "name": "Pazar",
+    "coordinates": [41.08905, 40.947019]
+  },
+  {
+    "cityName": "Rize",
+    "name": "RizeMerkez",
+    "coordinates": [41.0216319, 40.586128]
+  },
+  {
+    "cityName": "Tekirdağ",
+    "name": "Çerkezköy",
+    "coordinates": [41.2989316, 28.0098257]
+  },
+  {
+    "cityName": "Tekirdağ",
+    "name": "Çorlu",
+    "coordinates": [41.1468167, 27.8282121]
+  },
+  {
+    "cityName": "Tekirdağ",
+    "name": "Ergene",
+    "coordinates": [41.318363, 27.679328]
+  },
+  {
+    "cityName": "Tekirdağ",
+    "name": "Hayrabolu",
+    "coordinates": [41.179186, 27.037943]
+  },
+  {
+    "cityName": "Tekirdağ",
+    "name": "Kapaklı",
+    "coordinates": [41.3514693, 27.9776173]
+  },
+  {
+    "cityName": "Tekirdağ",
+    "name": "Malkara",
+    "coordinates": [40.883057, 27.071195]
+  },
+  {
+    "cityName": "Tekirdağ",
+    "name": "Marmaraereğlisi",
+    "coordinates": [40.9731514, 27.9395454]
+  },
+  {
+    "cityName": "Tekirdağ",
+    "name": "Muratlı",
+    "coordinates": [41.213963, 27.425132]
+  },
+  {
+    "cityName": "Tekirdağ",
+    "name": "Saray",
+    "coordinates": [41.37783, 27.928888]
+  },
+  {
+    "cityName": "Tekirdağ",
+    "name": "Şarköy",
+    "coordinates": [40.651774, 27.207472]
+  },
+  {
+    "cityName": "Tekirdağ",
+    "name": "Süleymanpaşa",
+    "coordinates": [40.9675984, 27.4938098]
+  },
+  {
+    "cityName": "Diyarbakır",
+    "name": "Bağlar",
+    "coordinates": [37.9204976, 40.2053301]
+  },
+  {
+    "cityName": "Diyarbakır",
+    "name": "Bismil",
+    "coordinates": [37.811566, 40.971388]
+  },
+  {
+    "cityName": "Diyarbakır",
+    "name": "Çermik",
+    "coordinates": [37.97343600000001, 39.326916]
+  },
+  {
+    "cityName": "Diyarbakır",
+    "name": "Çınar",
+    "coordinates": [37.603895, 40.353807]
+  },
+  {
+    "cityName": "Diyarbakır",
+    "name": "Çüngüş",
+    "coordinates": [38.27009, 39.315419]
+  },
+  {
+    "cityName": "Diyarbakır",
+    "name": "Dicle",
+    "coordinates": [37.9249733, 40.2109826]
+  },
+  {
+    "cityName": "Diyarbakır",
+    "name": "Eğil",
+    "coordinates": [38.206452, 40.2013039]
+  },
+  {
+    "cityName": "Diyarbakır",
+    "name": "Ergani",
+    "coordinates": [38.2626995, 39.7738996]
+  },
+  {
+    "cityName": "Diyarbakır",
+    "name": "Hani",
+    "coordinates": [38.4012479, 40.4025724]
+  },
+  {
+    "cityName": "Diyarbakır",
+    "name": "Hazro",
+    "coordinates": [38.156165, 40.818179]
+  },
+  {
+    "cityName": "Diyarbakır",
+    "name": "Kayapınar",
+    "coordinates": [38.069061, 39.993135]
+  },
+  {
+    "cityName": "Diyarbakır",
+    "name": "Kocaköy",
+    "coordinates": [38.2918189, 40.50552]
+  },
+  {
+    "cityName": "Diyarbakır",
+    "name": "Kulp",
+    "coordinates": [38.50380940000001, 41.0087203]
+  },
+  {
+    "cityName": "Diyarbakır",
+    "name": "Lice",
+    "coordinates": [38.570919, 40.681989]
+  },
+  {
+    "cityName": "Diyarbakır",
+    "name": "Silvan",
+    "coordinates": [37.992236, 40.99144500000001]
+  },
+  {
+    "cityName": "Diyarbakır",
+    "name": "Sur",
+    "coordinates": [37.9085899, 40.2350733]
+  },
+  {
+    "cityName": "Diyarbakır",
+    "name": "Yenişehir",
+    "coordinates": [38.095518, 39.992998]
+  },
+  {
+    "cityName": "Tokat",
+    "name": "Almus",
+    "coordinates": [40.362341, 37.0379909]
+  },
+  {
+    "cityName": "Tokat",
+    "name": "Artova",
+    "coordinates": [40.1007109, 36.17019]
+  },
+  {
+    "cityName": "Tokat",
+    "name": "Başçiftlik",
+    "coordinates": [40.585894, 37.084084]
+  },
+  {
+    "cityName": "Tokat",
+    "name": "Erbaa",
+    "coordinates": [40.643405, 36.675666]
+  },
+  {
+    "cityName": "Tokat",
+    "name": "Niksar",
+    "coordinates": [40.544463, 36.890636]
+  },
+  {
+    "cityName": "Tokat",
+    "name": "Pazar",
+    "coordinates": [40.2835518, 36.2812583]
+  },
+  {
+    "cityName": "Tokat",
+    "name": "Reşadiye",
+    "coordinates": [40.392406, 37.336033]
+  },
+  {
+    "cityName": "Tokat",
+    "name": "Sulusaray",
+    "coordinates": [39.973277, 36.0066241]
+  },
+  {
+    "cityName": "Tokat",
+    "name": "TokatMerkez",
+    "coordinates": [40.278357, 36.718475]
+  },
+  {
+    "cityName": "Tokat",
+    "name": "Turhal",
+    "coordinates": [40.3850101, 35.924763]
+  },
+  {
+    "cityName": "Tokat",
+    "name": "Yeşilyurt",
+    "coordinates": [40.006471, 36.220355]
+  },
+  {
+    "cityName": "Tokat",
+    "name": "Zile",
+    "coordinates": [40.1292509, 35.57911199999999]
+  },
+  {
+    "cityName": "Osmaniye",
+    "name": "Bahçe",
+    "coordinates": [37.188745, 36.6139839]
+  },
+  {
+    "cityName": "Osmaniye",
+    "name": "Düziçi",
+    "coordinates": [37.259806, 36.3455021]
+  },
+  {
+    "cityName": "Osmaniye",
+    "name": "Hasanbeyli",
+    "coordinates": [37.131723, 36.552987]
+  },
+  {
+    "cityName": "Osmaniye",
+    "name": "Kadirli",
+    "coordinates": [37.3711379, 36.106325]
+  },
+  {
+    "cityName": "Osmaniye",
+    "name": "OsmaniyeMerkez",
+    "coordinates": [37.0600997, 36.229181]
+  },
+  {
+    "cityName": "Osmaniye",
+    "name": "Sumbas",
+    "coordinates": [37.4532668, 35.934753]
+  },
+  {
+    "cityName": "Osmaniye",
+    "name": "Toprakkale",
+    "coordinates": [37.1035168, 36.1232821]
+  },
+  {
+    "cityName": "Balıkesir",
+    "name": "Altıeylül",
+    "coordinates": [39.6444879, 27.9000006]
+  },
+  {
+    "cityName": "Balıkesir",
+    "name": "Ayvalık",
+    "coordinates": [39.32841639999999, 26.7039686]
+  },
+  {
+    "cityName": "Balıkesir",
+    "name": "Balya",
+    "coordinates": [39.657067, 27.52644]
+  },
+  {
+    "cityName": "Balıkesir",
+    "name": "Bandırma",
+    "coordinates": [40.3386011, 27.9981142]
+  },
+  {
+    "cityName": "Balıkesir",
+    "name": "Bigadiç",
+    "coordinates": [39.384967, 28.1254347]
+  },
+  {
+    "cityName": "Balıkesir",
+    "name": "Burhaniye",
+    "coordinates": [39.408131, 26.934038]
+  },
+  {
+    "cityName": "Balıkesir",
+    "name": "Dursunbey",
+    "coordinates": [39.646652, 28.75215]
+  },
+  {
+    "cityName": "Balıkesir",
+    "name": "Edremit",
+    "coordinates": [39.586764, 26.923097]
+  },
+  {
+    "cityName": "Balıkesir",
+    "name": "Erdek",
+    "coordinates": [40.4032692, 27.8047648]
+  },
+  {
+    "cityName": "Balıkesir",
+    "name": "Gömeç",
+    "coordinates": [39.362301, 26.864624]
+  },
+  {
+    "cityName": "Balıkesir",
+    "name": "Gönen",
+    "coordinates": [40.1095722, 27.6654854]
+  },
+  {
+    "cityName": "Balıkesir",
+    "name": "Havran",
+    "coordinates": [39.53049499999999, 27.073514]
+  },
+  {
+    "cityName": "Balıkesir",
+    "name": "İvrindi",
+    "coordinates": [39.582007, 27.485384]
+  },
+  {
+    "cityName": "Balıkesir",
+    "name": "Karesi",
+    "coordinates": [39.6554282, 27.8831548]
+  },
+  {
+    "cityName": "Balıkesir",
+    "name": "Kepsut",
+    "coordinates": [39.625484, 28.280154]
+  },
+  {
+    "cityName": "Balıkesir",
+    "name": "Manyas",
+    "coordinates": [40.121213, 27.854203]
+  },
+  {
+    "cityName": "Balıkesir",
+    "name": "Marmara",
+    "coordinates": [40.6522231, 27.6704532]
+  },
+  {
+    "cityName": "Balıkesir",
+    "name": "Savaştepe",
+    "coordinates": [39.462593, 27.633191]
+  },
+  {
+    "cityName": "Balıkesir",
+    "name": "Sındırgı",
+    "coordinates": [39.349429, 27.957935]
+  },
+  {
+    "cityName": "Balıkesir",
+    "name": "Susurluk",
+    "coordinates": [39.864555, 28.047626]
+  },
+  {
+    "cityName": "Bolu",
+    "name": "BoluMerkez",
+    "coordinates": [40.75155600000001, 31.863825]
+  },
+  {
+    "cityName": "Bolu",
+    "name": "Dörtdivan",
+    "coordinates": [40.7140371, 32.0738873]
+  },
+  {
+    "cityName": "Bolu",
+    "name": "Gerede",
+    "coordinates": [40.810485, 32.3218601]
+  },
+  {
+    "cityName": "Bolu",
+    "name": "Göynük",
+    "coordinates": [40.235155, 30.844948]
+  },
+  {
+    "cityName": "Bolu",
+    "name": "Kıbrıscık",
+    "coordinates": [40.34664799999999, 31.776212]
+  },
+  {
+    "cityName": "Bolu",
+    "name": "Mengen",
+    "coordinates": [40.939139, 32.0738681]
+  },
+  {
+    "cityName": "Bolu",
+    "name": "Mudurnu",
+    "coordinates": [40.5757266, 31.0145633]
+  },
+  {
+    "cityName": "Bolu",
+    "name": "Seben",
+    "coordinates": [40.414282, 31.599725]
+  },
+  {
+    "cityName": "Bolu",
+    "name": "Yeniçağa",
+    "coordinates": [40.795025, 32.040961]
+  },
+  {
+    "cityName": "Konya",
+    "name": "Ahırlı",
+    "coordinates": [37.238475, 32.1206658]
+  },
+  {
+    "cityName": "Konya",
+    "name": "Akören",
+    "coordinates": [37.452598, 32.371139]
+  },
+  {
+    "cityName": "Konya",
+    "name": "Akşehir",
+    "coordinates": [38.377531, 31.4570447]
+  },
+  {
+    "cityName": "Konya",
+    "name": "Altınekin",
+    "coordinates": [38.26573399999999, 32.919974]
+  },
+  {
+    "cityName": "Konya",
+    "name": "Beyşehir",
+    "coordinates": [37.518103, 31.485897]
+  },
+  {
+    "cityName": "Konya",
+    "name": "Bozkır",
+    "coordinates": [37.2015194, 32.2029832]
+  },
+  {
+    "cityName": "Konya",
+    "name": "Çeltik",
+    "coordinates": [38.956575, 31.893339]
+  },
+  {
+    "cityName": "Konya",
+    "name": "Cihanbeyli",
+    "coordinates": [38.477489, 32.832009]
+  },
+  {
+    "cityName": "Konya",
+    "name": "Çumra",
+    "coordinates": [37.739435, 32.750996]
+  },
+  {
+    "cityName": "Konya",
+    "name": "Derbent",
+    "coordinates": [37.983056, 31.889366]
+  },
+  {
+    "cityName": "Konya",
+    "name": "Derebucak",
+    "coordinates": [37.3508, 31.6397]
+  },
+  {
+    "cityName": "Konya",
+    "name": "Doğanhisar",
+    "coordinates": [38.1386066, 31.67322429999999]
+  },
+  {
+    "cityName": "Konya",
+    "name": "Emirgazi",
+    "coordinates": [37.89442, 33.8341509]
+  },
+  {
+    "cityName": "Konya",
+    "name": "Ereğli",
+    "coordinates": [37.512316, 34.048806]
+  },
+  {
+    "cityName": "Konya",
+    "name": "Güneysınır",
+    "coordinates": [37.267923, 32.72742]
+  },
+  {
+    "cityName": "Konya",
+    "name": "Hadim",
+    "coordinates": [36.986063, 32.455875]
+  },
+  {
+    "cityName": "Konya",
+    "name": "Halkapınar",
+    "coordinates": [37.4353035, 34.1893473]
+  },
+  {
+    "cityName": "Konya",
+    "name": "Hüyük",
+    "coordinates": [37.9615824, 31.59693039999999]
+  },
+  {
+    "cityName": "Konya",
+    "name": "Ilgın",
+    "coordinates": [38.2817239, 31.91395]
+  },
+  {
+    "cityName": "Konya",
+    "name": "Kadınhanı",
+    "coordinates": [38.317493, 32.151681]
+  },
+  {
+    "cityName": "Konya",
+    "name": "Karapınar",
+    "coordinates": [37.71532, 33.54657]
+  },
+  {
+    "cityName": "Konya",
+    "name": "Karatay",
+    "coordinates": [37.969658, 32.799993]
+  },
+  {
+    "cityName": "Konya",
+    "name": "Kulu",
+    "coordinates": [38.837094, 32.9908519]
+  },
+  {
+    "cityName": "Konya",
+    "name": "Meram",
+    "coordinates": [37.8679384, 32.4927162]
+  },
+  {
+    "cityName": "Konya",
+    "name": "Sarayönü",
+    "coordinates": [38.1563219, 32.4523855]
+  },
+  {
+    "cityName": "Konya",
+    "name": "Selçuklu",
+    "coordinates": [38.0095429, 32.497668]
+  },
+  {
+    "cityName": "Konya",
+    "name": "Seydişehir",
+    "coordinates": [37.523952, 31.84403099999999]
+  },
+  {
+    "cityName": "Konya",
+    "name": "Taşkent",
+    "coordinates": [36.9236829, 32.493227]
+  },
+  {
+    "cityName": "Konya",
+    "name": "Tuzlukçu",
+    "coordinates": [38.4743769, 31.629483]
+  },
+  {
+    "cityName": "Konya",
+    "name": "Yalıhüyük",
+    "coordinates": [37.2867294, 32.1121466]
+  },
+  {
+    "cityName": "Konya",
+    "name": "Yunak",
+    "coordinates": [38.87715, 32.096871]
+  },
+  {
+    "cityName": "Nevşehir",
+    "name": "Acıgöl",
+    "coordinates": [38.47526999999999, 34.508248]
+  },
+  {
+    "cityName": "Nevşehir",
+    "name": "Avanos",
+    "coordinates": [38.954308, 34.951244]
+  },
+  {
+    "cityName": "Nevşehir",
+    "name": "Derinkuyu",
+    "coordinates": [38.374548, 34.733365]
+  },
+  {
+    "cityName": "Nevşehir",
+    "name": "Gülşehir",
+    "coordinates": [38.852056, 34.315596]
+  },
+  {
+    "cityName": "Nevşehir",
+    "name": "Hacıbektaş",
+    "coordinates": [38.897149, 34.509381]
+  },
+  {
+    "cityName": "Nevşehir",
+    "name": "Kozaklı",
+    "coordinates": [39.079209, 34.823288]
+  },
+  {
+    "cityName": "Nevşehir",
+    "name": "NevşehirMerkez",
+    "coordinates": [38.5977511, 34.6414028]
+  },
+  {
+    "cityName": "Nevşehir",
+    "name": "Ürgüp",
+    "coordinates": [38.631169, 34.912182]
+  },
+  {
+    "cityName": "Ankara",
+    "name": "Akyurt",
+    "coordinates": [40.109903, 33.236678]
+  },
+  {
+    "cityName": "Ankara",
+    "name": "Altındağ",
+    "coordinates": [40.010596, 32.967716]
+  },
+  {
+    "cityName": "Ankara",
+    "name": "Ayaş",
+    "coordinates": [40.08608, 32.116735]
+  },
+  {
+    "cityName": "Ankara",
+    "name": "Bala",
+    "coordinates": [39.9333635, 32.8597419]
+  },
+  {
+    "cityName": "Ankara",
+    "name": "Beypazarı",
+    "coordinates": [40.1656, 31.9902]
+  },
+  {
+    "cityName": "Ankara",
+    "name": "Çamlıdere",
+    "coordinates": [40.4903679, 32.411933]
+  },
+  {
+    "cityName": "Ankara",
+    "name": "Çankaya",
+    "coordinates": [39.9020555, 32.8690828]
+  },
+  {
+    "cityName": "Ankara",
+    "name": "Çubuk",
+    "coordinates": [40.133699, 32.988069]
+  },
+  {
+    "cityName": "Ankara",
+    "name": "Elmadağ",
+    "coordinates": [39.809298, 33.108828]
+  },
+  {
+    "cityName": "Ankara",
+    "name": "Etimesgut",
+    "coordinates": [39.9423661, 32.6545889]
+  },
+  {
+    "cityName": "Ankara",
+    "name": "Evren",
+    "coordinates": [39.05704, 33.6951]
+  },
+  {
+    "cityName": "Ankara",
+    "name": "Gölbaşı",
+    "coordinates": [39.654491, 32.944856]
+  },
+  {
+    "cityName": "Ankara",
+    "name": "Güdül",
+    "coordinates": [40.190622, 32.187957]
+  },
+  {
+    "cityName": "Ankara",
+    "name": "Haymana",
+    "coordinates": [39.456235, 32.400282]
+  },
+  {
+    "cityName": "Ankara",
+    "name": "Kahramankazan",
+    "coordinates": [40.210869, 32.768978]
+  },
+  {
+    "cityName": "Ankara",
+    "name": "Kalecik",
+    "coordinates": [40.280593, 33.506638]
+  },
+  {
+    "cityName": "Ankara",
+    "name": "Keçiören",
+    "coordinates": [39.987917, 32.8521656]
+  },
+  {
+    "cityName": "Ankara",
+    "name": "Kızılcahamam",
+    "coordinates": [40.306273, 32.340907]
+  },
+  {
+    "cityName": "Ankara",
+    "name": "Mamak",
+    "coordinates": [39.9265795, 32.8859972]
+  },
+  {
+    "cityName": "Ankara",
+    "name": "Nallıhan",
+    "coordinates": [40.1888861, 31.3398668]
+  },
+  {
+    "cityName": "Ankara",
+    "name": "Polatlı",
+    "coordinates": [39.130593, 32.006592]
+  },
+  {
+    "cityName": "Ankara",
+    "name": "Pursaklar",
+    "coordinates": [40.0373245, 32.8881953]
+  },
+  {
+    "cityName": "Ankara",
+    "name": "Şereflikoçhisar",
+    "coordinates": [39.13713, 33.447508]
+  },
+  {
+    "cityName": "Ankara",
+    "name": "Sincan",
+    "coordinates": [40.017814, 32.53091]
+  },
+  {
+    "cityName": "Ankara",
+    "name": "Yenimahalle",
+    "coordinates": [39.9552509, 32.7957543]
+  },
+  {
+    "cityName": "Bayburt",
+    "name": "Aydıntepe",
+    "coordinates": [40.3915011, 40.1450355]
+  },
+  {
+    "cityName": "Bayburt",
+    "name": "BayburtMerkez",
+    "coordinates": [40.37757999999999, 40.324661]
+  },
+  {
+    "cityName": "Bayburt",
+    "name": "Demirözü",
+    "coordinates": [40.034724, 39.887097]
+  },
+  {
+    "cityName": "Karaman",
+    "name": "Ayrancı",
+    "coordinates": [37.409436, 33.836658]
+  },
+  {
+    "cityName": "Karaman",
+    "name": "Başyayla",
+    "coordinates": [36.7754537, 32.6051351]
+  },
+  {
+    "cityName": "Karaman",
+    "name": "Ermenek",
+    "coordinates": [36.640261, 32.892038]
+  },
+  {
+    "cityName": "Karaman",
+    "name": "KaramanMerkez",
+    "coordinates": [37.1777725, 33.2229815]
+  },
+  {
+    "cityName": "Karaman",
+    "name": "Kazımkarabekir",
+    "coordinates": [37.251805, 32.838098]
+  },
+  {
+    "cityName": "Karaman",
+    "name": "Sarıveliler",
+    "coordinates": [36.7004919, 32.6224466]
+  },
+  {
+    "cityName": "Ardahan",
+    "name": "ArdahanMerkez",
+    "coordinates": [41.144835, 42.59075900000001]
+  },
+  {
+    "cityName": "Ardahan",
+    "name": "Çıldır",
+    "coordinates": [41.268824, 43.041823]
+  },
+  {
+    "cityName": "Ardahan",
+    "name": "Damal",
+    "coordinates": [41.3396169, 42.83952]
+  },
+  {
+    "cityName": "Ardahan",
+    "name": "Göle",
+    "coordinates": [40.889173, 42.46126599999999]
+  },
+  {
+    "cityName": "Ardahan",
+    "name": "Hanak",
+    "coordinates": [41.220713, 42.9046019]
+  },
+  {
+    "cityName": "Ardahan",
+    "name": "Posof",
+    "coordinates": [41.5085519, 42.7361575]
+  },
+  {
+    "cityName": "Bingöl",
+    "name": "Adaklı",
+    "coordinates": [39.2279097, 40.4783246]
+  },
+  {
+    "cityName": "Bingöl",
+    "name": "BingölMerkez",
+    "coordinates": [38.931407, 40.7119781]
+  },
+  {
+    "cityName": "Bingöl",
+    "name": "Genç",
+    "coordinates": [38.582606, 40.211739]
+  },
+  {
+    "cityName": "Bingöl",
+    "name": "Karlıova",
+    "coordinates": [39.1830698, 40.760334]
+  },
+  {
+    "cityName": "Bingöl",
+    "name": "Kiğı",
+    "coordinates": [39.1580889, 40.308258]
+  },
+  {
+    "cityName": "Bingöl",
+    "name": "Solhan",
+    "coordinates": [38.9723479, 41.1308449]
+  },
+  {
+    "cityName": "Bingöl",
+    "name": "Yayladere",
+    "coordinates": [39.227956, 40.069078]
+  },
+  {
+    "cityName": "Bingöl",
+    "name": "Yedisu",
+    "coordinates": [39.433943, 40.54529100000001]
+  },
+  {
+    "cityName": "Iğdır",
+    "name": "Aralık",
+    "coordinates": [39.873902, 44.516055]
+  },
+  {
+    "cityName": "Iğdır",
+    "name": "IğdırMerkez",
+    "coordinates": [39.9320656, 44.0660956]
+  },
+  {
+    "cityName": "Iğdır",
+    "name": "Karakoyunlu",
+    "coordinates": [39.92005959999999, 44.0436151]
+  },
+  {
+    "cityName": "Iğdır",
+    "name": "Tuzluca",
+    "coordinates": [39.828734, 43.611574]
+  },
+  {
+    "cityName": "Aydın",
+    "name": "Bozdoğan",
+    "coordinates": [37.672873, 28.310157]
+  },
+  {
+    "cityName": "Aydın",
+    "name": "Buharkent",
+    "coordinates": [38.048825, 28.7185029]
+  },
+  {
+    "cityName": "Aydın",
+    "name": "Çine",
+    "coordinates": [37.5084178, 28.0215363]
+  },
+  {
+    "cityName": "Aydın",
+    "name": "Didim",
+    "coordinates": [37.387811, 27.433039]
+  },
+  {
+    "cityName": "Aydın",
+    "name": "Efeler",
+    "coordinates": [37.793115, 27.980651]
+  },
+  {
+    "cityName": "Aydın",
+    "name": "Germencik",
+    "coordinates": [37.906362, 27.5501429]
+  },
+  {
+    "cityName": "Aydın",
+    "name": "İncirliova",
+    "coordinates": [37.825806, 27.744316]
+  },
+  {
+    "cityName": "Aydın",
+    "name": "Karacasu",
+    "coordinates": [37.755633, 28.5641359]
+  },
+  {
+    "cityName": "Aydın",
+    "name": "Karpuzlu",
+    "coordinates": [37.611018, 27.865325]
+  },
+  {
+    "cityName": "Aydın",
+    "name": "Koçarlı",
+    "coordinates": [37.762029, 27.704495]
+  },
+  {
+    "cityName": "Aydın",
+    "name": "Köşk",
+    "coordinates": [37.985845, 28.092913]
+  },
+  {
+    "cityName": "Aydın",
+    "name": "Kuşadası",
+    "coordinates": [37.8562168, 27.2591609]
+  },
+  {
+    "cityName": "Aydın",
+    "name": "Kuyucak",
+    "coordinates": [37.9213543, 28.4221519]
+  },
+  {
+    "cityName": "Aydın",
+    "name": "Nazilli",
+    "coordinates": [38.098028, 28.347488]
+  },
+  {
+    "cityName": "Aydın",
+    "name": "Söke",
+    "coordinates": [37.73862, 27.341549]
+  },
+  {
+    "cityName": "Aydın",
+    "name": "Sultanhisar",
+    "coordinates": [37.89637, 28.21273]
+  },
+  {
+    "cityName": "Aydın",
+    "name": "Yenipazar",
+    "coordinates": [37.81131, 28.165686]
+  },
+  {
+    "cityName": "Afyonkarahisar",
+    "name": "AfyonkarahisarMerkez",
+    "coordinates": [38.774289, 30.57792499999999]
+  },
+  {
+    "cityName": "Afyonkarahisar",
+    "name": "Başmakçı",
+    "coordinates": [37.930558, 29.948193]
+  },
+  {
+    "cityName": "Afyonkarahisar",
+    "name": "Bayat",
+    "coordinates": [38.984257, 30.923901]
+  },
+  {
+    "cityName": "Afyonkarahisar",
+    "name": "Bolvadin",
+    "coordinates": [38.7114362, 31.0539344]
+  },
+  {
+    "cityName": "Afyonkarahisar",
+    "name": "Çay",
+    "coordinates": [38.5252089, 30.893408]
+  },
+  {
+    "cityName": "Afyonkarahisar",
+    "name": "Çobanlar",
+    "coordinates": [38.801602, 30.885008]
+  },
+  {
+    "cityName": "Afyonkarahisar",
+    "name": "Dazkırı",
+    "coordinates": [37.968455, 29.853057]
+  },
+  {
+    "cityName": "Afyonkarahisar",
+    "name": "Dinar",
+    "coordinates": [38.260595, 30.3845956]
+  },
+  {
+    "cityName": "Afyonkarahisar",
+    "name": "Emirdağ",
+    "coordinates": [39.2268649, 31.19273699999999]
+  },
+  {
+    "cityName": "Afyonkarahisar",
+    "name": "Evciler",
+    "coordinates": [38.001498, 29.8939639]
+  },
+  {
+    "cityName": "Afyonkarahisar",
+    "name": "Hocalar",
+    "coordinates": [38.627306, 29.9829719]
+  },
+  {
+    "cityName": "Afyonkarahisar",
+    "name": "İhsaniye",
+    "coordinates": [38.961756, 30.48224299999999]
+  },
+  {
+    "cityName": "Afyonkarahisar",
+    "name": "İscehisar",
+    "coordinates": [39.0001279, 30.7455431]
+  },
+  {
+    "cityName": "Afyonkarahisar",
+    "name": "Kızılören",
+    "coordinates": [38.2601871, 30.1560436]
+  },
+  {
+    "cityName": "Afyonkarahisar",
+    "name": "Sandıklı",
+    "coordinates": [38.6357182, 30.266936]
+  },
+  {
+    "cityName": "Afyonkarahisar",
+    "name": "Sinanpaşa",
+    "coordinates": [38.73303900000001, 30.299596]
+  },
+  {
+    "cityName": "Afyonkarahisar",
+    "name": "Şuhut",
+    "coordinates": [38.5834649, 30.559663]
+  },
+  {
+    "cityName": "Afyonkarahisar",
+    "name": "Sultandağı",
+    "coordinates": [38.46667, 31.2946371]
+  },
+  {
+    "cityName": "Yozgat",
+    "name": "Akdağmadeni",
+    "coordinates": [39.641775, 35.670023]
+  },
+  {
+    "cityName": "Yozgat",
+    "name": "Aydıncık",
+    "coordinates": [40.218575, 35.16175]
+  },
+  {
+    "cityName": "Yozgat",
+    "name": "Boğazlıyan",
+    "coordinates": [39.32474, 35.302764]
+  },
+  {
+    "cityName": "Yozgat",
+    "name": "Çandır",
+    "coordinates": [39.243376, 35.517196]
+  },
+  {
+    "cityName": "Yozgat",
+    "name": "Çayıralan",
+    "coordinates": [39.460941, 35.626475]
+  },
+  {
+    "cityName": "Yozgat",
+    "name": "Çekerek",
+    "coordinates": [40.003682, 35.3584019]
+  },
+  {
+    "cityName": "Yozgat",
+    "name": "Kadışehri",
+    "coordinates": [40.033923, 35.926682]
+  },
+  {
+    "cityName": "Yozgat",
+    "name": "Saraykent",
+    "coordinates": [39.7156789, 35.43361]
+  },
+  {
+    "cityName": "Yozgat",
+    "name": "Sarıkaya",
+    "coordinates": [39.559602, 35.386562]
+  },
+  {
+    "cityName": "Yozgat",
+    "name": "Şefaatli",
+    "coordinates": [39.544872, 34.6321479]
+  },
+  {
+    "cityName": "Yozgat",
+    "name": "Sorgun",
+    "coordinates": [39.8319981, 35.434312]
+  },
+  {
+    "cityName": "Yozgat",
+    "name": "Yenifakılı",
+    "coordinates": [39.207946, 34.9985387]
+  },
+  {
+    "cityName": "Yozgat",
+    "name": "Yerköy",
+    "coordinates": [39.6670968, 34.4866465]
+  },
+  {
+    "cityName": "Yozgat",
+    "name": "YozgatMerkez",
+    "coordinates": [39.8231056, 34.7933484]
+  },
+  {
+    "cityName": "Zonguldak",
+    "name": "Alaplı",
+    "coordinates": [41.095501, 31.604959]
+  },
+  {
+    "cityName": "Zonguldak",
+    "name": "Çaycuma",
+    "coordinates": [41.428644, 32.077204]
+  },
+  {
+    "cityName": "Zonguldak",
+    "name": "Devrek",
+    "coordinates": [41.2798881, 32.0682611]
+  },
+  {
+    "cityName": "Zonguldak",
+    "name": "Ereğli",
+    "coordinates": [41.25, 31.4333333]
+  },
+  {
+    "cityName": "Zonguldak",
+    "name": "Gökçebey",
+    "coordinates": [41.32844230000001, 32.0985285]
+  },
+  {
+    "cityName": "Zonguldak",
+    "name": "Kilimli",
+    "coordinates": [41.5021733, 31.8667753]
+  },
+  {
+    "cityName": "Zonguldak",
+    "name": "Kozlu",
+    "coordinates": [41.4284817, 31.74027]
+  },
+  {
+    "cityName": "Zonguldak",
+    "name": "ZonguldakMerkez",
+    "coordinates": [41.3301633, 31.9709766]
+  },
+  {
+    "cityName": "Karabük",
+    "name": "Eflani",
+    "coordinates": [41.4174, 33.0698]
+  },
+  {
+    "cityName": "Karabük",
+    "name": "Eskipazar",
+    "coordinates": [40.938402, 32.5378597]
+  },
+  {
+    "cityName": "Karabük",
+    "name": "KarabükMerkez",
+    "coordinates": [41.19772529999999, 32.6649141]
+  },
+  {
+    "cityName": "Karabük",
+    "name": "Ovacık",
+    "coordinates": [41.073276, 32.917514]
+  },
+  {
+    "cityName": "Karabük",
+    "name": "Safranbolu",
+    "coordinates": [41.249306, 32.683128]
+  },
+  {
+    "cityName": "Karabük",
+    "name": "Yenice",
+    "coordinates": [41.1949078, 32.3329638]
+  },
+  {
+    "cityName": "Düzce",
+    "name": "Akçakoca",
+    "coordinates": [41.096126, 31.258536]
+  },
+  {
+    "cityName": "Düzce",
+    "name": "Çilimli",
+    "coordinates": [40.86272700000001, 31.084749]
+  },
+  {
+    "cityName": "Düzce",
+    "name": "Cumayeri",
+    "coordinates": [40.928477, 30.965772]
+  },
+  {
+    "cityName": "Düzce",
+    "name": "DüzceMerkez",
+    "coordinates": [40.828223, 31.134927]
+  },
+  {
+    "cityName": "Düzce",
+    "name": "Gölyaka",
+    "coordinates": [40.76119, 30.997524]
+  },
+  {
+    "cityName": "Düzce",
+    "name": "Gümüşova",
+    "coordinates": [40.8431383, 30.9431976]
+  },
+  {
+    "cityName": "Düzce",
+    "name": "Kaynaşlı",
+    "coordinates": [40.7708616, 31.3209348]
+  },
+  {
+    "cityName": "Düzce",
+    "name": "Yığılca",
+    "coordinates": [40.9700022, 31.4397545]
+  },
+  {
+    "cityName": "Kırşehir",
+    "name": "Akçakent",
+    "coordinates": [39.59217, 34.139058]
+  },
+  {
+    "cityName": "Kırşehir",
+    "name": "Akpınar",
+    "coordinates": [39.4454417, 33.9652468]
+  },
+  {
+    "cityName": "Kırşehir",
+    "name": "Boztepe",
+    "coordinates": [39.2570861, 34.2588308]
+  },
+  {
+    "cityName": "Kırşehir",
+    "name": "Çiçekdağı",
+    "coordinates": [39.720522, 34.184754]
+  },
+  {
+    "cityName": "Kırşehir",
+    "name": "Kaman",
+    "coordinates": [39.412988, 33.449431]
+  },
+  {
+    "cityName": "Kırşehir",
+    "name": "KırşehirMerkez",
+    "coordinates": [41.1756, 29.2703]
+  },
+  {
+    "cityName": "Kırşehir",
+    "name": "Mucur",
+    "coordinates": [39.039387, 34.3587921]
+  },
+  {
+    "cityName": "Kırklareli",
+    "name": "Babaeski",
+    "coordinates": [41.522822, 27.123858]
+  },
+  {
+    "cityName": "Kırklareli",
+    "name": "Demirköy",
+    "coordinates": [41.90152399999999, 27.546645]
+  },
+  {
+    "cityName": "Kırklareli",
+    "name": "KırklareliMerkez",
+    "coordinates": [41.932262, 27.365664]
+  },
+  {
+    "cityName": "Kırklareli",
+    "name": "Kofçaz",
+    "coordinates": [42.085188, 27.237544]
+  },
+  {
+    "cityName": "Kırklareli",
+    "name": "Lüleburgaz",
+    "coordinates": [41.3893863, 27.3543026]
+  },
+  {
+    "cityName": "Kırklareli",
+    "name": "Pehlivanköy",
+    "coordinates": [41.332517, 26.935975]
+  },
+  {
+    "cityName": "Kırklareli",
+    "name": "Pınarhisar",
+    "coordinates": [41.702004, 27.561363]
+  },
+  {
+    "cityName": "Kırklareli",
+    "name": "Vize",
+    "coordinates": [41.459083, 27.646049]
+  },
+  {
+    "cityName": "Kütahya",
+    "name": "Altıntaş",
+    "coordinates": [39.057037, 30.029664]
+  },
+  {
+    "cityName": "Kütahya",
+    "name": "Aslanapa",
+    "coordinates": [39.3283, 29.749492]
+  },
+  {
+    "cityName": "Kütahya",
+    "name": "Çavdarhisar",
+    "coordinates": [39.205045, 29.71501]
+  },
+  {
+    "cityName": "Kütahya",
+    "name": "Domaniç",
+    "coordinates": [39.759495, 29.618936]
+  },
+  {
+    "cityName": "Kütahya",
+    "name": "Dumlupınar",
+    "coordinates": [38.906436, 29.9776231]
+  },
+  {
+    "cityName": "Kütahya",
+    "name": "Emet",
+    "coordinates": [39.2244261, 29.487688]
+  },
+  {
+    "cityName": "Kütahya",
+    "name": "Gediz",
+    "coordinates": [38.929607, 29.301558]
+  },
+  {
+    "cityName": "Kütahya",
+    "name": "Hisarcık",
+    "coordinates": [39.246528, 29.235896]
+  },
+  {
+    "cityName": "Kütahya",
+    "name": "KütahyaMerkez",
+    "coordinates": [39.3868914, 30.0361888]
+  },
+  {
+    "cityName": "Kütahya",
+    "name": "Pazarlar",
+    "coordinates": [38.9951999, 29.1239]
+  },
+  {
+    "cityName": "Kütahya",
+    "name": "Şaphane",
+    "coordinates": [39.02308499999999, 29.255575]
+  },
+  {
+    "cityName": "Kütahya",
+    "name": "Simav",
+    "coordinates": [39.0939924, 28.9659641]
+  },
+  {
+    "cityName": "Kütahya",
+    "name": "Tavşanlı",
+    "coordinates": [39.547, 29.4914]
+  },
+  {
+    "cityName": "Muş",
+    "name": "Bulanık",
+    "coordinates": [39.216069, 42.1770179]
+  },
+  {
+    "cityName": "Muş",
+    "name": "Hasköy",
+    "coordinates": [38.684263, 41.69077799999999]
+  },
+  {
+    "cityName": "Muş",
+    "name": "Korkut",
+    "coordinates": [38.6761445, 41.94511079999999]
+  },
+  {
+    "cityName": "Muş",
+    "name": "Malazgirt",
+    "coordinates": [38.96476699999999, 42.59114700000001]
+  },
+  {
+    "cityName": "Muş",
+    "name": "MuşMerkez",
+    "coordinates": [38.9016189, 41.319229]
+  },
+  {
+    "cityName": "Muş",
+    "name": "Varto",
+    "coordinates": [39.21025300000001, 41.4206019]
+  },
+  {
+    "cityName": "Trabzon",
+    "name": "Akçaabat",
+    "coordinates": [40.939673, 39.456741]
+  },
+  {
+    "cityName": "Trabzon",
+    "name": "Araklı",
+    "coordinates": [40.829214, 40.01061]
+  },
+  {
+    "cityName": "Trabzon",
+    "name": "Arsin",
+    "coordinates": [40.822618, 39.9053629]
+  },
+  {
+    "cityName": "Trabzon",
+    "name": "Beşikdüzü",
+    "coordinates": [41.0698799, 39.2060058]
+  },
+  {
+    "cityName": "Trabzon",
+    "name": "Çarşıbaşı",
+    "coordinates": [41.0750044, 39.38067210000001]
+  },
+  {
+    "cityName": "Trabzon",
+    "name": "Çaykara",
+    "coordinates": [40.7568397, 40.2323033]
+  },
+  {
+    "cityName": "Trabzon",
+    "name": "Dernekpazarı",
+    "coordinates": [40.8073075, 40.2468714]
+  },
+  {
+    "cityName": "Trabzon",
+    "name": "Düzköy",
+    "coordinates": [40.853988, 39.3788409]
+  },
+  {
+    "cityName": "Trabzon",
+    "name": "Hayrat",
+    "coordinates": [40.86642, 40.3360729]
+  },
+  {
+    "cityName": "Trabzon",
+    "name": "Köprübaşı",
+    "coordinates": [40.80007, 40.111464]
+  },
+  {
+    "cityName": "Trabzon",
+    "name": "Maçka",
+    "coordinates": [40.814221, 39.610662]
+  },
+  {
+    "cityName": "Trabzon",
+    "name": "Of",
+    "coordinates": [40.918128, 40.295346]
+  },
+  {
+    "cityName": "Trabzon",
+    "name": "Ortahisar",
+    "coordinates": [40.9886454, 39.6621964]
+  },
+  {
+    "cityName": "Trabzon",
+    "name": "Şalpazarı",
+    "coordinates": [40.941959, 39.193033]
+  },
+  {
+    "cityName": "Trabzon",
+    "name": "Sürmene",
+    "coordinates": [40.86203099999999, 40.121576]
+  },
+  {
+    "cityName": "Trabzon",
+    "name": "Tonya",
+    "coordinates": [40.851759, 39.304428]
+  },
+  {
+    "cityName": "Trabzon",
+    "name": "Vakfıkebir",
+    "coordinates": [40.965495, 39.307488]
+  },
+  {
+    "cityName": "Trabzon",
+    "name": "Yomra",
+    "coordinates": [40.954017, 39.8670029]
+  },
+  {
+    "cityName": "Van",
+    "name": "Bahçesaray",
+    "coordinates": [38.020626, 42.74401599999999]
+  },
+  {
+    "cityName": "Van",
+    "name": "Başkale",
+    "coordinates": [37.9951999, 44.1474]
+  },
+  {
+    "cityName": "Van",
+    "name": "Çaldıran",
+    "coordinates": [38.967358, 43.94936999999999]
+  },
+  {
+    "cityName": "Van",
+    "name": "Çatak",
+    "coordinates": [38.1231651, 43.0882212]
+  },
+  {
+    "cityName": "Van",
+    "name": "Edremit",
+    "coordinates": [38.4120079, 43.3737208]
+  },
+  {
+    "cityName": "Van",
+    "name": "Erciş",
+    "coordinates": [39.1496426, 43.2773699]
+  },
+  {
+    "cityName": "Van",
+    "name": "Gevaş",
+    "coordinates": [38.2823, 43.20859979999999]
+  },
+  {
+    "cityName": "Van",
+    "name": "Gürpınar",
+    "coordinates": [38.303, 43.6847]
+  },
+  {
+    "cityName": "Van",
+    "name": "İpekyolu",
+    "coordinates": [38.694116, 43.7595099]
+  },
+  {
+    "cityName": "Van",
+    "name": "Muradiye",
+    "coordinates": [38.972353, 43.7091469]
+  },
+  {
+    "cityName": "Van",
+    "name": "Özalp",
+    "coordinates": [38.82, 43.9861999]
+  },
+  {
+    "cityName": "Van",
+    "name": "Saray",
+    "coordinates": [38.6477408, 44.18370059999999]
+  },
+  {
+    "cityName": "Van",
+    "name": "Tuşba",
+    "coordinates": [38.5181796, 43.357226]
+  },
+  {
+    "cityName": "Mersin",
+    "name": "Akdeniz",
+    "coordinates": [36.823549, 34.713921]
+  },
+  {
+    "cityName": "Mersin",
+    "name": "Anamur",
+    "coordinates": [36.0763421, 32.8211433]
+  },
+  {
+    "cityName": "Mersin",
+    "name": "Aydıncık",
+    "coordinates": [36.1494989, 33.3275702]
+  },
+  {
+    "cityName": "Mersin",
+    "name": "Bozyazı",
+    "coordinates": [36.1030632, 32.9747512]
+  },
+  {
+    "cityName": "Mersin",
+    "name": "Çamlıyayla",
+    "coordinates": [37.128099, 34.7333901]
+  },
+  {
+    "cityName": "Mersin",
+    "name": "Erdemli",
+    "coordinates": [36.6058189, 34.310167]
+  },
+  {
+    "cityName": "Mersin",
+    "name": "Gülnar",
+    "coordinates": [36.32951449999999, 33.3962986]
+  },
+  {
+    "cityName": "Mersin",
+    "name": "Mezitli",
+    "coordinates": [36.7475361, 34.518219]
+  },
+  {
+    "cityName": "Mersin",
+    "name": "Mut",
+    "coordinates": [36.694907, 33.265661]
+  },
+  {
+    "cityName": "Mersin",
+    "name": "Silifke",
+    "coordinates": [36.24049, 33.750698]
+  },
+  {
+    "cityName": "Mersin",
+    "name": "Tarsus",
+    "coordinates": [36.9170482, 34.9127556]
+  },
+  {
+    "cityName": "Mersin",
+    "name": "Toroslar",
+    "coordinates": [36.8279476, 34.5985158]
+  },
+  {
+    "cityName": "Mersin",
+    "name": "Yenişehir",
+    "coordinates": [36.8022072, 34.5722198]
+  },
+  {
+    "cityName": "Amasya",
+    "name": "AmasyaMerkez",
+    "coordinates": [40.647023, 36.045049]
+  },
+  {
+    "cityName": "Amasya",
+    "name": "Göynücek",
+    "coordinates": [40.3999299, 35.5309044]
+  },
+  {
+    "cityName": "Amasya",
+    "name": "Gümüşhacıköy",
+    "coordinates": [40.873622, 35.2159369]
+  },
+  {
+    "cityName": "Amasya",
+    "name": "Hamamözü",
+    "coordinates": [40.86881, 35.04421]
+  },
+  {
+    "cityName": "Amasya",
+    "name": "Merzifon",
+    "coordinates": [40.8876498, 35.4753834]
+  },
+  {
+    "cityName": "Amasya",
+    "name": "Suluova",
+    "coordinates": [40.802649, 35.762857]
+  },
+  {
+    "cityName": "Amasya",
+    "name": "Taşova",
+    "coordinates": [40.961037, 36.302191]
+  },
+  {
+    "cityName": "Bartın",
+    "name": "Amasra",
+    "coordinates": [41.771645, 32.566786]
+  },
+  {
+    "cityName": "Bartın",
+    "name": "BartınMerkez",
+    "coordinates": [41.637602, 32.333811]
+  },
+  {
+    "cityName": "Bartın",
+    "name": "Kurucaşile",
+    "coordinates": [41.827654, 32.681187]
+  },
+  {
+    "cityName": "Bartın",
+    "name": "Ulus",
+    "coordinates": [41.4506017, 32.4662549]
+  },
+  {
+    "cityName": "Artvin",
+    "name": "Ardanuç",
+    "coordinates": [41.121449, 42.0686554]
+  },
+  {
+    "cityName": "Artvin",
+    "name": "Arhavi",
+    "coordinates": [41.274282, 41.364989]
+  },
+  {
+    "cityName": "Artvin",
+    "name": "ArtvinMerkez",
+    "coordinates": [41.180937, 41.820819]
+  },
+  {
+    "cityName": "Artvin",
+    "name": "Borçka",
+    "coordinates": [41.3637, 41.6791]
+  },
+  {
+    "cityName": "Artvin",
+    "name": "Hopa",
+    "coordinates": [41.3930623, 41.4287244]
+  },
+  {
+    "cityName": "Artvin",
+    "name": "Kemalpaşa",
+    "coordinates": [41.458143, 41.514812]
+  },
+  {
+    "cityName": "Artvin",
+    "name": "Murgul",
+    "coordinates": [41.2990001, 41.6268]
+  },
+  {
+    "cityName": "Artvin",
+    "name": "Şavşat",
+    "coordinates": [41.410398, 42.377548]
+  },
+  {
+    "cityName": "Artvin",
+    "name": "Yusufeli",
+    "coordinates": [40.820669, 41.543647]
+  },
+  {
+    "cityName": "Erzincan",
+    "name": "Çayırlı",
+    "coordinates": [39.821523, 39.95544]
+  },
+  {
+    "cityName": "Erzincan",
+    "name": "ErzincanMerkez",
+    "coordinates": [39.888016, 39.313652]
+  },
+  {
+    "cityName": "Erzincan",
+    "name": "İliç",
+    "coordinates": [39.4468833, 38.5510235]
+  },
+  {
+    "cityName": "Erzincan",
+    "name": "Kemah",
+    "coordinates": [39.73078599999999, 38.940199]
+  },
+  {
+    "cityName": "Erzincan",
+    "name": "Kemaliye",
+    "coordinates": [39.122765, 38.654221]
+  },
+  {
+    "cityName": "Erzincan",
+    "name": "Otlukbeli",
+    "coordinates": [40.010124, 40.055577]
+  },
+  {
+    "cityName": "Erzincan",
+    "name": "Refahiye",
+    "coordinates": [39.8883769, 38.78801199999999]
+  },
+  {
+    "cityName": "Erzincan",
+    "name": "Tercan",
+    "coordinates": [39.606737, 40.353169]
+  },
+  {
+    "cityName": "Erzincan",
+    "name": "Üzümlü",
+    "coordinates": [39.635359, 39.671107]
+  },
+  {
+    "cityName": "Eskişehir",
+    "name": "Alpu",
+    "coordinates": [39.91796799999999, 31.149119]
+  },
+  {
+    "cityName": "Eskişehir",
+    "name": "Beylikova",
+    "coordinates": [39.690031, 31.226366]
+  },
+  {
+    "cityName": "Eskişehir",
+    "name": "Çifteler",
+    "coordinates": [39.254684, 31.2332111]
+  },
+  {
+    "cityName": "Eskişehir",
+    "name": "Günyüzü",
+    "coordinates": [39.3538004, 31.7708337]
+  },
+  {
+    "cityName": "Eskişehir",
+    "name": "Han",
+    "coordinates": [39.1764909, 30.784329]
+  },
+  {
+    "cityName": "Eskişehir",
+    "name": "İnönü",
+    "coordinates": [39.699098, 30.067816]
+  },
+  {
+    "cityName": "Eskişehir",
+    "name": "Mahmudiye",
+    "coordinates": [39.624672, 30.88944789999999]
+  },
+  {
+    "cityName": "Eskişehir",
+    "name": "Mihalgazi",
+    "coordinates": [40.015251, 30.50225799999999]
+  },
+  {
+    "cityName": "Eskişehir",
+    "name": "Mihalıççık",
+    "coordinates": [39.69093600000001, 31.430677]
+  },
+  {
+    "cityName": "Eskişehir",
+    "name": "Odunpazarı",
+    "coordinates": [39.7511211, 30.5912217]
+  },
+  {
+    "cityName": "Eskişehir",
+    "name": "Sarıcakaya",
+    "coordinates": [40.083129, 30.764541]
+  },
+  {
+    "cityName": "Eskişehir",
+    "name": "Seyitgazi",
+    "coordinates": [39.3387, 30.518575]
+  },
+  {
+    "cityName": "Eskişehir",
+    "name": "Sivrihisar",
+    "coordinates": [39.196639, 31.6182509]
+  },
+  {
+    "cityName": "Eskişehir",
+    "name": "Tepebaşı",
+    "coordinates": [39.7757336, 30.5286292]
+  },
+  {
+    "cityName": "Kastamonu",
+    "name": "Abana",
+    "coordinates": [41.9769756, 34.011325]
+  },
+  {
+    "cityName": "Kastamonu",
+    "name": "Ağlı",
+    "coordinates": [41.6780136, 33.5451996]
+  },
+  {
+    "cityName": "Kastamonu",
+    "name": "Araç",
+    "coordinates": [41.27034, 33.02337]
+  },
+  {
+    "cityName": "Kastamonu",
+    "name": "Azdavay",
+    "coordinates": [41.642533, 33.305719]
+  },
+  {
+    "cityName": "Kastamonu",
+    "name": "Bozkurt",
+    "coordinates": [41.949649, 34.0127721]
+  },
+  {
+    "cityName": "Kastamonu",
+    "name": "Çatalzeytin",
+    "coordinates": [41.948969, 34.2177318]
+  },
+  {
+    "cityName": "Kastamonu",
+    "name": "Cide",
+    "coordinates": [41.860816, 32.886094]
+  },
+  {
+    "cityName": "Kastamonu",
+    "name": "Daday",
+    "coordinates": [41.47762600000001, 33.469228]
+  },
+  {
+    "cityName": "Kastamonu",
+    "name": "Devrekani",
+    "coordinates": [41.6169508, 33.8390196]
+  },
+  {
+    "cityName": "Kastamonu",
+    "name": "Doğanyurt",
+    "coordinates": [42.004299, 33.460477]
+  },
+  {
+    "cityName": "Kastamonu",
+    "name": "Hanönü",
+    "coordinates": [41.601693, 34.3591719]
+  },
+  {
+    "cityName": "Kastamonu",
+    "name": "İhsangazi",
+    "coordinates": [41.22925499999999, 33.572761]
+  },
+  {
+    "cityName": "Kastamonu",
+    "name": "İnebolu",
+    "coordinates": [41.961227, 33.623743]
+  },
+  {
+    "cityName": "Kastamonu",
+    "name": "KastamonuMerkez",
+    "coordinates": [41.47611, 33.979142]
+  },
+  {
+    "cityName": "Kastamonu",
+    "name": "Küre",
+    "coordinates": [41.7624039, 33.6397]
+  },
+  {
+    "cityName": "Kastamonu",
+    "name": "Pınarbaşı",
+    "coordinates": [41.532456, 33.0939191]
+  },
+  {
+    "cityName": "Kastamonu",
+    "name": "Şenpazar",
+    "coordinates": [41.8103303, 33.2370032]
+  },
+  {
+    "cityName": "Kastamonu",
+    "name": "Seydiler",
+    "coordinates": [41.619953, 33.718521]
+  },
+  {
+    "cityName": "Kastamonu",
+    "name": "Taşköprü",
+    "coordinates": [41.438097, 33.9874349]
+  },
+  {
+    "cityName": "Kastamonu",
+    "name": "Tosya",
+    "coordinates": [40.889126, 34.226676]
+  },
+  {
+    "cityName": "Yalova",
+    "name": "Altınova",
+    "coordinates": [40.6888853, 29.5281714]
+  },
+  {
+    "cityName": "Yalova",
+    "name": "Armutlu",
+    "coordinates": [40.54490699999999, 28.837641]
+  },
+  {
+    "cityName": "Yalova",
+    "name": "Çiftlikköy",
+    "coordinates": [40.67591400000001, 29.392721]
+  },
+  {
+    "cityName": "Yalova",
+    "name": "Çınarcık",
+    "coordinates": [40.635456, 29.155587]
+  },
+  {
+    "cityName": "Yalova",
+    "name": "Termal",
+    "coordinates": [40.626886, 29.192991]
+  },
+  {
+    "cityName": "Yalova",
+    "name": "YalovaMerkez",
+    "coordinates": [40.619223, 29.225354]
+  },
+  {
+    "cityName": "Burdur",
+    "name": "Ağlasun",
+    "coordinates": [37.57988, 30.72889]
+  },
+  {
+    "cityName": "Burdur",
+    "name": "Altınyayla",
+    "coordinates": [36.978534, 29.506302]
+  },
+  {
+    "cityName": "Burdur",
+    "name": "Bucak",
+    "coordinates": [37.4763193, 30.6142365]
+  },
+  {
+    "cityName": "Burdur",
+    "name": "BurdurMerkez",
+    "coordinates": [37.7160381, 30.29129189999999]
+  },
+  {
+    "cityName": "Burdur",
+    "name": "Çavdır",
+    "coordinates": [37.046155, 29.6932199]
+  },
+  {
+    "cityName": "Burdur",
+    "name": "Çeltikçi",
+    "coordinates": [37.508136, 30.416687]
+  },
+  {
+    "cityName": "Burdur",
+    "name": "Gölhisar",
+    "coordinates": [37.126655, 29.5281714]
+  },
+  {
+    "cityName": "Burdur",
+    "name": "Karamanlı",
+    "coordinates": [37.4258422, 29.9153567]
+  },
+  {
+    "cityName": "Burdur",
+    "name": "Kemer",
+    "coordinates": [37.398034, 30.1453459]
+  },
+  {
+    "cityName": "Burdur",
+    "name": "Tefenni",
+    "coordinates": [37.1802946, 29.7884829]
+  },
+  {
+    "cityName": "Burdur",
+    "name": "Yeşilova",
+    "coordinates": [37.510787, 29.750413]
+  },
+  {
+    "cityName": "Çanakkale",
+    "name": "Ayvacık",
+    "coordinates": [39.569546, 26.618643]
+  },
+  {
+    "cityName": "Çanakkale",
+    "name": "Bayramiç",
+    "coordinates": [39.79913, 26.572139]
+  },
+  {
+    "cityName": "Çanakkale",
+    "name": "Biga",
+    "coordinates": [40.203052, 27.249718]
+  },
+  {
+    "cityName": "Çanakkale",
+    "name": "Bozcaada",
+    "coordinates": [39.8314955, 26.0724183]
+  },
+  {
+    "cityName": "Çanakkale",
+    "name": "Çan",
+    "coordinates": [40.013076, 26.874645]
+  },
+  {
+    "cityName": "Çanakkale",
+    "name": "ÇanakkaleMerkez",
+    "coordinates": [40.081699, 26.614458]
+  },
+  {
+    "cityName": "Çanakkale",
+    "name": "Eceabat",
+    "coordinates": [40.094605, 26.224923]
+  },
+  {
+    "cityName": "Çanakkale",
+    "name": "Ezine",
+    "coordinates": [39.712439, 26.204331]
+  },
+  {
+    "cityName": "Çanakkale",
+    "name": "Gelibolu",
+    "coordinates": [40.67799400000001, 26.76354]
+  },
+  {
+    "cityName": "Çanakkale",
+    "name": "Gökçeada",
+    "coordinates": [40.222035, 25.907476]
+  },
+  {
+    "cityName": "Çanakkale",
+    "name": "Lapseki",
+    "coordinates": [40.2360044, 26.6066212]
+  },
+  {
+    "cityName": "Çanakkale",
+    "name": "Yenice",
+    "coordinates": [39.929543, 27.259331]
+  },
+  {
+    "cityName": "Edirne",
+    "name": "EdirneMerkez",
+    "coordinates": [41.663889, 26.5801536]
+  },
+  {
+    "cityName": "Edirne",
+    "name": "Enez",
+    "coordinates": [40.641594, 26.258552]
+  },
+  {
+    "cityName": "Edirne",
+    "name": "Havsa",
+    "coordinates": [41.542388, 26.743998]
+  },
+  {
+    "cityName": "Edirne",
+    "name": "İpsala",
+    "coordinates": [40.841043, 26.439708]
+  },
+  {
+    "cityName": "Edirne",
+    "name": "Keşan",
+    "coordinates": [40.8493799, 26.490641]
+  },
+  {
+    "cityName": "Edirne",
+    "name": "Lalapaşa",
+    "coordinates": [41.8385788, 26.7399476]
+  },
+  {
+    "cityName": "Edirne",
+    "name": "Meriç",
+    "coordinates": [41.110062, 26.3517977]
+  },
+  {
+    "cityName": "Edirne",
+    "name": "Süloğlu",
+    "coordinates": [41.7797113, 26.8911862]
+  },
+  {
+    "cityName": "Edirne",
+    "name": "Uzunköprü",
+    "coordinates": [41.060837, 26.651567]
+  },
+  {
+    "cityName": "Hakkari",
+    "name": "Çukurca",
+    "coordinates": [37.34779899999999, 43.463183]
+  },
+  {
+    "cityName": "Hakkari",
+    "name": "Derecik",
+    "coordinates": [37.072423, 44.324348]
+  },
+  {
+    "cityName": "Hakkari",
+    "name": "HakkariMerkez",
+    "coordinates": [37.503811, 43.787352]
+  },
+  {
+    "cityName": "Hakkari",
+    "name": "Şemdinli",
+    "coordinates": [37.299763, 44.7561061]
+  },
+  {
+    "cityName": "Hakkari",
+    "name": "Yüksekova",
+    "coordinates": [37.584597, 44.075202]
+  },
+  {
+    "cityName": "İstanbul",
+    "name": "Adalar",
+    "coordinates": [40.88, 29.0669444]
+  },
+  {
+    "cityName": "İstanbul",
+    "name": "Arnavutköy",
+    "coordinates": [41.1759836, 28.7372922]
+  },
+  {
+    "cityName": "İstanbul",
+    "name": "Ataşehir",
+    "coordinates": [41.0043206, 29.0918085]
+  },
+  {
+    "cityName": "İstanbul",
+    "name": "Avcılar",
+    "coordinates": [40.98213519999999, 28.7212582]
+  },
+  {
+    "cityName": "İstanbul",
+    "name": "Bağcılar",
+    "coordinates": [41.0314434, 28.8640496]
+  },
+  {
+    "cityName": "İstanbul",
+    "name": "Bahçelievler",
+    "coordinates": [41.0169336, 28.8407455]
+  },
+  {
+    "cityName": "İstanbul",
+    "name": "Bakırköy",
+    "coordinates": [40.9741906, 28.8698751]
+  },
+  {
+    "cityName": "İstanbul",
+    "name": "Başakşehir",
+    "coordinates": [41.0693768, 28.7460373]
+  },
+  {
+    "cityName": "İstanbul",
+    "name": "Bayrampaşa",
+    "coordinates": [41.038917, 28.8960871]
+  },
+  {
+    "cityName": "İstanbul",
+    "name": "Beşiktaş",
+    "coordinates": [41.0480102, 29.0045285]
+  },
+  {
+    "cityName": "İstanbul",
+    "name": "Beykoz",
+    "coordinates": [41.1339658, 29.1187097]
+  },
+  {
+    "cityName": "İstanbul",
+    "name": "Beylikdüzü",
+    "coordinates": [40.9988818, 28.6293961]
+  },
+  {
+    "cityName": "İstanbul",
+    "name": "Beyoğlu",
+    "coordinates": [41.0236074, 28.9710581]
+  },
+  {
+    "cityName": "İstanbul",
+    "name": "Büyükçekmece",
+    "coordinates": [41.03773899999999, 28.597305]
+  },
+  {
+    "cityName": "İstanbul",
+    "name": "Çatalca",
+    "coordinates": [41.402977, 28.381732]
+  },
+  {
+    "cityName": "İstanbul",
+    "name": "Çekmeköy",
+    "coordinates": [41.0454306, 29.179765]
+  },
+  {
+    "cityName": "İstanbul",
+    "name": "Esenler",
+    "coordinates": [41.07941330000001, 28.8538545]
+  },
+  {
+    "cityName": "İstanbul",
+    "name": "Esenyurt",
+    "coordinates": [41.0654136, 28.6323132]
+  },
+  {
+    "cityName": "İstanbul",
+    "name": "Eyüpsultan",
+    "coordinates": [41.178936, 28.889528]
+  },
+  {
+    "cityName": "İstanbul",
+    "name": "Fatih",
+    "coordinates": [41.0060351, 28.9484978]
+  },
+  {
+    "cityName": "İstanbul",
+    "name": "Gaziosmanpaşa",
+    "coordinates": [41.0581052, 28.9106474]
+  },
+  {
+    "cityName": "İstanbul",
+    "name": "Güngören",
+    "coordinates": [41.0236259, 28.8757003]
+  },
+  {
+    "cityName": "İstanbul",
+    "name": "Kadıköy",
+    "coordinates": [40.97462609999999, 29.0881728]
+  },
+  {
+    "cityName": "İstanbul",
+    "name": "Kağıthane",
+    "coordinates": [41.0814835, 28.9732411]
+  },
+  {
+    "cityName": "İstanbul",
+    "name": "Kartal",
+    "coordinates": [40.9050034, 29.1724978]
+  },
+  {
+    "cityName": "İstanbul",
+    "name": "Küçükçekmece",
+    "coordinates": [41.0396729, 28.7955841]
+  },
+  {
+    "cityName": "İstanbul",
+    "name": "Maltepe",
+    "coordinates": [40.9481578, 29.1085314]
+  },
+  {
+    "cityName": "İstanbul",
+    "name": "Pendik",
+    "coordinates": [40.8694899, 29.309062]
+  },
+  {
+    "cityName": "İstanbul",
+    "name": "Sancaktepe",
+    "coordinates": [40.993999, 29.23753899999999]
+  },
+  {
+    "cityName": "İstanbul",
+    "name": "Sarıyer",
+    "coordinates": [41.178284, 28.991934]
+  },
+  {
+    "cityName": "İstanbul",
+    "name": "Şile",
+    "coordinates": [41.138653, 29.856061]
+  },
+  {
+    "cityName": "İstanbul",
+    "name": "Silivri",
+    "coordinates": [41.198048, 28.333045]
+  },
+  {
+    "cityName": "İstanbul",
+    "name": "Şişli",
+    "coordinates": [41.0628433, 28.986339]
+  },
+  {
+    "cityName": "İstanbul",
+    "name": "Sultanbeyli",
+    "coordinates": [40.9604596, 29.25677559999999]
+  },
+  {
+    "cityName": "İstanbul",
+    "name": "Sultangazi",
+    "coordinates": [41.0916496, 28.8684187]
+  },
+  {
+    "cityName": "İstanbul",
+    "name": "Tuzla",
+    "coordinates": [40.949877, 29.4237365]
+  },
+  {
+    "cityName": "İstanbul",
+    "name": "Ümraniye",
+    "coordinates": [41.0210233, 29.1550551]
+  },
+  {
+    "cityName": "İstanbul",
+    "name": "Üsküdar",
+    "coordinates": [41.008161, 29.0547206]
+  },
+  {
+    "cityName": "İstanbul",
+    "name": "Zeytinburnu",
+    "coordinates": [41.0140402, 28.9150152]
+  },
+  {
+    "cityName": "Malatya",
+    "name": "Akçadağ",
+    "coordinates": [38.43663799999999, 38.137118]
+  },
+  {
+    "cityName": "Malatya",
+    "name": "Arapgir",
+    "coordinates": [39.0428349, 38.488364]
+  },
+  {
+    "cityName": "Malatya",
+    "name": "Arguvan",
+    "coordinates": [38.848484, 38.237574]
+  },
+  {
+    "cityName": "Malatya",
+    "name": "Battalgazi",
+    "coordinates": [38.3326787, 38.3186173]
+  },
+  {
+    "cityName": "Malatya",
+    "name": "Darende",
+    "coordinates": [38.54765500000001, 37.847041]
+  },
+  {
+    "cityName": "Malatya",
+    "name": "Doğanşehir",
+    "coordinates": [38.0540609, 37.876631]
+  },
+  {
+    "cityName": "Malatya",
+    "name": "Doğanyol",
+    "coordinates": [38.3211002, 39.0933027]
+  },
+  {
+    "cityName": "Malatya",
+    "name": "Hekimhan",
+    "coordinates": [39.0258309, 37.808217]
+  },
+  {
+    "cityName": "Malatya",
+    "name": "Kale",
+    "coordinates": [38.4231249, 38.7695911]
+  },
+  {
+    "cityName": "Malatya",
+    "name": "Kuluncak",
+    "coordinates": [38.8989, 37.6202999]
+  },
+  {
+    "cityName": "Malatya",
+    "name": "Pütürge",
+    "coordinates": [38.1970117, 38.8563325]
+  },
+  {
+    "cityName": "Malatya",
+    "name": "Yazıhan",
+    "coordinates": [38.687803, 38.123919]
+  },
+  {
+    "cityName": "Malatya",
+    "name": "Yeşilyurt",
+    "coordinates": [38.3572965, 38.2886757]
+  },
+  {
+    "cityName": "Sakarya",
+    "name": "Adapazarı",
+    "coordinates": [40.7886889, 30.4314665]
+  },
+  {
+    "cityName": "Sakarya",
+    "name": "Akyazı",
+    "coordinates": [40.64859999999999, 30.6806]
+  },
+  {
+    "cityName": "Sakarya",
+    "name": "Arifiye",
+    "coordinates": [40.7285895, 30.4040725]
+  },
+  {
+    "cityName": "Sakarya",
+    "name": "Erenler",
+    "coordinates": [40.7482186, 30.4199187]
+  },
+  {
+    "cityName": "Sakarya",
+    "name": "Ferizli",
+    "coordinates": [40.939182, 30.486795]
+  },
+  {
+    "cityName": "Sakarya",
+    "name": "Geyve",
+    "coordinates": [40.4777, 30.3681]
+  },
+  {
+    "cityName": "Sakarya",
+    "name": "Hendek",
+    "coordinates": [40.79, 30.61409999999999]
+  },
+  {
+    "cityName": "Sakarya",
+    "name": "Karapürçek",
+    "coordinates": [40.6064999, 30.5591]
+  },
+  {
+    "cityName": "Sakarya",
+    "name": "Karasu",
+    "coordinates": [41.034, 30.5916]
+  },
+  {
+    "cityName": "Sakarya",
+    "name": "Kaynarca",
+    "coordinates": [41.0332999, 30.3077]
+  },
+  {
+    "cityName": "Sakarya",
+    "name": "Kocaali",
+    "coordinates": [41.0541511, 30.8546454]
+  },
+  {
+    "cityName": "Sakarya",
+    "name": "Pamukova",
+    "coordinates": [40.5424999, 30.1265]
+  },
+  {
+    "cityName": "Sakarya",
+    "name": "Sapanca",
+    "coordinates": [40.66917, 30.326496]
+  },
+  {
+    "cityName": "Sakarya",
+    "name": "Serdivan",
+    "coordinates": [40.7772044, 30.36372769999999]
+  },
+  {
+    "cityName": "Sakarya",
+    "name": "Söğütlü",
+    "coordinates": [40.9034, 30.4717]
+  },
+  {
+    "cityName": "Sakarya",
+    "name": "Taraklı",
+    "coordinates": [40.300914, 30.540616]
+  },
+  {
+    "cityName": "Şanlıurfa",
+    "name": "Akçakale",
+    "coordinates": [36.7336431, 39.11322]
+  },
+  {
+    "cityName": "Şanlıurfa",
+    "name": "Birecik",
+    "coordinates": [37.0256927, 37.9824305]
+  },
+  {
+    "cityName": "Şanlıurfa",
+    "name": "Bozova",
+    "coordinates": [37.159231, 38.421721]
+  },
+  {
+    "cityName": "Şanlıurfa",
+    "name": "Ceylanpınar",
+    "coordinates": [36.909186, 39.734338]
+  },
+  {
+    "cityName": "Şanlıurfa",
+    "name": "Eyyübiye",
+    "coordinates": [37.1674039, 38.7955149]
+  },
+  {
+    "cityName": "Şanlıurfa",
+    "name": "Halfeti",
+    "coordinates": [37.27057, 38.064884]
+  },
+  {
+    "cityName": "Şanlıurfa",
+    "name": "Haliliye",
+    "coordinates": [37.329205, 39.219652]
+  },
+  {
+    "cityName": "Şanlıurfa",
+    "name": "Harran",
+    "coordinates": [36.8622198, 39.055446]
+  },
+  {
+    "cityName": "Şanlıurfa",
+    "name": "Hilvan",
+    "coordinates": [37.4372343, 39.0189623]
+  },
+  {
+    "cityName": "Şanlıurfa",
+    "name": "Karaköprü",
+    "coordinates": [37.088199, 38.527272]
+  },
+  {
+    "cityName": "Şanlıurfa",
+    "name": "Siverek",
+    "coordinates": [37.7469062, 39.3105215]
+  },
+  {
+    "cityName": "Şanlıurfa",
+    "name": "Suruç",
+    "coordinates": [37.06937509999999, 38.212415]
+  },
+  {
+    "cityName": "Şanlıurfa",
+    "name": "Viranşehir",
+    "coordinates": [37.212823, 39.557264]
+  },
+  {
+    "cityName": "Bitlis",
+    "name": "Adilcevaz",
+    "coordinates": [38.8512, 43.096963]
+  },
+  {
+    "cityName": "Bitlis",
+    "name": "Ahlat",
+    "coordinates": [38.90802499999999, 42.463328]
+  },
+  {
+    "cityName": "Bitlis",
+    "name": "BitlisMerkez",
+    "coordinates": [38.270389, 42.307253]
+  },
+  {
+    "cityName": "Bitlis",
+    "name": "Güroymak",
+    "coordinates": [38.509203, 42.095999]
+  },
+  {
+    "cityName": "Bitlis",
+    "name": "Hizan",
+    "coordinates": [38.189595, 42.518841]
+  },
+  {
+    "cityName": "Bitlis",
+    "name": "Mutki",
+    "coordinates": [38.3424509, 41.8308149]
+  },
+  {
+    "cityName": "Bitlis",
+    "name": "Tatvan",
+    "coordinates": [38.632962, 42.471519]
+  },
+  {
+    "cityName": "Elazığ",
+    "name": "Ağın",
+    "coordinates": [38.9413415, 38.7158366]
+  },
+  {
+    "cityName": "Elazığ",
+    "name": "Alacakaya",
+    "coordinates": [38.461835, 39.861713]
+  },
+  {
+    "cityName": "Elazığ",
+    "name": "Arıcak",
+    "coordinates": [38.4770332, 40.26433129999999]
+  },
+  {
+    "cityName": "Elazığ",
+    "name": "Baskil",
+    "coordinates": [38.618469, 38.6892]
+  },
+  {
+    "cityName": "Elazığ",
+    "name": "ElazığMerkez",
+    "coordinates": [38.611535, 39.3014099]
+  },
+  {
+    "cityName": "Elazığ",
+    "name": "Karakoçan",
+    "coordinates": [38.950832, 40.0041579]
+  },
+  {
+    "cityName": "Elazığ",
+    "name": "Keban",
+    "coordinates": [38.712504, 38.6398331]
+  },
+  {
+    "cityName": "Elazığ",
+    "name": "Kovancılar",
+    "coordinates": [38.717915, 39.866591]
+  },
+  {
+    "cityName": "Elazığ",
+    "name": "Maden",
+    "coordinates": [38.350752, 39.662546]
+  },
+  {
+    "cityName": "Elazığ",
+    "name": "Palu",
+    "coordinates": [38.752671, 40.285327]
+  },
+  {
+    "cityName": "Elazığ",
+    "name": "Sivrice",
+    "coordinates": [38.429799, 39.419677]
+  },
+  {
+    "cityName": "Kahramanmaraş",
+    "name": "Afşin",
+    "coordinates": [38.2490121, 36.9464929]
+  },
+  {
+    "cityName": "Kahramanmaraş",
+    "name": "Andırın",
+    "coordinates": [37.4185608, 36.3208591]
+  },
+  {
+    "cityName": "Kahramanmaraş",
+    "name": "Çağlayancerit",
+    "coordinates": [37.742944, 37.345266]
+  },
+  {
+    "cityName": "Kahramanmaraş",
+    "name": "Dulkadiroğlu",
+    "coordinates": [37.38704, 37.044387]
+  },
+  {
+    "cityName": "Kahramanmaraş",
+    "name": "Ekinözü",
+    "coordinates": [38.102006, 37.221853]
+  },
+  {
+    "cityName": "Kahramanmaraş",
+    "name": "Elbistan",
+    "coordinates": [38.258002, 37.149025]
+  },
+  {
+    "cityName": "Kahramanmaraş",
+    "name": "Göksun",
+    "coordinates": [38.00680699999999, 36.412828]
+  },
+  {
+    "cityName": "Kahramanmaraş",
+    "name": "Nurhak",
+    "coordinates": [38.078741, 37.350147]
+  },
+  {
+    "cityName": "Kahramanmaraş",
+    "name": "Onikişubat",
+    "coordinates": [37.6027712, 36.8748037]
+  },
+  {
+    "cityName": "Kahramanmaraş",
+    "name": "Pazarcık",
+    "coordinates": [37.614562, 37.2915769]
+  },
+  {
+    "cityName": "Kahramanmaraş",
+    "name": "Türkoğlu",
+    "coordinates": [37.3250979, 36.7952189]
+  },
+  {
+    "cityName": "Mardin",
+    "name": "Artuklu",
+    "coordinates": [37.3326854, 40.7184672]
+  },
+  {
+    "cityName": "Mardin",
+    "name": "Dargeçit",
+    "coordinates": [37.626742, 41.75034]
+  },
+  {
+    "cityName": "Mardin",
+    "name": "Derik",
+    "coordinates": [37.252458, 40.26347]
+  },
+  {
+    "cityName": "Mardin",
+    "name": "Kızıltepe",
+    "coordinates": [37.151805, 40.617447]
+  },
+  {
+    "cityName": "Mardin",
+    "name": "Mazıdağı",
+    "coordinates": [37.541813, 40.55162199999999]
+  },
+  {
+    "cityName": "Mardin",
+    "name": "Midyat",
+    "coordinates": [37.456397, 41.29574]
+  },
+  {
+    "cityName": "Mardin",
+    "name": "Nusaybin",
+    "coordinates": [37.0846034, 41.2040341]
+  },
+  {
+    "cityName": "Mardin",
+    "name": "Ömerli",
+    "coordinates": [37.465014, 41.060633]
+  },
+  {
+    "cityName": "Mardin",
+    "name": "Savur",
+    "coordinates": [37.599466, 41.083777]
+  },
+  {
+    "cityName": "Mardin",
+    "name": "Yeşilli",
+    "coordinates": [37.2546526, 40.91133740000001]
+  },
+  {
+    "cityName": "Kırıkkale",
+    "name": "Bahşılı",
+    "coordinates": [39.817274, 33.457972]
+  },
+  {
+    "cityName": "Kırıkkale",
+    "name": "Balışeyh",
+    "coordinates": [39.908091, 33.656912]
+  },
+  {
+    "cityName": "Kırıkkale",
+    "name": "Çelebi",
+    "coordinates": [39.464667, 33.525622]
+  },
+  {
+    "cityName": "Kırıkkale",
+    "name": "Delice",
+    "coordinates": [39.8927878, 33.9987206]
+  },
+  {
+    "cityName": "Kırıkkale",
+    "name": "Karakeçili",
+    "coordinates": [39.4775749, 33.39822300000001]
+  },
+  {
+    "cityName": "Kırıkkale",
+    "name": "Keskin",
+    "coordinates": [39.679614, 33.6021883]
+  },
+  {
+    "cityName": "Kırıkkale",
+    "name": "KırıkkaleMerkez",
+    "coordinates": [39.793576, 33.54703]
+  },
+  {
+    "cityName": "Kırıkkale",
+    "name": "Sulakyurt",
+    "coordinates": [40.1444289, 33.789624]
+  },
+  {
+    "cityName": "Kırıkkale",
+    "name": "Yahşihan",
+    "coordinates": [39.8441891, 33.4563274]
+  },
+  {
+    "cityName": "Çorum",
+    "name": "Alaca",
+    "coordinates": [40.024785, 34.8235009]
+  },
+  {
+    "cityName": "Çorum",
+    "name": "Bayat",
+    "coordinates": [40.808011, 34.135624]
+  },
+  {
+    "cityName": "Çorum",
+    "name": "Boğazkale",
+    "coordinates": [40.021565, 34.609279]
+  },
+  {
+    "cityName": "Çorum",
+    "name": "ÇorumMerkez",
+    "coordinates": [40.413104, 34.906716]
+  },
+  {
+    "cityName": "Çorum",
+    "name": "Dodurga",
+    "coordinates": [40.872014, 34.6285211]
+  },
+  {
+    "cityName": "Çorum",
+    "name": "İskilip",
+    "coordinates": [40.764063, 34.317904]
+  },
+  {
+    "cityName": "Çorum",
+    "name": "Kargı",
+    "coordinates": [41.13453, 34.487155]
+  },
+  {
+    "cityName": "Çorum",
+    "name": "Laçin",
+    "coordinates": [40.7765356, 34.8794899]
+  },
+  {
+    "cityName": "Çorum",
+    "name": "Mecitözü",
+    "coordinates": [40.5198449, 35.199946]
+  },
+  {
+    "cityName": "Çorum",
+    "name": "Oğuzlar",
+    "coordinates": [40.7987349, 34.674091]
+  },
+  {
+    "cityName": "Çorum",
+    "name": "Ortaköy",
+    "coordinates": [40.3636791, 35.348287]
+  },
+  {
+    "cityName": "Çorum",
+    "name": "Osmancık",
+    "coordinates": [40.923717, 34.818533]
+  },
+  {
+    "cityName": "Çorum",
+    "name": "Sungurlu",
+    "coordinates": [40.1659174, 34.3576897]
+  },
+  {
+    "cityName": "Çorum",
+    "name": "Uğurludağ",
+    "coordinates": [40.5263589, 34.388375]
+  },
+  {
+    "cityName": "Tunceli",
+    "name": "Çemişgezek",
+    "coordinates": [38.948302, 38.945384]
+  },
+  {
+    "cityName": "Tunceli",
+    "name": "Hozat",
+    "coordinates": [39.027975, 39.243589]
+  },
+  {
+    "cityName": "Tunceli",
+    "name": "Mazgirt",
+    "coordinates": [38.979339, 39.675214]
+  },
+  {
+    "cityName": "Tunceli",
+    "name": "Nazımiye",
+    "coordinates": [39.181163, 39.828544]
+  },
+  {
+    "cityName": "Tunceli",
+    "name": "Ovacık",
+    "coordinates": [39.35704399999999, 39.216588]
+  },
+  {
+    "cityName": "Tunceli",
+    "name": "Pertek",
+    "coordinates": [38.986111, 39.149444]
+  },
+  {
+    "cityName": "Tunceli",
+    "name": "Pülümür",
+    "coordinates": [39.4865039, 39.895394]
+  },
+  {
+    "cityName": "Tunceli",
+    "name": "TunceliMerkez",
+    "coordinates": [39.0498386, 39.4915742]
+  },
+  {
+    "cityName": "Batman",
+    "name": "BatmanMerkez",
+    "coordinates": [37.8830772, 41.1118295]
+  },
+  {
+    "cityName": "Batman",
+    "name": "Beşiri",
+    "coordinates": [37.763323, 41.480261]
+  },
+  {
+    "cityName": "Batman",
+    "name": "Gercüş",
+    "coordinates": [37.552009, 41.426507]
+  },
+  {
+    "cityName": "Batman",
+    "name": "Hasankeyf",
+    "coordinates": [37.694826, 41.556916]
+  },
+  {
+    "cityName": "Batman",
+    "name": "Kozluk",
+    "coordinates": [38.189291, 41.4905427]
+  },
+  {
+    "cityName": "Batman",
+    "name": "Sason",
+    "coordinates": [38.292587, 41.250089]
+  },
+  {
+    "cityName": "Sivas",
+    "name": "Akıncılar",
+    "coordinates": [40.1013048, 38.2937572]
+  },
+  {
+    "cityName": "Sivas",
+    "name": "Altınyayla",
+    "coordinates": [39.325065, 36.787893]
+  },
+  {
+    "cityName": "Sivas",
+    "name": "Divriği",
+    "coordinates": [39.2539848, 38.1209397]
+  },
+  {
+    "cityName": "Sivas",
+    "name": "Doğanşar",
+    "coordinates": [40.2107, 37.596002]
+  },
+  {
+    "cityName": "Sivas",
+    "name": "Gemerek",
+    "coordinates": [39.255154, 35.9476541]
+  },
+  {
+    "cityName": "Sivas",
+    "name": "Gölova",
+    "coordinates": [40.0596535, 38.609675]
+  },
+  {
+    "cityName": "Sivas",
+    "name": "Gürün",
+    "coordinates": [38.603741, 36.9042699]
+  },
+  {
+    "cityName": "Sivas",
+    "name": "Hafik",
+    "coordinates": [39.738614, 37.405712]
+  },
+  {
+    "cityName": "Sivas",
+    "name": "İmranlı",
+    "coordinates": [39.728562, 38.3592556]
+  },
+  {
+    "cityName": "Sivas",
+    "name": "Kangal",
+    "coordinates": [39.163866, 37.78263099999999]
+  },
+  {
+    "cityName": "Sivas",
+    "name": "Koyulhisar",
+    "coordinates": [40.225958, 37.913619]
+  },
+  {
+    "cityName": "Sivas",
+    "name": "Şarkışla",
+    "coordinates": [39.519172, 36.482163]
+  },
+  {
+    "cityName": "Sivas",
+    "name": "SivasMerkez",
+    "coordinates": [39.761055, 37.0283395]
+  },
+  {
+    "cityName": "Sivas",
+    "name": "Suşehri",
+    "coordinates": [40.3088311, 38.1207988]
+  },
+  {
+    "cityName": "Sivas",
+    "name": "Ulaş",
+    "coordinates": [39.282076, 37.0238911]
+  },
+  {
+    "cityName": "Sivas",
+    "name": "Yıldızeli",
+    "coordinates": [39.6962018, 36.6228013]
+  },
+  {
+    "cityName": "Sivas",
+    "name": "Zara",
+    "coordinates": [39.859025, 37.949537]
+  }
+]

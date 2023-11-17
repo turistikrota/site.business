@@ -18,6 +18,8 @@
     "deluxe": "Deluxe Membership",
     "invite": "Invitations",
     "invite-create": "Create Invitation",
+    "posts": "Posts",
+    "post-create": "Create Post",
     "users": "Users",
     "subtitles": {
       "edit": "Edit your seller profile picture, information and social media accounts.",
@@ -29,7 +31,9 @@
       "deluxe": "Learn about Deluxe membership benefits and manage or create your Deluxe membership.",
       "invite": "View your invitations and create new invitations.",
       "invite-create": "Invite an account to this organization.",
-      "users": "View and manage users in this organization."
+      "users": "View and manage users in this organization.",
+      "posts": "View and manage posts in this organization.",
+      "post-create": "Create a new post in this organization."
     }
   },
   "meta": {

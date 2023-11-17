@@ -1,6 +1,6 @@
 import { useBodyguard } from '@/hooks/permission'
 import { RouteType, getStaticRoute } from '@/static/page'
-import { OwnerRoles } from '@/static/role'
+import { OwnerRoles, PostRoles } from '@/static/role'
 import { Colors } from '@/types/colors'
 import { isWindowLtLg } from '@/utils/responsive'
 import Condition from '@turistikrota/ui/condition'
@@ -44,9 +44,10 @@ const menuItems: MenuItem[] = [
     href: (r: RouteType) => r.owner.details.edit,
   },
   {
-    title: 'notification',
-    icon: 'bx bx-bell',
-    href: (r: RouteType) => r.owner.details.notification,
+    title: 'posts',
+    icon: 'bx bx-grid',
+    roles: [OwnerRoles.Super, PostRoles.Super, PostRoles.List],
+    href: (r: RouteType) => r.owner.details.post.list,
   },
   {
     title: 'users',
@@ -59,6 +60,11 @@ const menuItems: MenuItem[] = [
     icon: 'bx bx-mail-send',
     roles: [OwnerRoles.Super, OwnerRoles.InviteView],
     href: (r: RouteType) => r.owner.details.invite,
+  },
+  {
+    title: 'notification',
+    icon: 'bx bx-bell',
+    href: (r: RouteType) => r.owner.details.notification,
   },
   {
     title: 'settings',
@@ -90,19 +96,19 @@ export default function OwnerMenu({ isDetail }: Props) {
   }
 
   return (
-    <div className='flex flex-col items-center justify-start w-full h-full rounded-md px-4 py-4'>
+    <div className='flex h-full w-full flex-col items-center justify-start rounded-md px-4 py-4'>
       <Condition value={isDetail && !isDesktop}>
-        <div className={`hidden lg:flex mb-2 w-full ${menuContext.openMenu ? 'justify-start' : 'justify-center'}`}>
+        <div className={`mb-2 hidden w-full lg:flex ${menuContext.openMenu ? 'justify-start' : 'justify-center'}`}>
           <ToggleButton />
         </div>
       </Condition>
       <Condition value={!isDetail || menuContext.openMenu || isDesktop}>
-        <Link to={`https://turistikrota.com/${i18n.language}`} className='flex items-center mb-6'>
+        <Link to={`https://turistikrota.com/${i18n.language}`} className='mb-6 flex items-center'>
           <Logo />
         </Link>
       </Condition>
       <OwnerMenuProfileCard open={isDetail && !isDesktop ? menuContext?.openMenu : true} />
-      <div className='grid gap-4 w-full mt-5'>
+      <div className='mt-5 grid w-full gap-4 pb-10'>
         {menuItems
           .filter((m) => (m.roles ? bodyguard.check(...m.roles) : true))
           .map((el, i) => (

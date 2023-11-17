@@ -16,16 +16,16 @@ const UserCollapseItem: React.FC<Props> = ({ user }) => {
   const [current] = useCurrentOwner()
   const [open, setOpen] = useState<boolean>(false)
   return (
-    <div className='flex flex-col bg-second rounded-md p-2'>
-      <div className='flex gap-2 cursor-pointer items-center' onClick={() => setOpen(!open)}>
-        <div className='min-w-max max-w-16'>
+    <div className='flex flex-col rounded-md bg-second p-2'>
+      <div className='flex cursor-pointer items-center gap-2' onClick={() => setOpen(!open)}>
+        <div className='max-w-16 min-w-max'>
           <img
             src={`https://avatar.turistikrota.com/@${user.name}.png`}
             alt=''
-            className='rounded-md h-16 w-16 object-cover'
+            className='h-16 w-16 rounded-md object-cover'
           />
         </div>
-        <div className='flex flex-col  md:flex-row justify-center md:justify-between md:items-center w-full'>
+        <div className='flex w-full  flex-col justify-center md:flex-row md:items-center md:justify-between'>
           <div className='flex flex-col'>
             <span className='font-bold'>{user.name}</span>
             <span className='text-muted'>
@@ -40,16 +40,16 @@ const UserCollapseItem: React.FC<Props> = ({ user }) => {
             })}
           </p>
         </div>
-        <div className='flex justify-end items-center'>
+        <div className='flex items-center justify-end'>
           <i
-            className={`bx bx-sm text-primary-500 bx-chevron-down transition-transform duration-200 ${
+            className={`bx bx-sm bx-chevron-down text-primary-500 transition-transform duration-200 ${
               open ? 'rotate-180' : ''
             }`}
           ></i>
         </div>
       </div>
-      <div className={` transition-all duration-200 ${open ? 'opacity-100 block' : 'opacity-0 hidden'}`}>
-        <div className='flex flex-col gap-2 mt-2'>
+      <div className={` transition-all duration-200 ${open ? 'block opacity-100' : 'hidden opacity-0'}`}>
+        <div className='mt-2 flex flex-col gap-2'>
           <div>
             <h2 className='text-lg font-bold text-gray-800 dark:text-gray-200'>{t('role.title')}</h2>
             <p className='text-sm text-gray-600 dark:text-gray-400'>{t('role.description')}</p>

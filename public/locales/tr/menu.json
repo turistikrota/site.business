@@ -19,6 +19,8 @@
     "invite": "Davetler",
     "invite-create": "Davet Oluştur",
     "users": "Kullanıcılar",
+    "posts": "İlanlar",
+    "post-create": "İlan Oluştur",
     "subtitles": {
       "edit": "Satıcı profil resminizi, bilgilerinizi ve sosyal medya hesaplarınızı düzenleyin.",
       "security": "Şifrenizi değiştirin, iki faktörlü kimlik doğrulamayı etkinleştirin ve oturum açma cihazlarınızı yönetin.",
@@ -29,7 +31,9 @@
       "deluxe": "Deluxe üyelik avantajları hakkında bilgi alın ve Deluxe üyeliğinizi yönetin veya oluşturun.",
       "invite": "Davetlerinizi görüntüleyin ve yeni davetler oluşturun.",
       "invite-create": "Bir hesabı bu organizasyona davet edin.",
-      "users": "Bu organizasyonun kullanıcılarını görüntüleyin ve yönetin."
+      "users": "Bu organizasyonun kullanıcılarını görüntüleyin ve yönetin.",
+      "posts": "Bu organizasyonun ilanlarını görüntüleyin ve yönetin.",
+      "post-create": "Bu organizasyona yeni bir ilan oluşturun."
     }
   },
   "meta": {

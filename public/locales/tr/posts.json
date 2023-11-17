@@ -1,0 +1,148 @@
+{
+  "button": {
+    "create": "İlanı Oluştur",
+    "loading": "İlan Oluşturuluyor...",
+    "disabled": "Lütfen tüm kategori kurallarını kabul ediniz. ({{accepted}}/{{total}})"
+  },
+  "create": {
+    "meta": {
+      "title": "İlan Oluştur",
+      "description": "Bu sayfayı kullanarak yeni bir ilan oluşturabilirsiniz.",
+      "keywords": "ilan, oluştur, yeni, yeni ilan, ilan oluştur"
+    },
+    "success": "İlanınız başarıyla oluşturuldu. Kategori kontrolleri tamamlandıktan sonra bir sorun tespit edilmezse yayınlanacaktır."
+  },
+  "autosave": {
+    "ask": {
+      "title": "Otomatik Kaydedilmiş Veriler Bulundu",
+      "description": "Bu ilan için otomatik kaydedilmiş veriler bulundu. Bu verileri yüklemek ister misiniz?",
+      "cancel": "Hayır",
+      "confirm": "Evet"
+    }
+  },
+  "form": {
+    "title": "Başlık",
+    "description": "Açıklama",
+    "meta": {
+      "title": "Meta Bilgileri",
+      "subtitle": "Bu bölümde ilanınızın meta bilgilerini girebilirsiniz."
+    },
+    "images": {
+      "title": "İlan Görselleri",
+      "subtitle": "Bu bölümde ilanınızın görsellerini yükleyebilirsiniz.",
+      "error": {
+        "title": "Başlık Gerekli",
+        "description": "Görsel yükleyebilmek için en az 5 karakterden oluşan bir başlık girmelisiniz."
+      }
+    },
+    "calendar": {
+      "title": "Takvim & Fiyatlandırma",
+      "subtitle": "Bu bölümde ilanınızın takvimini ve fiyatlandırmasını belirleyebilirsiniz.",
+      "startDate": "Başlangıç Tarihi",
+      "endDate": "Bitiş Tarihi",
+      "price": "Fiyat",
+      "add": "Ekle",
+      "price-list-item": "<0>{{startDate}}</0> - <1>{{endDate}}</1> arası <2>{{price}}</2> ₺",
+      "info": {
+        "title": "Fiyat Aralığı İpucu",
+        "description": "Aşağıdaki alanları kullanarak belirli tarih aralıkları için farklı fiyatlar belirleyebilirsiniz.",
+        "example": "Örneğin, 1 Haziran - 30 Haziran arası 100 ₺, 1 Temmuz - 31 Temmuz arası 200 ₺ gibi.",
+        "float": "Ondalıklı sayılar için noktalı kullanın. Örneğin, 100.50 ₺ gibi."
+      },
+      "error": {
+        "startDateGreaterThanEndDate": "Başlangıç tarihi bitiş tarihinden büyük olamaz.",
+        "endDateLessThanNow": "Bitiş tarihi şu anki tarihten küçük olamaz.",
+        "startDateLessThanNow": "Başlangıç tarihi şu anki tarihten küçük olamaz.",
+        "unique": "Bu tarih aralığındaki günlerden en az biri zaten eklenmiş.",
+        "priceNaN": "Fiyat alanı hatalı. Bu alan şu şekilde olmalı: 10.000 (on bin ₺) veya 10.000,50 (on bin ₺ 50 kuruş) gibi.",
+        "priceNegative": "Fiyat alanı negatif olamaz."
+      }
+    },
+    "category": {
+      "title": "Kategori Bilgileri",
+      "subtitle": "Bu bölümde ilanınızın kategori bilgilerini girebilirsiniz."
+    },
+    "category-alerts": {
+      "title": "Kategori Uyarları",
+      "subtitle": "Bu bölümde ilanınızın kategori uyarılarını girebilirsiniz.",
+      "category": "{{name}} kategorisi"
+    },
+    "category-rules": {
+      "title": "Kategori Kuralları",
+      "subtitle": "Lütfen kategori kurallarını okuyunuz ve kabul ediniz.",
+      "category": "{{name}} kategorisi"
+    },
+    "category-inputs": {
+      "options": {
+        "option 1": "Option 1",
+        "option 2": "Option 2",
+        "rich": "Zengin",
+        "electro": "Elektronik"
+      }
+    },
+    "location": {
+      "title": "İlan Konumu",
+      "subtitle": "Bu bölümde ilanınızın konumunu belirleyebilirsiniz.",
+      "city": "Şehir",
+      "street": "İlçe",
+      "address": "Adres",
+      "latitude": "Enlem",
+      "longitude": "Boylam",
+      "isStrict": {
+        "title": "Kesin Konum",
+        "description": "Bu ilanın konumu kesin mi?"
+      },
+      "error": "Konum seçimi başarısız oldu. Lütfen tekrar deneyin.",
+      "notSupported": "Tarayıcınız konum seçimini desteklemiyor.",
+      "info": {
+        "title": "Harita İpucu",
+        "description": "Haritada konum seçmek için tıklayın. Mavi işaretçi konumu gösterir. Konumu değiştirmek için işaretçiyi sürükleyin.",
+        "descriptionTwo": "Not: Şehir ve İlçe tahmini konum bilgileri kullanılarak değiştirilir. Eğer yanlışsa şehir ve ilçe bilgisini elle değiştirebilirsiniz."
+      }
+    },
+    "validation": {
+      "title": "Özel Kurallar",
+      "subtitle": "Bu bölümde ilanınızın özel kurallarını girebilirsiniz.",
+      "minAdult": "En az yetişkin sayısı",
+      "maxAdult": "En çok yetişkin sayısı",
+      "minKid": "En az çocuk sayısı",
+      "maxKid": "En çok çocuk sayısı",
+      "minBaby": "En az bebek sayısı",
+      "maxBaby": "En çok bebek sayısı",
+      "minDate": "En az gün sayısı",
+      "maxDate": "En çok gün sayısı",
+      "onlyFamily": {
+        "title": "Sadece Aileler",
+        "description": "Bu ilan sadece ailelere özeldir. Aile dışı kişiler bu ilanı rezerve edemezler."
+      },
+      "noPet": {
+        "title": "Evcil Hayvan Yok",
+        "description": "Bu ilan evcil hayvan kabul etmemektedir."
+      },
+      "noSmoke": {
+        "title": "Sigara İçmek Yasak",
+        "description": "Bu ilanı rezerve eden kişiler rezervasyon süresince sigara içemezler."
+      },
+      "noAlcohol": {
+        "title": "Alkol Yasak",
+        "description": "Bu ilanı rezerve eden kişiler rezervasyon süresince alkol tüketemezler."
+      },
+      "noParty": {
+        "title": "Parti Yasak",
+        "description": "Bu ilanı rezerve eden kişiler burada parti düzenleyemezler."
+      },
+      "noUnmarried": {
+        "title": "Evli Olmayanlar Yasak",
+        "description": "Bu ilanı rezerve eden kişiler evli olmalıdır."
+      },
+      "noGuest": {
+        "title": "Misafir Yasak",
+        "description": "Bu ilanı rezerve eden kişiler misafir kabul edemezler."
+      }
+    }
+  },
+  "config": {
+    "tr": "Türkçe",
+    "en": "İngilizce"
+  }
+}

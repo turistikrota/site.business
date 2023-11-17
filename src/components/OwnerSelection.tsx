@@ -51,7 +51,7 @@ const OwnerSelection = () => {
       .put(apiUrl(Services.Owner, `/~${item.nickName}/select`))
       .then((res) => {
         if (res.status === 200) {
-          navigate(getStaticRoute(i18n.language).account.details.default)
+          navigate(getStaticRoute(i18n.language).owner.details.default)
         }
       })
       .catch((err: any) => {
@@ -69,13 +69,13 @@ const OwnerSelection = () => {
 
   return (
     <Spin loading={loading}>
-      <div className='p-6 space-y-4 md:space-y-6 sm:p-8 ease-in'>
-        <h1 className='text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white'>
+      <div className='space-y-4 p-6 ease-in sm:p-8 md:space-y-6'>
+        <h1 className='text-xl font-bold leading-tight tracking-tight text-gray-900 dark:text-white md:text-2xl'>
           {t('title')}
         </h1>
         <div>
           <div className='flex flex-col space-y-4'>
-            <div className='max-h-96 overflow-auto space-y-4'>
+            <div className='max-h-96 space-y-4 overflow-auto'>
               {data.map((item, index) => (
                 <OwnerSelectionCard key={index} {...item} onSelect={() => onOwnerSelect(item)}>
                   <OwnerSelectionCard.Image>
@@ -100,7 +100,7 @@ const OwnerSelection = () => {
                   </Condition>
                   <Condition value={!item.isEnabled}>
                     <div
-                      className='absolute bottom-1 right-2 flex items-center justify-center rounded-full text-secondary gap-1'
+                      className='absolute bottom-1 right-2 flex items-center justify-center gap-1 rounded-full text-secondary'
                       role='alert'
                       aria-label={t('verified')}
                       title={t('verified_alt')}

@@ -16,6 +16,7 @@ export type RouteType = {
     select: string
   }
   owner: {
+    select: string
     create: string
     details: {
       default: string
@@ -28,6 +29,10 @@ export type RouteType = {
       users: string
       security: string
       settings: string
+      post: {
+        list: string
+        create: string
+      }
     }
     inviteUse: string
   }
@@ -49,15 +54,15 @@ const Routes: Record<Locales, RouteType> = {
     account: {
       create: '/olustur',
       details: {
-        edit: '/detay/duzenle',
-        notifications: '/detay/bildirim-tercihleri',
-        privacy: '/detay/gizlilik',
-        security: '/detay/guvenlik',
-        settings: '/detay/ayarlar',
-        vip: '/detay/vip',
-        default: '/detay/menu',
+        edit: '/duzenle',
+        notifications: '/bildirim-tercihleri',
+        privacy: '/gizlilik',
+        security: '/guvenlik',
+        settings: '/ayarlar',
+        vip: '/vip',
+        default: '/menu',
       },
-      select: `${SiteHosts.account.tr}?redirect=`,
+      select: `${SiteHosts.account.tr}/sec?redirect=`,
     },
     contracts: {
       terms: 'https://turistikrota.com/sozlesmeler/kullanim-kosullari',
@@ -65,18 +70,23 @@ const Routes: Record<Locales, RouteType> = {
       privacy: 'https://turistikrota.com/sozlesmeler/kisisel-verilerin-korunmasi-ve-gizlilik-politikasi',
     },
     owner: {
+      select: '/sec',
       create: '/basvuru',
       details: {
-        default: '/detay/menu',
-        deluxe: '/detay/deluxe',
-        edit: '/detay/duzenle',
-        notification: '/detay/bildirim-tercihleri',
-        privacy: '/detay/gizlilik',
-        security: '/detay/guvenlik',
-        settings: '/detay/ayarlar',
-        invite: '/detay/davetler',
-        inviteCreate: '/detay/davet-et',
-        users: '/detay/kullanicilar',
+        default: '/menu',
+        deluxe: '/deluxe',
+        edit: '/duzenle',
+        notification: '/bildirim-tercihleri',
+        privacy: '/gizlilik',
+        security: '/guvenlik',
+        settings: '/ayarlar',
+        invite: '/davetler',
+        inviteCreate: '/davet-et',
+        users: '/kullanicilar',
+        post: {
+          create: '/ilan-ekle',
+          list: '/ilanlar',
+        },
       },
       inviteUse: '/davet',
     },
@@ -88,15 +98,15 @@ const Routes: Record<Locales, RouteType> = {
     account: {
       create: '/create',
       details: {
-        edit: '/detail/edit',
-        notifications: '/detail/notifications',
-        privacy: '/detail/privacy',
-        security: '/detail/security',
-        settings: '/detail/settings',
-        vip: '/detail/vip',
-        default: '/detail/menu',
+        edit: '/edit',
+        notifications: '/notifications',
+        privacy: '/privacy',
+        security: '/security',
+        settings: '/settings',
+        vip: '/vip',
+        default: '/menu',
       },
-      select: `${SiteHosts.account.en}?redirect=`,
+      select: `${SiteHosts.account.en}/select?redirect=`,
     },
     contracts: {
       terms: 'https://turistikrota.com/contracts/terms-of-use',
@@ -104,18 +114,23 @@ const Routes: Record<Locales, RouteType> = {
       privacy: 'https://turistikrota.com/contracts/privacy-and-protection-of-personal-data',
     },
     owner: {
+      select: '/select',
       create: '/apply',
       details: {
-        default: '/detail/menu',
-        deluxe: '/detail/deluxe',
-        edit: '/detail/edit',
-        notification: '/detail/notification-preferences',
-        privacy: '/detail/privacy',
-        security: '/detail/security',
-        settings: '/detail/settings',
-        invite: '/detail/invites',
-        inviteCreate: '/detail/invite',
-        users: '/detail/users',
+        default: '/menu',
+        deluxe: '/deluxe',
+        edit: '/edit',
+        notification: '/notification-preferences',
+        privacy: '/privacy',
+        security: '/security',
+        settings: '/settings',
+        invite: '/invites',
+        inviteCreate: '/invite',
+        users: '/users',
+        post: {
+          create: '/add-post',
+          list: '/posts',
+        },
       },
       inviteUse: '/invite',
     },

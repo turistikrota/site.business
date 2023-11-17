@@ -77,7 +77,7 @@ const Badge = ({ type = 'primary', visible = true, children }: React.PropsWithCh
   if (!visible) return null
   return (
     <span
-      className={`absolute top-0 -right-2 flex items-center text-xs text-white justify-center w-4 h-4 rounded-full ${BadgeStyles[type]}`}
+      className={`absolute -right-2 top-0 flex h-4 w-4 items-center justify-center rounded-full text-xs text-white ${BadgeStyles[type]}`}
     >
       {children}
     </span>
@@ -87,15 +87,15 @@ const Badge = ({ type = 'primary', visible = true, children }: React.PropsWithCh
 const LinkIcon = ({ visible }: LinkIconProps) => {
   if (!visible) return null
   return (
-    <i className='bx bx-sm bx-chevron-right text-gray-700 dark:text-white absolute top-1/2 right-2 transform -translate-y-1/2'></i>
+    <i className='bx bx-sm bx-chevron-right absolute right-2 top-1/2 -translate-y-1/2 transform text-gray-700 dark:text-white'></i>
   )
 }
 
 const Content = ({ children, hidden, isLink }: React.PropsWithChildren<ContentProps>) => {
   return (
     <div
-      className={`flex-col items-start justify-center relative ${
-        hidden ? 'hidden fade-out' : 'flex fade-in col-span-3'
+      className={`relative flex-col items-start justify-center ${
+        hidden ? 'fade-out hidden' : 'fade-in col-span-3 flex'
       }`}
     >
       <span className='text-md font-semibold text-gray-900  dark:text-white'>{children}</span>

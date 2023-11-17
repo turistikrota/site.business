@@ -1,10 +1,10 @@
 {
-    "title": "Bir Satıcı Profili Seçin",
-    "new": "Yeni Satıcı Profili Oluştur",
-    "waiting": "Onay Bekliyor",
-    "meta": {
-        "title": "Satıcı Profili Seçin",
-        "description": "İşlem yapmak istediğiniz satıcı profili seçin. Turistikrota'da birden fazla satıcı profili oluşturabilirsiniz.",
-        "keywords": "turistikrota, satıcı profili, satıcı profili seçin, satıcı profili oluşturun"
-    }
+  "title": "Bir Satıcı Profili Seçin",
+  "new": "Yeni Satıcı Profili Oluştur",
+  "waiting": "Onay Bekliyor",
+  "meta": {
+    "title": "Satıcı Profili Seçin",
+    "description": "İşlem yapmak istediğiniz satıcı profili seçin. Turistikrota'da birden fazla satıcı profili oluşturabilirsiniz.",
+    "keywords": "turistikrota, satıcı profili, satıcı profili seçin, satıcı profili oluşturun"
+  }
 }

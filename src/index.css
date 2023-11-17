@@ -3,12 +3,12 @@
 @tailwind utilities;
 
 :root {
-  --background-url: url("https://s3.turistikrota.com/ui/background/summer-light.png");
+  --background-url: url('https://s3.turistikrota.com/ui/background/summer-light.png');
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background-url: url("https://s3.turistikrota.com/ui/background/summer-dark.png");
+    --background-url: url('https://s3.turistikrota.com/ui/background/summer-dark.png');
   }
 }
 

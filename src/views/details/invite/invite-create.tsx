@@ -56,7 +56,7 @@ function InviteCreateView() {
   return (
     <RoleGuardView roles={[OwnerRoles.Super, OwnerRoles.InviteCreate]}>
       <MetaWrapper title={t('meta.title')} description={t('meta.description')} keywords={t('meta.keywords')}>
-        <section className='p-4 lg:pl-0 max-w-4xl mx-auto relative'>
+        <section className='relative mx-auto max-w-4xl p-4 lg:pl-0'>
           <form onSubmit={form.handleSubmit}>
             <div className='space-y-4 md:space-y-6'>
               <div>
