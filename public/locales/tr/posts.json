@@ -9,7 +9,8 @@
       "title": "İlan Oluştur",
       "description": "Bu sayfayı kullanarak yeni bir ilan oluşturabilirsiniz.",
       "keywords": "ilan, oluştur, yeni, yeni ilan, ilan oluştur"
-    }
+    },
+    "success": "İlanınız başarıyla oluşturuldu. Kategori kontrolleri tamamlandıktan sonra bir sorun tespit edilmezse yayınlanacaktır."
   },
   "autosave": {
     "ask": {

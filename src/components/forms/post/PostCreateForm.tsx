@@ -55,7 +55,7 @@ const PostCreateForm: React.FC = () => {
         .post(apiUrl(Services.Post, `/owner`), values)
         .then(() => {
           autoSave.remove()
-          toast.success(t('success'))
+          toast.success(t('create.success'))
           navigate(getStaticRoute(i18n.language).owner.details.post.list)
         })
         .catch((err) => {
