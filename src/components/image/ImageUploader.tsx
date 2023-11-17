@@ -15,8 +15,7 @@ type PreviewProps = {
 }
 
 type Props = {
-  value: File[]
-  onChange: (value: File[]) => void
+  onUpload: (value: File[]) => void
   invalid?: boolean
   error?: string
 }
@@ -62,11 +61,11 @@ const ImagePreview: React.FC<PreviewProps> = ({ list, onChange, onRemove }) => {
   )
 }
 
-const ImageUploader: UploaderType = ({ invalid = false, value, error, onChange }) => {
+const ImageUploader: UploaderType = ({ invalid = false, error, onUpload }) => {
   const { t } = useTranslation('dropzone')
 
   const handleAcceptedFiles = (files: File[]) => {
-    onChange([...value, ...files])
+    onUpload(files)
   }
   return (
     <Dropzone onDrop={(f: File[]) => handleAcceptedFiles(f)}>

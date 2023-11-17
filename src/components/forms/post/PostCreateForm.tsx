@@ -27,7 +27,6 @@ import PostFormValidationSection from './PostFormValidationSection'
 const PostCreateForm: React.FC = () => {
   const { t, i18n } = useTranslation('posts')
   const [images, setImages] = useState<string[]>([])
-  const [files, setFiles] = useState<File[]>([])
   const navigate = useNavigate()
   const [loading, setLoading] = useState(false)
   const [inputIndexes, setInputIndexes] = useState<Record<string, number>>({})
@@ -129,6 +128,15 @@ const PostCreateForm: React.FC = () => {
     })
   }, 300)
 
+  const onImagesChange = (images: string[]) => {
+    const mapped = images.map((img, indx) => ({
+      url: img,
+      order: indx + 1,
+    }))
+    form.setFieldValue('images', mapped)
+    setImages(images)
+  }
+
   const calcInputIndexes = (inputGroups: InputGroup[]) => {
     const newIndex: Record<string, number> = {}
     const features: PostFeature[] = []
@@ -157,11 +165,6 @@ const PostCreateForm: React.FC = () => {
     form.handleSubmit()
   }
 
-  const onFileChange = (files: File[]) => {
-    setFiles(files)
-    setImages(files.map((f) => URL.createObjectURL(f)))
-  }
-
   return (
     <form onSubmit={onSubmit} className='flex flex-col gap-8 pb-10'>
       <PostFormMetaSection values={form.values} errors={form.errors} onChange={form.handleChange} />
@@ -188,9 +191,8 @@ const PostCreateForm: React.FC = () => {
       <PostFormImageSection
         images={images}
         errors={form.errors}
-        setImages={setImages}
-        files={files}
-        setFiles={onFileChange}
+        setImages={onImagesChange}
+        title={form.values.meta.tr.title}
       />
       <PostFormLocationSection
         values={form.values}

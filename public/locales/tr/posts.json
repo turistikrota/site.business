@@ -28,7 +28,11 @@
     },
     "images": {
       "title": "İlan Görselleri",
-      "subtitle": "Bu bölümde ilanınızın görsellerini yükleyebilirsiniz."
+      "subtitle": "Bu bölümde ilanınızın görsellerini yükleyebilirsiniz.",
+      "error": {
+        "title": "Başlık Gerekli",
+        "description": "Görsel yükleyebilmek için en az 5 karakterden oluşan bir başlık girmelisiniz."
+      }
     },
     "calendar": {
       "title": "Takvim & Fiyatlandırma",
