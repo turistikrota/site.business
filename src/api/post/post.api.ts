@@ -52,3 +52,7 @@ export const fetchMyPosts = async (page: number = 1, limit: number = 10): Promis
   }))
   return res.data
 }
+
+export const reorderPost = async (uuid: string, order: number): Promise<void> => {
+  await httpClient.patch(apiUrl(Services.Post, `/owner/${uuid}/re-order`), { order }).catch(() => {})
+}

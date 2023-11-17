@@ -14,7 +14,7 @@ import { Link } from 'react-router-dom'
 
 const PostListView: React.FC = () => {
   const { t, i18n } = useTranslation('posts')
-  const { firstLoading, list } = useListQuery<PostListItem>(fetchMyPosts)
+  const { firstLoading, list, setList } = useListQuery<PostListItem>(fetchMyPosts)
 
   if (firstLoading) return <ContentLoader noMargin />
 
@@ -42,7 +42,13 @@ const PostListView: React.FC = () => {
                 description={t('list.empty.description')}
               />
             )}
-            {list.length > 0 && <PostDragProvider list={list} Renderer={PostListCard} />}
+            {list.length > 0 && (
+              <PostDragProvider
+                list={list.sort((a, b) => (a.order && b.order ? a.order - b.order : 0))}
+                setList={setList}
+                Renderer={PostListCard}
+              />
+            )}
           </div>
         </section>
       </MetaWrapper>

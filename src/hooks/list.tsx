@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react'
 
 type ListResult<T> = {
   list: T[]
+  setList: (list: T[]) => void
   total: number
   firstLoading: boolean
   loading: boolean
@@ -70,6 +71,7 @@ export function useListQuery<T = any>(getter: Fetcher<T>): ListResult<T> {
   return {
     firstLoading,
     list,
+    setList,
     loading,
     total,
     isNextVisible,

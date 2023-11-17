@@ -1,4 +1,4 @@
-import { PostListItem } from '@/api/post/post.api'
+import { PostListItem, reorderPost } from '@/api/post/post.api'
 import { useGuard } from '@/hooks/permission'
 import { OwnerRoles, PostRoles } from '@/static/role'
 import Alert from '@turistikrota/ui/alert'
@@ -9,10 +9,11 @@ import { Props as PostListCardProps } from './PostListCard'
 
 type Props = {
   list: PostListItem[]
+  setList: (list: PostListItem[]) => void
   Renderer: React.FC<PostListCardProps>
 }
 
-const PostDragProvider: React.FC<Props> = ({ list, Renderer }) => {
+const PostDragProvider: React.FC<Props> = ({ list, setList, Renderer }) => {
   const { t } = useTranslation('posts')
   const isAuthenticatedForDrag = useGuard(OwnerRoles.Super, PostRoles.Super, PostRoles.ReOrder)
 
@@ -26,8 +27,8 @@ const PostDragProvider: React.FC<Props> = ({ list, Renderer }) => {
     )
 
   const onOrderChange = (current: number, to: number) => {
-    move(list, current, to)
-    // call api to update order
+    reorderPost(list[current].uuid, to)
+    setList(move(list, current, to))
   }
 
   return (
