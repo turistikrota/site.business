@@ -12,12 +12,63 @@
     },
     "success": "İlanınız başarıyla oluşturuldu. Kategori kontrolleri tamamlandıktan sonra bir sorun tespit edilmezse yayınlanacaktır."
   },
+  "list": {
+    "meta": {
+      "title": "İlanlarım",
+      "description": "Bu sayfayı kullanarak ilanlarınızı yönetebilirsiniz.",
+      "keywords": "ilanlarım, ilanlarımı yönet, ilanlarımı görüntüle"
+    },
+    "reorder": {
+      "info": {
+        "title": "İlan Sıralama",
+        "description": "İlanlarınızı sürükleyip bırakarak sıralayabilirsiniz."
+      }
+    },
+    "empty": {
+      "title": "İlan Bulunamadı",
+      "description": "Henüz hiç ilan oluşturmadınız. Yeni ilan oluşturmak için yukarıdaki ilan oluşturma butonuna tıklayın."
+    },
+    "actions": {
+      "create": "İlan Oluştur"
+    }
+  },
   "autosave": {
     "ask": {
       "title": "Otomatik Kaydedilmiş Veriler Bulundu",
       "description": "Bu ilan için otomatik kaydedilmiş veriler bulundu. Bu verileri yüklemek ister misiniz?",
       "cancel": "Hayır",
       "confirm": "Evet"
+    }
+  },
+  "details": {
+    "states": {
+      "verificationFailed": {
+        "title": "Doğrulama Hatası",
+        "description": "İlanınızın doğrulanması sırasında bir hata oluştu. Lütfen detayları incelemesi için yetkilinize danışın."
+      },
+      "onLive": {
+        "title": "Yayında",
+        "description": "İlanınız şu anda herkese açık olarak yayında."
+      },
+      "deleted": {
+        "title": "Silindi",
+        "description": "Silinmiş ilan. Tekrar yayınlamak için detay sayfasına gidin."
+      },
+      "active": {
+        "title": "Aktif",
+        "description": "İlanınız aktif ve yayınlamaya hazır."
+      },
+      "passive": {
+        "title": "Devre Dışı",
+        "description": "İlanınız devre dışı ve yayınlanmaya hazır değil."
+      }
+    },
+    "fields": {
+      "createdAt": "{{date}} tarihinde oluşturuldu."
+    },
+    "actions": {
+      "show-logs": "Kayıtları Göster",
+      "show-details": "Detayları Göster"
     }
   },
   "form": {

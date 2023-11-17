@@ -1,0 +1,19 @@
+{
+  "labels": ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+  "months": [
+    "Fireplace",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December"
+  ],
+  "today": "Today",
+  "selected": "Selected Date"
+}

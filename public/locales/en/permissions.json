@@ -77,7 +77,7 @@
         "title": "Inactivation",
         "description": "With this authority, the post/advertisement can be deactivated in the post/advertisement profile."
       },
-      "re_order": {
+      "reorder": {
         "title": "Sorting",
         "description": "With this authority, the post/advertisement order can be changed in the post/advertisement profile."
       },

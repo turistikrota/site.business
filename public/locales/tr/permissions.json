@@ -77,7 +77,7 @@
         "title": "Pasif Etme",
         "description": "Bu yetki ile gönderi/ilan profilinde gönderi/ilan pasif edilebilir."
       },
-      "re_order": {
+      "reorder": {
         "title": "Sıralama",
         "description": "Bu yetki ile gönderi/ilan profilinde gönderi/ilan sıralaması değiştirilebilir."
       },
