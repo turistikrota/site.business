@@ -16,6 +16,13 @@ const trRoutes: RouteObject[] = [
         lazy: () => import('@/layouts/BusinessSubDetailLayout'),
         children: [
           {
+            path: '',
+            lazy: () => import('@/views/details/edit'),
+            handle: {
+              page: 'edit',
+            },
+          },
+          {
             path: 'duzenle',
             lazy: () => import('@/views/details/edit'),
             handle: {
