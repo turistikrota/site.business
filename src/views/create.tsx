@@ -1,17 +1,17 @@
-import OwnerCreateForm from '@/components/forms/OwnerCreateForm'
+import BusinessCreateForm from '@/components/forms/BusinessCreateForm'
 import ConfigurationLayout from '@/layouts/ConfigurationLayout'
 import DefaultLayout from '@/layouts/DefaultLayout'
 import { useTranslation } from 'react-i18next'
 
-const OwnerCreateView = () => {
+const BusinessCreateView = () => {
   const { t } = useTranslation('select')
   return (
     <ConfigurationLayout title={t('meta.title')} description={t('meta.description')} keywords={t('meta.keywords')}>
       <DefaultLayout>
-        <OwnerCreateForm />
+        <BusinessCreateForm />
       </DefaultLayout>
     </ConfigurationLayout>
   )
 }
 
-export { OwnerCreateView as Component }
+export { BusinessCreateView as Component }

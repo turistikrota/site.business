@@ -18,11 +18,11 @@
     "deluxe": "Deluxe Membership",
     "invite": "Invitations",
     "invite-create": "Create Invitation",
-    "posts": "Posts",
-    "post-create": "Create Post",
+    "listings": "Listings",
+    "listing-create": "Create Listing",
     "users": "Users",
     "subtitles": {
-      "edit": "Edit your seller profile picture, information and social media accounts.",
+      "edit": "Edit your business profile picture, information and social media accounts.",
       "security": "Change your password, enable two-factor authentication, and manage your sign-in devices.",
       "privacy": "Edit your privacy settings and make your profile visible or invisible in search results.",
       "notification": "Edit your notification preferences.",
@@ -32,13 +32,13 @@
       "invite": "View your invitations and create new invitations.",
       "invite-create": "Invite an account to this organization.",
       "users": "View and manage users in this organization.",
-      "posts": "View and manage posts in this organization.",
-      "post-create": "Create a new post in this organization."
+      "listings": "View and manage listings in this organization.",
+      "listing-create": "Create a new listing in this organization."
     }
   },
   "meta": {
-    "title": "Seller Profile",
-    "description": "Edit your Turistikrota seller profile, adjust your security and privacy, and change your account settings.",
-    "keywords": "seller profile, seller profile edit, seller profile settings, seller profile security, seller profile privacy, seller profile account settings"
+    "title": "Business Profile",
+    "description": "Edit your Turistikrota business profile, adjust your security and privacy, and change your account settings.",
+    "keywords": "business profile, business profile edit, business profile settings, business profile security, business profile privacy, business profile account settings"
   }
 }

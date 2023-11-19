@@ -2,7 +2,7 @@
   "fields": {
     "nickName": "Takma Ad",
     "realName": "Gerçek Ad",
-    "ownerType": "Satıcı Tipi",
+    "businessType": "İşletme Tipi",
     "firstName": "Ad",
     "lastName": "Soyad",
     "identityNumber": "TC Kimlik No",
@@ -14,7 +14,7 @@
     "taxNumber": "Vergi No",
     "corporationType": "Kurum Tipi",
     "lang": "Dil",
-    "email": "E-posta",
+    "email": "E-listinga",
     "title": "Başlık",
     "category": "Kategori",
     "description": "Açıklama",
@@ -52,8 +52,8 @@
   "required": "{{field}} alanı zorunludur",
   "invalid": "{{field}} alanı geçersizdir",
   "either": "{{field}} alanı {{value1}} veya {{value2}} olmalıdır",
-  "requiredForIndividual": "{{field}} alanı bireysel satıcılar için zorunludur",
-  "requiredForCorporate": "{{field}} alanı kurumsal satıcılar için zorunludur",
+  "requiredForIndividual": "{{field}} alanı bireysel işletmelar için zorunludur",
+  "requiredForCorporate": "{{field}} alanı kurumsal işletmelar için zorunludur",
   "individual": "Bireysel",
   "corporation": "Kurumsal"
 }

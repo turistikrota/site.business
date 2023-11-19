@@ -1,11 +1,11 @@
 import MetaWrapper from '@/components/MetaWrapper'
 import { Services, apiUrl } from '@/config/services'
-import { useCurrentOwner } from '@/contexts/currentOwner'
+import { useCurrentBusiness } from '@/contexts/currentBusiness'
 import { httpClient } from '@/http/client'
 import RoleGuardView from '@/layouts/RoleGuard'
 import { useInviteCreateSchema } from '@/schemas/invite-create.schema'
 import { getStaticRoute } from '@/static/page'
-import { OwnerRoles } from '@/static/role'
+import { BusinessRoles } from '@/static/role'
 import Button from '@turistikrota/ui/button'
 import Input from '@turistikrota/ui/form/input'
 import Radio from '@turistikrota/ui/form/radio'
@@ -20,7 +20,7 @@ import { useNavigate } from 'react-router-dom'
 function InviteCreateView() {
   const { t, i18n } = useTranslation('invite-create')
   const [loading, setLoading] = useState<boolean>(false)
-  const [current] = useCurrentOwner()
+  const [current] = useCurrentBusiness()
   const toast = useToast()
   const schema = useInviteCreateSchema()
   const navigate = useNavigate()
@@ -37,11 +37,11 @@ function InviteCreateView() {
     onSubmit: (values) => {
       setLoading(true)
       httpClient
-        .post(apiUrl(Services.Owner, `/~${current.owner.nickName}/invite`), values)
+        .listing(apiUrl(Services.Business, `/~${current.business.nickName}/invite`), values)
         .then((res) => {
           if ([200, 201].includes(res.status)) {
             toast.success(t('success'))
-            navigate(getStaticRoute(i18n.language).owner.details.invite)
+            navigate(getStaticRoute(i18n.language).business.details.invite)
             return
           }
         })
@@ -54,7 +54,7 @@ function InviteCreateView() {
     },
   })
   return (
-    <RoleGuardView roles={[OwnerRoles.Super, OwnerRoles.InviteCreate]}>
+    <RoleGuardView roles={[BusinessRoles.Super, BusinessRoles.InviteCreate]}>
       <MetaWrapper title={t('meta.title')} description={t('meta.description')} keywords={t('meta.keywords')}>
         <section className='relative mx-auto max-w-4xl p-4 lg:pl-0'>
           <form onSubmit={form.handleSubmit}>

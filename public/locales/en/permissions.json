@@ -1,125 +1,125 @@
 {
   "titles": {
-    "owner": "Seller Module",
-    "post": "Post/Announcement Module",
-    "post_log": "Post/Advertising Log Module",
-    "owner_log": "Seller Log Module"
+    "business": "Business Module",
+    "listing": "Listing/Announcement Module",
+    "listing_log": "Listing/Advertising Log Module",
+    "business_log": "Business Log Module"
   },
   "roles": {
-    "owner": {
+    "business": {
       "Super": {
         "title": "Super Authority",
-        "description": "The super administrator has full authority on the seller profile."
+        "description": "The super administrator has full authority on the business profile."
       },
       "member": {
         "title": "Member",
-        "description": "The member can only see his/her own information in the seller profile."
+        "description": "The member can only see his/her own information in the business profile."
       },
       "user_remove": {
         "title": "User Deletion",
-        "description": "With this authorization, the user can be deleted in the seller profile."
+        "description": "With this authorization, the user can be deleted in the business profile."
       },
       "user_perm_add": {
         "title": "Adding User Authorization",
-        "description": "With this authorization, authorization can be added to any user in the seller profile."
+        "description": "With this authorization, authorization can be added to any user in the business profile."
       },
       "user_perm_remove": {
         "title": "Delete User Authorization",
-        "description": "With this authorization, authorization can be deleted from any user in the seller profile."
+        "description": "With this authorization, authorization can be deleted from any user in the business profile."
       },
       "enable": {
         "title": "Activation",
-        "description": "With this authorization, the seller profile can be activated."
+        "description": "With this authorization, the business profile can be activated."
       },
       "disable": {
         "title": "Inactivation",
-        "description": "With this authorization, the seller profile can be disabled."
+        "description": "With this authorization, the business profile can be disabled."
       },
       "user_list": {
         "title": "User Listing",
-        "description": "With this authorization, the user list can be displayed in the seller profile."
+        "description": "With this authorization, the user list can be displayed in the business profile."
       },
       "invite_create": {
         "title": "Creating Invitation",
-        "description": "With this authority, an invitation can be created in the seller profile to invite other users to the seller profile."
+        "description": "With this authority, an invitation can be created in the business profile to invite other users to the business profile."
       },
       "invite_delete": {
         "title": "Deleting Invitation",
-        "description": "With this authority, the invitation can be deleted in the seller profile."
+        "description": "With this authority, the invitation can be deleted in the business profile."
       },
       "invite_view": {
         "title": "Viewing Invitation",
-        "description": "With this authorization, invitations can be displayed in the seller profile."
+        "description": "With this authorization, invitations can be displayed in the business profile."
       }
     },
-    "post": {
+    "listing": {
       "Super": {
         "title": "Super Authority",
-        "description": "The super administrator has full authority on the post/advertisement profile."
+        "description": "The super administrator has full authority on the listing/advertisement profile."
       },
       "create": {
-        "title": "Creating a Post/Advertisement",
-        "description": "With this authority, a post/advertisement can be created in the post/advertisement profile."
+        "title": "Creating a Listing/Advertisement",
+        "description": "With this authority, a listing/advertisement can be created in the listing/advertisement profile."
       },
       "update": {
-        "title": "Post/Ad Update",
-        "description": "With this authorization, the post/advertisement can be updated in the post/advertisement profile."
+        "title": "Listing/Ad Update",
+        "description": "With this authorization, the listing/advertisement can be updated in the listing/advertisement profile."
       },
       "delete": {
-        "title": "Delete Post/Ad",
-        "description": "With this authority, the post/advertisement can be deleted in the post/advertisement profile."
+        "title": "Delete Listing/Ad",
+        "description": "With this authority, the listing/advertisement can be deleted in the listing/advertisement profile."
       },
       "enable": {
         "title": "Activation",
-        "description": "With this authorization, the post/advertisement can be activated in the post/advertisement profile."
+        "description": "With this authorization, the listing/advertisement can be activated in the listing/advertisement profile."
       },
       "disable": {
         "title": "Inactivation",
-        "description": "With this authority, the post/advertisement can be deactivated in the post/advertisement profile."
+        "description": "With this authority, the listing/advertisement can be deactivated in the listing/advertisement profile."
       },
       "reorder": {
         "title": "Sorting",
-        "description": "With this authority, the post/advertisement order can be changed in the post/advertisement profile."
+        "description": "With this authority, the listing/advertisement order can be changed in the listing/advertisement profile."
       },
       "restore": {
         "title": "Restore",
-        "description": "With this authority, a deleted post/advertisement in the post/advertisement profile can be restored."
+        "description": "With this authority, a deleted listing/advertisement in the listing/advertisement profile can be restored."
       },
       "list": {
         "title": "Listing",
-        "description": "With this authorization, the post/advertisement list can be displayed in the post/advertisement profile."
+        "description": "With this authorization, the listing/advertisement list can be displayed in the listing/advertisement profile."
       },
       "view": {
         "title": "Views",
-        "description": "With this authorization, post/advertisement details can be viewed in the post/advertisement profile."
+        "description": "With this authorization, listing/advertisement details can be viewed in the listing/advertisement profile."
       }
     },
-    "post_log": {
+    "listing_log": {
       "Super": {
         "title": "Super Authority",
-        "description": "The super administrator has full authority on the post/advertisement log profile."
+        "description": "The super administrator has full authority on the listing/advertisement log profile."
       },
       "view": {
         "title": "Views",
-        "description": "With this authorization, the post/advertisement log profile can be viewed."
+        "description": "With this authorization, the listing/advertisement log profile can be viewed."
       },
       "count": {
         "title": "Counting",
-        "description": "With this authority, counting can be done in the post/advertisement log profile."
+        "description": "With this authority, counting can be done in the listing/advertisement log profile."
       }
     },
-    "owner_log": {
+    "business_log": {
       "Super": {
         "title": "Super Authority",
-        "description": "The super administrator has full authority on the seller log profile."
+        "description": "The super administrator has full authority on the business log profile."
       },
       "view": {
         "title": "Views",
-        "description": "With this authorization, the seller log profile can be viewed."
+        "description": "With this authorization, the business log profile can be viewed."
       },
       "count": {
         "title": "Counting",
-        "description": "With this authority, counting can be done in the seller log profile."
+        "description": "With this authority, counting can be done in the business log profile."
       }
     }
   },

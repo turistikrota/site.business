@@ -2,12 +2,12 @@ import KeyValue from '@/components/KeyValue'
 import MetaWrapper from '@/components/MetaWrapper'
 import RoleGuard from '@/components/RoleGuard'
 import { Services, apiUrl } from '@/config/services'
-import { useCurrentOwner } from '@/contexts/currentOwner'
+import { useCurrentBusiness } from '@/contexts/currentBusiness'
 import { httpClient } from '@/http/client'
 import RoleGuardView from '@/layouts/RoleGuard'
 import { getStaticRoute } from '@/static/page'
-import { OwnerRoles } from '@/static/role'
-import { InviteItem, isInviteItemListResponse } from '@/types/owner'
+import { BusinessRoles } from '@/static/role'
+import { InviteItem, isInviteItemListResponse } from '@/types/business'
 import { useDayJS } from '@/utils/dayjs'
 import Button from '@turistikrota/ui/button'
 import ContentLoader from '@turistikrota/ui/loader'
@@ -32,7 +32,7 @@ function InviteMainView() {
   const [invites, setInvites] = useState<InviteItem[]>([])
   const [loading, setLoading] = useState<boolean>(false)
   const [loadingIds, setLoadingIds] = useState<string[]>([])
-  const [current] = useCurrentOwner()
+  const [current] = useCurrentBusiness()
   const toast = useToast()
 
   useEffect(() => {
@@ -42,7 +42,7 @@ function InviteMainView() {
   const fetchInvites = () => {
     setLoading(true)
     httpClient
-      .get(apiUrl(Services.Owner, `/~${current.owner.nickName}/invite`))
+      .get(apiUrl(Services.Business, `/~${current.business.nickName}/invite`))
       .then((res) => {
         if (res.data && isInviteItemListResponse(res.data)) {
           setInvites(res.data)
@@ -64,7 +64,7 @@ function InviteMainView() {
   const deleteInvite = (id: string) => {
     setLoadingIds([...loadingIds, id])
     httpClient
-      .delete(apiUrl(Services.Owner, `/~${current.owner.nickName}/invite/${id}`))
+      .delete(apiUrl(Services.Business, `/~${current.business.nickName}/invite/${id}`))
       .then((res) => {
         if (res.status === 200) {
           toast.success(t('delete_success'))
@@ -103,12 +103,12 @@ function InviteMainView() {
     return t('fields.days_ago', { days: diff })
   }
   return (
-    <RoleGuardView roles={[OwnerRoles.Super, OwnerRoles.InviteView]}>
+    <RoleGuardView roles={[BusinessRoles.Super, BusinessRoles.InviteView]}>
       <MetaWrapper title={t('meta.title')} description={t('meta.description')} keywords={t('meta.keywords')}>
         <section className='relative mx-auto max-w-4xl space-y-5 p-4 lg:pl-0'>
-          <RoleGuard roles={[OwnerRoles.Super, OwnerRoles.InviteCreate]}>
+          <RoleGuard roles={[BusinessRoles.Super, BusinessRoles.InviteCreate]}>
             <div className='flex'>
-              <Link to={getStaticRoute(i18n.language).owner.details.inviteCreate}>
+              <Link to={getStaticRoute(i18n.language).business.details.inviteCreate}>
                 <Button size='sm' block={false} variant='primary'>
                   {t('fields.create')}
                 </Button>
@@ -136,7 +136,7 @@ function InviteMainView() {
                     <KeyValue.Item label={t('fields.created_at')} value={calcRelativeUpdateTime(invite.createdAt)} />
                   )}
                 </KeyValue>
-                <RoleGuard roles={[OwnerRoles.Super, OwnerRoles.InviteDelete]}>
+                <RoleGuard roles={[BusinessRoles.Super, BusinessRoles.InviteDelete]}>
                   {calcState(invite) === 'pending' && (
                     <div className='mt-2 flex justify-center border-t pt-2'>
                       <Button

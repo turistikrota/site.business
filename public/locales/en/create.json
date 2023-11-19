@@ -1,12 +1,12 @@
 {
   "meta": {
-    "title": "Seller Application Form",
-    "description": "You can create an individual or corporate seller profile on Turistikrota and rent or sell your products such as villas, hotels, tours, car rentals.",
+    "title": "Business Application Form",
+    "description": "You can create an individual or corporate business profile on Turistikrota and rent or sell your products such as villas, hotels, tours, car rentals.",
     "keywords": "vendor application form, vendor application, Turistikrota, Turistikrota vendor application"
   },
-  "title": "Seller Application Form",
+  "title": "Business Application Form",
   "type-select": {
-    "title": "Seller Type",
+    "title": "Business Type",
     "subtitle": "Please select the type of vendor you are applying for.",
     "info": {
       "title": "Information",
@@ -41,7 +41,7 @@
   },
   "general": {
     "nickName": "Unique Nickname",
-    "realName": "Real Name (will be shown on Seller profile)"
+    "realName": "Real Name (will be shown on Business profile)"
   },
   "corporationTypes": {
     "anonymous": "Joint Stock Company",

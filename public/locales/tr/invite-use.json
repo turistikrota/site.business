@@ -5,7 +5,7 @@
     "keywords": "davet, organizasyon, daveti kabul et, daveti reddet, davet detayları"
   },
   "title": "Organizasyon Daveti",
-  "description": "<0>{{creator}}</0> tarafından <1>{{owner}}</1> organizasyonuna katılmak için davet edildiniz. Daveti kabul etmek için lütfen aşağıdaki butona tıklayın. Daveti kabul etmek istemiyorsanız lütfen bu daveti görmezden gelin.",
+  "description": "<0>{{creator}}</0> tarafından <1>{{business}}</1> organizasyonuna katılmak için davet edildiniz. Daveti kabul etmek için lütfen aşağıdaki butona tıklayın. Daveti kabul etmek istemiyorsanız lütfen bu daveti görmezden gelin.",
   "notfound": {
     "title": "Davet Bulunamadı",
     "description": "Bu davet bulunamadı. Lütfen davetin doğru olduğundan emin olun."

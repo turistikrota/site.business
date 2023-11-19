@@ -1,19 +1,19 @@
-import { useCurrentOwner } from '@/contexts/currentOwner'
-import { OwnerUserListItem } from '@/types/owner'
+import { useCurrentBusiness } from '@/contexts/currentBusiness'
+import { BusinessUserListItem } from '@/types/business'
 import { useDayJS } from '@/utils/dayjs'
 import Alert from '@turistikrota/ui/alert'
 import React, { useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import OwnerRoleToggle from './OwnerRoleToggle'
+import BusinessRoleToggle from './BusinessRoleToggle'
 
 type Props = {
-  user: OwnerUserListItem
+  user: BusinessUserListItem
 }
 
 const UserCollapseItem: React.FC<Props> = ({ user }) => {
   const { t, i18n } = useTranslation('users')
   const dayjs = useDayJS(i18n.language)
-  const [current] = useCurrentOwner()
+  const [current] = useCurrentBusiness()
   const [open, setOpen] = useState<boolean>(false)
   return (
     <div className='flex flex-col rounded-md bg-second p-2'>
@@ -58,11 +58,11 @@ const UserCollapseItem: React.FC<Props> = ({ user }) => {
               <Alert.Description>{t('role.info.desc')}</Alert.Description>
             </Alert>
           </div>
-          <OwnerRoleToggle
+          <BusinessRoleToggle
             roles={user.roles}
             userRoles={current.user.roles}
             userName={user.name}
-            ownerName={current.owner.nickName}
+            businessName={current.business.nickName}
           />
         </div>
       </div>

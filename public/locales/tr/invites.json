@@ -5,7 +5,7 @@
     "keywords": "davet, davetler, davet yönetimi, davet oluştur, davet düzenle, davet sil"
   },
   "fields": {
-    "email": "E-posta",
+    "email": "E-listinga",
     "state": "Durum",
     "create": "Yeni Davet Oluştur",
     "creator": "Oluşturan",
