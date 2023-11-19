@@ -5,14 +5,14 @@
     "keywords": "davet, davet oluştur, davet et, kullanıcı davet et, kullanıcı davet etme"
   },
   "fields": {
-    "email": "E-listinga Adresi",
+    "email": "E-posta Adresi",
     "locale": "Davet Edilen Kullanıcının Dili"
   },
   "info": {
-    "email": "Kullanıcının turistikrota'da kayıtlı e-listinga adresi. Eğer kullanıcı turistikrota'da kayıtlı değilse, davet edilen kullanıcı bu e-listinga adresiyle turistikrota'ya kayıt olacaktır.",
-    "locale": "Kullanıcıya davet e-listingası bu dilde gönderilecektir."
+    "email": "Kullanıcının turistikrota'da kayıtlı e-posta adresi. Eğer kullanıcı turistikrota'da kayıtlı değilse, davet edilen kullanıcı bu e-posta adresiyle turistikrota'ya kayıt olacaktır.",
+    "locale": "Kullanıcıya davet e-posta bu dilde gönderilecektir."
   },
   "loading": "Davet oluşturuluyor...",
   "invite": "Davet Et",
-  "success": "Davet başarıyla gönderildi. Davet edilen kullanıcı e-listinga adresine bir davet alacak ve 24 saat içinde davetinizi kabul etmesi gerekecek."
+  "success": "Davet başarıyla gönderildi. Davet edilen kullanıcı e-posta adresine bir davet alacak ve 24 saat içinde davetinizi kabul etmesi gerekecek."
 }
