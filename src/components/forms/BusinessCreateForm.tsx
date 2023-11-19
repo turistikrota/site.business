@@ -8,7 +8,7 @@ import Textarea from '@turistikrota/ui/form/textarea'
 import { useToast } from '@turistikrota/ui/toast'
 import { parseApiError } from '@turistikrota/ui/utils/response'
 import { useFormik } from 'formik'
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useMemo, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useNavigate } from 'react-router-dom'
 import Spin from 'sspin/dist/esm/Spin'
@@ -89,6 +89,12 @@ const BusinessCreateForm = () => {
   const toast = useToast()
   const [isLoading, setIsLoading] = useState<boolean>(false)
   const [currentStep, setCurrentStep] = useState<number>(0)
+  const maxDate = useMemo(() => {
+    const now = new Date()
+    now.setHours(0, 0, 0, 0)
+    now.setFullYear(now.getFullYear() - 18)
+    return now.toISOString().split('T')[0]
+  }, [])
   const form = useFormik({
     initialValues: {
       nickName: undefined,
@@ -111,7 +117,7 @@ const BusinessCreateForm = () => {
     validateOnMount: false,
     onSubmit: (values) => {
       if (values.businessType === 'corporation') {
-        values.dateOfBirth = '2006-01-02'
+        values.dateOfBirth = maxDate
       }
       setIsLoading(true)
       httpClient
@@ -261,6 +267,7 @@ const BusinessCreateForm = () => {
               type='date'
               autoComplete='dateOfBirth'
               required
+              max={maxDate}
               value={form.values.dateOfBirth}
               onChange={form.handleChange}
               onBlur={form.handleBlur}
