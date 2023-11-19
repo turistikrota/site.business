@@ -66,7 +66,7 @@ const InviteDetail: React.FC = () => {
   const join = () => {
     setLoading(true)
     httpClient
-      .listing(apiUrl(Services.Business, `/join/${params.uuid}`))
+      .post(apiUrl(Services.Business, `/join/${params.uuid}`))
       .then((res) => {
         if (res.status === 200) {
           toast.success(t('success'))
