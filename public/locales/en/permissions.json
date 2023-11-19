@@ -106,6 +106,10 @@
       "count": {
         "title": "Counting",
         "description": "With this authority, counting can be done in the listing/advertisement log profile."
+      },
+      "list": {
+        "title": "Listing",
+        "description": "With this authorization, the listing/advertisement log list can be displayed in the listing/advertisement log profile."
       }
     },
     "business_log": {
@@ -120,6 +124,10 @@
       "count": {
         "title": "Counting",
         "description": "With this authority, counting can be done in the business log profile."
+      },
+      "list": {
+        "title": "Listing",
+        "description": "With this authorization, the business log list can be displayed in the business log profile."
       }
     }
   },

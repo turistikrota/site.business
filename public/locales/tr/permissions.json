@@ -106,6 +106,10 @@
       "count": {
         "title": "Sayma",
         "description": "Bu yetki ile gönderi/ilan log profilinde sayma yapılabilir."
+      },
+      "list": {
+        "title": "Listeleme",
+        "description": "Bu yetki ile gönderi/ilan log profilinde gönderi/ilan log listesi görüntülenebilir."
       }
     },
     "business_log": {
@@ -120,6 +124,10 @@
       "count": {
         "title": "Sayma",
         "description": "Bu yetki ile işletme log profilinde sayma yapılabilir."
+      },
+      "list": {
+        "title": "Listeleme",
+        "description": "Bu yetki ile işletme log profilinde işletme log listesi görüntülenebilir."
       }
     }
   },
