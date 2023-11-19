@@ -1,0 +1,8 @@
+{
+  "deletion": {
+    "warning": "This operation will cause major changes to the system. Please make sure before doing this operation.",
+    "confirm": "Yes, I want to delete",
+    "delete": "Delete",
+    "confirmation": "Please type '<strong>{{text}}</strong>' in the box below to complete the deletion process."
+  }
+}
