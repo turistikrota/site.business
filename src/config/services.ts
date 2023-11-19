@@ -15,11 +15,11 @@ export const ApiUrls: Record<Services, string> = {
   [Services.Auth]: import.meta.env.VITE_API_AUTH_SRV_URL as string,
   [Services.Account]: import.meta.env.VITE_API_ACCOUNT_SRV_URL as string,
   [Services.Upload]: import.meta.env.VITE_API_UPLOAD_SRV_URL as string,
-  [Services.Business]: import.meta.env.VITE_API_OWNER_SRV_URL as string,
+  [Services.Business]: import.meta.env.VITE_API_BUSINESS_SRV_URL as string,
   [Services.Category]: import.meta.env.VITE_API_CATEGORY_SRV_URL as string,
   [Services.Listing]: import.meta.env.VITE_API_POST_SRV_URL as string,
   [Services.ListingLog]: import.meta.env.VITE_API_POST_LOG_SRV_URL as string,
-  [Services.BusinessLog]: import.meta.env.VITE_API_OWNER_LOG_SRV_URL as string,
+  [Services.BusinessLog]: import.meta.env.VITE_API_BUSINESS_LOG_SRV_URL as string,
 }
 
 export enum Sites {
