@@ -1,0 +1,22 @@
+{
+  "rejected": {
+    "title": "Application Denied",
+    "description": "Your business application has been rejected by our team. The reason for rejection is stated below. If you think there is a problem, please contact us.",
+    "reason": "Reason for Rejection:",
+    "meta": {
+      "title": "Application Rejection",
+      "description": "Your business application has been rejected by our team. The reason for rejection is stated below. If you think there is a problem, please contact us.",
+      "keywords": "application rejection"
+    }
+  },
+  "waiting": {
+    "title": "Application Pending",
+    "description": "Your business application is being reviewed by our team. Please contact us to get information about the outcome of your application.",
+    "meta": {
+      "title": "Application Pending",
+      "description": "Your business application is being reviewed by our team. Please contact us to get information about the outcome of your application.",
+      "keywords": "application waiting"
+    }
+  },
+  "back": "Go Back"
+}
