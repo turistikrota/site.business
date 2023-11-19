@@ -58,16 +58,16 @@
         "description": "The super administrator has all authority regarding the posting."
       },
       "create": {
-        "title": "Creating an Ad",
-        "description": "An advertisement can be created with this authority."
+        "title": "Creating an Listing",
+        "description": "An listing can be created with this authority."
       },
       "update": {
-        "title": "Ad Update",
-        "description": "With this authorization, advertisement information can be updated."
+        "title": "Listing Update",
+        "description": "With this authorization, listing information can be updated."
       },
       "delete": {
-        "title": "Delete Ad",
-        "description": "With this authority, the ad can be deleted."
+        "title": "Delete Listing",
+        "description": "With this authority, the listing can be deleted."
       },
       "enable": {
         "title": "Activation",
@@ -75,23 +75,23 @@
       },
       "disable": {
         "title": "Inactivation",
-        "description": "With this authority, the ad can be deactivated. That is, it can be removed from publication."
+        "description": "With this authority, the listing can be deactivated. That is, it can be removed from publication."
       },
       "reorder": {
         "title": "Sorting",
-        "description": "With this authority, the ad order can be changed."
+        "description": "With this authority, the listing order can be changed."
       },
       "restore": {
         "title": "Restore",
-        "description": "With this authority, a deleted ad can be restored."
+        "description": "With this authority, a deleted listing can be restored."
       },
       "list": {
         "title": "Listing",
-        "description": "With this authorization, the advertisement list can be viewed."
+        "description": "With this authorization, the listing list can be viewed."
       },
       "view": {
         "title": "Views",
-        "description": "With this authorization, advertisement details can be viewed."
+        "description": "With this authorization, listing details can be viewed."
       }
     },
     "listing_log": {
@@ -101,15 +101,15 @@
       },
       "view": {
         "title": "Views",
-        "description": "With this authorization, advertisement records can be viewed."
+        "description": "With this authorization, listing records can be viewed."
       },
       "count": {
         "title": "Counting",
-        "description": "With this authorization, the number of advertisement records can be displayed."
+        "description": "With this authorization, the number of listing records can be displayed."
       },
       "list": {
         "title": "Listing",
-        "description": "With this authorization, the list of advertisement records can be viewed."
+        "description": "With this authorization, the list of listing records can be viewed."
       }
     },
     "business_log": {
