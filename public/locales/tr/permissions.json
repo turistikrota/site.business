@@ -1,8 +1,8 @@
 {
   "titles": {
     "business": "İşletme Modülü",
-    "listing": "Gönderi/İlan Modülü",
-    "listing_log": "Gönderi/İlan Log Modülü",
+    "listing": "İlan Modülü",
+    "listing_log": "İlan Log Modülü",
     "business_log": "İşletme Log Modülü"
   },
   "roles": {
@@ -55,79 +55,79 @@
     "listing": {
       "super": {
         "title": "Süper Yetkili",
-        "description": "Süper yetkili, gönderi/ilan profilinde tam yetkiye sahiptir."
+        "description": "Süper yetkili, ilan ile ilgili tüm yetkilere sahiptir."
       },
       "create": {
-        "title": "Gönderi/İlan Oluşturma",
-        "description": "Bu yetki ile gönderi/ilan profilinde gönderi/ilan oluşturulabilir."
+        "title": "İlan Oluşturma",
+        "description": "Bu yetki ile ilan oluşturulabilir."
       },
       "update": {
-        "title": "Gönderi/İlan Güncelleme",
-        "description": "Bu yetki ile gönderi/ilan profilinde gönderi/ilan güncellenebilir."
+        "title": "İlan Güncelleme",
+        "description": "Bu yetki ile ilan bilgileri güncellenebilir."
       },
       "delete": {
-        "title": "Gönderi/İlan Silme",
-        "description": "Bu yetki ile gönderi/ilan profilinde gönderi/ilan silinebilir."
+        "title": "İlan Silme",
+        "description": "Bu yetki ile ilan silinebilir."
       },
       "enable": {
         "title": "Aktif Etme",
-        "description": "Bu yetki ile gönderi/ilan profilinde gönderi/ilan aktif edilebilir."
+        "description": "Bu yetki ile ilan aktif edilebilir. Yani yayına alınabilir."
       },
       "disable": {
         "title": "Pasif Etme",
-        "description": "Bu yetki ile gönderi/ilan profilinde gönderi/ilan pasif edilebilir."
+        "description": "Bu yetki ile ilan pasif edilebilir. Yani yayından kaldırılabilir."
       },
       "reorder": {
         "title": "Sıralama",
-        "description": "Bu yetki ile gönderi/ilan profilinde gönderi/ilan sıralaması değiştirilebilir."
+        "description": "Bu yetki ile ilan sıralaması değiştirilebilir."
       },
       "restore": {
         "title": "Geri Yükleme",
-        "description": "Bu yetki ile gönderi/ilan profilinde silinen bir gönderi/ilan geri yüklenebilir."
+        "description": "Bu yetki ile silinen bir ilan geri yüklenebilir."
       },
       "list": {
         "title": "Listeleme",
-        "description": "Bu yetki ile gönderi/ilan profilinde gönderi/ilan listesi görüntülenebilir."
+        "description": "Bu yetki ile ilan listesi görüntülenebilir."
       },
       "view": {
         "title": "Görüntüleme",
-        "description": "Bu yetki ile gönderi/ilan profilinde gönderi/ilan detayı görüntülenebilir."
+        "description": "Bu yetki ile ilan detayları görüntülenebilir."
       }
     },
     "listing_log": {
       "super": {
         "title": "Süper Yetkili",
-        "description": "Süper yetkili, gönderi/ilan log profilinde tam yetkiye sahiptir."
+        "description": "Süper yetkili, ilan kayıtları ile ilgili tüm yetkilere sahiptir."
       },
       "view": {
         "title": "Görüntüleme",
-        "description": "Bu yetki ile gönderi/ilan log profilinde görüntüleme yapılabilir."
+        "description": "Bu yetki ile ilan kayıtlarını görüntülenebilir."
       },
       "count": {
         "title": "Sayma",
-        "description": "Bu yetki ile gönderi/ilan log profilinde sayma yapılabilir."
+        "description": "Bu yetki ile ilan kayıtlarının sayısını görüntülenebilir."
       },
       "list": {
         "title": "Listeleme",
-        "description": "Bu yetki ile gönderi/ilan log profilinde gönderi/ilan log listesi görüntülenebilir."
+        "description": "Bu yetki ile ilan kayıtları listesi görüntülenebilir."
       }
     },
     "business_log": {
       "super": {
         "title": "Süper Yetkili",
-        "description": "Süper yetkili, işletme log profilinde tam yetkiye sahiptir."
+        "description": "Süper yetkili, işletme kayıtları ile ilgili tüm yetkilere sahiptir."
       },
       "view": {
         "title": "Görüntüleme",
-        "description": "Bu yetki ile işletme log profilinde görüntüleme yapılabilir."
+        "description": "Bu yetki ile işletme kayıtlarını görüntülenebilir."
       },
       "count": {
         "title": "Sayma",
-        "description": "Bu yetki ile işletme log profilinde sayma yapılabilir."
+        "description": "Bu yetki ile işletme kayıtlarının sayısını görüntülenebilir."
       },
       "list": {
         "title": "Listeleme",
-        "description": "Bu yetki ile işletme log profilinde işletme log listesi görüntülenebilir."
+        "description": "Bu yetki ile işletme kayıtları listesi görüntülenebilir."
       }
     }
   },
