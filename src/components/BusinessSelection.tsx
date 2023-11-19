@@ -101,7 +101,7 @@ const BusinessSelection = () => {
                   <Condition value={item.isVerified}>
                     <BusinessSelectionCard.VerifiedBadge />
                   </Condition>
-                  <Condition value={!item.isEnabled}>
+                  <Condition value={!item.isVerified && !item.rejectReason}>
                     <div
                       className='absolute bottom-1 right-2 flex items-center justify-center gap-1 rounded-full text-secondary'
                       role='alert'
@@ -110,6 +110,17 @@ const BusinessSelection = () => {
                     >
                       <i className='bx bx-s bx-timer'></i>
                       {t('waiting')}
+                    </div>
+                  </Condition>
+                  <Condition value={!item.isVerified && !!item.rejectReason}>
+                    <div
+                      className='absolute bottom-1 right-2 flex items-center justify-center gap-1 rounded-full text-red-500'
+                      role='alert'
+                      aria-label={t('rejected')}
+                      title={t('rejected_alt')}
+                    >
+                      <i className='bx bx-s bx-error'></i>
+                      {t('rejected')}
                     </div>
                   </Condition>
                 </BusinessSelectionCard>
