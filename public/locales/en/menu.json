@@ -19,6 +19,7 @@
     "invite": "Invitations",
     "invite-create": "Create Invitation",
     "listings": "Listings",
+    "listing-detail": "Listing Detail",
     "listing-create": "Create Listing",
     "users": "Users",
     "subtitles": {
@@ -30,10 +31,11 @@
       "delete": "Delete your profile.",
       "deluxe": "Learn about Deluxe membership benefits and manage or create your Deluxe membership.",
       "invite": "View your invitations and create new invitations.",
-      "invite-create": "Invite an account to this organization.",
-      "users": "View and manage users in this organization.",
-      "listings": "View and manage listings in this organization.",
-      "listing-create": "Create a new listing in this organization."
+      "invite-create": "Invite an account to this business.",
+      "users": "View and manage users in this business.",
+      "listings": "View and manage listings in this business.",
+      "listing-detail": "View and manage a listing in this business.",
+      "listing-create": "Create a new listing in this business."
     }
   },
   "meta": {

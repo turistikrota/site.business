@@ -4,6 +4,13 @@
     "loading": "İlan Oluşturuluyor...",
     "disabled": "Lütfen tüm kategori kurallarını kabul ediniz. ({{accepted}}/{{total}})"
   },
+  "detail": {
+    "meta": {
+      "title": "İlan Detayları",
+      "description": "Bu sayfayı kullanarak ilanınızın detaylarını görüntüleyebilirsiniz.",
+      "keywords": "ilan, detay, ilan detayları, ilan detayı"
+    }
+  },
   "create": {
     "meta": {
       "title": "İlan Oluştur",

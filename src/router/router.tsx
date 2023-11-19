@@ -86,6 +86,13 @@ const trRoutes: RouteObject[] = [
             },
           },
           {
+            path: 'ilanlar/:id',
+            lazy: () => import('@/views/details/listing/detail'),
+            handle: {
+              page: 'listing-detail',
+            },
+          },
+          {
             path: 'ilan-ekle',
             lazy: () => import('@/views/details/listing/listing-create'),
             handle: {
@@ -201,6 +208,13 @@ const enRoutes: RouteObject[] = [
             lazy: () => import('@/views/details/listing/listings'),
             handle: {
               page: 'listings',
+            },
+          },
+          {
+            path: 'listings/:id',
+            lazy: () => import('@/views/details/listing/detail'),
+            handle: {
+              page: 'listing-detail',
             },
           },
           {

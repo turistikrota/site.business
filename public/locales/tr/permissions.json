@@ -2,8 +2,8 @@
   "titles": {
     "business": "İşletme Modülü",
     "listing": "İlan Modülü",
-    "listing_log": "İlan Log Modülü",
-    "business_log": "İşletme Log Modülü"
+    "listing_log": "İlan Kayıt Modülü",
+    "business_log": "İşletme Kayıt Modülü"
   },
   "roles": {
     "business": {
