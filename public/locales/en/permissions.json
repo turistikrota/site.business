@@ -53,7 +53,7 @@
       }
     },
     "listing": {
-      "Super": {
+      "super": {
         "title": "Super Authority",
         "description": "The super administrator has all authority regarding the posting."
       },
@@ -95,7 +95,7 @@
       }
     },
     "listing_log": {
-      "Super": {
+      "super": {
         "title": "Super Authority",
         "description": "The super administrator has all authority regarding posting records."
       },
@@ -113,7 +113,7 @@
       }
     },
     "business_log": {
-      "Super": {
+      "super": {
         "title": "Super Authority",
         "description": "The super administrator has all authority regarding business records."
       },
