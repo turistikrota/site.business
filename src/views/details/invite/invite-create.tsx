@@ -37,7 +37,7 @@ function InviteCreateView() {
     onSubmit: (values) => {
       setLoading(true)
       httpClient
-        .listing(apiUrl(Services.Business, `/~${current.business.nickName}/invite`), values)
+        .post(apiUrl(Services.Business, `/~${current.business.nickName}/invite`), values)
         .then((res) => {
           if ([200, 201].includes(res.status)) {
             toast.success(t('success'))

@@ -57,7 +57,7 @@ const ListingCreateForm: React.FC = () => {
     onSubmit: (values) => {
       setLoading(true)
       httpClient
-        .listing(apiUrl(Services.Listing, `/business`), values)
+        .post(apiUrl(Services.Listing, `/business`), values)
         .then(() => {
           autoSave.remove()
           toast.success(t('create.success'))
