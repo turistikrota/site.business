@@ -141,6 +141,13 @@ const enRoutes: RouteObject[] = [
             },
           },
           {
+            path: '',
+            lazy: () => import('@/views/details/edit'),
+            handle: {
+              page: 'edit',
+            },
+          },
+          {
             path: 'settings',
             lazy: () => import('@/views/details/settings'),
             handle: {
