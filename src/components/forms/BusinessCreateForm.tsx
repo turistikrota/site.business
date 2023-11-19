@@ -1,6 +1,5 @@
 import { Services, apiUrl } from '@/config/services'
 import { httpClient } from '@/http/client'
-import { useAccount } from '@/layouts/AccountSelectionLayout'
 import { useBusinessCreateSchema } from '@/schemas/business-create.schema'
 import Alert from '@turistikrota/ui/alert'
 import Input from '@turistikrota/ui/form/input'
@@ -88,7 +87,6 @@ const BusinessCreateForm = () => {
   const navigate = useNavigate()
   const { t } = useTranslation('create')
   const toast = useToast()
-  const { current } = useAccount()
   const [isLoading, setIsLoading] = useState<boolean>(false)
   const [currentStep, setCurrentStep] = useState<number>(0)
   const form = useFormik({
