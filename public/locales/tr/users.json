@@ -1,15 +1,15 @@
 {
   "meta": {
     "title": "Kullanıcılar",
-    "description": "Organizasyona ait kullanıcıları görüntüleyin, düzenleyin ve yönetin.",
-    "keywords": "kullanıcılar, organizasyon kullanıcıları"
+    "description": "İşletmeye ait kullanıcıları görüntüleyin, düzenleyin ve yönetin.",
+    "keywords": "kullanıcılar, işletme kullanıcıları"
   },
   "role": {
     "title": "Rol Yönetimi",
     "description": "Aşağıdaki alanda bu kullanıcının hangi modüllerde hangi yetkilere sahip olduğunu görebilir ve düzenleyebilirsiniz.",
     "info": {
       "title": "Rol Düzenleme Hk.",
-      "desc": "Rol ekleme veya kaldırma rolünüz olmayabilir. Rol eklemeye veya kaldırmaya çalıştığınızda bir hata ile karşılaşırsanız lütfen organizasyon yöneticiniz ile iletişime geçin."
+      "desc": "Rol ekleme veya kaldırma rolünüz olmayabilir. Rol eklemeye veya kaldırmaya çalıştığınızda bir hata ile karşılaşırsanız lütfen işletme yöneticiniz ile iletişime geçin."
     }
   },
   "joinAt": "{{date}} tarihinde katıldı.",

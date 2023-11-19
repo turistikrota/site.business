@@ -1,11 +1,11 @@
 {
   "meta": {
-    "title": "Organizasyon Daveti",
+    "title": "İşletme Daveti",
     "description": "Bu sayfada bir davetin detaylarını görebilir ve daveti kabul edebilirsiniz.",
-    "keywords": "davet, organizasyon, daveti kabul et, daveti reddet, davet detayları"
+    "keywords": "davet, işletme, daveti kabul et, daveti reddet, davet detayları"
   },
-  "title": "Organizasyon Daveti",
-  "description": "<0>{{creator}}</0> tarafından <1>{{business}}</1> organizasyonuna katılmak için davet edildiniz. Daveti kabul etmek için lütfen aşağıdaki butona tıklayın. Daveti kabul etmek istemiyorsanız lütfen bu daveti görmezden gelin.",
+  "title": "İşletme Daveti",
+  "description": "<0>{{creator}}</0> tarafından <1>{{business}}</1> işletmesine katılmak için davet edildiniz. Daveti kabul etmek için lütfen aşağıdaki butona tıklayın. Daveti kabul etmek istemiyorsanız lütfen bu daveti görmezden gelin.",
   "notfound": {
     "title": "Davet Bulunamadı",
     "description": "Bu davet bulunamadı. Lütfen davetin doğru olduğundan emin olun."
@@ -16,7 +16,7 @@
   },
   "deleted": {
     "title": "Davet Silinmiş",
-    "description": "Bu davet organizasyon yöneticileri tarafından silinmiş. Lütfen yeni bir davet isteyin."
+    "description": "Bu davet işletme yöneticileri tarafından silinmiş. Lütfen yeni bir davet isteyin."
   },
   "timeout": {
     "title": "Davet Süresi Doldu",
