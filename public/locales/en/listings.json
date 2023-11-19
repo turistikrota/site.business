@@ -1,0 +1,199 @@
+{
+  "button": {
+    "create": "Create Listing",
+    "loading": "Creating Listing...",
+    "disabled": "Please accept all category rules. ({{accepted}}/{{total}})"
+  },
+  "create": {
+    "meta": {
+      "title": "Create Listing",
+      "description": "You can create a new listing using this page.",
+      "keywords": "listing, create, new, new listing, create listing"
+    },
+    "success": "Your listing has been created successfully. If no problems are detected after the category checks are completed, it will be published."
+  },
+  "list": {
+    "meta": {
+      "title": "My Listings",
+      "description": "You can manage your listings using this page.",
+      "keywords": "my listings, manage my listings, view my listings"
+    },
+    "reorder": {
+      "info": {
+        "title": "Listing Sorting",
+        "description": "You can sort your listings by dragging and dropping them."
+      }
+    },
+    "empty": {
+      "title": "Listing Not Found",
+      "description": "You have not created any listings yet. Click the create listing button above to create a new listing."
+    },
+    "actions": {
+      "create": "Create Listing"
+    }
+  },
+  "autosave": {
+    "love": {
+      "title": "Autosaved Data Found",
+      "description": "Auto-saved data was found for this listing. Would you like to upload this data?",
+      "cancel": "No",
+      "confirm": "Yes"
+    }
+  },
+  "details": {
+    "states": {
+      "verificationFailed": {
+        "title": "Authentication Error",
+        "description": "An error occurred while verifying your listing. Please contact your representative to review the details."
+      },
+      "onLive": {
+        "title": "On Live",
+        "description": "Your listing is now publicly available."
+      },
+      "deleted": {
+        "title": "Deleted",
+        "description": "Deleted listing. To republish, go to the detail page."
+      },
+      "active": {
+        "title": "Active",
+        "description": "Your listing is active and ready to be published."
+      },
+      "passive": {
+        "title": "Disabled",
+        "description": "Your listing is disabled and not ready to be published."
+      }
+    },
+    "fields": {
+      "createdAt": "Created on {{date}}."
+    },
+    "actions": {
+      "show-logs": "Show Logs",
+      "show-details": "Show Details"
+    }
+  },
+  "form": {
+    "title": "Title",
+    "description": "Description",
+    "meta": {
+      "title": "Meta Information",
+      "subtitle": "In this section, you can enter the meta information of your listing."
+    },
+    "images": {
+      "title": "Listing Images",
+      "subtitle": "In this section, you can upload images of your listing.",
+      "error": {
+        "title": "Title Required",
+        "description": "To upload an image, you must enter a title of at least 5 characters."
+      }
+    },
+    "calendar": {
+      "title": "Calendar & Pricing",
+      "subtitle": "In this section, you can determine the calendar and pricing of your listing.",
+      "startDate": "Start Date",
+      "endDate": "End Date",
+      "price": "Price",
+      "add": "Add",
+      "price-list-item": "<0>{{startDate}}</0> to <1>{{endDate}}</1> for <2>{{price}}</2> ₺",
+      "info": {
+        "title": "Price Range Tip",
+        "description": "You can set different prices for specific date ranges using the fields below.",
+        "example": "For example, between June 1 - June 30, it is 100 ₺, and between July 1 - July 31, it is 200 ₺.",
+        "float": "Use dots for decimal numbers. For example, $100.50."
+      },
+      "error": {
+        "startDateGreaterThanEndDate": "Start date cannot be greater than end date.",
+        "endDateLessThanNow": "The end date cannot be less than the current date.",
+        "startDateLessThanNow": "The start date cannot be less than the current date.",
+        "unique": "At least one of the days in this date range has already been added.",
+        "priceNaN": "The price field is incorrect. This field should be like this: 10,000 (ten thousand ₺) or 10,000.50 (ten thousand ₺ 50 kr).",
+        "priceNegative": "The price field cannot be negative."
+      }
+    },
+    "category": {
+      "title": "Category Information",
+      "subtitle": "In this section, you can enter the category information of your listing."
+    },
+    "category-alerts": {
+      "title": "Category Warnings",
+      "subtitle": "In this section, you can enter the category warnings of your listing.",
+      "category": "{{name}} category"
+    },
+    "category-rules": {
+      "title": "Category Rules",
+      "subtitle": "Please read and accept the category rules.",
+      "category": "{{name}} category"
+    },
+    "category-inputs": {
+      "options": {
+        "option 1": "Option 1",
+        "option 2": "Option 2",
+        "rich": "Rich",
+        "electro": "Electronic"
+      }
+    },
+    "location": {
+      "title": "Listing Location",
+      "subtitle": "In this section you can determine the location of your listing.",
+      "city": "City",
+      "street": "District",
+      "address": "Address",
+      "latitude": "Latitude",
+      "longitude": "Longitude",
+      "isStrict": {
+        "title": "Exact Location",
+        "description": "Is the location of this listing certain?"
+      },
+      "error": "Location selection failed. Please try again.",
+      "notSupported": "Your browser does not support location selection.",
+      "info": {
+        "title": "Map Tip",
+        "description": "Click to select a location on the map. The blue pointer shows the location. Drag the pointer to change the location.",
+        "descriptionTwo": "Note: City and County are changed using estimated location information. If it is incorrect, you can change the city and county information manually."
+      }
+    },
+    "validation": {
+      "title": "Special Rules",
+      "subtitle": "In this section, you can enter the special rules of your listing.",
+      "minAdult": "Minimum number of adults",
+      "maxAdult": "Maximum number of adults",
+      "minKid": "Minimum number of children",
+      "maxKid": "Maximum number of children",
+      "minBaby": "Minimum number of babies",
+      "maxBaby": "Maximum number of babies",
+      "minDate": "Minimum number of days",
+      "maxDate": "Maximum number of days",
+      "onlyFamily": {
+        "title": "Families Only",
+        "description": "This listing is for families only. Non-family members cannot reserve this listing."
+      },
+      "noPet": {
+        "title": "No Pets",
+        "description": "This listing does not accept pets."
+      },
+      "noSmoke": {
+        "title": "Smoking is Prohibited",
+        "description": "People who book this listing cannot smoke during the booking period."
+      },
+      "noAlcohol": {
+        "title": "Alcohol is Prohibited",
+        "description": "People who reserve this listing cannot consume alcohol during the reservation period."
+      },
+      "noParty": {
+        "title": "Party Forbidden",
+        "description": "People who book this listing cannot organize a party here."
+      },
+      "noUnmarried": {
+        "title": "Unmarried Persons Prohibited",
+        "description": "People who book this listing must be married."
+      },
+      "noGuest": {
+        "title": "Guests Forbidden",
+        "description": "People who reserve this listing cannot accept guests."
+      }
+    }
+  },
+  "config": {
+    "tr": "Turkish",
+    "en": "English"
+  }
+}

@@ -1,18 +1,18 @@
 import MetaWrapper from '@/components/MetaWrapper'
-import OwnerMenu from '@/components/menu/OwnerMenu'
+import BusinessMenu from '@/components/menu/BusinessMenu'
 import { useTranslation } from 'react-i18next'
 
-function OwnershipMenuView() {
+function BusinessshipMenuView() {
   const { t } = useTranslation('menu')
   return (
     <MetaWrapper title={t('meta.title')} description={t('meta.description')} keywords={t('meta.keywords')}>
       <section className='mx-auto flex h-full min-h-screen items-start justify-center sm:max-w-md'>
-        <OwnerMenu isDetail={false} />
+        <BusinessMenu isDetail={false} />
       </section>
     </MetaWrapper>
   )
 }
 
-OwnershipMenuView.displayName = 'OwnershipMenuView'
+BusinessshipMenuView.displayName = 'BusinessshipMenuView'
 
-export { OwnershipMenuView as Component }
+export { BusinessshipMenuView as Component }

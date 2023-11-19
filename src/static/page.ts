@@ -15,7 +15,7 @@ export type RouteType = {
     }
     select: string
   }
-  owner: {
+  business: {
     select: string
     create: string
     details: {
@@ -29,7 +29,7 @@ export type RouteType = {
       users: string
       security: string
       settings: string
-      post: {
+      listing: {
         list: string
         create: string
         detail: string
@@ -71,7 +71,7 @@ const Routes: Record<Locales, RouteType> = {
       privacyNotify: 'https://turistikrota.com/sozlesmeler/gizlilik-bildirimi',
       privacy: 'https://turistikrota.com/sozlesmeler/kisisel-verilerin-korunmasi-ve-gizlilik-politikasi',
     },
-    owner: {
+    business: {
       select: '/sec',
       create: '/basvuru',
       details: {
@@ -85,7 +85,7 @@ const Routes: Record<Locales, RouteType> = {
         invite: '/davetler',
         inviteCreate: '/davet-et',
         users: '/kullanicilar',
-        post: {
+        listing: {
           create: '/ilan-ekle',
           list: '/ilanlar',
           detail: '/ilan/',
@@ -117,7 +117,7 @@ const Routes: Record<Locales, RouteType> = {
       privacyNotify: 'https://turistikrota.com/contracts/privacy-notice',
       privacy: 'https://turistikrota.com/contracts/privacy-and-protection-of-personal-data',
     },
-    owner: {
+    business: {
       select: '/select',
       create: '/apply',
       details: {
@@ -131,11 +131,11 @@ const Routes: Record<Locales, RouteType> = {
         invite: '/invites',
         inviteCreate: '/invite',
         users: '/users',
-        post: {
-          create: '/add-post',
-          list: '/posts',
-          detail: '/post/',
-          logs: '/post-logs/',
+        listing: {
+          create: '/add-listing',
+          list: '/listings',
+          detail: '/listing/',
+          logs: '/listing-logs/',
         },
       },
       inviteUse: '/invite',

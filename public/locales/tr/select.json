@@ -1,10 +1,13 @@
 {
-  "title": "Bir Satıcı Profili Seçin",
-  "new": "Yeni Satıcı Profili Oluştur",
+  "title": "Bir İşletme Profili Seçin",
+  "new": "Yeni İşletme Profili Oluştur",
   "waiting": "Onay Bekliyor",
+  "waiting_alt": "İşletme profiliniz onay bekliyor. Lütfen daha sonra tekrar deneyin.",
+  "rejected": "Reddedildi",
+  "rejected_alt": "İşletme profiliniz reddedildi. Lütfen daha sonra tekrar deneyin.",
   "meta": {
-    "title": "Satıcı Profili Seçin",
-    "description": "İşlem yapmak istediğiniz satıcı profili seçin. Turistikrota'da birden fazla satıcı profili oluşturabilirsiniz.",
-    "keywords": "turistikrota, satıcı profili, satıcı profili seçin, satıcı profili oluşturun"
+    "title": "İşletme Profili Seçin",
+    "description": "İşlem yapmak istediğiniz işletme profili seçin. Turistikrota'da birden fazla işletme profili oluşturabilirsiniz.",
+    "keywords": "turistikrota, işletme profili, işletme profili seçin, işletme profili oluşturun"
   }
 }

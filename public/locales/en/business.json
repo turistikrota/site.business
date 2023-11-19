@@ -1,0 +1,14 @@
+{
+  "title": "Business Profile",
+  "title-full": "Business Profile | Turistikrota",
+  "description": "Edit your turistikrota business profile, set your security and privacy, manage notifications and change your account settings.",
+  "keywords": "Business Profile, Profile, Turistikrota, Vacation Planning, Tour Reservation",
+  "url": "https://business.turistikrota.com",
+  "errors": {
+    "accountNotFound": {
+      "title": "Account Not Found.",
+      "subtitle": "If you entered this page immediately after creating your account, please log in again and try again.",
+      "button": "Refresh Session"
+    }
+  }
+}

@@ -5,7 +5,7 @@ import { RouteObject, createBrowserRouter } from 'react-router-dom'
 const trRoutes: RouteObject[] = [
   {
     path: '/',
-    lazy: () => import('@/layouts/OwnerLayout'),
+    lazy: () => import('@/layouts/BusinessLayout'),
     children: [
       {
         path: 'menu',
@@ -13,8 +13,15 @@ const trRoutes: RouteObject[] = [
       },
       {
         path: '',
-        lazy: () => import('@/layouts/OwnerSubDetailLayout'),
+        lazy: () => import('@/layouts/BusinessSubDetailLayout'),
         children: [
+          {
+            path: '',
+            lazy: () => import('@/views/details/edit'),
+            handle: {
+              page: 'edit',
+            },
+          },
           {
             path: 'duzenle',
             lazy: () => import('@/views/details/edit'),
@@ -73,16 +80,16 @@ const trRoutes: RouteObject[] = [
           },
           {
             path: 'ilanlar',
-            lazy: () => import('@/views/details/post/posts'),
+            lazy: () => import('@/views/details/listing/listings'),
             handle: {
-              page: 'posts',
+              page: 'listings',
             },
           },
           {
             path: 'ilan-ekle',
-            lazy: () => import('@/views/details/post/post-create'),
+            lazy: () => import('@/views/details/listing/listing-create'),
             handle: {
-              page: 'post-create',
+              page: 'listing-create',
             },
           },
           {
@@ -116,7 +123,7 @@ const trRoutes: RouteObject[] = [
 const enRoutes: RouteObject[] = [
   {
     path: '/',
-    lazy: () => import('@/layouts/OwnerLayout'),
+    lazy: () => import('@/layouts/BusinessLayout'),
     children: [
       {
         path: 'menu',
@@ -124,10 +131,17 @@ const enRoutes: RouteObject[] = [
       },
       {
         path: '',
-        lazy: () => import('@/layouts/OwnerSubDetailLayout'),
+        lazy: () => import('@/layouts/BusinessSubDetailLayout'),
         children: [
           {
             path: 'edit',
+            lazy: () => import('@/views/details/edit'),
+            handle: {
+              page: 'edit',
+            },
+          },
+          {
+            path: '',
             lazy: () => import('@/views/details/edit'),
             handle: {
               page: 'edit',
@@ -183,17 +197,17 @@ const enRoutes: RouteObject[] = [
             },
           },
           {
-            path: 'posts',
-            lazy: () => import('@/views/details/post/posts'),
+            path: 'listings',
+            lazy: () => import('@/views/details/listing/listings'),
             handle: {
-              page: 'posts',
+              page: 'listings',
             },
           },
           {
-            path: 'add-post',
-            lazy: () => import('@/views/details/post/post-create'),
+            path: 'add-listing',
+            lazy: () => import('@/views/details/listing/listing-create'),
             handle: {
-              page: 'post-create',
+              page: 'listing-create',
             },
           },
           {

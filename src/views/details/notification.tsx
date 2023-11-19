@@ -2,17 +2,17 @@ import MaintenanceAlert from '@/components/MaintenanceAlert'
 import MetaWrapper from '@/components/MetaWrapper'
 import { useTranslation } from 'react-i18next'
 
-function OwnershipNotificationView() {
+function BusinessshipNotificationView() {
   const { t } = useTranslation('notification')
   return (
     <MetaWrapper title={t('meta.title')} description={t('meta.description')} keywords={t('meta.keywords')}>
-      <section className='mx-auto container p-4'>
+      <section className='container mx-auto p-4'>
         <MaintenanceAlert />
       </section>
     </MetaWrapper>
   )
 }
 
-OwnershipNotificationView.displayName = 'OwnershipNotificationView'
+BusinessshipNotificationView.displayName = 'BusinessshipNotificationView'
 
-export { OwnershipNotificationView as Component }
+export { BusinessshipNotificationView as Component }

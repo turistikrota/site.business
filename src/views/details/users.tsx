@@ -1,11 +1,11 @@
 import MetaWrapper from '@/components/MetaWrapper'
 import UserCollapseItem from '@/components/UserCollapseItem'
 import { Services, apiUrl } from '@/config/services'
-import { useCurrentOwner } from '@/contexts/currentOwner'
+import { useCurrentBusiness } from '@/contexts/currentBusiness'
 import { httpClient } from '@/http/client'
 import RoleGuardView from '@/layouts/RoleGuard'
-import { OwnerRoles } from '@/static/role'
-import { OwnerUserListItem, isOwnerUserListResponse } from '@/types/owner'
+import { BusinessRoles } from '@/static/role'
+import { BusinessUserListItem, isBusinessUserListResponse } from '@/types/business'
 import ContentLoader from '@turistikrota/ui/loader'
 import { useToast } from '@turistikrota/ui/toast'
 import { parseApiError } from '@turistikrota/ui/utils/response'
@@ -14,9 +14,9 @@ import { useTranslation } from 'react-i18next'
 
 const UsersView: React.FC = () => {
   const { t } = useTranslation('users')
-  const [users, setUsers] = useState<OwnerUserListItem[]>([])
+  const [users, setUsers] = useState<BusinessUserListItem[]>([])
   const [loading, setLoading] = useState<boolean>(false)
-  const [current] = useCurrentOwner()
+  const [current] = useCurrentBusiness()
   const toast = useToast()
 
   useEffect(() => {
@@ -26,9 +26,9 @@ const UsersView: React.FC = () => {
   const fetchUsers = () => {
     setLoading(true)
     httpClient
-      .get(apiUrl(Services.Owner, `/~${current.owner.nickName}/user`))
+      .get(apiUrl(Services.Business, `/~${current.business.nickName}/user`))
       .then((res) => {
-        if (res.data && isOwnerUserListResponse(res.data)) {
+        if (res.data && isBusinessUserListResponse(res.data)) {
           setUsers(res.data)
         }
       })
@@ -45,9 +45,9 @@ const UsersView: React.FC = () => {
   if (loading) return <ContentLoader noMargin />
 
   return (
-    <RoleGuardView roles={[OwnerRoles.Super, OwnerRoles.UserList]}>
+    <RoleGuardView roles={[BusinessRoles.Super, BusinessRoles.UserList]}>
       <MetaWrapper title={t('meta.title')} description={t('meta.description')} keywords={t('meta.keywords')}>
-        <section className='relative mx-auto container space-y-5 p-4'>
+        <section className='container relative mx-auto space-y-5 p-4'>
           {users.map((user) => (
             <UserCollapseItem user={user} key={user.name} />
           ))}

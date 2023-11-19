@@ -19,10 +19,10 @@
     "invite": "Davetler",
     "invite-create": "Davet Oluştur",
     "users": "Kullanıcılar",
-    "posts": "İlanlar",
-    "post-create": "İlan Oluştur",
+    "listings": "İlanlar",
+    "listing-create": "İlan Oluştur",
     "subtitles": {
-      "edit": "Satıcı profil resminizi, bilgilerinizi ve sosyal medya hesaplarınızı düzenleyin.",
+      "edit": "İşletme profil resminizi, bilgilerinizi ve sosyal medya hesaplarınızı düzenleyin.",
       "security": "Şifrenizi değiştirin, iki faktörlü kimlik doğrulamayı etkinleştirin ve oturum açma cihazlarınızı yönetin.",
       "privacy": "Gizlilik ayarlarınızı düzenleyin ve profilinizi arama sonuçlarında görünür veya görünmez yapın.",
       "notification": "Bildirim tercihlerinizi düzenleyin.",
@@ -32,13 +32,13 @@
       "invite": "Davetlerinizi görüntüleyin ve yeni davetler oluşturun.",
       "invite-create": "Bir hesabı bu organizasyona davet edin.",
       "users": "Bu organizasyonun kullanıcılarını görüntüleyin ve yönetin.",
-      "posts": "Bu organizasyonun ilanlarını görüntüleyin ve yönetin.",
-      "post-create": "Bu organizasyona yeni bir ilan oluşturun."
+      "listings": "Bu organizasyonun ilanlarını görüntüleyin ve yönetin.",
+      "listing-create": "Bu organizasyona yeni bir ilan oluşturun."
     }
   },
   "meta": {
-    "title": "Satıcı Profili",
-    "description": "Turistikrota satıcı profilinizi düzenleyin, güvenliğinizi ve gizliliğinizi ayarlayın ve hesap ayarlarınızı değiştirin.",
-    "keywords": "satıcı profil, satıcı profil düzenle, satıcı profil ayarları, satıcı profil güvenlik, satıcı profil gizlilik, satıcı profil hesap ayarları"
+    "title": "İşletme Profili",
+    "description": "Turistikrota işletme profilinizi düzenleyin, güvenliğinizi ve gizliliğinizi ayarlayın ve hesap ayarlarınızı değiştirin.",
+    "keywords": "işletme profil, işletme profil düzenle, işletme profil ayarları, işletme profil güvenlik, işletme profil gizlilik, işletme profil hesap ayarları"
   }
 }

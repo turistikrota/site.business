@@ -2,7 +2,7 @@ import { Services, apiUrl } from '@/config/services'
 import { httpClient } from '@/http/client'
 import { useAccount } from '@/layouts/AccountSelectionLayout'
 import { getStaticRoute } from '@/static/page'
-import { InviteItem, isInviteItem } from '@/types/owner'
+import { InviteItem, isInviteItem } from '@/types/business'
 import { useDayJS } from '@/utils/dayjs'
 import Alert from '@turistikrota/ui/alert'
 import Button from '@turistikrota/ui/button'
@@ -66,12 +66,12 @@ const InviteDetail: React.FC = () => {
   const join = () => {
     setLoading(true)
     httpClient
-      .post(apiUrl(Services.Owner, `/join/${params.uuid}`))
+      .listing(apiUrl(Services.Business, `/join/${params.uuid}`))
       .then((res) => {
         if (res.status === 200) {
           toast.success(t('success'))
           refreshAuth(() => {
-            navigate(getStaticRoute(i18n.language).owner.details.default)
+            navigate(getStaticRoute(i18n.language).business.details.default)
           })
         }
       })
@@ -88,7 +88,7 @@ const InviteDetail: React.FC = () => {
 
   const fetchInvite = () => {
     httpClient
-      .get(apiUrl(Services.Owner, `/join/${params.uuid}`))
+      .get(apiUrl(Services.Business, `/join/${params.uuid}`))
       .then((res) => {
         if (res.data && isInviteItem(res.data)) {
           setInvite(res.data)
@@ -146,7 +146,7 @@ const InviteDetail: React.FC = () => {
                 <div className='relative  col-span-2  flex flex-col items-center justify-center'>
                   <div className='relative'>
                     <img
-                      src={`https://avatar.turistikrota.com/~${invite.ownerNickName}.png`}
+                      src={`https://avatar.turistikrota.com/~${invite.businessNickName}.png`}
                       className='z-10 h-24 w-24 rounded-md'
                     />
                     <img
@@ -154,18 +154,18 @@ const InviteDetail: React.FC = () => {
                       className='absolute -bottom-3 -left-5  h-12 w-12 rounded-full'
                     />
                   </div>
-                  <span className='mt-2 font-semibold text-secondary'>~{invite.ownerNickName}</span>
+                  <span className='mt-2 font-semibold text-secondary'>~{invite.businessNickName}</span>
                 </div>
                 <p className='col-span-5 mt-4 text-center text-gray-500'>
                   <Trans
                     t={t}
                     i18nKey='description'
                     values={{
-                      owner: `~${invite.ownerNickName}`,
+                      business: `~${invite.businessNickName}`,
                       creator: `@${invite.creatorUserName}`,
                     }}
                   >
-                    <span className='font-semibold text-secondary'>~{invite.ownerNickName}</span>
+                    <span className='font-semibold text-secondary'>~{invite.businessNickName}</span>
                     <span className='font-semibold text-secondary'>@{invite.creatorUserName}</span>
                   </Trans>
                 </p>

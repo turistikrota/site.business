@@ -1,0 +1,22 @@
+{
+  "rejected": {
+    "title": "Başvuru Reddedildi",
+    "description": "İşletme başvurunuz ekibimiz tarafından reddedildi. Başvuru reddedilme sebebi aşağıda belirtilmiştir. Bir sorun olduğunu düşünüyorsanız lütfen bizimle iletişime geçin.",
+    "reason": "Reddedilme Sebebi:",
+    "meta": {
+      "title": "Başvuru Reddi",
+      "description": "İşletme başvurunuz ekibimiz tarafından reddedildi. Başvuru reddedilme sebebi aşağıda belirtilmiştir. Bir sorun olduğunu düşünüyorsanız lütfen bizimle iletişime geçin.",
+      "keywords": "başvuru reddi"
+    }
+  },
+  "waiting": {
+    "title": "Başvuru Beklemede",
+    "description": "İşletme başvurunuz ekibimiz tarafından inceleniyor. Başvurunuzun sonucu hakkında bilgi almak için lütfen bizimle iletişime geçin.",
+    "meta": {
+      "title": "Başvuru Beklemede",
+      "description": "İşletme başvurunuz ekibimiz tarafından inceleniyor. Başvurunuzun sonucu hakkında bilgi almak için lütfen bizimle iletişime geçin.",
+      "keywords": "başvuru bekliyor"
+    }
+  },
+  "back": "Geri Dön"
+}

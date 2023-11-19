@@ -2,7 +2,7 @@
   "fields": {
     "nickName": "Nickname",
     "realName": "Real Name",
-    "ownerType": "Seller Type",
+    "businessType": "Business Type",
     "firstName": "FirstName",
     "lastName": "Surname",
     "identityNumber": "TC Identity Number",
@@ -52,8 +52,8 @@
   "required": "The {{field}} field is required",
   "invalid": "The {{field}} field is invalid",
   "either": "The field {{field}} must be {{value1}} or {{value2}}",
-  "requiredForIndividual": "The {{field}} field is required for individual sellers",
-  "requiredForCorporate": "The {{field}} field is required for enterprise sellers",
+  "requiredForIndividual": "The {{field}} field is required for individual businesss",
+  "requiredForCorporate": "The {{field}} field is required for enterprise businesss",
   "individual": "Individual",
   "corporation": "Corporate"
 }

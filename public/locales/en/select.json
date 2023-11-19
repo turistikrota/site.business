@@ -1,10 +1,13 @@
 {
-  "title": "Select a Seller Profile",
-  "new": "Create New Seller Profile",
+  "title": "Select a Business Profile",
+  "new": "Create New Business Profile",
   "waiting": "Waiting for Approval",
+  "waiting_alt": "Your business profile is waiting for approval",
+  "rejected": "Rejected",
+  "rejected_alt": "Your business profile has been rejected",
   "meta": {
-    "title": "Select Seller Profile",
-    "description": "Select the seller profile you want to transact with. You can create more than one seller profile on Turistikrota.",
+    "title": "Select Business Profile",
+    "description": "Select the business profile you want to transact with. You can create more than one business profile on Turistikrota.",
     "keywords": "tourist route, vendor profile, select vendor profile, create vendor profile"
   }
 }

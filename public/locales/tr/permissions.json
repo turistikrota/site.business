@@ -1,58 +1,58 @@
 {
   "titles": {
-    "owner": "Satıcı Modülü",
-    "post": "Gönderi/İlan Modülü",
-    "post_log": "Gönderi/İlan Log Modülü",
-    "owner_log": "Satıcı Log Modülü"
+    "business": "İşletme Modülü",
+    "listing": "Gönderi/İlan Modülü",
+    "listing_log": "Gönderi/İlan Log Modülü",
+    "business_log": "İşletme Log Modülü"
   },
   "roles": {
-    "owner": {
+    "business": {
       "super": {
         "title": "Süper Yetkili",
-        "description": "Süper yetkili, satıcı profilinde tam yetkiye sahiptir."
+        "description": "Süper yetkili, işletme profilinde tam yetkiye sahiptir."
       },
       "member": {
         "title": "Üye",
-        "description": "Üye, satıcı profilinde sadece kendi bilgilerini görebilir."
+        "description": "Üye, işletme profilinde sadece kendi bilgilerini görebilir."
       },
       "user_remove": {
         "title": "Kullanıcı Silme",
-        "description": "Bu yetki ile satıcı profilinde kullanıcı silinebilir."
+        "description": "Bu yetki ile işletme profilinde kullanıcı silinebilir."
       },
       "user_perm_add": {
         "title": "Kullanıcı Yetki Ekleme",
-        "description": "Bu yetki ile satıcı profilinde herhangi bir kullanıcıya yetki eklenebilir."
+        "description": "Bu yetki ile işletme profilinde herhangi bir kullanıcıya yetki eklenebilir."
       },
       "user_perm_remove": {
         "title": "Kullanıcı Yetki Silme",
-        "description": "Bu yetki ile satıcı profilinde herhangi bir kullanıcıdan yetki silinebilir."
+        "description": "Bu yetki ile işletme profilinde herhangi bir kullanıcıdan yetki silinebilir."
       },
       "enable": {
         "title": "Aktif Etme",
-        "description": "Bu yetki ile satıcı profili aktif edilebilir."
+        "description": "Bu yetki ile işletme profili aktif edilebilir."
       },
       "disable": {
         "title": "Pasif Etme",
-        "description": "Bu yetki ile satıcı profili pasif edilebilir."
+        "description": "Bu yetki ile işletme profili pasif edilebilir."
       },
       "user_list": {
         "title": "Kullanıcı Listeleme",
-        "description": "Bu yetki ile satıcı profilinde kullanıcı listesi görüntülenebilir."
+        "description": "Bu yetki ile işletme profilinde kullanıcı listesi görüntülenebilir."
       },
       "invite_create": {
         "title": "Davetiye Oluşturma",
-        "description": "Bu yetki ile satıcı profilinde başka kullanıcıları satıcı profiline davet etmek için davetiye oluşturulabilir."
+        "description": "Bu yetki ile işletme profilinde başka kullanıcıları işletme profiline davet etmek için davetiye oluşturulabilir."
       },
       "invite_delete": {
         "title": "Davetiye Silme",
-        "description": "Bu yetki ile satıcı profilinde davetiye silinebilir."
+        "description": "Bu yetki ile işletme profilinde davetiye silinebilir."
       },
       "invite_view": {
         "title": "Davetiye Görüntüleme",
-        "description": "Bu yetki ile satıcı profilinde davetiyeler görüntülenebilir."
+        "description": "Bu yetki ile işletme profilinde davetiyeler görüntülenebilir."
       }
     },
-    "post": {
+    "listing": {
       "super": {
         "title": "Süper Yetkili",
         "description": "Süper yetkili, gönderi/ilan profilinde tam yetkiye sahiptir."
@@ -94,7 +94,7 @@
         "description": "Bu yetki ile gönderi/ilan profilinde gönderi/ilan detayı görüntülenebilir."
       }
     },
-    "post_log": {
+    "listing_log": {
       "super": {
         "title": "Süper Yetkili",
         "description": "Süper yetkili, gönderi/ilan log profilinde tam yetkiye sahiptir."
@@ -106,20 +106,28 @@
       "count": {
         "title": "Sayma",
         "description": "Bu yetki ile gönderi/ilan log profilinde sayma yapılabilir."
+      },
+      "list": {
+        "title": "Listeleme",
+        "description": "Bu yetki ile gönderi/ilan log profilinde gönderi/ilan log listesi görüntülenebilir."
       }
     },
-    "owner_log": {
+    "business_log": {
       "super": {
         "title": "Süper Yetkili",
-        "description": "Süper yetkili, satıcı log profilinde tam yetkiye sahiptir."
+        "description": "Süper yetkili, işletme log profilinde tam yetkiye sahiptir."
       },
       "view": {
         "title": "Görüntüleme",
-        "description": "Bu yetki ile satıcı log profilinde görüntüleme yapılabilir."
+        "description": "Bu yetki ile işletme log profilinde görüntüleme yapılabilir."
       },
       "count": {
         "title": "Sayma",
-        "description": "Bu yetki ile satıcı log profilinde sayma yapılabilir."
+        "description": "Bu yetki ile işletme log profilinde sayma yapılabilir."
+      },
+      "list": {
+        "title": "Listeleme",
+        "description": "Bu yetki ile işletme log profilinde işletme log listesi görüntülenebilir."
       }
     }
   },

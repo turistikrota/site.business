@@ -1,4 +1,4 @@
-import { useCurrentOwner } from '@/contexts/currentOwner'
+import { useCurrentBusiness } from '@/contexts/currentBusiness'
 import { checkRoles } from '@/utils/role'
 import { useCallback } from 'react'
 
@@ -7,7 +7,7 @@ type Bodyguard = {
 }
 
 export const useBodyguard = (): Bodyguard => {
-  const [current] = useCurrentOwner()
+  const [current] = useCurrentBusiness()
 
   const check = useCallback(
     (...roles: string[]) => {
