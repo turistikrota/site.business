@@ -4,6 +4,13 @@
     "loading": "Creating Listing...",
     "disabled": "Please accept all category rules. ({{accepted}}/{{total}})"
   },
+  "detail": {
+    "meta": {
+      "title": "Listing Detail",
+      "description": "You can view the details of your listing using this page.",
+      "keywords": "listing, detail, listing detail, view listing detail"
+    }
+  },
   "create": {
     "meta": {
       "title": "Create Listing",

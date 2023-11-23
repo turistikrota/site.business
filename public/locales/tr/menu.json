@@ -20,6 +20,7 @@
     "invite-create": "Davet Oluştur",
     "users": "Kullanıcılar",
     "listings": "İlanlar",
+    "listing-detail": "İlan Detayı",
     "listing-create": "İlan Oluştur",
     "subtitles": {
       "edit": "İşletme profil resminizi, bilgilerinizi ve sosyal medya hesaplarınızı düzenleyin.",
@@ -30,10 +31,11 @@
       "delete": "Profilinizi silin.",
       "deluxe": "Deluxe üyelik avantajları hakkında bilgi alın ve Deluxe üyeliğinizi yönetin veya oluşturun.",
       "invite": "Davetlerinizi görüntüleyin ve yeni davetler oluşturun.",
-      "invite-create": "Bir hesabı bu organizasyona davet edin.",
-      "users": "Bu organizasyonun kullanıcılarını görüntüleyin ve yönetin.",
-      "listings": "Bu organizasyonun ilanlarını görüntüleyin ve yönetin.",
-      "listing-create": "Bu organizasyona yeni bir ilan oluşturun."
+      "invite-create": "Bir hesabı bu işletme için davet edin.",
+      "users": "Bu işletmenin kullanıcılarını görüntüleyin ve yönetin.",
+      "listings": "Bu işletmenin ilanlarını görüntüleyin ve yönetin.",
+      "listing-create": "Bu işletme için yeni bir ilan oluşturun.",
+      "listing-detail": "Bu işletmenin ilanını görüntüleyin ve yönetin."
     }
   },
   "meta": {

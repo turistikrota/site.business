@@ -1,0 +1,8 @@
+{
+  "deletion": {
+    "warning": "Bu işlem sistemde büyük değişikliklere neden olacaktır. Lütfen bu işlemi yapmadan emin olun.",
+    "confirm": "Evet, silmek istiyorum",
+    "delete": "Sil",
+    "confirmation": "Silme işlemini tamamlamak için lütfen aşağıdaki kutucuğa '<strong>{{text}}</strong>' yazın."
+  }
+}
