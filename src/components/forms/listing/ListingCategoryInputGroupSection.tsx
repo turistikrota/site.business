@@ -141,7 +141,7 @@ const Renderer: Record<string, InputRender> = {
               name={formName}
               reversed={!isDesktop}
               effect={isDesktop ? 'hover' : undefined}
-              value={value}
+              value={value?.includes(option)}
               onChange={(e: boolean) => {
                 if (e) {
                   const newVal = value ? [...value, option] : [option]

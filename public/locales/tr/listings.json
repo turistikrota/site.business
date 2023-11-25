@@ -86,8 +86,8 @@
       "subtitle": "Bu bölümde ilanınızın meta bilgilerini girebilirsiniz."
     },
     "images": {
-      "title": "İlan Görbusinessi",
-      "subtitle": "Bu bölümde ilanınızın görbusinessini yükleyebilirsiniz.",
+      "title": "İlan Görselleri",
+      "subtitle": "Bu bölümde ilanınızın görsellerini yükleyebilirsiniz.",
       "error": {
         "title": "Başlık Gerekli",
         "description": "Görsel yükleyebilmek için en az 5 karakterden oluşan bir başlık girmelisiniz."

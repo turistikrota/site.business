@@ -46,7 +46,7 @@ export type ListingCreateFormValues = {
     isStrict: boolean
     coordinates: Coordinates
   }
-  images: []
+  images: string[]
   features: ListingFeature[]
   validation: {
     minAdult: number
@@ -142,4 +142,13 @@ export function isEmptyListingCreateFormValues(values: ListingCreateFormValues):
   const { location, ...empty } = EmptyListingCreateValues
   const { location: _, ...valuesCopy } = values
   return Object.keys(findDiff(empty, valuesCopy)).length === 0
+}
+
+type ListingImage = {
+  url: string
+  order: number
+}
+
+export function isImages(value: any): value is ListingImage[] {
+  return value && value.length && value[0].url && value[0].order
 }

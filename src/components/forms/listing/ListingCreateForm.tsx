@@ -9,9 +9,11 @@ import {
   ListingCreateFormValues,
   ListingFeature,
   isEmptyListingCreateFormValues,
+  isImages,
 } from '@/types/listing'
 import Button from '@turistikrota/ui/button'
 import { useToast } from '@turistikrota/ui/toast'
+import { isCoordinates } from '@turistikrota/ui/types'
 import { deepEqual } from '@turistikrota/ui/utils'
 import { parseApiError } from '@turistikrota/ui/utils/response'
 import { FormikErrors, useFormik } from 'formik'
@@ -64,6 +66,7 @@ const ListingCreateForm: React.FC = () => {
           navigate(getStaticRoute(i18n.language).business.details.listing.list)
         })
         .catch((err) => {
+          console.log('err::', err)
           parseApiError({
             error: err.response.data,
             form,
@@ -95,7 +98,18 @@ const ListingCreateForm: React.FC = () => {
         onConfirm: () => {
           Object.entries(existsData).forEach(([key, value]) => {
             // @ts-ignore
-            if (key === 'location' && value.coordinates[0] === 0 && value.coordinates[1] === 0) return
+            if (key === 'location' && isCoordinates(value) && value.coordinates[0] === 0 && value.coordinates[1] === 0)
+              return
+            if (key === 'images') {
+              if (isImages(value)) {
+                // @ts-ignore
+                setImages(value.map((img) => img.url))
+              }
+              if (Array.isArray(value)) {
+                // @ts-ignore
+                setImages(value)
+              }
+            }
             form.setFieldValue(key, value)
           })
           setInitialCategories(existsData.categoryUUIDs)
@@ -109,7 +123,7 @@ const ListingCreateForm: React.FC = () => {
 
   useEffect(() => {
     if (isEmptyListingCreateFormValues(form.values)) return
-    autoSave.set(form.values)
+    autoSave.set({ ...form.values, images: images })
   }, [form.values])
 
   useEffect(() => {
