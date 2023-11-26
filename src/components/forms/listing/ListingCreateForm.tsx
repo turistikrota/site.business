@@ -59,14 +59,19 @@ const ListingCreateForm: React.FC = () => {
     onSubmit: (values) => {
       setLoading(true)
       httpClient
-        .post(apiUrl(Services.Listing, `/business`), values)
+        .post(apiUrl(Services.Listing, `/business`), {
+          ...values,
+          images: images.map((img, indx) => ({
+            url: img,
+            order: indx + 1,
+          })),
+        })
         .then(() => {
           autoSave.remove()
           toast.success(t('create.success'))
           navigate(getStaticRoute(i18n.language).business.details.listing.list)
         })
         .catch((err) => {
-          console.log('err::', err)
           parseApiError({
             error: err.response.data,
             form,
@@ -258,7 +263,7 @@ const ListingCreateForm: React.FC = () => {
           ? t('button.loading')
           : t('button.disabled', {
               total: categoryFields.rules.length,
-              accepted: acceptedRules.length,
+              accepted: Object.keys(acceptedRules).length,
             })}
       </Button>
     </form>

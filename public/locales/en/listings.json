@@ -146,6 +146,7 @@
       "address": "Address",
       "latitude": "Latitude",
       "longitude": "Longitude",
+      "grant": "Use My Location",
       "isStrict": {
         "title": "Exact Location",
         "description": "Is the location of this listing certain?"

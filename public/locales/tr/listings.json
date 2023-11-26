@@ -146,6 +146,7 @@
       "address": "Adres",
       "latitude": "Enlem",
       "longitude": "Boylam",
+      "grant": "Mevcut Konumu Kullan",
       "isStrict": {
         "title": "Kesin Konum",
         "description": "Bu ilanın konumu kesin mi?"
