@@ -50,8 +50,8 @@
   "details": {
     "states": {
       "verificationFailed": {
-        "title": "Authentication Error",
-        "description": "An error occurred while verifying your listing. Please contact your representative to review the details."
+        "title": "Not Verified",
+        "description": "An error occurred while validating your listing. Please contact your representative to review the details."
       },
       "onLive": {
         "title": "On Live",

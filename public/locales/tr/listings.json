@@ -50,7 +50,7 @@
   "details": {
     "states": {
       "verificationFailed": {
-        "title": "Doğrulama Hatası",
+        "title": "Doğrulanamadı",
         "description": "İlanınızın doğrulanması sırasında bir hata oluştu. Lütfen detayları incelemesi için yetkilinize danışın."
       },
       "onLive": {

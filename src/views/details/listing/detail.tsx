@@ -12,7 +12,7 @@ const ListingDetailView = () => {
         description={t('detail.meta.description')}
         keywords={t('detail.meta.keywords')}
       >
-        <section className='container relative mx-auto p-4 '></section>
+        <section className='container relative mx-auto p-4'></section>
       </MetaWrapper>
     </RoleGuardView>
   )

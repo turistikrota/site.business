@@ -1,6 +1,5 @@
 import { ListingImage, ListingLocation, ListingTranslation } from '@/api/listing/listing.api'
 import { getStaticRoute } from '@/static/page'
-import { BusinessRoles, ListingLogRoles, ListingRoles } from '@/static/role'
 import { getI18nTranslation } from '@/types/base'
 import { useDayJS } from '@/utils/dayjs'
 import Badge from '@turistikrota/ui/badge'
@@ -11,7 +10,6 @@ import { FullVariant, I18nTranslation } from '@turistikrota/ui/types'
 import React, { useMemo } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router-dom'
-import RoleGuard from '../RoleGuard'
 
 export type Props = {
   uuid: string
@@ -109,26 +107,11 @@ const ListingListCard: React.FC<Props> = ({
                 />
               )}
               {!isValid && (
-                <RoleGuard
-                  fallback={
-                    <StateItem
-                      variant='danger'
-                      title={t('details.states.verificationFailed.title')}
-                      description={t('details.states.verificationFailed.description')}
-                      className='col-span-12 w-full justify-center'
-                    />
-                  }
-                  roles={[BusinessRoles.Super, ListingRoles.Super, ListingLogRoles.Super, ListingLogRoles.List]}
-                >
-                  <Link
-                    to={getStaticRoute(i18n.language).business.details.listing.logs + uuid}
-                    className='col-span-6 w-full'
-                  >
-                    <Button size='sm' variant='secondary'>
-                      {t('details.actions.show-logs')}
-                    </Button>
-                  </Link>
-                </RoleGuard>
+                <StateItem
+                  variant='warning'
+                  title={t('details.states.verificationFailed.title')}
+                  description={t('details.states.verificationFailed.description')}
+                />
               )}
               {isValid && isActive && !isDeleted && (
                 <StateItem
