@@ -2,6 +2,7 @@ import { ListingDetails, fetchMyListing } from '@/api/listing/listing.api'
 import { useQuery } from '@/hooks/query'
 import NotFoundView from '@/views/404'
 import ContentLoader from '@turistikrota/ui/loader'
+import ListingDisableForm from './form/ListingDisableForm'
 import ListingEnableForm from './form/ListingEnableForm'
 
 type Props = {
@@ -16,7 +17,17 @@ const ListingDetailContent: React.FC<Props> = ({ uuid }) => {
   const onOk = () => {
     refetch()
   }
-  return <>{!data?.isActive && <ListingEnableForm onOk={onOk} uuid={uuid} />}</>
+  return (
+    <>
+      <section>
+        <h2>Danger Zone</h2>
+        <div className='rounded-md border dark:border-red-900'>
+          {!data?.isActive && <ListingEnableForm onOk={onOk} uuid={uuid} />}
+          {data?.isActive && <ListingDisableForm onOk={onOk} uuid={uuid} />}
+        </div>
+      </section>
+    </>
+  )
 }
 
 export default ListingDetailContent

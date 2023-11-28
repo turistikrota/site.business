@@ -58,8 +58,8 @@ const ListingEnableForm: React.FC<Props> = ({ uuid, onOk }) => {
   }
   return (
     <Spin loading={isLoading}>
-      <div className='bg-second p-4'>
-        <LineForm className='rounded-md'>
+      <div className='rounded-t-md bg-second p-4 transition-colors duration-200 hover:bg-third'>
+        <LineForm>
           <LineForm.Left>
             <LineForm.Left.Title>{t('detail.activation.title')}</LineForm.Left.Title>
             <LineForm.Left.Description>{t('detail.activation.passive')}</LineForm.Left.Description>
