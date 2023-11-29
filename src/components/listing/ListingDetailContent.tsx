@@ -2,6 +2,7 @@ import { ListingDetails, fetchMyListing } from '@/api/listing/listing.api'
 import { useQuery } from '@/hooks/query'
 import NotFoundView from '@/views/404'
 import ContentLoader from '@turistikrota/ui/loader'
+import ListingDeleteForm from './form/ListingDeleteForm'
 import ListingDisableForm from './form/ListingDisableForm'
 import ListingEnableForm from './form/ListingEnableForm'
 
@@ -24,6 +25,7 @@ const ListingDetailContent: React.FC<Props> = ({ uuid }) => {
         <div className='rounded-md border dark:border-red-900'>
           {!data?.isActive && <ListingEnableForm onOk={onOk} uuid={uuid} />}
           {data?.isActive && <ListingDisableForm onOk={onOk} uuid={uuid} />}
+          {!data?.isDeleted && <ListingDeleteForm onOk={onOk} uuid={uuid} />}
         </div>
       </section>
     </>

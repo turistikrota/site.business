@@ -28,6 +28,15 @@
         "cancel": "Hayır",
         "confirm": "Devre Dışı Bırak"
       }
+    },
+    "delete": {
+      "title": "İlanı Sil",
+      "text": "Bir ilanı sildiğinizde ilanın geri dönüşü zor olacaktır. İlanı silmeden önce emin olmalısınız.",
+      "confirm": {
+        "title": "İlanı Sil",
+        "subtitle": "İlanı silmek istediğinize emin misiniz?"
+      },
+      "button": "İlanı Sil"
     }
   },
   "create": {
