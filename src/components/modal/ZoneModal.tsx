@@ -11,18 +11,32 @@ type Props = {
   text: string
   inputLabel: string
   inputName?: string
+  confirmationText: string
+  warningText: string
+  loadingText: string
+  buttonText: string
+  confirmText: string
+  loading: boolean
   visible: boolean
+  variant: 'error' | 'warning'
   onConfirm: () => void
   onCancel: () => void
 }
 
-const DeleteModal: React.FC<Props> = ({
+const ZoneModal: React.FC<Props> = ({
   text,
   visible,
   title,
   subtitle,
+  loading,
   inputLabel,
   inputName = 'confirm-text',
+  buttonText,
+  confirmText,
+  loadingText,
+  variant,
+  warningText,
+  confirmationText,
   onConfirm,
   onCancel,
 }) => {
@@ -43,7 +57,7 @@ const DeleteModal: React.FC<Props> = ({
               <p>
                 <Trans
                   t={t}
-                  i18nKey='deletion.confirmation'
+                  i18nKey={confirmationText}
                   components={{
                     b: <b />,
                   }}
@@ -62,7 +76,7 @@ const DeleteModal: React.FC<Props> = ({
             </>
           ) : (
             <>
-              <p className='text-gray-600 dark:text-gray-300'>{t('deletion.warning')}</p>
+              <p className='text-gray-600 dark:text-gray-300'>{warningText}</p>
             </>
           )}
         </div>
@@ -70,13 +84,18 @@ const DeleteModal: React.FC<Props> = ({
       <Modal.Footer>
         {firstConfirm ? (
           <>
-            <Button variant='error' disabled={!matched} onClick={() => onConfirm()} className='disabled:opacity-50'>
-              {t('deletion.delete')}
+            <Button
+              variant={variant}
+              disabled={!matched || loading}
+              onClick={() => onConfirm()}
+              className='disabled:opacity-50'
+            >
+              {loading ? loadingText : buttonText}
             </Button>
           </>
         ) : (
-          <Button variant='error' onClick={() => setFirstConfirm(true)}>
-            {t('deletion.confirm')}
+          <Button variant={variant} onClick={() => setFirstConfirm(true)}>
+            {confirmText}
           </Button>
         )}
       </Modal.Footer>
@@ -84,4 +103,4 @@ const DeleteModal: React.FC<Props> = ({
   )
 }
 
-export default DeleteModal
+export default ZoneModal

@@ -9,6 +9,34 @@
       "title": "İlan Detayları",
       "description": "Bu sayfayı kullanarak ilanınızın detaylarını görüntüleyebilirsiniz.",
       "keywords": "ilan, detay, ilan detayları, ilan detayı"
+    },
+    "activation": {
+      "title": "Yayın Durumu",
+      "active": "İlanınız şu anda herkese açık olarak yayında. İlanınızı devre dışı bırakmak için yandaki butona tıklayın.",
+      "passive": "İlanınız şu anda devre dışı. İlanınızı yayınlamak için yandaki butona tıklayın.",
+      "enable": {
+        "title": "İlanı Yayına Al",
+        "description": "İlanınızı yayına almak istediğinize emin misiniz?",
+        "alt": "İlanı Yayına Al",
+        "cancel": "Hayır",
+        "confirm": "Yayına Al"
+      },
+      "disable": {
+        "title": "İlanı Devre Dışı Bırak",
+        "description": "İlanınızı devre dışı bırakmak istediğinize emin misiniz?",
+        "alt": "İlanı Devre Dışı Bırak",
+        "cancel": "Hayır",
+        "confirm": "Devre Dışı Bırak"
+      }
+    },
+    "delete": {
+      "title": "İlanı Sil",
+      "text": "Bir ilanı sildiğinizde ilanın geri dönüşü zor olacaktır. İlanı silmeden önce emin olmalısınız.",
+      "confirm": {
+        "title": "İlanı Sil",
+        "subtitle": "İlanı silmek istediğinize emin misiniz?"
+      },
+      "button": "İlanı Sil"
     }
   },
   "create": {
@@ -50,7 +78,7 @@
   "details": {
     "states": {
       "verificationFailed": {
-        "title": "Doğrulama Hatası",
+        "title": "Doğrulanamadı",
         "description": "İlanınızın doğrulanması sırasında bir hata oluştu. Lütfen detayları incelemesi için yetkilinize danışın."
       },
       "onLive": {
@@ -86,8 +114,8 @@
       "subtitle": "Bu bölümde ilanınızın meta bilgilerini girebilirsiniz."
     },
     "images": {
-      "title": "İlan Görbusinessi",
-      "subtitle": "Bu bölümde ilanınızın görbusinessini yükleyebilirsiniz.",
+      "title": "İlan Görselleri",
+      "subtitle": "Bu bölümde ilanınızın görsellerini yükleyebilirsiniz.",
       "error": {
         "title": "Başlık Gerekli",
         "description": "Görsel yükleyebilmek için en az 5 karakterden oluşan bir başlık girmelisiniz."
@@ -146,6 +174,7 @@
       "address": "Adres",
       "latitude": "Enlem",
       "longitude": "Boylam",
+      "grant": "Mevcut Konumu Kullan",
       "isStrict": {
         "title": "Kesin Konum",
         "description": "Bu ilanın konumu kesin mi?"

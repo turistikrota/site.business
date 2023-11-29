@@ -66,6 +66,7 @@ const ListingFormLocationSection: React.FC<Props> = ({ values, errors, onChange,
         (position) => {
           setPosition([position.coords.latitude, position.coords.longitude])
           setMapKey((k) => k + 1)
+          setGrant(true)
         },
         () => {
           toast.error(t('form.location.error'))

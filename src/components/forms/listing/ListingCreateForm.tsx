@@ -9,9 +9,11 @@ import {
   ListingCreateFormValues,
   ListingFeature,
   isEmptyListingCreateFormValues,
+  isImages,
 } from '@/types/listing'
 import Button from '@turistikrota/ui/button'
 import { useToast } from '@turistikrota/ui/toast'
+import { isCoordinates } from '@turistikrota/ui/types'
 import { deepEqual } from '@turistikrota/ui/utils'
 import { parseApiError } from '@turistikrota/ui/utils/response'
 import { FormikErrors, useFormik } from 'formik'
@@ -57,7 +59,13 @@ const ListingCreateForm: React.FC = () => {
     onSubmit: (values) => {
       setLoading(true)
       httpClient
-        .post(apiUrl(Services.Listing, `/business`), values)
+        .post(apiUrl(Services.Listing, `/business`), {
+          ...values,
+          images: images.map((img, indx) => ({
+            url: img,
+            order: indx + 1,
+          })),
+        })
         .then(() => {
           autoSave.remove()
           toast.success(t('create.success'))
@@ -95,7 +103,18 @@ const ListingCreateForm: React.FC = () => {
         onConfirm: () => {
           Object.entries(existsData).forEach(([key, value]) => {
             // @ts-ignore
-            if (key === 'location' && value.coordinates[0] === 0 && value.coordinates[1] === 0) return
+            if (key === 'location' && isCoordinates(value) && value.coordinates[0] === 0 && value.coordinates[1] === 0)
+              return
+            if (key === 'images') {
+              if (isImages(value)) {
+                // @ts-ignore
+                setImages(value.map((img) => img.url))
+              }
+              if (Array.isArray(value)) {
+                // @ts-ignore
+                setImages(value)
+              }
+            }
             form.setFieldValue(key, value)
           })
           setInitialCategories(existsData.categoryUUIDs)
@@ -109,7 +128,7 @@ const ListingCreateForm: React.FC = () => {
 
   useEffect(() => {
     if (isEmptyListingCreateFormValues(form.values)) return
-    autoSave.set(form.values)
+    autoSave.set({ ...form.values, images: images })
   }, [form.values])
 
   useEffect(() => {
@@ -244,7 +263,7 @@ const ListingCreateForm: React.FC = () => {
           ? t('button.loading')
           : t('button.disabled', {
               total: categoryFields.rules.length,
-              accepted: acceptedRules.length,
+              accepted: Object.keys(acceptedRules).length,
             })}
       </Button>
     </form>
