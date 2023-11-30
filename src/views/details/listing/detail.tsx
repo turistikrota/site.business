@@ -16,16 +16,20 @@ const ListingDetailView = () => {
   const { t, i18n } = useTranslation('listings')
   const params = useParams()
   const { data, loading, notFound, refetch } = useQuery(() => fetchMyListing(params.id ?? ''))
+
   const translations = useMemo<ListingTranslation>(() => {
     if (!data) return EmptyTranslation
     return getI18nTranslation<ListingTranslation>(data.meta, i18n.language)
   }, [data, i18n.language])
+
   const images = useMemo<string[]>(() => {
     if (!data) return []
     return data.images.sort((a, b) => a.order - b.order).map((image) => image.url)
   }, [data])
+
   if (loading) return <ContentLoader noMargin />
   if (notFound) return <NotFoundView />
+
   return (
     <RoleGuardView roles={[BusinessRoles.Super, ListingRoles.Super, ListingRoles.View]}>
       <MetaWrapper
@@ -40,6 +44,7 @@ const ListingDetailView = () => {
               title={translations.title}
               isActive={data?.isActive ?? false}
               isDeleted={data?.isDeleted ?? false}
+              images={images}
               onOk={() => refetch()}
             />
           </section>
