@@ -1,32 +1,28 @@
-import { ListingDetails, fetchMyListing } from '@/api/listing/listing.api'
-import { useQuery } from '@/hooks/query'
-import NotFoundView from '@/views/404'
-import ContentLoader from '@turistikrota/ui/loader'
+import { useTranslation } from 'react-i18next'
 import ListingDeleteForm from './ListingDeleteForm'
 import ListingDisableForm from './ListingDisableForm'
 import ListingEnableForm from './ListingEnableForm'
+import ListingRestoreForm from './ListingRecoverForm'
 
 type Props = {
   uuid: string
   title: string
+  isActive: boolean
+  isDeleted: boolean
+  onOk: () => void
 }
 
-const ListingDetailContent: React.FC<Props> = ({ uuid, title }) => {
-  const { data, notFound, loading, refetch } = useQuery<ListingDetails>(() => fetchMyListing(uuid))
-  if (notFound) return <NotFoundView />
-  if (loading) return <ContentLoader />
-
-  const onOk = () => {
-    refetch()
-  }
+const ListingDetailContent: React.FC<Props> = ({ uuid, title, isActive, isDeleted, onOk }) => {
+  const { t } = useTranslation('listings')
   return (
     <>
       <section>
-        <h2 className='mb-2 text-xl font-semibold'>Danger Zone</h2>
+        <h2 className='mb-2 text-xl font-semibold'>{t('detail.sections.danger')}</h2>
         <div className='rounded-md border dark:border-red-900'>
-          {!data?.isActive && <ListingEnableForm onOk={onOk} uuid={uuid} title={title} />}
-          {data?.isActive && <ListingDisableForm onOk={onOk} uuid={uuid} title={title} />}
-          {!data?.isDeleted && <ListingDeleteForm onOk={onOk} uuid={uuid} title={title} />}
+          {!isActive && <ListingEnableForm onOk={onOk} uuid={uuid} title={title} />}
+          {isActive && <ListingDisableForm onOk={onOk} uuid={uuid} title={title} />}
+          {!isDeleted && <ListingDeleteForm onOk={onOk} uuid={uuid} title={title} />}
+          {isDeleted && <ListingRestoreForm onOk={onOk} uuid={uuid} title={title} />}
         </div>
       </section>
     </>

@@ -32,12 +32,18 @@
       "title": "İlanı Sil",
       "subtitle": "İlanınızı silmek istediğinize emin misiniz?",
       "text": "Bir ilanı sildiğinizde ilanın geri dönüşü zor olacaktır. İlanı silmeden önce emin olmalısınız.",
-      "confirm": {
-        "title": "İlanı Sil",
-        "subtitle": "İlanı silmek istediğinize emin misiniz?"
-      },
       "label": "Onay Metni",
       "button": "İlanı Sil"
+    },
+    "restore": {
+      "title": "İlanı Kurtar",
+      "subtitle": "İlanınızı kurtarmak istediğinize emin misiniz?",
+      "text": "Bir ilanı kurtardığınızda ilanın geri dönüşü kolay olacaktır. İlanı kurtarmadan önce emin olmalısınız.",
+      "label": "Onay Metni",
+      "button": "İlanı Kurtar"
+    },
+    "sections": {
+      "danger": "Tehlikeli Bölge"
     }
   },
   "create": {

@@ -42,7 +42,7 @@ const ListingDisableForm: React.FC<Props> = ({ uuid, title, onOk }) => {
   }
 
   return (
-    <>
+    <LineForm className='bg-second p-4 transition-colors duration-200 first:rounded-t-md last:rounded-b-md hover:bg-third'>
       <ZoneWarningModal
         inputLabel={t('detail.enable.label')}
         onCancel={() => {
@@ -59,23 +59,21 @@ const ListingDisableForm: React.FC<Props> = ({ uuid, title, onOk }) => {
         visible={visible}
         loading={isLoading}
       />
-      <LineForm className='rounded-t-md bg-second p-4 transition-colors duration-200 hover:bg-third'>
-        <LineForm.Left>
-          <LineForm.Left.Title>{t('detail.disable.title')}</LineForm.Left.Title>
-          <LineForm.Left.Description>{t('detail.disable.text')}</LineForm.Left.Description>
-        </LineForm.Left>
-        <LineForm.Right>
-          <Button
-            variant='warning'
-            onClick={() => {
-              setVisible(true)
-            }}
-          >
-            {t('detail.disable.button')}
-          </Button>
-        </LineForm.Right>
-      </LineForm>
-    </>
+      <LineForm.Left>
+        <LineForm.Left.Title>{t('detail.disable.title')}</LineForm.Left.Title>
+        <LineForm.Left.Description>{t('detail.disable.text')}</LineForm.Left.Description>
+      </LineForm.Left>
+      <LineForm.Right>
+        <Button
+          variant='warning'
+          onClick={() => {
+            setVisible(true)
+          }}
+        >
+          {t('detail.disable.button')}
+        </Button>
+      </LineForm.Right>
+    </LineForm>
   )
 }
 

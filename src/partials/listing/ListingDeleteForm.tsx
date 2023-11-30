@@ -41,7 +41,7 @@ const ListingDeleteForm: React.FC<Props> = ({ uuid, title, onOk }) => {
       })
   }
   return (
-    <>
+    <LineForm className='bg-second p-4 transition-colors duration-200 first:rounded-t-md last:rounded-b-md hover:bg-third'>
       <ZoneErrorModal
         inputLabel={t('detail.delete.label')}
         onCancel={() => {
@@ -55,23 +55,21 @@ const ListingDeleteForm: React.FC<Props> = ({ uuid, title, onOk }) => {
         visible={visible}
         loading={isLoading}
       />
-      <LineForm className='rounded-b-md bg-second p-4 transition-colors duration-200 hover:bg-third'>
-        <LineForm.Left>
-          <LineForm.Left.Title>{t('detail.delete.title')}</LineForm.Left.Title>
-          <LineForm.Left.Description>{t('detail.delete.text')}</LineForm.Left.Description>
-        </LineForm.Left>
-        <LineForm.Right>
-          <Button
-            variant='error'
-            onClick={() => {
-              setVisible(true)
-            }}
-          >
-            {t('detail.delete.button')}
-          </Button>
-        </LineForm.Right>
-      </LineForm>
-    </>
+      <LineForm.Left>
+        <LineForm.Left.Title>{t('detail.delete.title')}</LineForm.Left.Title>
+        <LineForm.Left.Description>{t('detail.delete.text')}</LineForm.Left.Description>
+      </LineForm.Left>
+      <LineForm.Right>
+        <Button
+          variant='error'
+          onClick={() => {
+            setVisible(true)
+          }}
+        >
+          {t('detail.delete.button')}
+        </Button>
+      </LineForm.Right>
+    </LineForm>
   )
 }
 

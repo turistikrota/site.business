@@ -6,6 +6,7 @@ import ListingDetailContent from '@/partials/listing/ListingDetailContent'
 import { BusinessRoles, ListingRoles } from '@/static/role'
 import { getI18nTranslation } from '@/types/base'
 import NotFoundView from '@/views/404'
+import ImagePreview from '@turistikrota/ui/image/preview'
 import ContentLoader from '@turistikrota/ui/loader'
 import { useMemo } from 'react'
 import { useTranslation } from 'react-i18next'
@@ -14,11 +15,15 @@ import { useParams } from 'react-router-dom'
 const ListingDetailView = () => {
   const { t, i18n } = useTranslation('listings')
   const params = useParams()
-  const { data, loading, notFound } = useQuery(() => fetchMyListing(params.id ?? ''))
+  const { data, loading, notFound, refetch } = useQuery(() => fetchMyListing(params.id ?? ''))
   const translations = useMemo<ListingTranslation>(() => {
     if (!data) return EmptyTranslation
     return getI18nTranslation<ListingTranslation>(data.meta, i18n.language)
   }, [data, i18n.language])
+  const images = useMemo<string[]>(() => {
+    if (!data) return []
+    return data.images.sort((a, b) => a.order - b.order).map((image) => image.url)
+  }, [data])
   if (loading) return <ContentLoader noMargin />
   if (notFound) return <NotFoundView />
   return (
@@ -28,9 +33,17 @@ const ListingDetailView = () => {
         description={t('detail.meta.description')}
         keywords={t('detail.meta.keywords')}
       >
-        <section className='container relative mx-auto p-4'>
-          <ListingDetailContent uuid={params.id ?? ''} title={translations.title} />
-        </section>
+        <ImagePreview list={images} altPrefix={translations.title}>
+          <section className='container relative mx-auto p-4'>
+            <ListingDetailContent
+              uuid={params.id ?? ''}
+              title={translations.title}
+              isActive={data?.isActive ?? false}
+              isDeleted={data?.isDeleted ?? false}
+              onOk={() => refetch()}
+            />
+          </section>
+        </ImagePreview>
       </MetaWrapper>
     </RoleGuardView>
   )
