@@ -25,7 +25,7 @@ const ListingDetailContent: React.FC<Props> = ({ uuid, title }) => {
         <h2 className='mb-2 text-xl font-semibold'>Danger Zone</h2>
         <div className='rounded-md border dark:border-red-900'>
           {!data?.isActive && <ListingEnableForm onOk={onOk} uuid={uuid} title={title} />}
-          {data?.isActive && <ListingDisableForm onOk={onOk} uuid={uuid} />}
+          {data?.isActive && <ListingDisableForm onOk={onOk} uuid={uuid} title={title} />}
           {!data?.isDeleted && <ListingDeleteForm onOk={onOk} uuid={uuid} title={title} />}
         </div>
       </section>

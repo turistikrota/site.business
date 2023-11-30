@@ -53,6 +53,7 @@ const ListingEnableForm: React.FC<Props> = ({ uuid, title, onOk }) => {
         warningText={t('detail.enable.text')}
         confirmText={t('detail.enable.confirm')}
         confirmationText={t('detail.enable.confirmation')}
+        buttonText={t('detail.enable.button')}
         text={title}
         title={t('detail.enable.title')}
         visible={visible}

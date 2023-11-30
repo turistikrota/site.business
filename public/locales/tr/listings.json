@@ -10,25 +10,6 @@
       "description": "Bu sayfayı kullanarak ilanınızın detaylarını görüntüleyebilirsiniz.",
       "keywords": "ilan, detay, ilan detayları, ilan detayı"
     },
-    "activation": {
-      "title": "Yayın Durumu",
-      "active": "İlanınız şu anda herkese açık olarak yayında. İlanınızı devre dışı bırakmak için yandaki butona tıklayın.",
-      "passive": "İlanınız şu anda devre dışı. İlanınızı yayınlamak için yandaki butona tıklayın.",
-      "enable": {
-        "title": "İlanı Yayına Al",
-        "description": "İlanınızı yayına almak istediğinize emin misiniz?",
-        "alt": "İlanı Yayına Al",
-        "cancel": "Hayır",
-        "confirm": "Yayına Al"
-      },
-      "disable": {
-        "title": "İlanı Devre Dışı Bırak",
-        "description": "İlanınızı devre dışı bırakmak istediğinize emin misiniz?",
-        "alt": "İlanı Devre Dışı Bırak",
-        "cancel": "Hayır",
-        "confirm": "Devre Dışı Bırak"
-      }
-    },
     "enable": {
       "title": "İlanı Yayına Al",
       "subtitle": "İlanınızı yayına almak istediğinize emin misiniz?",
@@ -37,6 +18,15 @@
       "confirm": "Evet, Yayına Almak İstiyorum",
       "confirmation": "İlanı yayına alma işlemini tamamlamak için lütfen aşağıdaki kutucuğa '<strong>{{text}}</strong>' yazın.",
       "button": "İlanı Yayına Al"
+    },
+    "disable": {
+      "title": "İlanı Devre Dışı Bırak",
+      "subtitle": "İlanınızı devre dışı bırakmak istediğinize emin misiniz?",
+      "text": "İlanınızı devre dışı bıraktığınızda kimse ilanınızı göremeyecektir. İlanınızı devre dışı bırakmadan önce emin olmalısınız.",
+      "label": "Onay Metni",
+      "confirm": "Evet, Devre Dışı Bırakmak İstiyorum",
+      "confirmation": "İlanı devre dışı bırakma işlemini tamamlamak için lütfen aşağıdaki kutucuğa '<strong>{{text}}</strong>' yazın.",
+      "button": "İlanı Devre Dışı Bırak"
     },
     "delete": {
       "title": "İlanı Sil",
