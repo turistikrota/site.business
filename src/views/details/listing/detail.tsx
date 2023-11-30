@@ -42,6 +42,7 @@ const ListingDetailView = () => {
             <ListingDetailContent
               uuid={params.id ?? ''}
               title={translations.title}
+              description={translations.description}
               isActive={data?.isActive ?? false}
               isDeleted={data?.isDeleted ?? false}
               images={images}
