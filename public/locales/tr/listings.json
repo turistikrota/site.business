@@ -29,6 +29,15 @@
         "confirm": "Devre Dışı Bırak"
       }
     },
+    "enable": {
+      "title": "İlanı Yayına Al",
+      "subtitle": "İlanınızı yayına almak istediğinize emin misiniz?",
+      "text": "İlanınızı yayına aldığınızda herkese açık olarak görüntülenecektir. İlanınızı yayına almadan önce emin olmalısınız.",
+      "label": "Onay Metni",
+      "confirm": "Evet, Yayına Almak İstiyorum",
+      "confirmation": "İlanı yayına alma işlemini tamamlamak için lütfen aşağıdaki kutucuğa '<strong>{{text}}</strong>' yazın.",
+      "button": "İlanı Yayına Al"
+    },
     "delete": {
       "title": "İlanı Sil",
       "subtitle": "İlanınızı silmek istediğinize emin misiniz?",
