@@ -2,9 +2,9 @@ import { ListingDetails, fetchMyListing } from '@/api/listing/listing.api'
 import { useQuery } from '@/hooks/query'
 import NotFoundView from '@/views/404'
 import ContentLoader from '@turistikrota/ui/loader'
-import ListingDeleteForm from './form/ListingDeleteForm'
-import ListingDisableForm from './form/ListingDisableForm'
-import ListingEnableForm from './form/ListingEnableForm'
+import ListingDeleteForm from './ListingDeleteForm'
+import ListingDisableForm from './ListingDisableForm'
+import ListingEnableForm from './ListingEnableForm'
 
 type Props = {
   uuid: string

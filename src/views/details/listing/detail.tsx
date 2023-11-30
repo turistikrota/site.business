@@ -1,8 +1,8 @@
 import { EmptyTranslation, ListingTranslation, fetchMyListing } from '@/api/listing/listing.api'
 import MetaWrapper from '@/components/MetaWrapper'
-import ListingDetailContent from '@/components/listing/ListingDetailContent'
 import { useQuery } from '@/hooks/query'
 import RoleGuardView from '@/layouts/RoleGuard'
+import ListingDetailContent from '@/partials/listing/ListingDetailContent'
 import { BusinessRoles, ListingRoles } from '@/static/role'
 import { getI18nTranslation } from '@/types/base'
 import NotFoundView from '@/views/404'
@@ -19,7 +19,7 @@ const ListingDetailView = () => {
     if (!data) return EmptyTranslation
     return getI18nTranslation<ListingTranslation>(data.meta, i18n.language)
   }, [data, i18n.language])
-  if (loading) return <ContentLoader />
+  if (loading) return <ContentLoader noMargin />
   if (notFound) return <NotFoundView />
   return (
     <RoleGuardView roles={[BusinessRoles.Super, ListingRoles.Super, ListingRoles.View]}>

@@ -1,5 +1,6 @@
 import { getCurrentServeLocale } from '@/utils/lang'
 import NotFoundView from '@/views/404'
+import ServerErrorView from '@/views/500'
 import { RouteObject, createBrowserRouter } from 'react-router-dom'
 
 const trRoutes: RouteObject[] = [
@@ -271,4 +272,9 @@ routes.push({
   element: <NotFoundView />,
 })
 
-export const router = createBrowserRouter(routes)
+export const router = createBrowserRouter(
+  routes.map((r) => ({
+    ...r,
+    errorElement: <ServerErrorView />,
+  })),
+)
