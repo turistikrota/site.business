@@ -31,11 +31,13 @@
     },
     "delete": {
       "title": "İlanı Sil",
+      "subtitle": "İlanınızı silmek istediğinize emin misiniz?",
       "text": "Bir ilanı sildiğinizde ilanın geri dönüşü zor olacaktır. İlanı silmeden önce emin olmalısınız.",
       "confirm": {
         "title": "İlanı Sil",
         "subtitle": "İlanı silmek istediğinize emin misiniz?"
       },
+      "label": "Onay Metni",
       "button": "İlanı Sil"
     }
   },

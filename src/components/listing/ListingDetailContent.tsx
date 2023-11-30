@@ -8,9 +8,10 @@ import ListingEnableForm from './form/ListingEnableForm'
 
 type Props = {
   uuid: string
+  title: string
 }
 
-const ListingDetailContent: React.FC<Props> = ({ uuid }) => {
+const ListingDetailContent: React.FC<Props> = ({ uuid, title }) => {
   const { data, notFound, loading, refetch } = useQuery<ListingDetails>(() => fetchMyListing(uuid))
   if (notFound) return <NotFoundView />
   if (loading) return <ContentLoader />
@@ -25,7 +26,7 @@ const ListingDetailContent: React.FC<Props> = ({ uuid }) => {
         <div className='rounded-md border dark:border-red-900'>
           {!data?.isActive && <ListingEnableForm onOk={onOk} uuid={uuid} />}
           {data?.isActive && <ListingDisableForm onOk={onOk} uuid={uuid} />}
-          {!data?.isDeleted && <ListingDeleteForm onOk={onOk} uuid={uuid} />}
+          {!data?.isDeleted && <ListingDeleteForm onOk={onOk} uuid={uuid} title={title} />}
         </div>
       </section>
     </>

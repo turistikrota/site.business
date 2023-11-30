@@ -94,6 +94,12 @@ export type ListingDetails = {
   updatedAt: string
 }
 
+export const EmptyTranslation: ListingTranslation = {
+  title: '',
+  description: '',
+  slug: '',
+}
+
 export const fetchMyListings = async (page: number = 1, limit: number = 10): Promise<ListResponse<ListingListItem>> => {
   const res = await httpClient.get(apiUrl(Services.Listing, `/business?page=${page}&limit=${limit}`)).catch(() => ({
     data: {

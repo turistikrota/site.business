@@ -10,10 +10,11 @@ import { useTranslation } from 'react-i18next'
 
 type Props = {
   uuid: string
+  title: string
   onOk: () => void
 }
 
-const ListingDeleteForm: React.FC<Props> = ({ uuid, onOk }) => {
+const ListingDeleteForm: React.FC<Props> = ({ uuid, title, onOk }) => {
   const { t } = useTranslation('listings')
   const toast = useToast()
   const [visible, setVisible] = useState<boolean>(false)
@@ -42,13 +43,14 @@ const ListingDeleteForm: React.FC<Props> = ({ uuid, onOk }) => {
   return (
     <>
       <ZoneErrorModal
-        inputLabel='saa'
+        inputLabel={t('detail.delete.label')}
         onCancel={() => {
           setVisible(false)
         }}
         onConfirm={handleDelete}
-        subtitle='subtitle'
-        text={t('detail.delete.text')}
+        subtitle={t('detail.delete.subtitle')}
+        warningText={t('detail.delete.text')}
+        text={title}
         title={t('detail.delete.title')}
         visible={visible}
         loading={isLoading}
