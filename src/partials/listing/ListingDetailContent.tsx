@@ -1,5 +1,7 @@
+import { Coordinates } from '@turistikrota/ui/types'
+import ListingDetailBaseSection from './ListingDetailBaseSection'
 import ListingDetailDangerZone from './ListingDetailDangerZone'
-import ListingDetailImagePreview from './ListingDetailImagePreview'
+import ListingDetailMapSection from './ListingDetailMapSection'
 
 type Props = {
   uuid: string
@@ -8,19 +10,26 @@ type Props = {
   isActive: boolean
   isDeleted: boolean
   images: string[]
+  coordinates: Coordinates
   onOk: () => void
 }
 
-const ListingDetailContent: React.FC<Props> = ({ uuid, title, description, isActive, isDeleted, images, onOk }) => {
+const ListingDetailContent: React.FC<Props> = ({
+  uuid,
+  title,
+  description,
+  isActive,
+  coordinates,
+  isDeleted,
+  images,
+  onOk,
+}) => {
   return (
-    <>
-      <ListingDetailImagePreview images={images} title={title} />
-      <div className='mb-4 flex flex-col'>
-        <h2 className='text-2xl'>{title}</h2>
-        <p className='text-gray-600 dark:text-gray-300'>{description}</p>
-      </div>
+    <div className='flex flex-col space-y-8'>
+      <ListingDetailBaseSection images={images} title={title} description={description} />
+      <ListingDetailMapSection coordinates={coordinates} />
       <ListingDetailDangerZone uuid={uuid} title={title} isActive={isActive} isDeleted={isDeleted} onOk={onOk} />
-    </>
+    </div>
   )
 }
 

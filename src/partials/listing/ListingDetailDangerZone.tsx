@@ -33,7 +33,7 @@ const ListingDetailDangerZone: React.FC<Props> = ({ isActive, isDeleted, uuid, t
   if (!isEnableActive && !isDisableActive && !isDeleteActive && !isRestoreActive) return <></>
   return (
     <section>
-      <h2 className='mb-2 text-xl font-semibold'>{t('detail.sections.danger')}</h2>
+      <h2 className='mb-3 text-xl font-semibold'>{t('detail.sections.danger')}</h2>
       <div className='rounded-md border dark:border-red-900'>
         {isEnableActive && <ListingEnableForm onOk={onOk} uuid={uuid} title={title} />}
         {isDisableActive && <ListingDisableForm onOk={onOk} uuid={uuid} title={title} />}

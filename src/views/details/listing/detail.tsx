@@ -45,6 +45,7 @@ const ListingDetailView = () => {
               description={translations.description}
               isActive={data?.isActive ?? false}
               isDeleted={data?.isDeleted ?? false}
+              coordinates={data?.location.coordinates ?? [0, 0]}
               images={images}
               onOk={() => refetch()}
             />

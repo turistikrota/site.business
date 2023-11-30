@@ -43,7 +43,8 @@
       "button": "İlanı Kurtar"
     },
     "sections": {
-      "danger": "Tehlikeli Bölge"
+      "danger": "Tehlikeli Bölge",
+      "map": "Harita"
     }
   },
   "create": {
