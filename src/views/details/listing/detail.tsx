@@ -1,4 +1,4 @@
-import { EmptyTranslation, ListingTranslation, fetchMyListing } from '@/api/listing/listing.api'
+import { EmptyTranslation, EmptyValidation, ListingTranslation, fetchMyListing } from '@/api/listing/listing.api'
 import MetaWrapper from '@/components/MetaWrapper'
 import { useQuery } from '@/hooks/query'
 import RoleGuardView from '@/layouts/RoleGuard'
@@ -48,6 +48,7 @@ const ListingDetailView = () => {
               coordinates={data?.location.coordinates ?? [0, 0]}
               images={images}
               prices={data?.prices ?? []}
+              validation={data?.validation ?? EmptyValidation}
               onOk={() => refetch()}
             />
           </section>

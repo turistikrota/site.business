@@ -57,7 +57,7 @@ export type ListingPrice = {
   price: number
 }
 
-type ListingValidation = {
+export type ListingValidation = {
   minAdult: number
   maxAdult: number
   minKid: number
@@ -94,10 +94,31 @@ export type ListingDetails = {
   updatedAt: string
 }
 
+export type ValidationKey = keyof ListingValidation
+export type ValidationValue<Key extends ValidationKey> = ListingValidation[Key]
+
 export const EmptyTranslation: ListingTranslation = {
   title: '',
   description: '',
   slug: '',
+}
+
+export const EmptyValidation: ListingValidation = {
+  minAdult: 0,
+  maxAdult: 0,
+  minKid: 0,
+  maxKid: 0,
+  minBaby: 0,
+  maxBaby: 0,
+  minDate: 0,
+  maxDate: 0,
+  onlyFamily: false,
+  noPet: false,
+  noSmoke: false,
+  noAlcohol: false,
+  noParty: false,
+  noUnmarried: false,
+  noGuest: false,
 }
 
 export const fetchMyListings = async (page: number = 1, limit: number = 10): Promise<ListResponse<ListingListItem>> => {

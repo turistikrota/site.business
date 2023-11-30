@@ -45,7 +45,16 @@
     "sections": {
       "danger": "Tehlikeli Bölge",
       "map": "Harita",
-      "priceCalendar": "Fiyat Takvimi"
+      "priceCalendar": "Fiyat Takvimi",
+      "rules": "Kurallar"
+    },
+    "rules": {
+      "yes": "Evet",
+      "no": "Hayır",
+      "date": "{{value}} gün",
+      "adult": "{{value}} kişi",
+      "kid": "{{value}} çocuk",
+      "baby": "{{value}} bebek"
     }
   },
   "create": {
