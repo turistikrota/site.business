@@ -17,12 +17,14 @@ type Props<T = any> = {
   availableCalc?: (date: Date, data: T[]) => boolean
 }
 
+type DetailRendererType<T> = React.FC<{
+  day: number
+  data: T[]
+}>
+
 type DayProps<T> = {
   day: number
-  DetailRender: React.FC<{
-    day: number
-    data: T[]
-  }>
+  DetailRender: DetailRendererType<T>
   variant?: Variant
   data: T[]
   isPrevMonth: boolean
@@ -206,7 +208,7 @@ function Calendar<T = any>({ data, DetailRender, onDayClick, variantCalc, availa
                 key={index}
                 day={day.value}
                 DetailRender={DetailRender}
-                data={data[calendar.makeDateStr(day.value, month, year)]}
+                data={month === day.month ? data[calendar.makeDateStr(day.value, month, year)] : []}
                 onClick={() => onDayDetailClick(day.value)}
                 isActive={!day.isNextMonth && !day.isPrevMonth && day.value === currentDate.getDate()}
                 isNextMonth={day.isNextMonth}
@@ -223,7 +225,7 @@ function Calendar<T = any>({ data, DetailRender, onDayClick, variantCalc, availa
                 onNextMonth={() => onNextMonth(day.value)}
                 onPrevMonth={() => onPrevMonth(day.value)}
                 variant={
-                  variantCalc && data[calendar.makeDateStr(day.value, month, year)]
+                  variantCalc && month === day.month && data[calendar.makeDateStr(day.value, month, year)]
                     ? variantCalc(data[calendar.makeDateStr(day.value, month, year)]) ?? 'default'
                     : 'default'
                 }
@@ -235,5 +237,15 @@ function Calendar<T = any>({ data, DetailRender, onDayClick, variantCalc, availa
     </div>
   )
 }
+
+export const PriceRenderer: DetailRendererType<number> = ({ data }) => (
+  <div className='flex h-full w-full flex-col items-center justify-center gap-1'>
+    {data.map((d, idx) => (
+      <div key={idx} className='text-lg text-gray-800 dark:text-gray-200'>
+        {Intl.NumberFormat('tr-TR').format(d)} ₺
+      </div>
+    ))}
+  </div>
+)
 
 export default Calendar

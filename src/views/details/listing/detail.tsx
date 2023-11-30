@@ -47,6 +47,7 @@ const ListingDetailView = () => {
               isDeleted={data?.isDeleted ?? false}
               coordinates={data?.location.coordinates ?? [0, 0]}
               images={images}
+              prices={data?.prices ?? []}
               onOk={() => refetch()}
             />
           </section>

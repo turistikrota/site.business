@@ -51,7 +51,7 @@ type ListingBusiness = {
   nickName: string
 }
 
-type ListingPrice = {
+export type ListingPrice = {
   startDate: string
   endDate: string
   price: number

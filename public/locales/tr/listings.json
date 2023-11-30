@@ -44,7 +44,8 @@
     },
     "sections": {
       "danger": "Tehlikeli Bölge",
-      "map": "Harita"
+      "map": "Harita",
+      "priceCalendar": "Fiyat Takvimi"
     }
   },
   "create": {

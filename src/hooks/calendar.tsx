@@ -6,10 +6,12 @@ type Day = {
   isNextMonth: boolean
   isToday: boolean
   value: number
+  month: number
 }
 
 type Week = {
   days: Day[]
+  month: number
 }
 
 type Weeks = Week[]
@@ -48,6 +50,7 @@ export const useCalendar = (date?: Date): Result => {
   for (let week = 0; week < weeksInMonth; week++) {
     weeks.push({
       days: [],
+      month,
     })
   }
   let day = 1
@@ -61,6 +64,7 @@ export const useCalendar = (date?: Date): Result => {
           isNextMonth: false,
           isToday: false,
           value: prevMonth + dayOfWeek,
+          month: month - 1,
         })
       } else if (day > daysInMonth) {
         nextMonth++
@@ -69,6 +73,7 @@ export const useCalendar = (date?: Date): Result => {
           isNextMonth: true,
           isToday: false,
           value: nextMonth,
+          month: month + 1,
         })
       } else {
         weeks[week].days.push({
@@ -76,6 +81,7 @@ export const useCalendar = (date?: Date): Result => {
           isNextMonth: false,
           isToday: day === now.getDate(),
           value: day,
+          month,
         })
         day++
       }
