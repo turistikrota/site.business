@@ -163,7 +163,16 @@
         "option 1": "Option 1",
         "option 2": "Option 2",
         "rich": "Zengin",
-        "electro": "Elektronik"
+        "electro": "Elektronik",
+        "options": {
+          "exists": "Var",
+          "not-exists": "Yok"
+        },
+        "heating": {
+          "air-conditioning": "Klima ile",
+          "stove": "Soba ile",
+          "gas": "Doğalgaz ile"
+        }
       }
     },
     "location": {

@@ -135,7 +135,16 @@
         "option 1": "Option 1",
         "option 2": "Option 2",
         "rich": "Rich",
-        "electro": "Electronic"
+        "electro": "Electronic",
+        "options": {
+          "exists": "Exists",
+          "not-exists": "None"
+        },
+        "heating": {
+          "air-conditioning": "With air conditioning",
+          "stove": "With stove",
+          "gas": "With natural gas"
+        }
       }
     },
     "location": {
