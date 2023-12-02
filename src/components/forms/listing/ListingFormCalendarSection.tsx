@@ -1,9 +1,9 @@
-import Calendar, { CalendarData } from '@/components/calendar/Calendar'
+import Calendar, { PriceRenderer } from '@/components/calendar/Calendar'
+import { useListingCalendar } from '@/hooks/calendar.listing'
 import { ListingCreateFormValues, Price } from '@/types/listing'
 import Alert from '@turistikrota/ui/alert'
 import FormSection from '@turistikrota/ui/form/section'
 import { FormikErrors } from 'formik'
-import { useMemo } from 'react'
 import { useTranslation } from 'react-i18next'
 import ListingFormPricePreviewList from './ListingFormPricePreviewList'
 import ListingFormPriceRangeSection from './ListingFormPriceRangeSection'
@@ -16,20 +16,7 @@ type Props = {
 
 const ListingFormCalendarSection: React.FC<Props> = ({ errors, values, setFieldValue }) => {
   const { t } = useTranslation('listings')
-  const priceCalendarData = useMemo<CalendarData<number>>(() => {
-    const data: CalendarData<number> = {}
-    values.prices.forEach((price) => {
-      const startDate = new Date(price.startDate)
-      const endDate = new Date(price.endDate)
-      while (startDate <= endDate) {
-        const date = `${startDate.getDate()}.${startDate.getMonth() + 1}.${startDate.getFullYear()}`
-        if (!data[date]) data[date] = []
-        data[date].push(price.price)
-        startDate.setDate(startDate.getDate() + 1)
-      }
-    })
-    return data
-  }, [values])
+  const priceCalendarData = useListingCalendar(values.prices)
 
   const onAdd = (from: string, to: string, price: number) => {
     setFieldValue('prices', [...values.prices, { startDate: from, endDate: to, price }])
@@ -56,15 +43,7 @@ const ListingFormCalendarSection: React.FC<Props> = ({ errors, values, setFieldV
         />
         <Calendar<number>
           data={priceCalendarData}
-          DetailRender={({ data }) => (
-            <div className='flex h-full w-full flex-col items-center justify-center gap-1'>
-              {data.map((d, idx) => (
-                <div key={idx} className='text-lg text-gray-800 dark:text-gray-200'>
-                  {Intl.NumberFormat('tr-TR').format(d)} ₺
-                </div>
-              ))}
-            </div>
-          )}
+          DetailRender={PriceRenderer}
           availableCalc={(date) => {
             const now = new Date()
             now.setHours(0, 0, 0, 0)

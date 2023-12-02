@@ -1,6 +1,10 @@
 import React from 'react'
 
-type KeyValueType = React.FC<React.PropsWithChildren> & {
+type BaseProps = {
+  className?: string
+}
+
+type KeyValueType = React.FC<React.PropsWithChildren<BaseProps>> & {
   Item: React.FC<Props>
 }
 
@@ -14,17 +18,19 @@ const Item: React.FC<Props> = ({ label, value, valueClassName }) => {
   return (
     <>
       <div className='col-span-1'>
-        <div className='text-sm text-gray-400'>{label}</div>
+        <div className='text-sm text-gray-600 dark:text-gray-400'>{label}</div>
       </div>
       <div className='col-span-2 flex justify-end'>
-        <div className={`text-sm font-semibold ${valueClassName ? valueClassName : 'text-gray-400'}`}>{value}</div>
+        <div className={`text-sm font-bold ${valueClassName ? valueClassName : 'text-gray-600 dark:text-gray-400'}`}>
+          {value}
+        </div>
       </div>
     </>
   )
 }
 
-const KeyValue: KeyValueType = ({ children }) => {
-  return <div className='grid grid-cols-3 gap-2'>{children}</div>
+const KeyValue: KeyValueType = ({ children, className }) => {
+  return <div className={`grid grid-cols-3 gap-2 ${className ? className : ''}`}>{children}</div>
 }
 
 KeyValue.Item = Item

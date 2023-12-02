@@ -45,7 +45,7 @@ const ZoneModal: React.FC<Props> = ({
   const [inputText, setInputText] = useState('')
   const matched = useMemo(() => inputText === text, [inputText, text])
   return (
-    <Modal open={visible} onClose={onCancel} heightClass=''>
+    <Modal open={visible} onClose={onCancel} heightClass='' widthClass='max-w-sm'>
       <Modal.Head>
         <FormSection.Head.Title>{title}</FormSection.Head.Title>
         <FormSection.Head.Subtitle>{subtitle}</FormSection.Head.Subtitle>
