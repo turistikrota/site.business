@@ -11,10 +11,11 @@ import VerificationRejected from '@/views/state/verification-rejected'
 import VerificationWaiting from '@/views/state/verification-waiting'
 import Button from '@turistikrota/ui/button'
 import ErrorPage from '@turistikrota/ui/pages/error'
-import { useEffect, useState } from 'react'
+import {useEffect, useMemo, useState} from 'react'
 import { useTranslation } from 'react-i18next'
 import { Outlet, useNavigate } from 'react-router-dom'
 import { Spinner } from 'sspin'
+import {useAuth} from "@/hooks/auth.tsx";
 
 type ErrorView = {
   title: string
@@ -31,6 +32,8 @@ function BusinessDetailLayout() {
   const [errorView, setErrorView] = useState<ErrorView | undefined>(undefined)
   const [detail, setDetail] = useState<BusinessDetail | null>(null)
   const navigate = useNavigate()
+  const auth = useAuth()
+  const isAnyLoading = useMemo(() => isLoading || auth.loading, [isLoading, auth.loading])
 
   useEffect(() => {
     getSelected()
@@ -64,7 +67,15 @@ function BusinessDetailLayout() {
                 code: err.response.status,
                 button: t('errors.accountNotFound.button'),
                 callback: () => {
-                  refreshAuth()
+                  auth.refresh((err) => {
+                    if (err) {
+                      if (checkUnauthorized(err, i18n.language)) return
+                      setIsServerError(true)
+                      return
+                    }
+                    getSelected()
+                    setIsServerError(false)
+                  })
                 },
               })
               return
@@ -79,25 +90,6 @@ function BusinessDetailLayout() {
           }
         }
         setIsServerError(true)
-      })
-  }
-
-  const refreshAuth = () => {
-    setIsLoading(true)
-    httpClient
-      .put(apiUrl(Services.Auth, `/refresh`))
-      .then((res) => {
-        if (res.status === 200) {
-          setIsServerError(false)
-          getSelected()
-        }
-      })
-      .catch((err) => {
-        if (checkUnauthorized(err, i18n.language)) return
-        setIsServerError(true)
-      })
-      .finally(() => {
-        setIsLoading(false)
       })
   }
 
@@ -119,7 +111,7 @@ function BusinessDetailLayout() {
       />
     )
   if (isServerError) return <ServerErrorView />
-  if (isLoading)
+  if (isAnyLoading)
     return (
       <div className='flex h-full w-full items-center justify-center ease-out'>
         <Spinner />

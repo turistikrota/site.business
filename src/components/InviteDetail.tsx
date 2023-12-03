@@ -12,8 +12,7 @@ import React, { useEffect, useMemo, useState } from 'react'
 import { Trans, useTranslation } from 'react-i18next'
 import { useNavigate, useParams } from 'react-router-dom'
 import Spin from 'sspin'
-
-type Callback = () => void
+import {useAuth} from "@/hooks/auth.tsx";
 
 const InviteDetail: React.FC = () => {
   const [loading, setLoading] = useState<boolean>(true)
@@ -22,8 +21,10 @@ const InviteDetail: React.FC = () => {
   const toast = useToast()
   const params = useParams()
   const navigate = useNavigate()
+  const auth = useAuth()
   const { t, i18n } = useTranslation('invite-use')
   const dayjs = useDayJS(i18n.language)
+  const isAnyLoading = useMemo(() => loading || auth.loading, [loading, auth.loading])
 
   const isTimeout = useMemo<boolean>(() => {
     if (!invite) return false
@@ -43,26 +44,6 @@ const InviteDetail: React.FC = () => {
     fetchInvite()
   }, [])
 
-  const refreshAuth = (cb: Callback | undefined = undefined) => {
-    setLoading(true)
-    httpClient
-      .put(apiUrl(Services.Auth, `/refresh`))
-      .then((res) => {
-        if (res.status === 200) {
-          if (typeof cb === 'function') cb()
-        }
-      })
-      .catch((err: any) => {
-        parseApiError({
-          error: err?.response?.data,
-          toast,
-        })
-      })
-      .finally(() => {
-        setLoading(false)
-      })
-  }
-
   const join = () => {
     setLoading(true)
     httpClient
@@ -70,7 +51,7 @@ const InviteDetail: React.FC = () => {
       .then((res) => {
         if (res.status === 200) {
           toast.success(t('success'))
-          refreshAuth(() => {
+          auth.refresh(() => {
             navigate(getStaticRoute(i18n.language).business.details.default)
           })
         }
@@ -100,31 +81,31 @@ const InviteDetail: React.FC = () => {
       })
   }
   return (
-    <Spin loading={loading}>
+    <Spin loading={isAnyLoading}>
       <div className='space-y-4 p-6 ease-in sm:p-8 md:space-y-6'>
         <h1 className='text-xl font-bold leading-tight tracking-tight text-gray-900 dark:text-white md:text-2xl'>
           {t('title')}
         </h1>
         <div>
-          {!loading && !invite && (
+          {!isAnyLoading && !invite && (
             <Alert type='error' showIcon>
               <Alert.Title>{t('notfound.title')}</Alert.Title>
               <Alert.Description>{t('notfound.description')}</Alert.Description>
             </Alert>
           )}
-          {!loading && invite && invite.isUsed && (
+          {!isAnyLoading && invite && invite.isUsed && (
             <Alert type='error' showIcon>
               <Alert.Title>{t('used.title')}</Alert.Title>
               <Alert.Description>{t('used.description')}</Alert.Description>
             </Alert>
           )}
-          {!loading && invite && invite.isDeleted && (
+          {!isAnyLoading && invite && invite.isDeleted && (
             <Alert type='error' showIcon>
               <Alert.Title>{t('deleted.title')}</Alert.Title>
               <Alert.Description>{t('deleted.description')}</Alert.Description>
             </Alert>
           )}
-          {!loading && invite && isTimeout && (
+          {!isAnyLoading && invite && isTimeout && (
             <Alert type='error' showIcon>
               <Alert.Title>{t('timeout.title')}</Alert.Title>
               <Alert.Description>{t('timeout.description')}</Alert.Description>
@@ -174,7 +155,7 @@ const InviteDetail: React.FC = () => {
                   size='lg'
                   variant='primary'
                   onClick={join}
-                  disabled={loading || !available}
+                  disabled={isAnyLoading || !available}
                 >
                   {t('join')}
                 </Button>
