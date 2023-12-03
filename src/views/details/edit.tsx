@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next'
 import {useCurrentBusiness} from "@/contexts/currentBusiness.tsx";
 import RoleGuardView from "@/layouts/RoleGuard.tsx";
 import {BusinessRoles, BusinessUploadRoles} from "@/static/role.ts";
-import BusinessEditDangerZone from "@/partials/business/BusinessEditDangerZone.tsx";
+import BusinessEditDangerZone from "@/partials/business/edit/BusinessEditDangerZone.tsx";
 import {useQuery} from "@/hooks/query.tsx";
 import {fetchMyBusiness} from "@/api/business/business.api.ts";
 import ContentLoader from "@turistikrota/ui/loader";

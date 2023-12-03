@@ -2,8 +2,8 @@ import {FC, useMemo} from "react";
 import {useTranslation} from "react-i18next";
 import {useBodyguard} from "@/hooks/permission.tsx";
 import {BusinessRoles} from "@/static/role.ts";
-import BusinessDisableForm from "@/partials/business/BusinessDisableForm.tsx";
-import BusinessEnableForm from "@/partials/business/BusinessEnableForm.tsx";
+import BusinessDisableForm from "@/partials/business/edit/BusinessDisableForm.tsx";
+import BusinessEnableForm from "@/partials/business/edit/BusinessEnableForm.tsx";
 
 type Props = {
     isEnabled: boolean
