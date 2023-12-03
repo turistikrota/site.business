@@ -22,7 +22,7 @@ const BusinessDisableForm : FC<Props> = ({ nickName, onOk}) => {
     const handleDisable = () => {
         setIsLoading(true)
         httpClient
-            .patch(apiUrl(Services.Business, `/${nickName}/disable`), null)
+            .patch(apiUrl(Services.Business, `/~${nickName}/disable`), null)
             .then((res) => {
                 if (res.status === 200) return onOk()
             })
@@ -42,7 +42,7 @@ const BusinessDisableForm : FC<Props> = ({ nickName, onOk}) => {
 
     return <LineForm className='bg-second p-4 transition-colors duration-200 first:rounded-t-md last:rounded-b-md hover:bg-third'>
         <ZoneErrorModal
-            inputLabel={t('detail.disable.label')}
+            inputLabel={t('activation.disable.label')}
             onCancel={() => {
                 setVisible(false)
             }}

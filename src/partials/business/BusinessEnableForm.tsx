@@ -22,7 +22,7 @@ const BusinessEnableForm : FC<Props> = ({ nickName, onOk}) => {
     const handleEnable = () => {
         setIsLoading(true)
         httpClient
-            .patch(apiUrl(Services.Business, `/${nickName}/enable`), null)
+            .patch(apiUrl(Services.Business, `/~${nickName}/enable`), null)
             .then((res) => {
                 if (res.status === 200) return onOk()
             })
@@ -42,7 +42,7 @@ const BusinessEnableForm : FC<Props> = ({ nickName, onOk}) => {
 
     return <LineForm className='bg-second p-4 transition-colors duration-200 first:rounded-t-md last:rounded-b-md hover:bg-third'>
         <ZoneErrorModal
-            inputLabel={t('detail.enable.label')}
+            inputLabel={t('activation.enable.label')}
             onCancel={() => {
                 setVisible(false)
             }}
