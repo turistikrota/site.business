@@ -43,5 +43,11 @@
       "limited_partnership_share_capital": "Limited Company with Capital Divided into Shares",
       "other": "Other"
     }
+  },
+  "warns": {
+    "disabled": {
+      "title": "Business is Disabled",
+      "description": "Your business is disabled. Updates you make for this business may cause errors. Please activate your business to complete all transactions successfully."
+    }
   }
 }

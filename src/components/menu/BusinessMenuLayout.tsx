@@ -2,6 +2,9 @@ import { useIsDesktop } from '@turistikrota/ui/hooks/dom'
 import React, { useState } from 'react'
 import BusinessDetailHeader, { BusinessDetailTitle, type Pages } from './BusinessDetailHeader'
 import BusinessMenu from './BusinessMenu'
+import {useCurrentBusiness} from "@/contexts/currentBusiness.tsx";
+import Alert from "@turistikrota/ui/alert";
+import {useTranslation} from "react-i18next";
 
 type Props = {
   open?: boolean
@@ -21,7 +24,9 @@ export const BusinessDetailContext = React.createContext<Context>({
 })
 
 export default function BusinessMenuLayout({ open = false, page, children }: React.PropsWithChildren<Props>) {
+  const { t } = useTranslation('general')
   const [menuOpen, setMenuOpen] = useState(open)
+  const [current] = useCurrentBusiness()
   const isDesktop = useIsDesktop()
   return (
     <BusinessDetailContext.Provider
@@ -51,6 +56,12 @@ export default function BusinessMenuLayout({ open = false, page, children }: Rea
             <div className={`pl-4 pt-4 lg:block ${menuOpen ? 'block' : 'hidden'}`}>
               <BusinessDetailTitle page={page} />
             </div>
+            {!current.business.isEnabled && <section className={"container relative mx-auto p-4"}>
+              <Alert type={"warning"}>
+                <Alert.Title>{t('warns.disabled.title')}</Alert.Title>
+                <Alert.Description>{t('warns.disabled.description')}</Alert.Description>
+              </Alert>
+            </section>}
             {children}
           </div>
         </div>
