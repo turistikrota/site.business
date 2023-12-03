@@ -14,7 +14,7 @@ function BusinessEditView() {
   const { t } = useTranslation('edit')
     const [current] = useCurrentBusiness()
 
-    const { data, loading, notFound, refetch } = useQuery(() => fetchMyBusiness(current.business.nickName))
+    const { data, loading, notFound } = useQuery(() => fetchMyBusiness(current.business.nickName))
 
     if (loading) return <ContentLoader noMargin />
     if (!data || notFound) return <NotFoundView />
@@ -23,7 +23,7 @@ function BusinessEditView() {
         <MetaWrapper title={t('meta.title')} description={t('meta.description')} keywords={t('meta.keywords')}>
             <section className='container relative mx-auto p-4 flex flex-col space-y-8'>
                 <BusinessDetailInformationSection business={data} />
-                <BusinessEditDangerZone onOk={() => refetch()} nickName={current.business.nickName} isEnabled={data.isEnabled} />
+                <BusinessEditDangerZone onOk={() => window.location.reload()} nickName={current.business.nickName} isEnabled={data.isEnabled} />
             </section>
         </MetaWrapper>
   )
