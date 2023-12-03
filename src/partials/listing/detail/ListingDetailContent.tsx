@@ -1,10 +1,10 @@
-import { ListingPrice, ListingValidation } from '@/api/listing/listing.api'
+import { ListingPrice, ListingValidation } from '@/api/listing/listing.api.ts'
 import { Coordinates } from '@turistikrota/ui/types'
-import ListingDetailBaseSection from './ListingDetailBaseSection'
-import ListingDetailCalendarSection from './ListingDetailCalendarSection'
-import ListingDetailDangerZone from './ListingDetailDangerZone'
-import ListingDetailMapSection from './ListingDetailMapSection'
-import ListingDetailRuleSection from './ListingDetailRuleSection'
+import ListingDetailBaseSection from './ListingDetailBaseSection.tsx'
+import ListingDetailCalendarSection from './ListingDetailCalendarSection.tsx'
+import ListingDetailDangerZone from './ListingDetailDangerZone.tsx'
+import ListingDetailMapSection from './ListingDetailMapSection.tsx'
+import ListingDetailRuleSection from './ListingDetailRuleSection.tsx'
 
 type Props = {
   uuid: string

@@ -1,6 +1,6 @@
-import { ListingPrice } from '@/api/listing/listing.api'
-import Calendar, { PriceRenderer } from '@/components/calendar/Calendar'
-import { useListingCalendar } from '@/hooks/calendar.listing'
+import { ListingPrice } from '@/api/listing/listing.api.ts'
+import Calendar, { PriceRenderer } from '@/components/calendar/Calendar.tsx'
+import { useListingCalendar } from '@/hooks/calendar.listing.tsx'
 import { useTranslation } from 'react-i18next'
 
 type Props = {

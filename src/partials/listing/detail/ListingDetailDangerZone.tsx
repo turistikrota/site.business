@@ -1,11 +1,11 @@
-import { useBodyguard } from '@/hooks/permission'
-import { BusinessRoles, ListingRoles } from '@/static/role'
+import { useBodyguard } from '@/hooks/permission.tsx'
+import { BusinessRoles, ListingRoles } from '@/static/role.ts'
 import { useMemo } from 'react'
 import { useTranslation } from 'react-i18next'
-import ListingDeleteForm from './ListingDeleteForm'
-import ListingDisableForm from './ListingDisableForm'
-import ListingEnableForm from './ListingEnableForm'
-import ListingRestoreForm from './ListingRecoverForm'
+import ListingDeleteForm from './ListingDeleteForm.tsx'
+import ListingDisableForm from './ListingDisableForm.tsx'
+import ListingEnableForm from './ListingEnableForm.tsx'
+import ListingRestoreForm from './ListingRecoverForm.tsx'
 
 type Props = {
   isActive: boolean

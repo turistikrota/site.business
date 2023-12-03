@@ -1,5 +1,5 @@
-import { ListingValidation, ValidationKey } from '@/api/listing/listing.api'
-import KeyValue from '@/components/KeyValue'
+import { ListingValidation, ValidationKey } from '@/api/listing/listing.api.ts'
+import KeyValue from '@/components/KeyValue.tsx'
 import Card from '@turistikrota/ui/cards/default'
 import React, { useMemo } from 'react'
 import { useTranslation } from 'react-i18next'

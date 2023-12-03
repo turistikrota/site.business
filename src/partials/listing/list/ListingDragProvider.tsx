@@ -1,11 +1,11 @@
-import { ListingListItem, reorderListing } from '@/api/listing/listing.api'
-import { useGuard } from '@/hooks/permission'
-import { BusinessRoles, ListingRoles } from '@/static/role'
+import { ListingListItem, reorderListing } from '@/api/listing/listing.api.ts'
+import { useGuard } from '@/hooks/permission.tsx'
+import { BusinessRoles, ListingRoles } from '@/static/role.ts'
 import Alert from '@turistikrota/ui/alert'
 import React from 'react'
 import { useTranslation } from 'react-i18next'
 import DraggableContainer, { move } from 's-dnm'
-import { Props as ListingListCardProps } from './ListingListCard'
+import { Props as ListingListCardProps } from './ListingListCard.tsx'
 
 type Props = {
   list: ListingListItem[]

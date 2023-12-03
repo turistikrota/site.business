@@ -1,6 +1,6 @@
-import ZoneWarningModal from '@/components/modal/ZoneWarningModal'
-import { Services, apiUrl } from '@/config/services'
-import { httpClient } from '@/http/client'
+import ZoneErrorModal from '@/components/modal/ZoneErrorModal.tsx'
+import { Services, apiUrl } from '@/config/services.ts'
+import { httpClient } from '@/http/client.tsx'
 import Button from '@turistikrota/ui/button'
 import LineForm from '@turistikrota/ui/form/line'
 import { useToast } from '@turistikrota/ui/toast'
@@ -14,16 +14,16 @@ type Props = {
   onOk: () => void
 }
 
-const ListingDisableForm: React.FC<Props> = ({ uuid, title, onOk }) => {
+const ListingRestoreForm: React.FC<Props> = ({ uuid, title, onOk }) => {
   const { t } = useTranslation('listings')
   const toast = useToast()
   const [visible, setVisible] = useState<boolean>(false)
   const [isLoading, setIsLoading] = useState<boolean>(false)
 
-  const handleDisable = () => {
+  const handleRestore = () => {
     setIsLoading(true)
     httpClient
-      .patch(apiUrl(Services.Listing, `/${uuid}/disable`), null)
+      .patch(apiUrl(Services.Listing, `/${uuid}/restore`))
       .then((res) => {
         if (res.status === 200) return onOk()
       })
@@ -40,41 +40,37 @@ const ListingDisableForm: React.FC<Props> = ({ uuid, title, onOk }) => {
         setIsLoading(false)
       })
   }
-
   return (
     <LineForm className='bg-second p-4 transition-colors duration-200 first:rounded-t-md last:rounded-b-md hover:bg-third'>
-      <ZoneWarningModal
-        inputLabel={t('detail.enable.label')}
+      <ZoneErrorModal
+        inputLabel={t('detail.restore.label')}
         onCancel={() => {
           setVisible(false)
         }}
-        onConfirm={handleDisable}
-        subtitle={t('detail.disable.subtitle')}
-        warningText={t('detail.disable.text')}
-        confirmText={t('detail.disable.confirm')}
-        confirmationText={t('detail.disable.confirmation')}
+        onConfirm={handleRestore}
+        subtitle={t('detail.restore.subtitle')}
+        warningText={t('detail.restore.text')}
         text={title}
-        title={t('detail.disable.title')}
-        buttonText={t('detail.disable.button')}
+        title={t('detail.restore.title')}
         visible={visible}
         loading={isLoading}
       />
       <LineForm.Left>
-        <LineForm.Left.Title>{t('detail.disable.title')}</LineForm.Left.Title>
-        <LineForm.Left.Description>{t('detail.disable.text')}</LineForm.Left.Description>
+        <LineForm.Left.Title>{t('detail.restore.title')}</LineForm.Left.Title>
+        <LineForm.Left.Description>{t('detail.restore.text')}</LineForm.Left.Description>
       </LineForm.Left>
       <LineForm.Right>
         <Button
-          variant='warning'
+          variant='error'
           onClick={() => {
             setVisible(true)
           }}
         >
-          {t('detail.disable.button')}
+          {t('detail.restore.button')}
         </Button>
       </LineForm.Right>
     </LineForm>
   )
 }
 
-export default ListingDisableForm
+export default ListingRestoreForm
