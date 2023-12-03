@@ -4,5 +4,44 @@
     "confirm": "Yes, I want to delete",
     "delete": "Delete",
     "confirmation": "Please type '<strong>{{text}}</strong>' in the box below to complete the deletion process."
+  },
+  "key-value": {
+    "nickName": "Unique Nickname",
+    "realName": "Real Name",
+    "businessType": "Business Type",
+    "firstName": "Business Owner's Name",
+    "lastName": "Business Owner's Surname",
+    "province": "Province",
+    "district": "District",
+    "address": "Address",
+    "birthDate": "Business Owner's Date of Birth",
+    "corporationType": "Company Type",
+    "isActivated": "Activated?",
+    "yes": "Yes",
+    "no": "No",
+    "updatedAt": "Updated Date",
+    "createdAt": "Creation Date",
+    "notVerified": "Not Verified",
+    "notProvided": "Not Provided",
+    "verifiedAt": "Verification Date",
+    "businessTypes": {
+      "individual": "Individual",
+      "corporation": "Corporate"
+    },
+    "corporationTypes": {
+      "anonymous": "Joint Stock Company",
+      "soleProprietorship": "Sole Proprietorship",
+      "sole_proprietorship": "Sole Proprietorship",
+      "limited": "Limited Company",
+      "collective": "Collective Company",
+      "cooperative": "Cooperative",
+      "ordinaryPartnership": "Ordinary Partnership",
+      "ordinary_partnership": "Ordinary Partnership",
+      "ordinaryLimitedPartnership": "Ordinary Limited Partnership",
+      "ordinary_limited_partnership": "Ordinary Limited Partnership",
+      "limitedPartnershipShareCapital": "Limited Company with Capital Divided into Shares",
+      "limited_partnership_share_capital": "Limited Company with Capital Divided into Shares",
+      "other": "Other"
+    }
   }
 }

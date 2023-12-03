@@ -5,7 +5,8 @@
     "keywords": "Profili Düzenle, Turistik Rota, Tatil Planlama, Tur Rezervasyonu"
   },
   "sections": {
-    "danger": "Tehlikeli Bölge"
+    "danger": "Tehlikeli Bölge",
+    "info": "İşletme Bilgileri"
   },
   "activation": {
     "enable": {

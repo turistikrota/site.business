@@ -8,6 +8,7 @@ import {useQuery} from "@/hooks/query.tsx";
 import {fetchMyBusiness} from "@/api/business/business.api.ts";
 import ContentLoader from "@turistikrota/ui/loader";
 import NotFoundView from "@/views/404.tsx";
+import BusinessDetailInformationSection from "@/partials/business/detail/BusinessDetailInformationSection.tsx";
 
 function BusinessEditView() {
   const { t } = useTranslation('edit')
@@ -21,6 +22,7 @@ function BusinessEditView() {
   return (
         <MetaWrapper title={t('meta.title')} description={t('meta.description')} keywords={t('meta.keywords')}>
             <section className='container relative mx-auto p-4 flex flex-col space-y-8'>
+                <BusinessDetailInformationSection business={data} />
                 <BusinessEditDangerZone onOk={() => refetch()} nickName={current.business.nickName} isEnabled={data.isEnabled} />
             </section>
         </MetaWrapper>

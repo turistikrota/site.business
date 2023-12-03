@@ -4,5 +4,44 @@
     "confirm": "Evet, silmek istiyorum",
     "delete": "Sil",
     "confirmation": "Silme işlemini tamamlamak için lütfen aşağıdaki kutucuğa '<strong>{{text}}</strong>' yazın."
+  },
+  "key-value": {
+    "nickName": "Benzersiz Takma Ad",
+    "realName": "Gerçek İsim",
+    "businessType": "İşletme Türü",
+    "firstName": "İşletme Sahibinin Adı",
+    "lastName": "İşletme Sahibinin Soyadı",
+    "province": "İl",
+    "district": "İlçe",
+    "address": "Adres",
+    "birthDate": "İşletme Sahibinin Doğum Tarihi",
+    "corporationType": "Şirket Türü",
+    "isActivated": "Aktif mi?",
+    "notVerified": "Doğrulanmadı",
+    "notProvided": "Veri Yok",
+    "yes": "Evet",
+    "no": "Hayır",
+    "updatedAt": "Güncelleme Tarihi",
+    "createdAt": "Oluşturma Tarihi",
+    "verifiedAt": "Doğrulama Tarihi",
+    "businessTypes": {
+      "individual": "Bireysel",
+        "corporation": "Kurumsal"
+    },
+    "corporationTypes": {
+      "anonymous": "Anonim Şirket",
+      "soleProprietorship": "Şahıs Şirketi",
+      "sole_proprietorship": "Şahıs Şirketi",
+      "limited": "Limited Şirket",
+      "collective": "Kollektif Şirket",
+      "cooperative": "Kooperatif",
+      "ordinaryPartnership": "Adi Ortaklık",
+      "ordinary_partnership": "Adi Ortaklık",
+      "ordinaryLimitedPartnership": "Adi Komandit Ortaklık",
+      "ordinary_limited_partnership": "Adi Komandit Ortaklık",
+      "limitedPartnershipShareCapital": "Sermayesi Paylara Bölünmüş Komandit Şirket",
+      "limited_partnership_share_capital": "Sermayesi Paylara Bölünmüş Komandit Şirket",
+      "other": "Diğer"
+    }
   }
 }
