@@ -47,7 +47,8 @@
   "warns": {
     "disabled": {
       "title": "İşletme Devre Dışı Durumda",
-      "description": "İşletmeniz devre dışı durumda. Bu işletme için yapacağınız güncellemeler hata verebilir. Lütfen tüm işlemleri başarıyla yapabilmek için işletmenizi aktif hale getirin."
+      "description": "İşletmeniz devre dışı durumda. Bu işletme için yapacağınız güncellemeler hata verebilir. Lütfen tüm işlemleri başarıyla yapabilmek için işletmenizi aktif hale getirin.",
+      "link": "İşletmeyi Düzenle"
     }
   }
 }
