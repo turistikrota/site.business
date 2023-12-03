@@ -50,5 +50,16 @@
       "description": "İşletmeniz devre dışı durumda. Bu işletme için yapacağınız güncellemeler hata verebilir. Lütfen tüm işlemleri başarıyla yapabilmek için işletmenizi aktif hale getirin.",
       "link": "İşletmeyi Düzenle"
     }
+  },
+  "category-features": {
+    "options": {
+      "exists": "Var",
+      "not-exists": "Yok"
+    },
+    "heating": {
+      "air-conditioning": "Klima ile",
+      "stove": "Soba ile",
+      "gas": "Doğalgaz ile"
+    }
   }
 }

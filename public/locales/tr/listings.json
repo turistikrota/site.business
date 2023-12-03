@@ -46,7 +46,8 @@
       "danger": "Tehlikeli Bölge",
       "map": "Harita",
       "priceCalendar": "Fiyat Takvimi",
-      "rules": "Kurallar"
+      "rules": "Kurallar",
+      "category": "Kategori"
     },
     "rules": {
       "yes": "Evet",

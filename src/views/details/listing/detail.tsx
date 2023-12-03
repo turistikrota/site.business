@@ -48,6 +48,8 @@ const ListingDetailView = () => {
               coordinates={data?.location.coordinates ?? [0, 0]}
               images={images}
               prices={data?.prices ?? []}
+              features={data?.features ?? []}
+              categoryUUIDs={data?.categoryUUIDs ?? []}
               validation={data?.validation ?? EmptyValidation}
               onOk={() => refetch()}
             />
