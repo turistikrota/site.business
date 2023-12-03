@@ -3,5 +3,29 @@
     "title": "Profili Düzenle",
     "description": "Turist güzergahı profilinizi düzenleyin, avatarınızı, işletme adınızı ve hesap ayarlarınızı değiştirin.",
     "keywords": "Profili Düzenle, Turistik Rota, Tatil Planlama, Tur Rezervasyonu"
+  },
+  "sections": {
+    "danger": "Tehlikeli Bölge",
+    "info": "İşletme Bilgileri"
+  },
+  "activation": {
+    "enable": {
+      "title": "İşletmeyi Aktif Et",
+      "subtitle": "İşletmenizi aktif etmek istediğinizden emin misiniz?",
+      "text": "İşletmenizi aktif ettiğinizde herkes tarafından görülebilir olacaktır. Aktif etmeden önce emin olmalısınız.",
+      "button": "Aktif Et",
+      "label": "Onay Metni",
+      "confirm": "Evet, Aktif Et",
+      "confirmation": "İşletmenizi aktif edebilmek için lütfen aşağıdaki kutucuğa '<strong>{{text}}</strong>' yazınız."
+    },
+    "disable": {
+        "title": "İşletmeyi Pasif Et",
+        "subtitle": "İşletmenizi pasif etmek istediğinizden emin misiniz?",
+        "text": "İşletmenizi pasif ettiğinizde herkes tarafından görülemez olacaktır. Pasif etmeden önce emin olmalısınız.",
+        "button": "Pasif Et",
+        "label": "Onay Metni",
+        "confirm": "Evet, Pasif Et",
+        "confirmation": "İşletmenizi pasif edebilmek için lütfen aşağıdaki kutucuğa '<strong>{{text}}</strong>' yazınız."
+    }
   }
 }

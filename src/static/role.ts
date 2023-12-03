@@ -36,3 +36,8 @@ export enum BusinessLogRoles {
   List = 'business_log.list',
   View = 'business_log.view',
 }
+
+export enum BusinessUploadRoles {
+  Avatar = 'business.upload.avatar',
+  Cover = 'business.upload.cover',
+}
