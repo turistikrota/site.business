@@ -1,5 +1,5 @@
-import MapDefaultConfig from '@/components/map/MapDefaultConfig'
-import MapDynamic from '@/components/map/MapDynamic'
+import MapDefaultConfig from '@/components/map/MapDefaultConfig.tsx'
+import MapDynamic from '@/components/map/MapDynamic.tsx'
 import { Coordinates } from '@turistikrota/ui/types'
 import React from 'react'
 import { useTranslation } from 'react-i18next'

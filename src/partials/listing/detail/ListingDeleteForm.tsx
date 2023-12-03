@@ -1,6 +1,6 @@
-import ZoneWarningModal from '@/components/modal/ZoneWarningModal'
-import { Services, apiUrl } from '@/config/services'
-import { httpClient } from '@/http/client'
+import ZoneErrorModal from '@/components/modal/ZoneErrorModal.tsx'
+import { Services, apiUrl } from '@/config/services.ts'
+import { httpClient } from '@/http/client.tsx'
 import Button from '@turistikrota/ui/button'
 import LineForm from '@turistikrota/ui/form/line'
 import { useToast } from '@turistikrota/ui/toast'
@@ -14,16 +14,16 @@ type Props = {
   onOk: () => void
 }
 
-const ListingEnableForm: React.FC<Props> = ({ uuid, title, onOk }) => {
+const ListingDeleteForm: React.FC<Props> = ({ uuid, title, onOk }) => {
   const { t } = useTranslation('listings')
   const toast = useToast()
   const [visible, setVisible] = useState<boolean>(false)
   const [isLoading, setIsLoading] = useState<boolean>(false)
 
-  const handleEnable = () => {
+  const handleDelete = () => {
     setIsLoading(true)
     httpClient
-      .patch(apiUrl(Services.Listing, `/${uuid}/enable`), null)
+      .delete(apiUrl(Services.Listing, `/${uuid}`))
       .then((res) => {
         if (res.status === 200) return onOk()
       })
@@ -40,41 +40,37 @@ const ListingEnableForm: React.FC<Props> = ({ uuid, title, onOk }) => {
         setIsLoading(false)
       })
   }
-
   return (
     <LineForm className='bg-second p-4 transition-colors duration-200 first:rounded-t-md last:rounded-b-md hover:bg-third'>
-      <ZoneWarningModal
-        inputLabel={t('detail.enable.label')}
+      <ZoneErrorModal
+        inputLabel={t('detail.delete.label')}
         onCancel={() => {
           setVisible(false)
         }}
-        onConfirm={handleEnable}
-        subtitle={t('detail.enable.subtitle')}
-        warningText={t('detail.enable.text')}
-        confirmText={t('detail.enable.confirm')}
-        confirmationText={t('detail.enable.confirmation')}
-        buttonText={t('detail.enable.button')}
+        onConfirm={handleDelete}
+        subtitle={t('detail.delete.subtitle')}
+        warningText={t('detail.delete.text')}
         text={title}
-        title={t('detail.enable.title')}
+        title={t('detail.delete.title')}
         visible={visible}
         loading={isLoading}
       />
       <LineForm.Left>
-        <LineForm.Left.Title>{t('detail.enable.title')}</LineForm.Left.Title>
-        <LineForm.Left.Description>{t('detail.enable.text')}</LineForm.Left.Description>
+        <LineForm.Left.Title>{t('detail.delete.title')}</LineForm.Left.Title>
+        <LineForm.Left.Description>{t('detail.delete.text')}</LineForm.Left.Description>
       </LineForm.Left>
       <LineForm.Right>
         <Button
-          variant='warning'
+          variant='error'
           onClick={() => {
             setVisible(true)
           }}
         >
-          {t('detail.enable.button')}
+          {t('detail.delete.button')}
         </Button>
       </LineForm.Right>
     </LineForm>
   )
 }
 
-export default ListingEnableForm
+export default ListingDeleteForm

@@ -2,7 +2,7 @@ import { EmptyTranslation, EmptyValidation, ListingTranslation, fetchMyListing }
 import MetaWrapper from '@/components/MetaWrapper'
 import { useQuery } from '@/hooks/query'
 import RoleGuardView from '@/layouts/RoleGuard'
-import ListingDetailContent from '@/partials/listing/ListingDetailContent'
+import ListingDetailContent from '@/partials/listing/detail/ListingDetailContent.tsx'
 import { BusinessRoles, ListingRoles } from '@/static/role'
 import { getI18nTranslation } from '@/types/base'
 import NotFoundView from '@/views/404'
@@ -48,6 +48,8 @@ const ListingDetailView = () => {
               coordinates={data?.location.coordinates ?? [0, 0]}
               images={images}
               prices={data?.prices ?? []}
+              features={data?.features ?? []}
+              categoryUUIDs={data?.categoryUUIDs ?? []}
               validation={data?.validation ?? EmptyValidation}
               onOk={() => refetch()}
             />

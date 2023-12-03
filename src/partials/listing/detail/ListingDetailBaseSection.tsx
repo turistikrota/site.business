@@ -1,4 +1,4 @@
-import ListingDetailImagePreview from './ListingDetailImagePreview'
+import ListingDetailImagePreview from './ListingDetailImagePreview.tsx'
 
 type Props = {
   title: string

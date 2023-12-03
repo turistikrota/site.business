@@ -15,7 +15,7 @@ export type CategoryInput = {
   options: string[]
 }
 
-type InputExtra = {
+export type InputExtra = {
   name: string
   value: string
 }
@@ -101,6 +101,13 @@ export const fetchMainCategories = async (): Promise<CategoryListItem[]> => {
 
 export const fetchChildCategories = async (uuid: string): Promise<CategoryListItem[]> => {
   const res = await httpClient.get(apiUrl(Services.Category, `/${uuid}/child`)).catch(() => ({
+    data: [],
+  }))
+  return res.data
+}
+
+export const fetchCategoryListByUUIDs = async (uuids: string[]): Promise<CategoryListItem[]> => {
+  const res = await httpClient.get(apiUrl(Services.Category, `/?uuids=${uuids.join(',')}`)).catch(() => ({
     data: [],
   }))
   return res.data

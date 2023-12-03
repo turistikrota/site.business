@@ -1,5 +1,5 @@
-import { ListingValidation, ValidationKey } from '@/api/listing/listing.api'
-import KeyValue from '@/components/KeyValue'
+import { ListingValidation, ValidationKey } from '@/api/listing/listing.api.ts'
+import KeyValue from '@/components/KeyValue.tsx'
 import Card from '@turistikrota/ui/cards/default'
 import React, { useMemo } from 'react'
 import { useTranslation } from 'react-i18next'
@@ -41,7 +41,7 @@ const ListingDetailRuleSection: React.FC<Props> = ({ validation }) => {
   const items: Item[] = useMemo(
     () =>
       Object.entries(validation).map(([key, value]) => ({
-        label: typeof value === 'boolean' ? t(`form.validation.${key}.title`) : t(`form.validation.${key}`),
+        label: typeof value === 'boolean' || key.startsWith('no') ? t(`form.validation.${key}.title`) : t(`form.validation.${key}`),
         value: RuleMixers[key as ValidationKey](t, value),
       })),
     [t, validation],
