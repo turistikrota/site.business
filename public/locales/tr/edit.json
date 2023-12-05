@@ -8,6 +8,12 @@
     "danger": "Tehlikeli Bölge",
     "info": "İşletme Bilgileri"
   },
+  "uploads": {
+    "avatar": "Avatar Yükle",
+    "cover": "Kapak Fotoğrafı Yükle",
+    "success": "Yükleme Başarılı",
+    "required": "Bu alan zorunludur"
+  },
   "activation": {
     "enable": {
       "title": "İşletmeyi Aktif Et",

@@ -9,6 +9,8 @@ import {fetchMyBusiness} from "@/api/business/business.api.ts";
 import ContentLoader from "@turistikrota/ui/loader";
 import NotFoundView from "@/views/404.tsx";
 import BusinessDetailInformationSection from "@/partials/business/detail/BusinessDetailInformationSection.tsx";
+import BusinessProfileImageUploadSection from "@/partials/business/upload/BusinessProfileImageUploadSection.tsx";
+import BusinessProfileCoverUploadSection from "@/partials/business/upload/BusinessProfileCoverUploadSection.tsx";
 
 function BusinessEditView() {
   const { t } = useTranslation('edit')
@@ -22,6 +24,8 @@ function BusinessEditView() {
   return (
         <MetaWrapper title={t('meta.title')} description={t('meta.description')} keywords={t('meta.keywords')}>
             <section className='container relative mx-auto p-4 flex flex-col space-y-8'>
+                <BusinessProfileCoverUploadSection nickName={current.business.nickName} onOk={() => window.location.reload()} />
+                <BusinessProfileImageUploadSection nickName={current.business.nickName} onOk={() => window.location.reload()} />
                 <BusinessDetailInformationSection business={data} />
                 <BusinessEditDangerZone onOk={() => window.location.reload()} nickName={current.business.nickName} isEnabled={data.isEnabled} />
             </section>

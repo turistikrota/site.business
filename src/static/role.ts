@@ -10,6 +10,7 @@ export enum BusinessRoles {
   InviteCreate = 'business.invite_create',
   InviteDelete = 'business.invite_delete',
   InviteView = 'business.invite_view',
+  View = 'business.admin_view'
 }
 
 export enum ListingRoles {

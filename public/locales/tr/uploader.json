@@ -1,0 +1,24 @@
+{
+  "button": {
+    "show": "Göster",
+    "hide": "Gizle",
+    "close": "Kapat",
+    "save": "Kaydet",
+    "cancel": "İptal",
+    "zoom-in": "Yakınlaştır",
+    "zoom-out": "Uzaklaştır",
+    "rotate-left": "Sola döndür",
+    "rotate-right": "Sağa döndür",
+    "flip-horizontal": "Yatay çevir",
+    "flip-vertical": "Dikey çevir"
+  },
+  "loading": "Yükleniyor...",
+  "errors": {
+    "min": "Profil resmi en az {min} MB olmalıdır",
+    "max": "Profil resmi en fazla {max} MB olmalıdır",
+    "type": "Profil resmi sadece {type} formatında olabilir",
+    "minSize": "Profil resmi en az {minWidth}x{minHeight} piksel olmalıdır",
+    "maxSize": "Profil resmi en fazla {maxWidth}x{maxHeight} piksel olmalıdır",
+    "required": "Bu alan zorunludur"
+  }
+}
