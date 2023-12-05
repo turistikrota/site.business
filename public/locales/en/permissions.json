@@ -3,7 +3,8 @@
     "business": "Business Module",
     "listing": "Listing Module",
     "listing_log": "Listing Log Module",
-    "business_log": "Business Log Module"
+    "business_log": "Business Log Module",
+    "business_upload": "Business Upload Module"
   },
   "roles": {
     "business": {
@@ -14,6 +15,10 @@
       "member": {
         "title": "Member",
         "description": "The member can only see his/her own information in the business profile."
+      },
+      "admin_view": {
+        "title": "Detail View",
+        "description": "With this authorization, the business profile can be viewed in detail."
       },
       "user_remove": {
         "title": "User Deletion",
@@ -50,6 +55,16 @@
       "invite_view": {
         "title": "Viewing Invitation",
         "description": "With this authorization, invitations can be displayed in the business profile."
+      },
+      "upload": {
+        "avatar": {
+          "title": "Upload Profile Picture",
+          "description": "With this authorization, business profile pictures can be uploaded."
+        },
+        "cover": {
+          "title": "Uploading Cover Image",
+          "description": "With this authorization, business profile cover image can be uploaded."
+        }
       }
     },
     "listing": {
