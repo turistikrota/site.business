@@ -65,7 +65,7 @@ const ListingListCard: React.FC<Props> = ({
   )
 
   return (
-    <div className={`flex flex-col ${isDraggable ? 'cursor-move' : 'h-full w-full'}`}>
+    <div className={`flex flex-col h-full ${isDraggable ? 'cursor-move' : 'w-full'}`}>
       <Carousel
         imageAltPrefix={translation.title}
         images={mappedImages}
@@ -137,7 +137,6 @@ const ListingListCard: React.FC<Props> = ({
               })}
             </div>
           </div>
-          <div className='flex flex-col gap-2'></div>
         </div>
       </TooltipProvider>
     </div>
