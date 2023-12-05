@@ -10,5 +10,36 @@
       "subtitle": "Eğer hesabınızı oluşturduktan hemen sonra bu sayfaya girdiyseniz, lütfen tekrar giriş yapın ve tekrar deneyin.",
       "button": "Oturumu Yenile"
     }
+  },
+  "logs": {
+    "meta": {
+      "title": "İşletme Log Kayıtları",
+      "description": "İşletmenizle ilgili tüm log kayıtlarını görüntüleyin.",
+      "keywords": "İşletme Kayıtları, İşletme Logları, İşletme Profili, Turistik Rota, Tatil Planlama, Tur Rezervasyonu"
+    },
+    "empty": {
+      "title": "Henüz bir log kaydı yok.",
+      "description": "İşletmenizle ilgili bir log kaydı oluşturulduğunda burada görüntülenecektir."
+    },
+    "actions": {
+      "business_enabled": {
+        "text": "<0>@{{userName}}</0> adlı kullanıcı işletmenizi etkinleştirdi."
+      },
+      "business_disabled": {
+        "text": "<0>@{{userName}}</0> adlı kullanıcı işletmenizi devre dışı bıraktı."
+      },
+      "business_rejected": {
+        "text": "işletmeniz yöneticilerimiz tarafından <0>{{reason}}</0> nedeniyle reddedildi."
+      },
+      "business_verified": {
+        "text": "işletmeniz yöneticilerimiz tarafından onaylandı."
+      },
+      "business_perm_added": {
+        "text": "<0>@{{creator}}</0> adlı kullanıcı <1>@{{userName}}</1> adlı kullanıcıya <2>{{permissionModule}}</2> için <3>{{permission}}</3> yetkisini verdi."
+      },
+      "business_perm_removed": {
+        "text": "<0>@{{creator}}</0> adlı kullanıcı <1>@{{userName}}</1> adlı kullanıcıdan <2>{{permissionModule}}</2> için <3>{{permission}}</3> yetkisini kaldırdı."
+      }
+    }
   }
 }
