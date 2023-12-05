@@ -3,13 +3,18 @@
     "business": "İşletme Modülü",
     "listing": "İlan Modülü",
     "listing_log": "İlan Kayıt Modülü",
-    "business_log": "İşletme Kayıt Modülü"
+    "business_log": "İşletme Kayıt Modülü",
+    "business_upload": "İşletme Yükleme Modülü"
   },
   "roles": {
     "business": {
       "super": {
         "title": "Süper Yetkili",
         "description": "Süper yetkili, işletme profilinde tam yetkiye sahiptir."
+      },
+      "admin_view": {
+        "title": "Detay Görüntüleme",
+        "description": "Bu yetki ile işletme profilini detaylı bir şekilde görüntülenebilir."
       },
       "member": {
         "title": "Üye",
@@ -50,6 +55,16 @@
       "invite_view": {
         "title": "Davetiye Görüntüleme",
         "description": "Bu yetki ile işletme profilinde davetiyeler görüntülenebilir."
+      },
+      "upload": {
+        "avatar": {
+          "title": "Profil Resmi Yükleme",
+          "description": "Bu yetki ile işletme profil resmi yüklenebilir."
+        },
+        "cover": {
+          "title": "Kapak Resmi Yükleme",
+          "description": "Bu yetki ile işletme profil kapak resmi yüklenebilir."
+        }
       }
     },
     "listing": {
