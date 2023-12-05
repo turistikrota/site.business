@@ -41,7 +41,8 @@ const ListingDragProvider: React.FC<Props> = ({ list, setList, Renderer }) => {
       </div>
       <DraggableContainer
         onOrderChange={onOrderChange}
-        className='col-span-12 flex flex-col rounded-md bg-second md:col-span-4 lg:col-span-3'
+        className='col-span-12 flex flex-col rounded-md h-full bg-second md:col-span-4 lg:col-span-3'
+
       >
         {list.map((item) => (
           <Renderer key={item.uuid} {...item} isDraggable={true} />
