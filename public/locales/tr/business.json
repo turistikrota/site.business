@@ -39,6 +39,18 @@
       },
       "business_perm_removed": {
         "text": "<0>@{{creator}}</0> adlı kullanıcı <1>@{{userName}}</1> adlı kullanıcıdan <2>{{permissionModule}}</2> için <3>{{permission}}</3> yetkisini kaldırdı."
+      },
+      "business_created": {
+        "text": "<0>@{{userName}}</0> adlı kullanıcı bu işletmeyi oluşturdu."
+      },
+      "business_deleted": {
+        "text": "İşletmeniz yöneticilerimiz tarafından silindi."
+      },
+      "business_recovered": {
+        "text": "İşletmeniz yöneticilerimiz tarafından geri yüklendi."
+      },
+      "business_user_removed": {
+        "text": "<0>@{{creator}}</0> adlı kullanıcı <1>@{{userName}}</1> adlı kullanıcıyı işletmeden çıkardı."
       }
     }
   }
