@@ -33,6 +33,7 @@ export type RouteType = {
       listing: {
         list: string
         create: string
+        edit: string
         detail: string
         logs: string
       }
@@ -91,6 +92,7 @@ const Routes: Record<Locales, RouteType> = {
           create: '/ilan-ekle',
           list: '/ilanlar',
           detail: '/ilanlar/',
+          edit: 'duzenle',
           logs: '/ilan-kayitlari/',
         },
       },
@@ -138,6 +140,7 @@ const Routes: Record<Locales, RouteType> = {
           create: '/add-listing',
           list: '/listings',
           detail: '/listings/',
+          edit: 'edit',
           logs: '/listing-logs/',
         },
       },

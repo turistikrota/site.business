@@ -6,7 +6,7 @@ import { useListingCreateSchema } from '@/schemas/listing-create.schema.tsx'
 import { getStaticRoute } from '@/static/page.ts'
 import {
   EmptyListingCreateValues,
-  ListingCreateFormValues,
+  ListingFormValues,
   ListingFeature,
   isEmptyListingCreateFormValues,
   isImages,
@@ -45,10 +45,10 @@ const ListingCreateForm: React.FC = () => {
   const [acceptedRules, setAcceptedRules] = useState<Record<string, boolean>>({})
   const toast = useToast()
   const schema = useListingCreateSchema()
-  const autoSave = useAutoSave<ListingCreateFormValues>('listing-create-form')
+  const autoSave = useAutoSave<ListingFormValues>('listing-create-form')
   const [initialCategories, setInitialCategories] = useState<string[]>([])
   const existsData = useMemo(() => autoSave.get(), [])
-  const form = useFormik<ListingCreateFormValues>({
+  const form = useFormik<ListingFormValues>({
     initialValues: {
       ...EmptyListingCreateValues,
     },

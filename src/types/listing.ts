@@ -1,3 +1,4 @@
+import { ListingDetails } from '@/api/listing/listing.api'
 import { Coordinates, Locales } from '@turistikrota/ui/types'
 import { findDiff } from '@turistikrota/ui/utils'
 
@@ -30,7 +31,7 @@ export type ListingFeature<T = any> = {
   price: number
 }
 
-export type ListingCreateFormValues = {
+export type ListingFormValues = {
   meta: {
     [key in Locales]: {
       title: string
@@ -63,7 +64,7 @@ export type ListingCreateFormValues = {
   prices: Prices
 }
 
-export const EmptyListingCreateValues: ListingCreateFormValues = {
+export const EmptyListingCreateValues: ListingFormValues = {
   categoryUUIDs: [],
   meta: {
     tr: {
@@ -105,7 +106,21 @@ export const EmptyListingCreateValues: ListingCreateFormValues = {
   prices: [],
 }
 
-export function isListingCreateFormValues(value: any): value is ListingCreateFormValues {
+export const crateListingFormValuesFromDetails = (details: ListingDetails): ListingFormValues => {
+  const { meta, images, location, validation, features, prices, categoryUUIDs } = details
+
+  return {
+    meta,
+    images: images.map((image) => image.url),
+    location,
+    validation,
+    features,
+    prices,
+    categoryUUIDs,
+  }
+}
+
+export function isListingCreateFormValues(value: any): value is ListingFormValues {
   return (
     value &&
     value.meta &&
@@ -138,7 +153,7 @@ export function isListingCreateFormValues(value: any): value is ListingCreateFor
   )
 }
 
-export function isEmptyListingCreateFormValues(values: ListingCreateFormValues): boolean {
+export function isEmptyListingCreateFormValues(values: ListingFormValues): boolean {
   const { location, ...empty } = EmptyListingCreateValues
   const { location: _, ...valuesCopy } = values
   return Object.keys(findDiff(empty, valuesCopy)).length === 0

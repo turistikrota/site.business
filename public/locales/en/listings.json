@@ -5,6 +5,7 @@
     "disabled": "Please accept all category rules. ({{accepted}}/{{total}})"
   },
   "detail": {
+    "edit": "Edit Listing",
     "meta": {
       "title": "Listing Detail",
       "description": "You can view the details of your listing using this page.",
@@ -18,6 +19,14 @@
       "keywords": "listing, create, new, new listing, create listing"
     },
     "success": "Your listing has been created successfully. If no problems are detected after the category checks are completed, it will be published."
+  },
+  "edit": {
+    "meta": {
+      "title": "Edit Listing",
+      "description": "You can edit your listing using this page.",
+      "keywords": "listing, edit, edit listing, update, update listing"
+    },
+    "success": "Your listing has been updated successfully. If no problems are detected after the category checks are completed, it will be published."
   },
   "list": {
     "meta": {

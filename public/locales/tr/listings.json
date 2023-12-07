@@ -5,6 +5,7 @@
     "disabled": "Lütfen tüm kategori kurallarını kabul ediniz. ({{accepted}}/{{total}})"
   },
   "detail": {
+    "edit": "İlanı Düzenle",
     "meta": {
       "title": "İlan Detayları",
       "description": "Bu sayfayı kullanarak ilanınızın detaylarını görüntüleyebilirsiniz.",
@@ -65,6 +66,14 @@
       "keywords": "ilan, oluştur, yeni, yeni ilan, ilan oluştur"
     },
     "success": "İlanınız başarıyla oluşturuldu. Kategori kontrolleri tamamlandıktan sonra bir sorun tespit edilmezse yayınlanacaktır."
+  },
+  "edit": {
+    "meta": {
+      "title": "İlan Düzenle",
+      "description": "Bu sayfayı kullanarak ilanınızı düzenleyebilirsiniz.",
+      "keywords": "ilan, düzenle, ilan düzenle, ilanı düzenle"
+    },
+    "success": "İlanınız başarıyla güncellendi. Kategori kontrolleri tamamlandıktan sonra bir sorun tespit edilmezse yayınlanacaktır."
   },
   "list": {
     "meta": {
