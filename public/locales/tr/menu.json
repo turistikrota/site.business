@@ -22,6 +22,7 @@
     "listings": "İlanlar",
     "listing-detail": "İlan Detayı",
     "listing-create": "İlan Oluştur",
+    "business-logs": "İşletme Logları",
     "subtitles": {
       "edit": "İşletme profil resminizi, bilgilerinizi ve sosyal medya hesaplarınızı düzenleyin.",
       "security": "Şifrenizi değiştirin, iki faktörlü kimlik doğrulamayı etkinleştirin ve oturum açma cihazlarınızı yönetin.",
@@ -35,7 +36,8 @@
       "users": "Bu işletmenin kullanıcılarını görüntüleyin ve yönetin.",
       "listings": "Bu işletmenin ilanlarını görüntüleyin ve yönetin.",
       "listing-create": "Bu işletme için yeni bir ilan oluşturun.",
-      "listing-detail": "Bu işletmenin ilanını görüntüleyin ve yönetin."
+      "listing-detail": "Bu işletmenin ilanını görüntüleyin ve yönetin.",
+      "business-logs": "Bu işletmenin loglarını görüntüleyin."
     }
   },
   "meta": {

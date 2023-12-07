@@ -10,5 +10,57 @@
       "subtitle": "If you entered this page immediately after creating your account, please log in again and try again.",
       "button": "Refresh Session"
     }
+  },
+  "logs": {
+    "meta": {
+      "title": "Business Log Records",
+      "description": "View all log records related to your business.",
+      "keywords": "Business Records, Business Logs, Business Profile, Tourist Route, Vacation Planning, Tour Reservation"
+    },
+    "empty": {
+      "title": "No log record yet.",
+      "description": "When a log record is created for your business, it will be displayed here."
+    },
+    "actions": {
+      "business_enabled": {
+        "text": "<0>@{{userName}}</0> has enabled your business."
+      },
+      "business_disabled": {
+        "text": "<0>@{{userName}}</0> has disabled your business."
+      },
+      "business_rejected": {
+        "text": "Your business was rejected by our administrators for the reason <0>{{reason}}</0>."
+      },
+      "business_verified": {
+        "text": "Your business has been verified by our administrators."
+      },
+      "business_perm_added": {
+        "text": "<0>@{{creator}}</0> has given <1>@{{userName}}</1> the <3>{{permission}}</3> permission for <2>{{permissionModule}}</2>."
+      },
+      "business_perm_removed": {
+        "text": "<0>@{{creator}}</0> has removed <1>@{{userName}}</1>'s <3>{{permission}}</3> permission for <2>{{permissionModule}}</2>."
+      },
+      "business_created": {
+        "text": "<0>@{{userName}}</0> has created this business."
+      },
+      "business_deleted": {
+        "text": "Your business has been deleted by our administrators."
+      },
+      "business_recovered": {
+        "text": "Your business has been recovered by our administrators."
+      },
+      "business_user_removed": {
+        "text": "<0>@{{creator}}</0> has removed <1>@{{userName}}</1> from the business."
+      },
+      "invite_created": {
+        "text": "<0>@{{creator}}</0> has sent an invitation to the email address <1>{{email}}</1>."
+      },
+      "invite_deleted": {
+        "text": "<0>@{{deletedUser}}</0> has deleted the invitation created by <1>@{{userName}}</1>."
+      },
+      "invite_used": {
+        "text": "<0>@{{userName}}</0> has accepted the invitation sent to the email address <1>{{email}}</1>."
+      }
+    }
   }
 }
