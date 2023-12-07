@@ -171,26 +171,10 @@ const dataToObj = (data: DataArray[]) => {
 export const fetchMyBusinessLogs = async (page: number, limit: number): Promise<ListResponse<BusinessLog>> => {
     const res = await httpClient.get(apiUrl(Services.BusinessLog, `/?page=${page}&limit=${limit}`)).catch(() => ({data: undefined}))
     if (res.data) {
-        res.data.list = (res.data.list || []).map(r => ({
+        res.data.list = (res.data.list || []).map((r: any) => ({
             ...r,
             data: r.data ? dataToObj(r.data) : null
         }))
     }
     return res.data
-}
-
-export const isPermissionData = (data: any): data is PermissionData => {
-    return data && data.permission && data.userName
-}
-
-export const isInviteCreated = (data: any): data is BusinessActionInviteCreated => {
-    return data && data.action === BusinessLogActions.InviteCreated
-}
-
-export const isInviteDeleted = (data: any): data is BusinessActionInviteDeleted => {
-    return data && data.action === BusinessLogActions.InviteDeleted
-}
-
-export const isInviteUsed = (data: any): data is BusinessActionInviteUsed => {
-    return data && data.action === BusinessLogActions.InviteUsed
 }
