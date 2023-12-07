@@ -59,7 +59,7 @@ export type ListingFormValues = {
     minDate?: number
     maxDate?: number
   } & {
-    [key in BoolRule]: boolean
+    [key in BoolRule]: boolean | null
   }
   prices: Prices
 }
@@ -113,7 +113,18 @@ export const crateListingFormValuesFromDetails = (details: ListingDetails): List
     meta,
     images: images.map((image) => image.url),
     location,
-    validation,
+    validation: Object.entries(validation).reduce(
+      (acc: ListingFormValues['validation'], [key, value]) => {
+        if (value === null && key in BoolRules) {
+          acc[key as BoolRule] = false
+        } else {
+          // @ts-ignore
+          acc[key] = value
+        }
+        return acc
+      },
+      {} as ListingFormValues['validation'],
+    ),
     features,
     prices,
     categoryUUIDs,

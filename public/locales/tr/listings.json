@@ -1,6 +1,7 @@
 {
   "button": {
     "create": "İlanı Oluştur",
+    "edit": "İlanı Düzenle",
     "loading": "İlan Oluşturuluyor...",
     "disabled": "Lütfen tüm kategori kurallarını kabul ediniz. ({{accepted}}/{{total}})"
   },

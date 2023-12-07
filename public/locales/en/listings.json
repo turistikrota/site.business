@@ -1,6 +1,7 @@
 {
   "button": {
     "create": "Create Listing",
+    "edit": "Edit Listing",
     "loading": "Creating Listing...",
     "disabled": "Please accept all category rules. ({{accepted}}/{{total}})"
   },

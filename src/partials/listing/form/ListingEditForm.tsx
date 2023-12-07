@@ -49,7 +49,7 @@ const ListingEditForm: React.FC<Props> = ({ details, onOk }) => {
     onSubmit: (values) => {
       setLoading(true)
       httpClient
-        .post(apiUrl(Services.Listing, `/business`), {
+        .put(apiUrl(Services.Listing, `/business/${details.uuid}`), {
           ...values,
           images: images.map((img, indx) => ({
             url: img,
@@ -57,7 +57,7 @@ const ListingEditForm: React.FC<Props> = ({ details, onOk }) => {
           })),
         })
         .then(() => {
-          toast.success(t('create.success'))
+          toast.success(t('edit.success'))
           onOk()
         })
         .catch((err) => {
@@ -92,6 +92,7 @@ const ListingEditForm: React.FC<Props> = ({ details, onOk }) => {
   useEffect(() => {
     if (details) {
       setInitialCategories(details.categoryUUIDs)
+      setImages(details.images.sort((a, b) => a.order - b.order).map((image) => image.url))
     }
   }, [details])
 
@@ -209,7 +210,7 @@ const ListingEditForm: React.FC<Props> = ({ details, onOk }) => {
         className='disabled:opacity-50'
       >
         {isAllRulesAccepted
-          ? t('button.create')
+          ? t('button.edit')
           : loading
             ? t('button.loading')
             : t('button.disabled', {
