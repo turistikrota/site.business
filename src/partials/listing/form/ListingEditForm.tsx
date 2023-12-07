@@ -1,11 +1,13 @@
 import React from 'react'
+import {ListingDetails} from "@/api/listing/listing.api.ts";
 
 type Props = {
-  uuid: string
+    details: ListingDetails
+    onOk: () => void
 }
 
-const ListingEditForm: React.FC<Props> = () => {
-  return <></>
+const ListingEditForm: React.FC<Props> = ({details, onOk}) => {
+    return <></>
 }
 
 export default ListingEditForm
