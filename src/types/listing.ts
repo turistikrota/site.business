@@ -115,7 +115,7 @@ export const crateListingFormValuesFromDetails = (details: ListingDetails): List
     location,
     validation: Object.entries(validation).reduce(
       (acc: ListingFormValues['validation'], [key, value]) => {
-        if (value === null && key in BoolRules) {
+        if (value === null && BoolRules.includes(key as BoolRule)) {
           acc[key as BoolRule] = false
         } else {
           // @ts-ignore
@@ -126,7 +126,11 @@ export const crateListingFormValuesFromDetails = (details: ListingDetails): List
       {} as ListingFormValues['validation'],
     ),
     features,
-    prices,
+    prices: prices.map((price) => ({
+      startDate: price.startDate.split('T')[0],
+      endDate: price.endDate.split('T')[0],
+      price: price.price,
+    })),
     categoryUUIDs,
   }
 }

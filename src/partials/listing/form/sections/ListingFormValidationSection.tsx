@@ -143,7 +143,7 @@ const ListingFormValidationSection: React.FC<Props> = ({ values, errors, onBoolF
             </LineForm.Left>
             <LineForm.Right>
               <ToggleButton
-                defaultChecked={values.validation[field]}
+                defaultChecked={values.validation[field] ?? false}
                 variant='error'
                 title={t(`form.validation.${field}.alt`)}
                 onChange={(e) => onBoolFieldChange(`validation.${field}`, e)}

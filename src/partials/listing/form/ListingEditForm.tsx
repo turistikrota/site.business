@@ -143,6 +143,7 @@ const ListingEditForm: React.FC<Props> = ({ details, onOk }) => {
 
   return (
     <form onSubmit={onSubmit} className='flex flex-col gap-8 pb-10'>
+      {JSON.stringify(form.errors)}
       <ListingFormMetaSection values={form.values} errors={form.errors} onChange={form.handleChange} />
       <ListingFormCategorySection
         initialSelectedCategories={initialCategories}
@@ -190,7 +191,7 @@ const ListingEditForm: React.FC<Props> = ({ details, onOk }) => {
         errors={form.errors}
         onChange={form.handleChange}
         onBoolFieldChange={(field, value) => {
-          form.setFieldValue(field, value)
+          form.setFieldValue(field, typeof value === 'boolean' ? value : false)
         }}
       />
       <ListingCategoryRuleSection
