@@ -182,3 +182,15 @@ export const fetchMyBusinessLogs = async (page: number, limit: number): Promise<
 export const isPermissionData = (data: any): data is PermissionData => {
     return data && data.permission && data.userName
 }
+
+export const isInviteCreated = (data: any): data is BusinessActionInviteCreated => {
+    return data && data.action === BusinessLogActions.InviteCreated
+}
+
+export const isInviteDeleted = (data: any): data is BusinessActionInviteDeleted => {
+    return data && data.action === BusinessLogActions.InviteDeleted
+}
+
+export const isInviteUsed = (data: any): data is BusinessActionInviteUsed => {
+    return data && data.action === BusinessLogActions.InviteUsed
+}

@@ -51,6 +51,15 @@
       },
       "business_user_removed": {
         "text": "<0>@{{creator}}</0> adlı kullanıcı <1>@{{userName}}</1> adlı kullanıcıyı işletmeden çıkardı."
+      },
+      "invite_created": {
+        "text": "<0>@{{creator}}</0> adlı kullanıcı <1>{{email}}</1> adresine davet gönderdi."
+      },
+      "invite_deleted": {
+        "text": "<0>@{{deletedUser}}</0> adlı kullanıcı <1>@{{userName}}</1> adlı kullanıcının oluşturduğu daveti sildi."
+      },
+      "invite_used": {
+        "text": "<0>@{{userName}}</0> adlı kullanıcı <1>{{email}}</1> adresine gönderilen daveti kabul etti."
       }
     }
   }
