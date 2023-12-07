@@ -26,7 +26,7 @@
     "verifiedAt": "Doğrulama Tarihi",
     "businessTypes": {
       "individual": "Bireysel",
-        "corporation": "Kurumsal"
+      "corporation": "Kurumsal"
     },
     "corporationTypes": {
       "anonymous": "Anonim Şirket",

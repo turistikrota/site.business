@@ -5,8 +5,8 @@ import ListingDetailCalendarSection from './ListingDetailCalendarSection.tsx'
 import ListingDetailDangerZone from './ListingDetailDangerZone.tsx'
 import ListingDetailMapSection from './ListingDetailMapSection.tsx'
 import ListingDetailRuleSection from './ListingDetailRuleSection.tsx'
-import ListingDetailCategorySection from "@/partials/listing/detail/ListingDetailCategorySection.tsx";
-import {ListingFeature} from "@/types/listing.ts";
+import ListingDetailCategorySection from '@/partials/listing/detail/ListingDetailCategorySection.tsx'
+import { ListingFeature } from '@/types/listing.ts'
 
 type Props = {
   uuid: string
@@ -18,7 +18,7 @@ type Props = {
   categoryUUIDs: string[]
   coordinates: Coordinates
   prices: ListingPrice[]
-    features: ListingFeature[]
+  features: ListingFeature[]
   validation: ListingValidation
   onOk: () => void
 }
@@ -30,10 +30,10 @@ const ListingDetailContent: React.FC<Props> = ({
   isActive,
   coordinates,
   isDeleted,
-    features,
+  features,
   images,
   prices,
-                                                 categoryUUIDs,
+  categoryUUIDs,
   validation,
   onOk,
 }) => {

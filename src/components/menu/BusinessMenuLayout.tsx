@@ -2,12 +2,12 @@ import { useIsDesktop } from '@turistikrota/ui/hooks/dom'
 import React, { useState } from 'react'
 import BusinessDetailHeader, { BusinessDetailTitle, type Pages } from './BusinessDetailHeader'
 import BusinessMenu from './BusinessMenu'
-import {useCurrentBusiness} from "@/contexts/currentBusiness.tsx";
-import Alert from "@turistikrota/ui/alert";
-import {useTranslation} from "react-i18next";
-import {Link, useLocation} from "react-router-dom";
-import {getStaticRoute} from "@/static/page.ts";
-import Button from "@turistikrota/ui/button";
+import { useCurrentBusiness } from '@/contexts/currentBusiness.tsx'
+import Alert from '@turistikrota/ui/alert'
+import { useTranslation } from 'react-i18next'
+import { Link, useLocation } from 'react-router-dom'
+import { getStaticRoute } from '@/static/page.ts'
+import Button from '@turistikrota/ui/button'
 
 type Props = {
   open?: boolean
@@ -60,17 +60,21 @@ export default function BusinessMenuLayout({ open = false, page, children }: Rea
             <div className={`pl-4 pt-4 lg:block ${menuOpen ? 'block' : 'hidden'}`}>
               <BusinessDetailTitle page={page} />
             </div>
-            {!current.business.isEnabled && <section className={"container relative mx-auto p-4"}>
-              <Alert type={"warning"} showIcon>
-                <Alert.Title>{t('warns.disabled.title')}</Alert.Title>
-                <Alert.Description>{t('warns.disabled.description')}</Alert.Description>
-                {currentPath !== getStaticRoute(i18n.language).business.details.edit && <Link to={getStaticRoute(i18n.language).business.details.edit}>
-                  <Button variant={"secondary"} block={false} className={"mt-2"}>
-                    {t('warns.disabled.link')}
-                  </Button>
-                </Link>}
-              </Alert>
-            </section>}
+            {!current.business.isEnabled && (
+              <section className={'container relative mx-auto p-4'}>
+                <Alert type={'warning'} showIcon>
+                  <Alert.Title>{t('warns.disabled.title')}</Alert.Title>
+                  <Alert.Description>{t('warns.disabled.description')}</Alert.Description>
+                  {currentPath !== getStaticRoute(i18n.language).business.details.edit && (
+                    <Link to={getStaticRoute(i18n.language).business.details.edit}>
+                      <Button variant={'secondary'} block={false} className={'mt-2'}>
+                        {t('warns.disabled.link')}
+                      </Button>
+                    </Link>
+                  )}
+                </Alert>
+              </section>
+            )}
             {children}
           </div>
         </div>
