@@ -120,7 +120,7 @@ export const crateListingFormValuesFromDetails = (details: ListingDetails): List
   }
 }
 
-export function isListingCreateFormValues(value: any): value is ListingFormValues {
+export function isListingFormValues(value: any): value is ListingFormValues {
   return (
     value &&
     value.meta &&
@@ -153,7 +153,7 @@ export function isListingCreateFormValues(value: any): value is ListingFormValue
   )
 }
 
-export function isEmptyListingCreateFormValues(values: ListingFormValues): boolean {
+export function isEmptyListingFormValues(values: ListingFormValues): boolean {
   const { location, ...empty } = EmptyListingCreateValues
   const { location: _, ...valuesCopy } = values
   return Object.keys(findDiff(empty, valuesCopy)).length === 0

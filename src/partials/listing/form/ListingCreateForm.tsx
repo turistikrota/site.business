@@ -6,9 +6,9 @@ import { useListingCreateSchema } from '@/schemas/listing-create.schema.tsx'
 import { getStaticRoute } from '@/static/page.ts'
 import {
   EmptyListingCreateValues,
-  ListingFormValues,
   ListingFeature,
-  isEmptyListingCreateFormValues,
+  ListingFormValues,
+  isEmptyListingFormValues,
   isImages,
 } from '@/types/listing.ts'
 import Button from '@turistikrota/ui/button'
@@ -93,7 +93,7 @@ const ListingCreateForm: React.FC = () => {
       existsData &&
       JSON.stringify(existsData) !== JSON.stringify(form.values) &&
       !deepEqual(existsData, form.values) &&
-      !isEmptyListingCreateFormValues(existsData)
+      !isEmptyListingFormValues(existsData)
     ) {
       toast.askSuccess({
         title: t('autosave.ask.title'),
@@ -127,7 +127,7 @@ const ListingCreateForm: React.FC = () => {
   }, [])
 
   useEffect(() => {
-    if (isEmptyListingCreateFormValues(form.values)) return
+    if (isEmptyListingFormValues(form.values)) return
     autoSave.set({ ...form.values, images: images })
   }, [form.values])
 

@@ -1,5 +1,5 @@
 import { Locales as LocaleConstant } from '@/config/i18n.tsx'
-import { ListingCreateFormValues } from '@/types/listing.ts'
+import { ListingFormValues } from '@/types/listing.ts'
 import Input from '@turistikrota/ui/form/input'
 import FormSection from '@turistikrota/ui/form/section'
 import { FormikErrors } from 'formik'
@@ -7,8 +7,8 @@ import React from 'react'
 import { useTranslation } from 'react-i18next'
 
 type Props = {
-  values: ListingCreateFormValues
-  errors: FormikErrors<ListingCreateFormValues>
+  values: ListingFormValues
+  errors: FormikErrors<ListingFormValues>
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void
 }
 

@@ -1,4 +1,4 @@
-import { BoolRules, ListingCreateFormValues } from '@/types/listing.ts'
+import { BoolRules, ListingFormValues } from '@/types/listing.ts'
 import Input from '@turistikrota/ui/form/input'
 import LineForm from '@turistikrota/ui/form/line'
 import FormSection from '@turistikrota/ui/form/section'
@@ -7,8 +7,8 @@ import { FormikErrors } from 'formik'
 import { useTranslation } from 'react-i18next'
 
 type Props = {
-  values: ListingCreateFormValues
-  errors: FormikErrors<ListingCreateFormValues>
+  values: ListingFormValues
+  errors: FormikErrors<ListingFormValues>
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void
   onBoolFieldChange: (field: string, value: boolean) => void
 }

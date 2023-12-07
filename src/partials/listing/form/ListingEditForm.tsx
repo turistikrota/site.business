@@ -39,6 +39,7 @@ const ListingEditForm: React.FC<Props> = ({ details, onOk }) => {
   const [acceptedRules, setAcceptedRules] = useState<Record<string, boolean>>({})
   const toast = useToast()
   const schema = useListingEditSchema()
+  const [initialCategories, setInitialCategories] = useState<string[]>([])
   const form = useFormik<ListingFormValues>({
     initialValues: crateListingFormValuesFromDetails(details),
     validationSchema: schema,
@@ -87,6 +88,12 @@ const ListingEditForm: React.FC<Props> = ({ details, onOk }) => {
       setAcceptedRules({})
     }
   }, [form.values.categoryUUIDs])
+
+  useEffect(() => {
+    if (details) {
+      setInitialCategories(details.categoryUUIDs)
+    }
+  }, [details])
 
   const debouncedCategoryFieldFetcher = debounce((categoryIds: string[]) => {
     fetchCategoryFields(categoryIds).then((res) => {
@@ -137,7 +144,7 @@ const ListingEditForm: React.FC<Props> = ({ details, onOk }) => {
     <form onSubmit={onSubmit} className='flex flex-col gap-8 pb-10'>
       <ListingFormMetaSection values={form.values} errors={form.errors} onChange={form.handleChange} />
       <ListingFormCategorySection
-        initialSelectedCategories={details.categoryUUIDs}
+        initialSelectedCategories={initialCategories}
         values={form.values}
         errors={form.errors}
         onChange={form.handleChange}

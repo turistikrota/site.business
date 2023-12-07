@@ -1,4 +1,4 @@
-import { ListingCreateFormValues } from '@/types/listing.ts'
+import { ListingFormValues } from '@/types/listing.ts'
 import FormSection from '@turistikrota/ui/form/section'
 import { FormikErrors } from 'formik'
 import React from 'react'
@@ -7,8 +7,8 @@ import ListingFormCategorySelection from './ListingFormCategorySelection.tsx'
 
 type Props = {
   initialSelectedCategories?: string[]
-  values: ListingCreateFormValues
-  errors: FormikErrors<ListingCreateFormValues>
+  values: ListingFormValues
+  errors: FormikErrors<ListingFormValues>
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void
   setFieldValue: (field: string, value: any) => void
 }

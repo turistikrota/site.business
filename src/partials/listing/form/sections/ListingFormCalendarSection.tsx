@@ -1,6 +1,6 @@
 import Calendar, { PriceRenderer } from '@/components/calendar/Calendar.tsx'
 import { useListingCalendar } from '@/hooks/calendar.listing.tsx'
-import { ListingCreateFormValues, Price } from '@/types/listing.ts'
+import { ListingFormValues, Price } from '@/types/listing.ts'
 import Alert from '@turistikrota/ui/alert'
 import FormSection from '@turistikrota/ui/form/section'
 import { FormikErrors } from 'formik'
@@ -9,8 +9,8 @@ import ListingFormPricePreviewList from '../ListingFormPricePreviewList.tsx'
 import ListingFormPriceRangeSection from './ListingFormPriceRangeSection.tsx'
 
 type Props = {
-  values: ListingCreateFormValues
-  errors: FormikErrors<ListingCreateFormValues>
+  values: ListingFormValues
+  errors: FormikErrors<ListingFormValues>
   setFieldValue: (field: string, value: any) => void
 }
 
