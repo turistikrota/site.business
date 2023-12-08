@@ -5,6 +5,13 @@
     "loading": "Creating Listing...",
     "disabled": "Please accept all category rules. ({{accepted}}/{{total}})"
   },
+  "logs": {
+    "meta": {
+      "title": "Listing Logs",
+      "description": "You can view the logs of your listing using this page.",
+      "keywords": "listing, logs, listing logs, view listing logs"
+    }
+  },
   "detail": {
     "edit": "Edit Listing",
     "meta": {

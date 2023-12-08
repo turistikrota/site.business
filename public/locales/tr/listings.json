@@ -5,6 +5,13 @@
     "loading": "İlan Oluşturuluyor...",
     "disabled": "Lütfen tüm kategori kurallarını kabul ediniz. ({{accepted}}/{{total}})"
   },
+  "logs": {
+    "meta": {
+      "title": "İlan Kayıtları",
+      "description": "Bu sayfayı kullanarak ilanınızın kayıtlarını görüntüleyebilirsiniz.",
+      "keywords": "ilan, kayıt, ilan kayıtları, ilan kaydı"
+    }
+  },
   "detail": {
     "edit": "İlanı Düzenle",
     "meta": {
