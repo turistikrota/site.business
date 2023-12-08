@@ -174,7 +174,7 @@ const ListingFormLocationSection: React.FC<Props> = ({ values, errors, onChange,
           </LineForm.Left>
           <LineForm.Right>
             <ToggleButton
-              defaultChecked={values.validation.onlyFamily}
+              defaultChecked={values.validation.onlyFamily ?? false}
               variant='success'
               title={t('form.location.isStrict.title')}
               onChange={(e) => setFieldValue('location.isStrict', e)}

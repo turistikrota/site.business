@@ -38,7 +38,7 @@ const ListingCategoryRuleSection: React.FC<Props> = ({ rules, acceptedRules, tog
             <LineForm.Right>
               <ToggleButton
                 defaultChecked={false}
-                checked={acceptedRules[rule.uuid]}
+                checked={typeof acceptedRules[rule.uuid] !== 'undefined' ? acceptedRules[rule.uuid] : false}
                 variant='success'
                 title={getI18nTranslation<BaseTranslation>(rule.translations, i18n.language).name}
                 onChange={(e) => toggleRule(rule, e)}
