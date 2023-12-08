@@ -14,6 +14,7 @@
   },
   "detail": {
     "edit": "İlanı Düzenle",
+    "logs": "Kayıtları Göster",
     "meta": {
       "title": "İlan Detayları",
       "description": "Bu sayfayı kullanarak ilanınızın detaylarını görüntüleyebilirsiniz.",

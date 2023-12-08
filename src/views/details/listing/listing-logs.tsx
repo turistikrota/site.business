@@ -1,6 +1,6 @@
 import MetaWrapper from '@/components/MetaWrapper'
 import RoleGuardView from '@/layouts/RoleGuard'
-import { BusinessRoles, ListingLogRoles } from '@/static/role'
+import { ListingLogsViewRoles } from '@/roles/listing'
 import { useTranslation } from 'react-i18next'
 
 const ListingLogsView = () => {
@@ -18,7 +18,7 @@ const ListingLogsView = () => {
 
 export function Component() {
   return (
-    <RoleGuardView roles={[BusinessRoles.Super, ListingLogRoles.Super, ListingLogRoles.List]}>
+    <RoleGuardView roles={ListingLogsViewRoles}>
       <ListingLogsView />
     </RoleGuardView>
   )
