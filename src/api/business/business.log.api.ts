@@ -1,5 +1,5 @@
-import { httpClient } from '@/http/client.tsx'
 import { apiUrl, Services } from '@/config/services.ts'
+import { httpClient } from '@/http/client.tsx'
 import { ListResponse } from '@turistikrota/ui/types'
 
 export enum BusinessLogActions {
@@ -155,19 +155,6 @@ export type BusinessLog = {
   | BusinessActionInviteUsed
 )
 
-type DataArray = {
-  Key: string
-  Value: string
-}
-
-const dataToObj = (data: DataArray[]) => {
-  const obj: Record<string, string> = {}
-  data.forEach((d) => {
-    obj[d.Key] = d.Value
-  })
-  return obj
-}
-
 export const fetchMyBusinessLogs = async (page: number, limit: number): Promise<ListResponse<BusinessLog>> => {
   const res = await httpClient
     .get(apiUrl(Services.BusinessLog, `/?page=${page}&limit=${limit}`))
@@ -175,7 +162,7 @@ export const fetchMyBusinessLogs = async (page: number, limit: number): Promise<
   if (res.data) {
     res.data.list = (res.data.list || []).map((r: any) => ({
       ...r,
-      data: r.data ? dataToObj(r.data) : null,
+      data: r.data ? jsonArrayToObject(r.data) : null,
     }))
   }
   return res.data
