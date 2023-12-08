@@ -1,7 +1,7 @@
-import ImageUploader from '@/components/image/ImageUploader'
-import { Services, apiUrl } from '@/config/services'
-import { httpClient } from '@/http/client'
-import { ListingCreateFormValues } from '@/types/listing'
+import ImageUploader from '@/components/image/ImageUploader.tsx'
+import { Services, apiUrl } from '@/config/services.ts'
+import { httpClient } from '@/http/client.tsx'
+import { ListingFormValues } from '@/types/listing.ts'
 import FormSection from '@turistikrota/ui/form/section'
 import ImagePreviewProvider from '@turistikrota/ui/image/preview'
 import DisabledSection from '@turistikrota/ui/section/disabled'
@@ -18,7 +18,7 @@ type DisabledProps = {
 
 type Props = DisabledProps & {
   images: string[]
-  errors: FormikErrors<ListingCreateFormValues>
+  errors: FormikErrors<ListingFormValues>
 
   setImages: (images: string[]) => void
 }

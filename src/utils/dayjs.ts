@@ -5,7 +5,7 @@ import relativeTime from 'dayjs/plugin/relativeTime'
 import dayjs from 'dayjs'
 
 export const useDayJS = (locale: string) => {
-    dayjs.extend(relativeTime)
-    dayjs.locale(locale)
-    return dayjs
+  dayjs.extend(relativeTime)
+  dayjs.locale(locale)
+  return dayjs
 }

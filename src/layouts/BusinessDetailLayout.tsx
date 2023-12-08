@@ -11,11 +11,11 @@ import VerificationRejected from '@/views/state/verification-rejected'
 import VerificationWaiting from '@/views/state/verification-waiting'
 import Button from '@turistikrota/ui/button'
 import ErrorPage from '@turistikrota/ui/pages/error'
-import {useEffect, useMemo, useState} from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Outlet, useNavigate } from 'react-router-dom'
 import { Spinner } from 'sspin'
-import {useAuth} from "@/hooks/auth.tsx";
+import { useAuth } from '@/hooks/auth.tsx'
 
 type ErrorView = {
   title: string

@@ -1,40 +1,34 @@
 import { CategoryFields, CategoryRule, InputGroup, fetchCategoryFields } from '@/api/category/category.api'
+import { ListingDetails } from '@/api/listing/listing.api.ts'
 import { Services, apiUrl } from '@/config/services'
-import useAutoSave from '@/hooks/autosave'
 import { httpClient } from '@/http/client'
-import { useListingCreateSchema } from '@/schemas/listing-create.schema'
-import { getStaticRoute } from '@/static/page'
-import {
-  EmptyListingCreateValues,
-  ListingCreateFormValues,
-  ListingFeature,
-  isEmptyListingCreateFormValues,
-  isImages,
-} from '@/types/listing'
+import { useListingEditSchema } from '@/schemas/listing-edit.schema'
+import { ListingFeature, ListingFormValues, crateListingFormValuesFromDetails } from '@/types/listing'
 import Button from '@turistikrota/ui/button'
 import { useToast } from '@turistikrota/ui/toast'
-import { isCoordinates } from '@turistikrota/ui/types'
-import { deepEqual } from '@turistikrota/ui/utils'
 import { parseApiError } from '@turistikrota/ui/utils/response'
 import { FormikErrors, useFormik } from 'formik'
 import React, { useEffect, useMemo, useState } from 'react'
 import { debounce } from 'react-advanced-cropper'
 import { useTranslation } from 'react-i18next'
-import { useNavigate } from 'react-router-dom'
-import ListingCategoryAlertSection from './ListingCategoryAlertSection'
-import ListingCategoryInputGroupSection from './ListingCategoryInputGroupSection'
-import ListingCategoryRuleSection from './ListingCategoryRuleSection'
-import ListingFormCalendarSection from './ListingFormCalendarSection'
-import ListingFormCategorySection from './ListingFormCategorySection'
-import ListingFormImageSection from './ListingFormImageSection'
-import ListingFormLocationSection from './ListingFormLocationSection'
-import ListingFormMetaSection from './ListingFormMetaSection'
-import ListingFormValidationSection from './ListingFormValidationSection'
+import ListingCategoryAlertSection from './sections/ListingCategoryAlertSection'
+import ListingCategoryInputGroupSection from './sections/ListingCategoryInputGroupSection'
+import ListingCategoryRuleSection from './sections/ListingCategoryRuleSection'
+import ListingFormCalendarSection from './sections/ListingFormCalendarSection'
+import ListingFormCategorySection from './sections/ListingFormCategorySection'
+import ListingFormImageSection from './sections/ListingFormImageSection'
+import ListingFormLocationSection from './sections/ListingFormLocationSection'
+import ListingFormMetaSection from './sections/ListingFormMetaSection'
+import ListingFormValidationSection from './sections/ListingFormValidationSection'
 
-const ListingCreateForm: React.FC = () => {
-  const { t, i18n } = useTranslation('listings')
+type Props = {
+  details: ListingDetails
+  onOk: () => void
+}
+
+const ListingEditForm: React.FC<Props> = ({ details, onOk }) => {
+  const { t } = useTranslation('listings')
   const [images, setImages] = useState<string[]>([])
-  const navigate = useNavigate()
   const [loading, setLoading] = useState(false)
   const [inputIndexes, setInputIndexes] = useState<Record<string, number>>({})
   const [categoryFields, setCategoryFields] = useState<CategoryFields>({
@@ -44,14 +38,10 @@ const ListingCreateForm: React.FC = () => {
   })
   const [acceptedRules, setAcceptedRules] = useState<Record<string, boolean>>({})
   const toast = useToast()
-  const schema = useListingCreateSchema()
-  const autoSave = useAutoSave<ListingCreateFormValues>('listing-create-form')
+  const schema = useListingEditSchema()
   const [initialCategories, setInitialCategories] = useState<string[]>([])
-  const existsData = useMemo(() => autoSave.get(), [])
-  const form = useFormik<ListingCreateFormValues>({
-    initialValues: {
-      ...EmptyListingCreateValues,
-    },
+  const form = useFormik<ListingFormValues>({
+    initialValues: crateListingFormValuesFromDetails(details),
     validationSchema: schema,
     validateOnBlur: false,
     validateOnChange: false,
@@ -59,7 +49,7 @@ const ListingCreateForm: React.FC = () => {
     onSubmit: (values) => {
       setLoading(true)
       httpClient
-        .post(apiUrl(Services.Listing, `/business`), {
+        .put(apiUrl(Services.Listing, `/business/${details.uuid}`), {
           ...values,
           images: images.map((img, indx) => ({
             url: img,
@@ -67,9 +57,8 @@ const ListingCreateForm: React.FC = () => {
           })),
         })
         .then(() => {
-          autoSave.remove()
-          toast.success(t('create.success'))
-          navigate(getStaticRoute(i18n.language).business.details.listing.list)
+          toast.success(t('edit.success'))
+          onOk()
         })
         .catch((err) => {
           parseApiError({
@@ -83,53 +72,9 @@ const ListingCreateForm: React.FC = () => {
         })
     },
   })
-
   const isAllRulesAccepted = useMemo(() => {
     return Object.keys(acceptedRules).length === categoryFields.rules.length
   }, [acceptedRules, categoryFields.rules])
-
-  useEffect(() => {
-    if (
-      existsData &&
-      JSON.stringify(existsData) !== JSON.stringify(form.values) &&
-      !deepEqual(existsData, form.values) &&
-      !isEmptyListingCreateFormValues(existsData)
-    ) {
-      toast.askSuccess({
-        title: t('autosave.ask.title'),
-        cancelText: t('autosave.ask.cancel'),
-        confirmText: t('autosave.ask.confirm'),
-        description: t('autosave.ask.description'),
-        onConfirm: () => {
-          Object.entries(existsData).forEach(([key, value]) => {
-            // @ts-ignore
-            if (key === 'location' && isCoordinates(value) && value.coordinates[0] === 0 && value.coordinates[1] === 0)
-              return
-            if (key === 'images') {
-              if (isImages(value)) {
-                // @ts-ignore
-                setImages(value.map((img) => img.url))
-              }
-              if (Array.isArray(value)) {
-                // @ts-ignore
-                setImages(value)
-              }
-            }
-            form.setFieldValue(key, value)
-          })
-          setInitialCategories(existsData.categoryUUIDs)
-        },
-        onCancel: () => {
-          autoSave.remove()
-        },
-      })
-    }
-  }, [])
-
-  useEffect(() => {
-    if (isEmptyListingCreateFormValues(form.values)) return
-    autoSave.set({ ...form.values, images: images })
-  }, [form.values])
 
   useEffect(() => {
     if (form.values.categoryUUIDs.length > 0) {
@@ -143,6 +88,13 @@ const ListingCreateForm: React.FC = () => {
       setAcceptedRules({})
     }
   }, [form.values.categoryUUIDs])
+
+  useEffect(() => {
+    if (details) {
+      setInitialCategories(details.categoryUUIDs)
+      setImages(details.images.sort((a, b) => a.order - b.order).map((image) => image.url))
+    }
+  }, [details])
 
   const debouncedCategoryFieldFetcher = debounce((categoryIds: string[]) => {
     fetchCategoryFields(categoryIds).then((res) => {
@@ -238,7 +190,7 @@ const ListingCreateForm: React.FC = () => {
         errors={form.errors}
         onChange={form.handleChange}
         onBoolFieldChange={(field, value) => {
-          form.setFieldValue(field, value)
+          form.setFieldValue(field, typeof value === 'boolean' ? value : false)
         }}
       />
       <ListingCategoryRuleSection
@@ -258,16 +210,16 @@ const ListingCreateForm: React.FC = () => {
         className='disabled:opacity-50'
       >
         {isAllRulesAccepted
-          ? t('button.create')
+          ? t('button.edit')
           : loading
-          ? t('button.loading')
-          : t('button.disabled', {
-              total: categoryFields.rules.length,
-              accepted: Object.keys(acceptedRules).length,
-            })}
+            ? t('button.loading')
+            : t('button.disabled', {
+                total: categoryFields.rules.length,
+                accepted: Object.keys(acceptedRules).length,
+              })}
       </Button>
     </form>
   )
 }
 
-export default ListingCreateForm
+export default ListingEditForm

@@ -1,5 +1,5 @@
-import { BaseTranslation, CategoryAlert, CategoryMiniMeta } from '@/api/category/category.api'
-import { getI18nTranslation } from '@/types/base'
+import { BaseTranslation, CategoryAlert, CategoryMiniMeta } from '@/api/category/category.api.ts'
+import { getI18nTranslation } from '@/types/base.ts'
 import Alert from '@turistikrota/ui/alert'
 import FormSection from '@turistikrota/ui/form/section'
 import { useTranslation } from 'react-i18next'

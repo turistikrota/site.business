@@ -1,4 +1,4 @@
-import { Prices } from '@/types/listing'
+import { Prices } from '@/types/listing.ts'
 import Button from '@turistikrota/ui/button'
 import Input from '@turistikrota/ui/form/input'
 import ErrorText from '@turistikrota/ui/text/error'

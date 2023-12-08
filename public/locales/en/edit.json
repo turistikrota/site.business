@@ -9,7 +9,7 @@
     "info": "Business Information"
   },
   "activation": {
-    "enable":{
+    "enable": {
       "title": "Activate Business",
       "subtitle": "Are you sure you want to activate your business?",
       "text": "When you activate your business, it will be visible to everyone. You must be sure before activating it.",

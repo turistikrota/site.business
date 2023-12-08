@@ -41,7 +41,10 @@ const ListingDetailRuleSection: React.FC<Props> = ({ validation }) => {
   const items: Item[] = useMemo(
     () =>
       Object.entries(validation).map(([key, value]) => ({
-        label: typeof value === 'boolean' || key.startsWith('no') ? t(`form.validation.${key}.title`) : t(`form.validation.${key}`),
+        label:
+          typeof value === 'boolean' || key.startsWith('no')
+            ? t(`form.validation.${key}.title`)
+            : t(`form.validation.${key}`),
         value: RuleMixers[key as ValidationKey](t, value),
       })),
     [t, validation],

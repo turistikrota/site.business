@@ -1,8 +1,8 @@
-import { useDayJS } from '@/utils/dayjs'
+import { useDayJS } from '@/utils/dayjs.ts'
 import Input from '@turistikrota/ui/form/input'
 import { useMemo } from 'react'
 import { useTranslation } from 'react-i18next'
-import { InputRender } from './types'
+import { InputRender } from './types.tsx'
 
 const CategoryDateInput: InputRender = ({ formName, translation, value, error, onChange, extra }) => {
   const { i18n } = useTranslation()

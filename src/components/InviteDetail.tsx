@@ -12,7 +12,7 @@ import React, { useEffect, useMemo, useState } from 'react'
 import { Trans, useTranslation } from 'react-i18next'
 import { useNavigate, useParams } from 'react-router-dom'
 import Spin from 'sspin'
-import {useAuth} from "@/hooks/auth.tsx";
+import { useAuth } from '@/hooks/auth.tsx'
 
 const InviteDetail: React.FC = () => {
   const [loading, setLoading] = useState<boolean>(true)

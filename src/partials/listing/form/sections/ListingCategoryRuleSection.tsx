@@ -1,5 +1,5 @@
-import { BaseTranslation, CategoryMiniMeta, CategoryRule } from '@/api/category/category.api'
-import { getI18nTranslation } from '@/types/base'
+import { BaseTranslation, CategoryMiniMeta, CategoryRule } from '@/api/category/category.api.ts'
+import { getI18nTranslation } from '@/types/base.ts'
 import LineForm from '@turistikrota/ui/form/line'
 import FormSection from '@turistikrota/ui/form/section'
 import ToggleButton from '@turistikrota/ui/form/toggle'
@@ -38,7 +38,7 @@ const ListingCategoryRuleSection: React.FC<Props> = ({ rules, acceptedRules, tog
             <LineForm.Right>
               <ToggleButton
                 defaultChecked={false}
-                checked={acceptedRules[rule.uuid]}
+                checked={typeof acceptedRules[rule.uuid] !== 'undefined' ? acceptedRules[rule.uuid] : false}
                 variant='success'
                 title={getI18nTranslation<BaseTranslation>(rule.translations, i18n.language).name}
                 onChange={(e) => toggleRule(rule, e)}

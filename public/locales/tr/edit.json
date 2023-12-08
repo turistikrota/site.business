@@ -25,13 +25,13 @@
       "confirmation": "İşletmenizi aktif edebilmek için lütfen aşağıdaki kutucuğa '<strong>{{text}}</strong>' yazınız."
     },
     "disable": {
-        "title": "İşletmeyi Pasif Et",
-        "subtitle": "İşletmenizi pasif etmek istediğinizden emin misiniz?",
-        "text": "İşletmenizi pasif ettiğinizde herkes tarafından görülemez olacaktır. Pasif etmeden önce emin olmalısınız.",
-        "button": "Pasif Et",
-        "label": "Onay Metni",
-        "confirm": "Evet, Pasif Et",
-        "confirmation": "İşletmenizi pasif edebilmek için lütfen aşağıdaki kutucuğa '<strong>{{text}}</strong>' yazınız."
+      "title": "İşletmeyi Pasif Et",
+      "subtitle": "İşletmenizi pasif etmek istediğinizden emin misiniz?",
+      "text": "İşletmenizi pasif ettiğinizde herkes tarafından görülemez olacaktır. Pasif etmeden önce emin olmalısınız.",
+      "button": "Pasif Et",
+      "label": "Onay Metni",
+      "confirm": "Evet, Pasif Et",
+      "confirmation": "İşletmenizi pasif edebilmek için lütfen aşağıdaki kutucuğa '<strong>{{text}}</strong>' yazınız."
     }
   }
 }

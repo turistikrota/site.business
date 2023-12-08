@@ -1,6 +1,11 @@
-import { CategoryListItem, CategoryMeta, fetchChildCategories, fetchMainCategories } from '@/api/category/category.api'
-import RichSelection from '@/components/selection/RichSelection'
-import { getI18nTranslation } from '@/types/base'
+import {
+  CategoryListItem,
+  CategoryMeta,
+  fetchChildCategories,
+  fetchMainCategories,
+} from '@/api/category/category.api.ts'
+import RichSelection from '@/components/selection/RichSelection.tsx'
+import { getI18nTranslation } from '@/types/base.ts'
 import ErrorText from '@turistikrota/ui/text/error'
 import React, { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'

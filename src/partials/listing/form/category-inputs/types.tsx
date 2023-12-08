@@ -1,4 +1,4 @@
-import { CategoryInput, InputTranslation } from '@/api/category/category.api'
+import { CategoryInput, InputTranslation } from '@/api/category/category.api.ts'
 
 type RenderProps = {
   formName: string

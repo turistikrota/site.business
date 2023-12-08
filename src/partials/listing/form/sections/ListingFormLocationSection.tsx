@@ -1,8 +1,8 @@
-import DraggableMarker from '@/components/map/DraggableMarker'
-import MapDefaultConfig from '@/components/map/MapDefaultConfig'
-import MapDynamic from '@/components/map/MapDynamic'
-import { findNearestDistrict } from '@/static/location/districts'
-import { ListingCreateFormValues } from '@/types/listing'
+import DraggableMarker from '@/components/map/DraggableMarker.tsx'
+import MapDefaultConfig from '@/components/map/MapDefaultConfig.tsx'
+import MapDynamic from '@/components/map/MapDynamic.tsx'
+import { findNearestDistrict } from '@/static/location/districts.ts'
+import { ListingFormValues } from '@/types/listing.ts'
 import Alert from '@turistikrota/ui/alert'
 import Button from '@turistikrota/ui/button'
 import Input from '@turistikrota/ui/form/input'
@@ -19,8 +19,8 @@ import { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 
 type Props = {
-  values: ListingCreateFormValues
-  errors: FormikErrors<ListingCreateFormValues>
+  values: ListingFormValues
+  errors: FormikErrors<ListingFormValues>
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void
   setFieldValue: (field: string, value: any) => void
 }
@@ -174,7 +174,7 @@ const ListingFormLocationSection: React.FC<Props> = ({ values, errors, onChange,
           </LineForm.Left>
           <LineForm.Right>
             <ToggleButton
-              defaultChecked={values.validation.onlyFamily}
+              defaultChecked={values.validation.onlyFamily ?? false}
               variant='success'
               title={t('form.location.isStrict.title')}
               onChange={(e) => setFieldValue('location.isStrict', e)}

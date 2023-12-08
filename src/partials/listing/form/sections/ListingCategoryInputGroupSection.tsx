@@ -1,6 +1,8 @@
-import { InputGroup, InputTranslation } from '@/api/category/category.api'
-import { getI18nTranslation } from '@/types/base'
-import { ListingCreateFormValues, ListingFeature } from '@/types/listing'
+import { InputGroup, InputTranslation } from '@/api/category/category.api.ts'
+import CategoryDateInput from '@/partials/listing/form/category-inputs/DateInput.tsx'
+import { InputRender } from '@/partials/listing/form/category-inputs/types.tsx'
+import { getI18nTranslation } from '@/types/base.ts'
+import { ListingFeature, ListingFormValues } from '@/types/listing.ts'
 import Checkbox from '@turistikrota/ui/form/checkbox'
 import Input from '@turistikrota/ui/form/input'
 import Radio from '@turistikrota/ui/form/radio'
@@ -12,11 +14,9 @@ import ErrorText from '@turistikrota/ui/text/error'
 import { FormikErrors } from 'formik'
 import { Fragment } from 'react'
 import { useTranslation } from 'react-i18next'
-import CategoryDateInput from './category-inputs/DateInput'
-import { InputRender } from './category-inputs/types'
 
 type Props = {
-  values: ListingCreateFormValues
+  values: ListingFormValues
   errors: FormikErrors<ListingFeature>[]
   inputGroups: InputGroup[]
   inputIndex: Record<string, number>

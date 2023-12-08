@@ -1,5 +1,5 @@
-import { Price, Prices } from '@/types/listing'
-import { useDayJS } from '@/utils/dayjs'
+import { Price, Prices } from '@/types/listing.ts'
+import { useDayJS } from '@/utils/dayjs.ts'
 import Button from '@turistikrota/ui/button'
 import ErrorText from '@turistikrota/ui/text/error'
 import { FormikErrors } from 'formik'

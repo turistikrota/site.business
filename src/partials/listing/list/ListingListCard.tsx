@@ -65,7 +65,7 @@ const ListingListCard: React.FC<Props> = ({
   )
 
   return (
-    <div className={`flex flex-col h-full ${isDraggable ? 'cursor-move' : 'w-full'}`}>
+    <div className={`flex h-full flex-col ${isDraggable ? 'cursor-move' : 'w-full'}`}>
       <Carousel
         imageAltPrefix={translation.title}
         images={mappedImages}

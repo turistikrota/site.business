@@ -1,5 +1,5 @@
 import MetaWrapper from '@/components/MetaWrapper'
-import ListingCreateForm from '@/components/forms/listing/ListingCreateForm'
+import ListingCreateForm from '@/partials/listing/form/ListingCreateForm.tsx'
 import RoleGuardView from '@/layouts/RoleGuard'
 import { BusinessRoles, ListingRoles } from '@/static/role'
 import { useTranslation } from 'react-i18next'
