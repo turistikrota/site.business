@@ -1,24 +1,26 @@
-import { BusinessLog, fetchMyBusinessLogs } from '@/api/business/business.log.api.ts'
-import EmptyContent from '@/components/EmptyContent.tsx'
-import MetaWrapper from '@/components/MetaWrapper.tsx'
-import { useListQuery } from '@/hooks/list.tsx'
-import RoleGuardView from '@/layouts/RoleGuard.tsx'
-import RenderLogDetails from '@/partials/business/logs/BusinessLogRenderer.tsx'
-import { BusinessLogRoles, BusinessRoles } from '@/static/role.ts'
-import { makeUserAvatar } from '@/utils/cdn.ts'
-import { useDayJS } from '@/utils/dayjs.ts'
-import NotFoundView from '@/views/404.tsx'
+import { ListingLog, fetchListingLogs } from '@/api/listing/listing.log.api'
+import EmptyContent from '@/components/EmptyContent'
+import MetaWrapper from '@/components/MetaWrapper'
+import { useListQuery } from '@/hooks/list'
+import RoleGuardView from '@/layouts/RoleGuard'
+import ListingLogRenderer from '@/partials/listing/log/ListingLogRenderer'
+import { ListingLogsViewRoles } from '@/roles/listing'
+import { makeUserAvatar } from '@/utils/cdn'
+import { useDayJS } from '@/utils/dayjs'
+import NotFoundView from '@/views/404'
 import ContentLoader from '@turistikrota/ui/loader'
 import Timeline from '@turistikrota/ui/timeline'
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
+import { useParams } from 'react-router-dom'
 
-function BusinessLogsView() {
-  const { t, i18n } = useTranslation('business')
+const ListingLogsView = () => {
+  const { t, i18n } = useTranslation('listings')
   const dayJS = useDayJS(i18n.language)
+  const params = useParams()
   const [page] = useState(1)
-  const [limit] = useState(100)
-  const { firstLoading, list } = useListQuery<BusinessLog>(() => fetchMyBusinessLogs(page, limit))
+  const [limit] = useState(10)
+  const { firstLoading, list } = useListQuery<ListingLog>(() => fetchListingLogs(params.id!, page, limit))
 
   if (firstLoading) return <ContentLoader noMargin />
   if (!list) return <NotFoundView />
@@ -32,14 +34,13 @@ function BusinessLogsView() {
     }
     return parsed.format('DD MMMM YYYY HH:mm')
   }
-
   return (
     <MetaWrapper
       title={t('logs.meta.title')}
       description={t('logs.meta.description')}
       keywords={t('logs.meta.keywords')}
     >
-      <section className={`container mx-auto ${list.length === 0 ? 'p-4' : 'px-8 py-4'}`}>
+      <section className='container relative mx-auto p-4 '>
         {list.length === 0 && (
           <EmptyContent
             className='col-span-12'
@@ -53,15 +54,15 @@ function BusinessLogsView() {
               <Timeline.Item
                 key={item.id}
                 avatar={
-                  item.isAdminAction ? (
-                    <Timeline.Admin />
-                  ) : (
+                  item.user ? (
                     <Timeline.Avatar avatar={makeUserAvatar(item.user.name)} avatarAlt={item.user.name} />
+                  ) : (
+                    <Timeline.System />
                   )
                 }
                 date={fixDate(item.datetime)}
               >
-                <RenderLogDetails {...item} />
+                <ListingLogRenderer {...item} />
               </Timeline.Item>
             ))}
           </Timeline>
@@ -73,8 +74,8 @@ function BusinessLogsView() {
 
 export function Component() {
   return (
-    <RoleGuardView roles={[BusinessRoles.Super, BusinessLogRoles.Super, BusinessLogRoles.List]}>
-      <BusinessLogsView />
+    <RoleGuardView roles={ListingLogsViewRoles}>
+      <ListingLogsView />
     </RoleGuardView>
   )
 }

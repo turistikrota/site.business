@@ -23,7 +23,7 @@ const ListingRestoreForm: React.FC<Props> = ({ uuid, title, onOk }) => {
   const handleRestore = () => {
     setIsLoading(true)
     httpClient
-      .patch(apiUrl(Services.Listing, `/${uuid}/restore`))
+      .patch(apiUrl(Services.Listing, `/business/${uuid}/restore`))
       .then((res) => {
         if (res.status === 200) return onOk()
       })

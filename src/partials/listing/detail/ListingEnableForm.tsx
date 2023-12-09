@@ -23,7 +23,7 @@ const ListingEnableForm: React.FC<Props> = ({ uuid, title, onOk }) => {
   const handleEnable = () => {
     setIsLoading(true)
     httpClient
-      .patch(apiUrl(Services.Listing, `/${uuid}/enable`), null)
+      .patch(apiUrl(Services.Listing, `/business/${uuid}/enable`), null)
       .then((res) => {
         if (res.status === 200) return onOk()
       })

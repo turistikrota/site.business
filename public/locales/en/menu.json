@@ -24,6 +24,7 @@
     "users": "Users",
     "business-logs": "Business Logs",
     "listing-edit": "Edit Listing",
+    "listing-logs": "Listing Logs",
     "subtitles": {
       "edit": "Edit your business profile picture, information and social media accounts.",
       "security": "Change your password, enable two-factor authentication, and manage your sign-in devices.",
@@ -38,6 +39,7 @@
       "listings": "View and manage listings in this business.",
       "listing-detail": "View and manage a listing in this business.",
       "listing-create": "Create a new listing in this business.",
+      "listing-logs": "View listing logs.",
       "business-logs": "View business logs.",
       "listing-edit": "Edit a listing in this business."
     }

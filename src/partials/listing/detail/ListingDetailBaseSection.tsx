@@ -1,3 +1,5 @@
+import RoleGuard from '@/components/RoleGuard.tsx'
+import { ListingEditViewRoles, ListingLogsViewRoles } from '@/roles/listing.ts'
 import { getStaticRoute } from '@/static/page.ts'
 import Button from '@turistikrota/ui/button'
 import { useTranslation } from 'react-i18next'
@@ -18,18 +20,36 @@ const ListingDetailBaseSection: React.FC<Props> = ({ uuid, title, images, descri
       <ListingDetailImagePreview images={images} title={title} />
       <h2 className='text-2xl'>{title}</h2>
       <p className='text-gray-600 dark:text-gray-300'>{description}</p>
-      <Link
-        to={`${getStaticRoute(i18n.language).business.details.listing.detail}${uuid}/${
-          getStaticRoute(i18n.language).business.details.listing.edit
-        }`}
-        target='_blank'
-        className='mt-2'
-      >
-        <Button block={false} className='flex items-center justify-center gap-2'>
-          <i className='bx bx-edit-alt bx-xs' />
-          {t('detail.edit')}
-        </Button>
-      </Link>
+      <RoleGuard roles={[...ListingEditViewRoles, ...ListingLogsViewRoles]}>
+        <div className='mt-2 flex gap-4'>
+          <RoleGuard roles={ListingEditViewRoles}>
+            <Link
+              to={`${getStaticRoute(i18n.language).business.details.listing.detail}${uuid}/${
+                getStaticRoute(i18n.language).business.details.listing.edit
+              }`}
+              target='_blank'
+            >
+              <Button block={false} className='flex items-center justify-center gap-2'>
+                <i className='bx bx-edit-alt bx-xs' />
+                {t('detail.edit')}
+              </Button>
+            </Link>
+          </RoleGuard>
+          <RoleGuard roles={ListingLogsViewRoles}>
+            <Link
+              to={`${getStaticRoute(i18n.language).business.details.listing.detail}${uuid}/${
+                getStaticRoute(i18n.language).business.details.listing.logs
+              }`}
+              target='_blank'
+            >
+              <Button block={false} className='flex items-center justify-center gap-2' variant='secondary'>
+                <i className='bx bx-history bx-xs' />
+                {t('detail.logs')}
+              </Button>
+            </Link>
+          </RoleGuard>
+        </div>
+      </RoleGuard>
     </section>
   )
 }

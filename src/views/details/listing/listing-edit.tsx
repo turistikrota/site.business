@@ -1,14 +1,14 @@
-import { FC } from 'react'
-import RoleGuardView from '@/layouts/RoleGuard.tsx'
-import { BusinessRoles, ListingRoles } from '@/static/role.ts'
-import { useTranslation } from 'react-i18next'
-import MetaWrapper from '@/components/MetaWrapper.tsx'
-import { useParams } from 'react-router-dom'
-import { useQuery } from '@/hooks/query.tsx'
 import { fetchMyListing } from '@/api/listing/listing.api.ts'
-import ContentLoader from '@turistikrota/ui/loader'
-import NotFoundView from '@/views/404.tsx'
+import MetaWrapper from '@/components/MetaWrapper.tsx'
+import { useQuery } from '@/hooks/query.tsx'
+import RoleGuardView from '@/layouts/RoleGuard.tsx'
 import ListingEditForm from '@/partials/listing/form/ListingEditForm.tsx'
+import { ListingEditViewRoles } from '@/roles/listing'
+import NotFoundView from '@/views/404.tsx'
+import ContentLoader from '@turistikrota/ui/loader'
+import { FC } from 'react'
+import { useTranslation } from 'react-i18next'
+import { useParams } from 'react-router-dom'
 
 const ListingEditView: FC = () => {
   const params = useParams()
@@ -33,7 +33,7 @@ const ListingEditView: FC = () => {
 
 export function Component() {
   return (
-    <RoleGuardView roles={[BusinessRoles.Super, ListingRoles.Super, ListingRoles.Update]}>
+    <RoleGuardView roles={ListingEditViewRoles}>
       <ListingEditView />
     </RoleGuardView>
   )

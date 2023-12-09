@@ -23,6 +23,7 @@
     "listing-detail": "İlan Detayı",
     "listing-create": "İlan Oluştur",
     "listing-edit": "İlan Düzenle",
+    "listing-logs": "İlan Logları",
     "business-logs": "İşletme Logları",
     "subtitles": {
       "edit": "İşletme profil resminizi, bilgilerinizi ve sosyal medya hesaplarınızı düzenleyin.",
@@ -39,6 +40,7 @@
       "listing-create": "Bu işletme için yeni bir ilan oluşturun.",
       "listing-detail": "Bu işletmenin ilanını görüntüleyin ve yönetin.",
       "listing-edit": "Bu işletmenin ilanını düzenleyin.",
+      "listing-logs": "Bu ilanın loglarını görüntüleyin.",
       "business-logs": "Bu işletmenin loglarını görüntüleyin."
     }
   },
