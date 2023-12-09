@@ -22,19 +22,28 @@ const ListingFormPricePreviewList: React.FC<Props> = ({ prices, errors, setField
       {prices.map((price, idx) => (
         <div key={idx} className='flex flex-col gap-x-2 gap-y-1'>
           <div key={idx} className='flex w-full gap-x-4'>
-            <div className='flex w-full items-center justify-center rounded-md bg-default p-2 text-secondary'>
+            <div
+              id={`prices[${idx}].startDate`}
+              className='flex w-full items-center justify-center rounded-md bg-default p-2 text-secondary'
+            >
               {dayjs(price.startDate).format('DD MMMM YYYY')}
             </div>
             <div className='flex items-center justify-center'>
               <i className='bx bx-arrow-to-right text-2xl text-gray-700 dark:text-gray-300' />
             </div>
-            <div className='flex w-full items-center justify-center rounded-md bg-default p-2 text-secondary'>
+            <div
+              id={`prices[${idx}].endDate`}
+              className='flex w-full items-center justify-center rounded-md bg-default p-2 text-secondary'
+            >
               {dayjs(price.endDate).format('DD MMMM YYYY')}
             </div>
             <div className='flex  justify-center'>
               <span className='text-2xl text-gray-700 dark:text-gray-300'>=</span>
             </div>
-            <div className='flex w-full items-center justify-center rounded-md bg-default p-2 text-primary'>
+            <div
+              id={`prices[${idx}].price`}
+              className='flex w-full items-center justify-center rounded-md bg-default p-2 text-primary'
+            >
               {Intl.NumberFormat('tr-TR').format(price.price)} ₺
             </div>
             <div className='flex items-center justify-center'>

@@ -27,7 +27,7 @@ const ListingFormMetaSection: React.FC<Props> = ({ values, errors, onChange }) =
               {t(`config.${locale}`)}
             </div>
             <Input
-              id={`meta.${locale}.title`}
+              id={`meta[${locale}].title`}
               type='text'
               name={`meta.${locale}.title`}
               autoComplete={`meta.${locale}.title`}
@@ -39,7 +39,7 @@ const ListingFormMetaSection: React.FC<Props> = ({ values, errors, onChange }) =
               onBlur={onChange}
             />
             <Input
-              id={`meta.${locale}.description`}
+              id={`meta[${locale}].description`}
               type='text'
               name={`meta.${locale}.description`}
               autoComplete={`meta.${locale}.description`}

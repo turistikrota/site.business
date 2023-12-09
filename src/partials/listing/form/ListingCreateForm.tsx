@@ -76,6 +76,12 @@ const ListingCreateForm: React.FC = () => {
             error: err.response.data,
             form,
             toast,
+            scroller: (elId: string) => {
+              const el = document.getElementById(elId)
+              if (el) {
+                el.scrollIntoView({ behavior: 'smooth', block: 'center' })
+              }
+            },
           })
         })
         .finally(() => {
@@ -130,6 +136,16 @@ const ListingCreateForm: React.FC = () => {
     if (isEmptyListingFormValues(form.values)) return
     autoSave.set({ ...form.values, images: images })
   }, [form.values])
+
+  useEffect(() => {
+    const errors = Object.keys(form.errors)
+    if (errors.length === 0) return
+    const el = document.getElementById(errors[0])
+    console.log('el::', el, errors[0])
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth', block: 'center' })
+    }
+  }, [form.errors])
 
   useEffect(() => {
     if (form.values.categoryUUIDs.length > 0) {
