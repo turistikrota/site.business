@@ -3,6 +3,7 @@ import EmptyContent from '@/components/EmptyContent'
 import MetaWrapper from '@/components/MetaWrapper'
 import { useListQuery } from '@/hooks/list'
 import RoleGuardView from '@/layouts/RoleGuard'
+import ListingLogRenderer from '@/partials/listing/log/ListingLogRenderer'
 import { ListingLogsViewRoles } from '@/roles/listing'
 import { makeUserAvatar } from '@/utils/cdn'
 import { useDayJS } from '@/utils/dayjs'
@@ -61,7 +62,7 @@ const ListingLogsView = () => {
                 }
                 date={fixDate(item.datetime)}
               >
-                ehe
+                <ListingLogRenderer {...item} />
               </Timeline.Item>
             ))}
           </Timeline>

@@ -10,7 +10,40 @@
       "title": "Listing Logs",
       "description": "You can view the logs of your listing using this page.",
       "keywords": "listing, logs, listing logs, view listing logs"
-    }
+    },
+    "empty": {
+      "title": "No log entry yet.",
+      "description": "A log entry for this listing will be displayed here when created."
+    },
+    "actions": {
+      "create": {
+        "text": "<0>@{{userName}}</0> created this listing."
+      },
+      "update": {
+        "text": "<0>@{{userName}}</0> edited this listing."
+      },
+      "delete": {
+        "text": "<0>@{{userName}}</0> deleted this listing."
+      },
+      "disable": {
+        "text": "<0>@{{userName}}</0> disabled this listing."
+      },
+      "enable": {
+        "text": "<0>@{{userName}}</0> enabled this listing."
+      },
+      "reorder": {
+        "text": "<0>@{{userName}}</0> changed the order of this listing."
+      },
+      "restore": {
+        "text": "<0>@{{userName}}</0> restored this listing."
+      },
+      "validate_success": {
+        "text": "The category rules were checked by the system and the listing successfully passed these rules. If active, the listing will be published."
+      },
+      "validate_fail": {
+        "text": "The category rules were checked by the system and the listing failed to pass these rules. Any errors will be displayed below."
+      }
+    }    
   },
   "detail": {
     "edit": "Edit Listing",

@@ -10,6 +10,39 @@
       "title": "İlan Kayıtları",
       "description": "Bu sayfayı kullanarak ilanınızın kayıtlarını görüntüleyebilirsiniz.",
       "keywords": "ilan, kayıt, ilan kayıtları, ilan kaydı"
+    },
+    "empty": {
+      "title": "Henüz bir log kaydı yok.",
+      "description": "Bu ilana ait bir log kaydı oluşturulduğunda burada görüntülenecektir."
+    },
+    "actions": {
+      "create": {
+        "text": "<0>@{{userName}}</0> adlı kullanıcı bu ilanı oluşturdu."
+      },
+      "update": {
+        "text": "<0>@{{userName}}</0> adlı kullanıcı bu ilanı düzenledi."
+      },
+      "delete": {
+        "text": "<0>@{{userName}}</0> adlı kullanıcı bu ilanı sildi."
+      },
+      "disable": {
+        "text": "<0>@{{userName}}</0> adlı kullanıcı bu ilanı devre dışı bıraktı."
+      },
+      "enable": {
+        "text": "<0>@{{userName}}</0> adlı kullanıcı bu ilanı etkinleştirdi."
+      },
+      "reorder": {
+        "text": "<0>@{{userName}}</0> adlı kullanıcı bu ilanın sırasını değiştirdi."
+      },
+      "restore": {
+        "text": "<0>@{{userName}}</0> adlı kullanıcı bu ilanı kurtardı."
+      },
+      "validate_success": {
+        "text": "Kategori kuralları sistem tarafından kontrol edildi ve ilan başarıyla bu kuralları geçti. İlan eğer aktifse yayınlanacaktır."
+      },
+      "validate_fail": {
+        "text": "Kategori kuralları sistem tarafından kontrol edildi ve ilan bu kuralları geçemedi. Oluşan hatalar varsa aşağıda görüntülenecektir."
+      }
     }
   },
   "detail": {
