@@ -23,7 +23,7 @@ const ListingDisableForm: React.FC<Props> = ({ uuid, title, onOk }) => {
   const handleDisable = () => {
     setIsLoading(true)
     httpClient
-      .patch(apiUrl(Services.Listing, `/${uuid}/disable`), null)
+      .patch(apiUrl(Services.Listing, `/business/${uuid}/disable`), null)
       .then((res) => {
         if (res.status === 200) return onOk()
       })

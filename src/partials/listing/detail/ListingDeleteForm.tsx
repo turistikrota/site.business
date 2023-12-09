@@ -23,7 +23,7 @@ const ListingDeleteForm: React.FC<Props> = ({ uuid, title, onOk }) => {
   const handleDelete = () => {
     setIsLoading(true)
     httpClient
-      .delete(apiUrl(Services.Listing, `/${uuid}`))
+      .delete(apiUrl(Services.Listing, `/business/${uuid}`))
       .then((res) => {
         if (res.status === 200) return onOk()
       })
