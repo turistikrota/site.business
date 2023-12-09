@@ -64,7 +64,7 @@ const ListingFormImageSection: React.FC<Props> = ({ errors, images, setImages, t
   return (
     <DisabledWrapper title={title}>
       <Spin loading={loading}>
-        <FormSection>
+        <FormSection id='images'>
           <FormSection.Head>
             <FormSection.Head.Title>{t('form.images.title')}</FormSection.Head.Title>
             <FormSection.Head.Subtitle>{t('form.images.subtitle')}</FormSection.Head.Subtitle>

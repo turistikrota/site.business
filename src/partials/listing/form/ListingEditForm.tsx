@@ -65,6 +65,12 @@ const ListingEditForm: React.FC<Props> = ({ details, onOk }) => {
             error: err.response.data,
             form,
             toast,
+            scroller: (elId: string) => {
+              const el = document.getElementById(elId)
+              if (el) {
+                el.scrollIntoView({ behavior: 'smooth', block: 'center' })
+              }
+            },
           })
         })
         .finally(() => {

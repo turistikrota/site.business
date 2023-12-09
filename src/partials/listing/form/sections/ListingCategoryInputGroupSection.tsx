@@ -215,7 +215,7 @@ const ListingCategoryInputGroupSection: React.FC<Props> = ({
               return (
                 <Fragment key={input.uuid}>
                   <InputRender
-                    formName={`features.${inputIndex[input.uuid]}.value`}
+                    formName={`features[${inputIndex[input.uuid]}].value`}
                     {...input}
                     isDesktop={isDesktop}
                     value={values.features[inputIndex[input.uuid]].value}

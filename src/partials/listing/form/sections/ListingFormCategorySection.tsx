@@ -16,7 +16,7 @@ type Props = {
 const ListingFormCategorySection: React.FC<Props> = ({ initialSelectedCategories, values, errors, setFieldValue }) => {
   const { t } = useTranslation('listings')
   return (
-    <FormSection>
+    <FormSection id='categoryUUIDs'>
       <FormSection.Head>
         <FormSection.Head.Title>{t('form.category.title')}</FormSection.Head.Title>
         <FormSection.Head.Subtitle>{t('form.category.subtitle')}</FormSection.Head.Subtitle>
