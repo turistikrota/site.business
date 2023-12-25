@@ -120,7 +120,7 @@ const ListingFormLocationSection: React.FC<Props> = ({ values, errors, onChange,
           onChange={onChange}
           onBlur={onChange}
         />
-        <div className='grid w-full grid-cols-12 gap-4'>
+        <div className='grid w-full grid-cols-12 gap-2'>
           <div className='col-span-6'>
             <Input
               id={`location.coordinates[0]`}

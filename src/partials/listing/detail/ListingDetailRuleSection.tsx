@@ -53,7 +53,7 @@ const ListingDetailRuleSection: React.FC<Props> = ({ validation }) => {
   return (
     <section>
       <h2 className='mb-3 text-xl font-semibold'>{t('detail.sections.rules')}</h2>
-      <div className='grid grid-cols-12 gap-4'>
+      <div className='grid grid-cols-12 gap-2'>
         {items.map((item, idx) => (
           <Card key={idx} className='col-span-12 md:col-span-6'>
             <KeyValue>

@@ -69,8 +69,8 @@ const corporationTypes: CorporationType[] = [
 const BusinessTypeCard: React.FC<BusinessTypeCardProps> = ({ description, icon, onClick, title, selected }) => {
   return (
     <div
-      className={`relative flex h-40 w-40 cursor-pointer flex-col items-center justify-center rounded-md p-4 transition-colors hover:bg-input ${
-        selected ? 'bg-input' : 'bg-third'
+      className={`relative flex h-40 w-40 cursor-pointer flex-col items-center justify-center rounded-md border p-2 transition-colors duration-200 hover:bg-second ${
+        selected ? 'bg-second' : ''
       }`}
       onClick={onClick}
     >
@@ -163,19 +163,19 @@ const BusinessCreateForm = () => {
 
   return (
     <Spin loading={isLoading}>
-      <div className='border-b py-4'>
-        <h1 className='text-center text-xl font-bold leading-tight tracking-tight text-gray-900 dark:text-white md:text-2xl'>
+      <div className='border-b py-2'>
+        <h1 className='text-center text-xl font-bold leading-tight tracking-tight text-gray-900 dark:text-white'>
           {t('title')}
         </h1>
       </div>
 
       <MultiStepForm currentStep={currentStep} onStepChange={setCurrentStep} onSubmit={form.handleSubmit}>
         <Step>
-          <div className='rounded-t-md bg-second pb-4'>
+          <div className='mb-2 rounded-md'>
             <h2 className='text-left text-lg font-bold lg:block'>{t('type-select.title')}</h2>
             <p className='text-left text-sm text-gray-600 dark:text-gray-400 lg:block'>{t('type-select.subtitle')}</p>
           </div>
-          <Alert type='warning' className='mb-4'>
+          <Alert type='warning' className='mb-2'>
             <Alert.Title>{t('type-select.info.title')}</Alert.Title>
             <Alert.Description>{t('type-select.info.content')}</Alert.Description>
           </Alert>
@@ -197,8 +197,8 @@ const BusinessCreateForm = () => {
           </div>
         </Step>
         {form.values.businessType === 'individual' ? (
-          <Step className='space-y-4 md:space-y-6'>
-            <div className='flex gap-4 md:gap-6'>
+          <Step className='space-y-2'>
+            <div className='flex gap-2'>
               <div className='w-full'>
                 <Input
                   label={t('individual.firstName')}
@@ -276,7 +276,7 @@ const BusinessCreateForm = () => {
             />
           </Step>
         ) : (
-          <Step className='space-y-4 md:space-y-6'>
+          <Step className='space-y-2'>
             <Input
               label={t('corporation.taxNumber')}
               id='taxNumber'
@@ -315,12 +315,12 @@ const BusinessCreateForm = () => {
           </Step>
         )}
         <Step>
-          <div className='rounded-t-md bg-second pb-4'>
+          <div className='mb-2'>
             <h2 className='text-left text-lg font-bold lg:block'>{t('billing.title')}</h2>
             <p className='text-left text-sm text-gray-600 dark:text-gray-400 lg:block'>{t('billing.subtitle')}</p>
           </div>
-          <div className='space-y-4 md:space-y-6'>
-            <div className='flex gap-4 md:gap-6'>
+          <div className='space-y-2'>
+            <div className='flex gap-2'>
               <div className='w-full'>
                 <Input
                   label={t('billing.province')}
@@ -366,7 +366,7 @@ const BusinessCreateForm = () => {
             />
           </div>
         </Step>
-        <Step className='space-y-4 md:space-y-6'>
+        <Step className='space-y-2'>
           <Input
             label={t('general.nickName')}
             id='nickName'

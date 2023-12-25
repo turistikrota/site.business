@@ -21,7 +21,7 @@ const ListingFormValidationSection: React.FC<Props> = ({ values, errors, onBoolF
         <FormSection.Head.Title>{t('form.validation.title')}</FormSection.Head.Title>
         <FormSection.Head.Subtitle>{t('form.validation.subtitle')}</FormSection.Head.Subtitle>
       </FormSection.Head>
-      <FormSection.Body className='grid grid-cols-12 gap-4 rounded-b-md'>
+      <FormSection.Body className='grid grid-cols-12 gap-2 rounded-b-md'>
         <div className='col-span-12 sm:col-span-6'>
           <Input
             id={`validation.minAdult`}

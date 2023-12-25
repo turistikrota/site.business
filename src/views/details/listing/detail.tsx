@@ -38,7 +38,7 @@ const ListingDetailView = () => {
         keywords={t('detail.meta.keywords')}
       >
         <ImagePreview list={images} altPrefix={translations.title}>
-          <section className='container relative mx-auto p-4'>
+          <section className='container relative mx-auto p-2'>
             <ListingDetailContent
               uuid={params.id ?? ''}
               title={translations.title}

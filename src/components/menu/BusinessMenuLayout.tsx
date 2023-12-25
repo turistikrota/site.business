@@ -1,13 +1,13 @@
+import { useCurrentBusiness } from '@/contexts/currentBusiness.tsx'
+import { getStaticRoute } from '@/static/page.ts'
+import Alert from '@turistikrota/ui/alert'
+import Button from '@turistikrota/ui/button'
 import { useIsDesktop } from '@turistikrota/ui/hooks/dom'
 import React, { useState } from 'react'
-import BusinessDetailHeader, { BusinessDetailTitle, type Pages } from './BusinessDetailHeader'
-import BusinessMenu from './BusinessMenu'
-import { useCurrentBusiness } from '@/contexts/currentBusiness.tsx'
-import Alert from '@turistikrota/ui/alert'
 import { useTranslation } from 'react-i18next'
 import { Link, useLocation } from 'react-router-dom'
-import { getStaticRoute } from '@/static/page.ts'
-import Button from '@turistikrota/ui/button'
+import BusinessDetailHeader, { BusinessDetailTitle, type Pages } from './BusinessDetailHeader'
+import BusinessMenu from './BusinessMenu'
 
 type Props = {
   open?: boolean
@@ -61,7 +61,7 @@ export default function BusinessMenuLayout({ open = false, page, children }: Rea
               <BusinessDetailTitle page={page} />
             </div>
             {!current.business.isEnabled && (
-              <section className={'container relative mx-auto p-4'}>
+              <section className={'container relative mx-auto p-2'}>
                 <Alert type={'warning'} showIcon>
                   <Alert.Title>{t('warns.disabled.title')}</Alert.Title>
                   <Alert.Description>{t('warns.disabled.description')}</Alert.Description>

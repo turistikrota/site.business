@@ -69,7 +69,7 @@ const ListingFormImageSection: React.FC<Props> = ({ errors, images, setImages, t
             <FormSection.Head.Title>{t('form.images.title')}</FormSection.Head.Title>
             <FormSection.Head.Subtitle>{t('form.images.subtitle')}</FormSection.Head.Subtitle>
           </FormSection.Head>
-          <FormSection.Body className='flex flex-wrap gap-4 rounded-b-md'>
+          <FormSection.Body className='flex flex-wrap gap-2 rounded-b-md'>
             <ImagePreviewProvider list={images} altPrefix='aa'>
               <ImageUploader onUpload={onUploadFiles}></ImageUploader>
               <ImageUploader.Preview

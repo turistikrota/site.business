@@ -51,7 +51,7 @@ const ZoneModal: React.FC<Props> = ({
         <FormSection.Head.Subtitle>{subtitle}</FormSection.Head.Subtitle>
       </Modal.Head>
       <Modal.Body>
-        <div className='flex flex-col gap-4'>
+        <div className='flex flex-col gap-2'>
           {firstConfirm ? (
             <>
               <p>

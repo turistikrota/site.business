@@ -40,7 +40,7 @@ export default function BusinessMenuProfileCard({ open }: Props) {
         </div>
         <Link
           to={getStaticRoute(i18n.language).business.select}
-          className='my-2'
+          className='mb-2'
           title={t('buttons.change')}
           aria-label={t('buttons.change')}
         >

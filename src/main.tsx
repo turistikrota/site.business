@@ -1,7 +1,6 @@
+import '@turistikrota/fonts/verdana.css'
 import '@turistikrota/ui/assets/config.css'
 import '@turistikrota/ui/assets/default.css'
-import GlassEffect from '@turistikrota/ui/design/glass'
-import '@turistikrota/ui/fonts/verdana.css'
 import { setDefaultImageSrc } from '@turistikrota/ui/hooks/image'
 import ContentLoader from '@turistikrota/ui/loader'
 import { ToastListProvider, ToastProvider } from '@turistikrota/ui/toast'
@@ -24,7 +23,6 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
     <AuthenticationLayout>
       <ToastListProvider>
         <ToastProvider>
-          <GlassEffect.Fixed />
           <RouterProvider router={router} fallbackElement={<ContentLoader />} />
         </ToastProvider>
       </ToastListProvider>

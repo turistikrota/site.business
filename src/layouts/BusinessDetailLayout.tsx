@@ -1,5 +1,6 @@
 import { Services, apiUrl } from '@/config/services'
 import { CurrentBusinessProvider } from '@/contexts/currentBusiness'
+import { useAuth } from '@/hooks/auth.tsx'
 import { checkUnauthorized } from '@/hooks/error'
 import { httpClient } from '@/http/client'
 import { getStaticRoute } from '@/static/page'
@@ -15,7 +16,6 @@ import { useEffect, useMemo, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Outlet, useNavigate } from 'react-router-dom'
 import { Spinner } from 'sspin'
-import { useAuth } from '@/hooks/auth.tsx'
 
 type ErrorView = {
   title: string

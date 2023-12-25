@@ -16,7 +16,7 @@ const VerificationRejected: React.FC<Props> = ({ reason }) => {
       description={t('rejected.meta.description')}
       keywords={t('rejected.meta.keywords')}
     >
-      <div className='flex flex-col gap-2 rounded-md bg-red-400 bg-opacity-5 p-4 dark:bg-red-800 dark:bg-opacity-5'>
+      <div className='flex flex-col gap-2 rounded-md bg-red-400 bg-opacity-5 p-2 dark:bg-red-800 dark:bg-opacity-5'>
         <div className='flex justify-center'>
           <i className={`bx bx-error text-8xl text-red-500`} />
         </div>

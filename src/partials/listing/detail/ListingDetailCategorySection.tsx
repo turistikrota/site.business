@@ -1,19 +1,19 @@
-import { FC } from 'react'
 import {
   CategoryFields,
   CategoryListItem,
   fetchCategoryFields,
   fetchCategoryListByUUIDs,
 } from '@/api/category/category.api.ts'
-import { useQuery } from '@/hooks/query.tsx'
-import ContentLoader from '@turistikrota/ui/loader'
-import { useTranslation } from 'react-i18next'
-import { getI18nTranslation } from '@/types/base.ts'
-import FormSection from '@turistikrota/ui/form/section'
-import { ListingFeature } from '@/types/listing.ts'
-import { useCategoryFeatures } from '@/hooks/category.fields.tsx'
-import Card from '@turistikrota/ui/cards/default'
 import KeyValue from '@/components/KeyValue.tsx'
+import { useCategoryFeatures } from '@/hooks/category.fields.tsx'
+import { useQuery } from '@/hooks/query.tsx'
+import { getI18nTranslation } from '@/types/base.ts'
+import { ListingFeature } from '@/types/listing.ts'
+import Card from '@turistikrota/ui/cards/default'
+import FormSection from '@turistikrota/ui/form/section'
+import ContentLoader from '@turistikrota/ui/loader'
+import { FC } from 'react'
+import { useTranslation } from 'react-i18next'
 
 type Props = {
   categoryUUIDs: string[]
@@ -49,7 +49,7 @@ const ListingDetailCategorySection: FC<Props> = ({ categoryUUIDs, features }) =>
               <FormSection.Head.Subtitle>
                 {getI18nTranslation(group.translations, i18n.language).description}
               </FormSection.Head.Subtitle>
-              <section className={'mt-4 grid grid-cols-12 gap-4'}>
+              <section className={'mt-4 grid grid-cols-12 gap-2'}>
                 {filterByGroup(group.uuid).map((feature, featureIdx) => (
                   <Card key={featureIdx} className={'col-span-12 md:col-span-6'}>
                     <KeyValue>

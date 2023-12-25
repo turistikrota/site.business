@@ -42,7 +42,7 @@ const ListingDisableForm: React.FC<Props> = ({ uuid, title, onOk }) => {
   }
 
   return (
-    <LineForm className='bg-second p-4 transition-colors duration-200 first:rounded-t-md last:rounded-b-md hover:bg-third'>
+    <LineForm className='bg-second p-2 transition-colors duration-200 first:rounded-t-md last:rounded-b-md hover:bg-third'>
       <ZoneWarningModal
         inputLabel={t('detail.enable.label')}
         onCancel={() => {

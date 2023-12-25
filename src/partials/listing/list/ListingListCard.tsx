@@ -74,7 +74,7 @@ const ListingListCard: React.FC<Props> = ({
         imgLoadingClassName='rounded-t-md'
       />
       <TooltipProvider>
-        <div className='flex h-full flex-col justify-between gap-2 p-4'>
+        <div className='flex h-full flex-col justify-between gap-2 p-2'>
           <div className='flex flex-col gap-2'>
             <div className='line-clamp-2 text-xl font-bold'>{translation.title}</div>
             <div className='flex w-full items-center justify-between text-sm'>

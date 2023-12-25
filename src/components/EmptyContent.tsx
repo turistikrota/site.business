@@ -14,7 +14,7 @@ const EmptyContent: React.FC<Props> = ({
   children = null,
 }) => {
   return (
-    <div className={`flex flex-col gap-2 rounded-md bg-default p-4 ${className ? className : ''}`}>
+    <div className={`flex flex-col gap-2 rounded-md bg-second p-2 ${className ? className : ''}`}>
       {icon && (
         <div className='flex justify-center'>
           <i className={`bx ${icon} text-6xl`} />
