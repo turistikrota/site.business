@@ -1,10 +1,10 @@
 import { ListingListItem, fetchMyListings } from '@/api/listing/listing.api'
 import EmptyContent from '@/components/EmptyContent'
 import MetaWrapper from '@/components/MetaWrapper'
-import ListingDragProvider from '@/partials/listing/list/ListingDragProvider.tsx'
-import ListingListCard from '@/partials/listing/list/ListingListCard.tsx'
 import { useListQuery } from '@/hooks/list'
 import RoleGuardView from '@/layouts/RoleGuard'
+import ListingDragProvider from '@/partials/listing/list/ListingDragProvider.tsx'
+import ListingListCard from '@/partials/listing/list/ListingListCard.tsx'
 import { getStaticRoute } from '@/static/page'
 import { BusinessRoles, ListingRoles } from '@/static/role'
 import Button from '@turistikrota/ui/button'
@@ -25,8 +25,8 @@ const ListingListView: React.FC = () => {
         description={t('list.meta.description')}
         keywords={t('list.meta.keywords')}
       >
-        <section className='container relative mx-auto p-4'>
-          <div className='grid w-full grid-cols-12 gap-4'>
+        <section className='container relative mx-auto p-2'>
+          <div className='grid w-full grid-cols-12 gap-2'>
             <div className='col-span-12'>
               <Link to={getStaticRoute(i18n.language).business.details.listing.create}>
                 <Button block={false} variant='primary' className='flex items-center justify-center gap-1'>

@@ -1,12 +1,12 @@
+import ZoneErrorModal from '@/components/modal/ZoneErrorModal.tsx'
+import { Services, apiUrl } from '@/config/services.ts'
+import { httpClient } from '@/http/client.tsx'
+import Button from '@turistikrota/ui/button'
 import LineForm from '@turistikrota/ui/form/line'
+import { useToast } from '@turistikrota/ui/toast'
+import { parseApiError } from '@turistikrota/ui/utils/response'
 import { FC, useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import { useToast } from '@turistikrota/ui/toast'
-import { httpClient } from '@/http/client.tsx'
-import { apiUrl, Services } from '@/config/services.ts'
-import { parseApiError } from '@turistikrota/ui/utils/response'
-import Button from '@turistikrota/ui/button'
-import ZoneErrorModal from '@/components/modal/ZoneErrorModal.tsx'
 
 type Props = {
   nickName: string
@@ -41,7 +41,7 @@ const BusinessEnableForm: FC<Props> = ({ nickName, onOk }) => {
   }
 
   return (
-    <LineForm className='bg-second p-4 transition-colors duration-200 first:rounded-t-md last:rounded-b-md hover:bg-third'>
+    <LineForm className='border-b p-2 transition-colors duration-200 first:rounded-t-md last:rounded-b-md last:border-b-0 hover:bg-second'>
       <ZoneErrorModal
         inputLabel={t('activation.enable.label')}
         onCancel={() => {

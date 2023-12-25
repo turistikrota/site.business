@@ -1,6 +1,6 @@
 import MetaWrapper from '@/components/MetaWrapper'
-import ListingCreateForm from '@/partials/listing/form/ListingCreateForm.tsx'
 import RoleGuardView from '@/layouts/RoleGuard'
+import ListingCreateForm from '@/partials/listing/form/ListingCreateForm.tsx'
 import { BusinessRoles, ListingRoles } from '@/static/role'
 import { useTranslation } from 'react-i18next'
 
@@ -13,7 +13,7 @@ const ListingCreateView: React.FC = () => {
         description={t('create.meta.description')}
         keywords={t('create.meta.keywords')}
       >
-        <section className='container relative mx-auto p-4 '>
+        <section className='container relative mx-auto p-2'>
           <ListingCreateForm />
         </section>
       </MetaWrapper>

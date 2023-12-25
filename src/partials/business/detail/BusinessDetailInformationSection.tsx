@@ -1,9 +1,9 @@
+import { BusinessDetails, BusinessTypes } from '@/api/business/business.api.ts'
+import KeyValue from '@/components/KeyValue.tsx'
+import { useDayJS } from '@/utils/dayjs.ts'
+import Card from '@turistikrota/ui/cards/default'
 import { FC, useMemo } from 'react'
 import { useTranslation } from 'react-i18next'
-import Card from '@turistikrota/ui/cards/default'
-import KeyValue from '@/components/KeyValue.tsx'
-import { BusinessDetails, BusinessTypes } from '@/api/business/business.api.ts'
-import { useDayJS } from '@/utils/dayjs.ts'
 
 type Props = {
   business: BusinessDetails
@@ -59,7 +59,7 @@ const BusinessDetailInformationSection: FC<Props> = ({ business }) => {
           },
           {
             label: t(`general:key-value.birthDate`),
-            value: !!business.details.birthDate
+            value: business.details.birthDate
               ? dayjs(business.details.birthDate).format('DD MMMM YYYY')
               : t(`general:key-value.notProvided`),
           },
@@ -100,7 +100,7 @@ const BusinessDetailInformationSection: FC<Props> = ({ business }) => {
         },
         {
           label: t(`general:key-value.verifiedAt`),
-          value: !!business.verifiedAt
+          value: business.verifiedAt
             ? dayjs(business.verifiedAt).format('DD MMMM YYYY')
             : t(`general:key-value.notVerified`),
         },
@@ -117,7 +117,7 @@ const BusinessDetailInformationSection: FC<Props> = ({ business }) => {
   return (
     <section>
       <h2 className='mb-3 text-xl font-semibold'>{t('edit:sections.info')}</h2>
-      <div className='grid grid-cols-12 gap-4'>
+      <div className='grid grid-cols-12 gap-2'>
         {items.map((item, idx) => (
           <Card key={idx} className='col-span-12 md:col-span-6'>
             <KeyValue>

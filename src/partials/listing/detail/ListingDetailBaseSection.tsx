@@ -21,7 +21,7 @@ const ListingDetailBaseSection: React.FC<Props> = ({ uuid, title, images, descri
       <h2 className='text-2xl'>{title}</h2>
       <p className='text-gray-600 dark:text-gray-300'>{description}</p>
       <RoleGuard roles={[...ListingEditViewRoles, ...ListingLogsViewRoles]}>
-        <div className='mt-2 flex gap-4'>
+        <div className='mt-2 flex gap-2'>
           <RoleGuard roles={ListingEditViewRoles}>
             <Link
               to={`${getStaticRoute(i18n.language).business.details.listing.detail}${uuid}/${

@@ -52,7 +52,7 @@ const VerifiedBadge = () => {
 
 const AImage = ({ children }: React.PropsWithChildren) => {
   return (
-    <div className='col-span-1 flex items-center justify-center rounded-bl-md rounded-tl-md bg-default p-4'>
+    <div className='bg-default col-span-1 flex items-center justify-center rounded-bl-md rounded-tl-md p-2'>
       {children}
     </div>
   )
@@ -77,9 +77,7 @@ const Avatar = ({ src, alt }: AvatarProps) => {
 
 const Content = ({ children }: React.PropsWithChildren) => {
   return (
-    <div className='col-span-3 flex flex-col justify-center rounded-br-md rounded-tr-md bg-third p-4 dark:bg-header'>
-      {children}
-    </div>
+    <div className='col-span-4 flex flex-col justify-center rounded-br-md rounded-tr-md bg-second p-2'>{children}</div>
   )
 }
 
@@ -93,7 +91,7 @@ const FullName = ({ children }: React.PropsWithChildren) => {
 
 const Card: BusinessSelectionCardType = ({ children, onSelect }) => {
   return (
-    <div className='relative grid cursor-pointer grid-cols-4 duration-200 ease-in' onClick={onSelect}>
+    <div className='relative grid cursor-pointer grid-cols-5 rounded-md border duration-200 ease-in' onClick={onSelect}>
       {children}
     </div>
   )

@@ -41,7 +41,7 @@ const ListingDeleteForm: React.FC<Props> = ({ uuid, title, onOk }) => {
       })
   }
   return (
-    <LineForm className='bg-second p-4 transition-colors duration-200 first:rounded-t-md last:rounded-b-md hover:bg-third'>
+    <LineForm className='border-b p-2 transition-colors duration-200 first:rounded-t-md last:rounded-b-md last:border-b-0 hover:bg-second'>
       <ZoneErrorModal
         inputLabel={t('detail.delete.label')}
         onCancel={() => {

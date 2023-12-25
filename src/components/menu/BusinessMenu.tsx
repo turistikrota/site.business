@@ -102,19 +102,19 @@ export default function BusinessMenu({ isDetail }: Props) {
   }
 
   return (
-    <div className='flex h-full w-full flex-col items-center justify-start rounded-md px-4 py-4'>
+    <div className='flex h-full w-full flex-col items-center justify-start rounded-md px-2 py-2'>
       <Condition value={isDetail && !isDesktop}>
         <div className={`mb-2 hidden w-full lg:flex ${menuContext.openMenu ? 'justify-start' : 'justify-center'}`}>
           <ToggleButton />
         </div>
       </Condition>
       <Condition value={!isDetail || menuContext.openMenu || isDesktop}>
-        <Link to={`https://turistikrota.com/${i18n.language}`} className='mb-6 flex items-center'>
+        <Link to={`https://turistikrota.com/${i18n.language}`} className='mb-2 flex items-center'>
           <Logo />
         </Link>
       </Condition>
       <BusinessMenuProfileCard open={isDetail && !isDesktop ? menuContext?.openMenu : true} />
-      <div className='mt-5 grid w-full gap-4 pb-10'>
+      <div className='mt-2 grid w-full gap-2 pb-10'>
         {menuItems
           .filter((m) => (m.roles ? bodyguard.check(...m.roles) : true))
           .map((el, i) => (

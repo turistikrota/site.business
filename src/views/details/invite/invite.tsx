@@ -105,7 +105,7 @@ function InviteMainView() {
   return (
     <RoleGuardView roles={[BusinessRoles.Super, BusinessRoles.InviteView]}>
       <MetaWrapper title={t('meta.title')} description={t('meta.description')} keywords={t('meta.keywords')}>
-        <section className='relative mx-auto max-w-4xl space-y-5 p-4 lg:pl-0'>
+        <section className='relative mx-auto max-w-4xl space-y-5 p-2 lg:pl-0'>
           <RoleGuard roles={[BusinessRoles.Super, BusinessRoles.InviteCreate]}>
             <div className='flex'>
               <Link to={getStaticRoute(i18n.language).business.details.inviteCreate}>

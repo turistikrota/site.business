@@ -69,7 +69,7 @@ const BusinessSelection = () => {
 
   return (
     <Spin loading={loading}>
-      <div className='space-y-4 p-6 ease-in sm:p-8 md:space-y-6'>
+      <div className='space-y-4 p-4 ease-in'>
         <h1 className='text-xl font-bold leading-tight tracking-tight text-gray-900 dark:text-white md:text-2xl'>
           {t('title')}
         </h1>

@@ -12,7 +12,7 @@ const VerificationWaiting: React.FC = () => {
       description={t('waiting.meta.description')}
       keywords={t('waiting.meta.keywords')}
     >
-      <div className='flex flex-col gap-2 rounded-md bg-secondary-400 bg-opacity-5 p-4 dark:bg-secondary-800 dark:bg-opacity-5'>
+      <div className='flex flex-col gap-2 rounded-md bg-secondary-400 bg-opacity-5 p-2 dark:bg-secondary-800 dark:bg-opacity-5'>
         <div className='flex justify-center'>
           <i className={`bx bx-timer text-6xl text-secondary-500`} />
         </div>
