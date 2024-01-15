@@ -5,6 +5,7 @@ import RoleGuardView from '@/layouts/RoleGuard'
 import ListingDetailContent from '@/partials/listing/detail/ListingDetailContent.tsx'
 import { BusinessRoles, ListingRoles } from '@/static/role'
 import { getI18nTranslation } from '@/types/base'
+import { Currency } from '@/types/listing'
 import NotFoundView from '@/views/404'
 import ImagePreview from '@turistikrota/ui/image/preview'
 import ContentLoader from '@turistikrota/ui/loader'
@@ -49,6 +50,7 @@ const ListingDetailView = () => {
               images={images}
               prices={data?.prices ?? []}
               features={data?.features ?? []}
+              currency={data?.currency ?? Currency.USD}
               categoryUUIDs={data?.categoryUUIDs ?? []}
               validation={data?.validation ?? EmptyValidation}
               onOk={() => refetch()}

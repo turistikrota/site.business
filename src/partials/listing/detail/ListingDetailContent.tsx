@@ -1,6 +1,6 @@
 import { ListingPrice, ListingValidation } from '@/api/listing/listing.api.ts'
 import ListingDetailCategorySection from '@/partials/listing/detail/ListingDetailCategorySection.tsx'
-import { ListingFeature } from '@/types/listing.ts'
+import { Currency, ListingFeature } from '@/types/listing.ts'
 import { Coordinates } from '@turistikrota/ui/types'
 import ListingDetailBaseSection from './ListingDetailBaseSection.tsx'
 import ListingDetailCalendarSection from './ListingDetailCalendarSection.tsx'
@@ -17,6 +17,7 @@ type Props = {
   images: string[]
   categoryUUIDs: string[]
   coordinates: Coordinates
+  currency: Currency
   prices: ListingPrice[]
   features: ListingFeature[]
   validation: ListingValidation
@@ -31,6 +32,7 @@ const ListingDetailContent: React.FC<Props> = ({
   coordinates,
   isDeleted,
   features,
+  currency,
   images,
   prices,
   categoryUUIDs,
@@ -42,7 +44,7 @@ const ListingDetailContent: React.FC<Props> = ({
       <ListingDetailBaseSection uuid={uuid} images={images} title={title} description={description} />
       <ListingDetailCategorySection categoryUUIDs={categoryUUIDs} features={features} />
       <ListingDetailMapSection coordinates={coordinates} />
-      <ListingDetailCalendarSection prices={prices} />
+      <ListingDetailCalendarSection prices={prices} currency={currency} />
       <ListingDetailRuleSection validation={validation} />
       <ListingDetailDangerZone uuid={uuid} title={title} isActive={isActive} isDeleted={isDeleted} onOk={onOk} />
     </div>
