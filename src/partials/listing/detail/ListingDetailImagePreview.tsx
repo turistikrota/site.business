@@ -17,10 +17,9 @@ const ListingDetailImagePreview: React.FC<Props> = ({ images, title }) => {
     <Carousel
       imageAltPrefix={title}
       images={images}
-      sizeClassName='h-104'
       onClick={openPreview}
       autoPlay
-      showSubImages
+      variant={Carousel.Variants.DetailHorizontal}
     />
   )
 }

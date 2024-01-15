@@ -10,6 +10,12 @@ export type Price = {
 
 export type Prices = Price[]
 
+export enum Currency {
+  TRY = 'TRY',
+  USD = 'USD',
+  EUR = 'EUR',
+}
+
 type BoolRuleType = 'onlyFamily' | 'noPet' | 'noSmoke' | 'noAlcohol' | 'noParty' | 'noUnmarried' | 'noGuest'
 
 export const BoolRules: BoolRuleType[] = [
@@ -47,6 +53,7 @@ export type ListingFormValues = {
     isStrict: boolean
     coordinates: Coordinates
   }
+  currency: Currency
   images: string[]
   features: ListingFeature[]
   validation: {
@@ -102,6 +109,7 @@ export const EmptyListingCreateValues: ListingFormValues = {
     noUnmarried: false,
     noGuest: false,
   },
+  currency: Currency.USD,
   features: [],
   prices: [],
 }
@@ -131,6 +139,7 @@ export const crateListingFormValuesFromDetails = (details: ListingDetails): List
       endDate: price.endDate.split('T')[0],
       price: price.price,
     })),
+    currency: details.currency,
     categoryUUIDs,
   }
 }
@@ -153,6 +162,7 @@ export function isListingFormValues(value: any): value is ListingFormValues {
     value.location.address &&
     value.location.isStrict &&
     value.location.coordinates &&
+    value.currency &&
     value.images &&
     value.features &&
     value.validation &&

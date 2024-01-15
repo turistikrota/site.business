@@ -16,6 +16,7 @@ import ListingCategoryInputGroupSection from './sections/ListingCategoryInputGro
 import ListingCategoryRuleSection from './sections/ListingCategoryRuleSection'
 import ListingFormCalendarSection from './sections/ListingFormCalendarSection'
 import ListingFormCategorySection from './sections/ListingFormCategorySection'
+import ListingFormCurrencySection from './sections/ListingFormCurrencySection'
 import ListingFormImageSection from './sections/ListingFormImageSection'
 import ListingFormLocationSection from './sections/ListingFormLocationSection'
 import ListingFormMetaSection from './sections/ListingFormMetaSection'
@@ -184,6 +185,7 @@ const ListingEditForm: React.FC<Props> = ({ details, onOk }) => {
           form.setFieldValue(field, value)
         }}
       />
+      <ListingFormCurrencySection values={form.values} errors={form.errors} onChange={form.handleChange} />
       <ListingFormCalendarSection
         values={form.values}
         errors={form.errors}

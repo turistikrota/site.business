@@ -1,5 +1,5 @@
 import { ListingPrice } from '@/api/listing/listing.api'
-import { CalendarData } from '@/components/calendar/Calendar'
+import { CalendarData } from '@turistikrota/ui/calendar'
 import { useMemo } from 'react'
 
 export const useListingCalendar = (prices: ListingPrice[]): CalendarData<number> => {

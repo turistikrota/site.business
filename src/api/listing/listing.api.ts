@@ -1,5 +1,6 @@
 import { Services, apiUrl } from '@/config/services'
 import { httpClient } from '@/http/client'
+import { Currency } from '@/types/listing'
 import { Coordinates, I18nTranslation, ListResponse } from '@turistikrota/ui/types'
 
 export type ListingImage = {
@@ -35,6 +36,7 @@ export type ListingListItem = {
   order: number | null
   isActive: boolean
   isDeleted: boolean
+  currency: Currency
   isValid: boolean
   createdAt: string
 }
@@ -86,6 +88,7 @@ export type ListingDetails = {
   location: ListingLocation
   boosts: ListingBoost[] | null
   validation: ListingValidation
+  currency: Currency
   order: number
   isActive: boolean
   isDeleted: boolean

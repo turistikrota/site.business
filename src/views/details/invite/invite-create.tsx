@@ -81,7 +81,7 @@ function InviteCreateView() {
                 <Radio
                   name='locale'
                   id='tr'
-                  checked={form.values.locale === 'tr'}
+                  value={form.values.locale === 'tr'}
                   reverse={!isDesktop}
                   effect={isDesktop ? 'hover' : undefined}
                   onChange={(sel: boolean) => {
@@ -94,7 +94,7 @@ function InviteCreateView() {
                 <Radio
                   name='locale'
                   id='en'
-                  checked={form.values.locale === 'en'}
+                  value={form.values.locale === 'en'}
                   reverse={!isDesktop}
                   effect={isDesktop ? 'hover' : undefined}
                   onChange={(sel: boolean) => {
