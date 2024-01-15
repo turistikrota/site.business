@@ -8,92 +8,141 @@
   "logs": {
     "meta": {
       "title": "Listing Logs",
-      "description": "You can view the logs of your listing using this page.",
-      "keywords": "listing, logs, listing logs, view listing logs"
+      "description": "View logs of your listing using this page.",
+      "keywords": "listing, log, listing logs, listing log"
     },
     "empty": {
-      "title": "No log entry yet.",
-      "description": "A log entry for this listing will be displayed here when created."
+      "title": "No log entries yet.",
+      "description": "Log entries for this listing will appear here when created."
     },
     "actions": {
       "create": {
-        "text": "<0>@{{userName}}</0> created this listing."
+        "text": "User <0>@{{userName}}</0> created this listing."
       },
       "update": {
-        "text": "<0>@{{userName}}</0> edited this listing."
+        "text": "User <0>@{{userName}}</0> edited this listing."
       },
       "delete": {
-        "text": "<0>@{{userName}}</0> deleted this listing."
+        "text": "User <0>@{{userName}}</0> deleted this listing."
       },
       "disable": {
-        "text": "<0>@{{userName}}</0> disabled this listing."
+        "text": "User <0>@{{userName}}</0> disabled this listing."
       },
       "enable": {
-        "text": "<0>@{{userName}}</0> enabled this listing."
+        "text": "User <0>@{{userName}}</0> enabled this listing."
       },
       "reorder": {
-        "text": "<0>@{{userName}}</0> changed the order of this listing."
+        "text": "User <0>@{{userName}}</0> changed the order of this listing."
       },
       "restore": {
-        "text": "<0>@{{userName}}</0> restored this listing."
+        "text": "User <0>@{{userName}}</0> restored this listing."
       },
       "validate_success": {
-        "text": "The category rules were checked by the system and the listing successfully passed these rules. If active, the listing will be published."
+        "text": "Category rules have been checked by the system, and the listing successfully passed these rules. If active, the listing will be published."
       },
       "validate_fail": {
-        "text": "The category rules were checked by the system and the listing failed to pass these rules. Any errors will be displayed below."
+        "text": "Category rules have been checked by the system, and the listing failed to pass these rules. Any errors will be displayed below."
       }
-    }    
+    }
   },
   "detail": {
     "edit": "Edit Listing",
-    "logs": "View Logs",
+    "logs": "Show Logs",
     "meta": {
-      "title": "Listing Detail",
-      "description": "You can view the details of your listing using this page.",
-      "keywords": "listing, detail, listing detail, view listing detail"
+      "title": "Listing Details",
+      "description": "View details of your listing using this page.",
+      "keywords": "listing, detail, listing details, listing detail"
+    },
+    "enable": {
+      "title": "Publish Listing",
+      "subtitle": "Are you sure you want to publish your listing?",
+      "text": "Once published, your listing will be visible to the public. Make sure you are certain before publishing.",
+      "label": "Confirmation Text",
+      "confirm": "Yes, I Want to Publish",
+      "confirmation": "To complete the publishing process, please type '<strong>{{text}}</strong>' in the box below.",
+      "button": "Publish Listing"
+    },
+    "disable": {
+      "title": "Disable Listing",
+      "subtitle": "Are you sure you want to disable your listing?",
+      "text": "When disabled, no one will be able to see your listing. Make sure you are certain before disabling.",
+      "label": "Confirmation Text",
+      "confirm": "Yes, I Want to Disable",
+      "confirmation": "To complete the disabling process, please type '<strong>{{text}}</strong>' in the box below.",
+      "button": "Disable Listing"
+    },
+    "delete": {
+      "title": "Delete Listing",
+      "subtitle": "Are you sure you want to delete your listing?",
+      "text": "Deleting an listing is irreversible. Make sure you are certain before deleting.",
+      "label": "Confirmation Text",
+      "button": "Delete Listing"
+    },
+    "restore": {
+      "title": "Restore Listing",
+      "subtitle": "Are you sure you want to restore your listing?",
+      "text": "Restoring an listing is easily reversible. Make sure you are certain before restoring.",
+      "label": "Confirmation Text",
+      "button": "Restore Listing"
+    },
+    "sections": {
+      "danger": "Dangerous Area",
+      "map": "Map",
+      "priceCalendar": "Price Calendar",
+      "rules": "Rules",
+      "category": "Category",
+      "priceCalendarSelected": "Selected Date",
+      "priceCalendarToday": "Today"
+    },
+    "rules": {
+      "yes": "Yes",
+      "no": "No",
+      "date": "{{value}} days",
+      "adult": "{{value}} adults",
+      "kid": "{{value}} children",
+      "baby": "{{value}} babies"
     }
   },
   "create": {
     "meta": {
       "title": "Create Listing",
-      "description": "You can create a new listing using this page.",
+      "description": "Create a new listing using this page.",
       "keywords": "listing, create, new, new listing, create listing"
     },
-    "success": "Your listing has been created successfully. If no problems are detected after the category checks are completed, it will be published."
+    "success": "Your listing has been successfully created. If no issues are detected during category checks, it will be published."
   },
   "edit": {
     "meta": {
       "title": "Edit Listing",
-      "description": "You can edit your listing using this page.",
-      "keywords": "listing, edit, edit listing, update, update listing"
+      "description": "Edit your listing using this page.",
+      "keywords": "listing, edit, edit listing, edit my listing"
     },
-    "success": "Your listing has been updated successfully. If no problems are detected after the category checks are completed, it will be published."
+    "success": "Your listing has been successfully updated. If no issues are detected during category checks, it will be published."
   },
   "list": {
     "meta": {
-      "title": "My Listings",
-      "description": "You can manage your listings using this page.",
-      "keywords": "my listings, manage my listings, view my listings"
+      "title": "My Ads",
+      "description": "Manage your ads using this page.",
+      "keywords": "my ads, manage my ads, view my ads"
     },
     "reorder": {
       "info": {
-        "title": "Listing Sorting",
-        "description": "You can sort your listings by dragging and dropping them."
+        "title": "Listing Reordering",
+        "description": "You can reorder your ads by dragging and dropping them."
       }
     },
     "empty": {
-      "title": "Listing Not Found",
-      "description": "You have not created any listings yet. Click the create listing button above to create a new listing."
+      "title": "No Ads Found",
+      "description": "You haven't created any ads yet. Click the create listing button above to create a new listing."
     },
     "actions": {
       "create": "Create Listing"
     }
   },
   "autosave": {
-    "love": {
+    "ask": {
       "title": "Autosaved Data Found",
-      "description": "Auto-saved data was found for this listing. Would you like to upload this data?",
+      "description": "Autosaved data has been found for this listing. Do you want to load this data?",
       "cancel": "No",
       "confirm": "Yes"
     }
@@ -101,24 +150,24 @@
   "details": {
     "states": {
       "verificationFailed": {
-        "title": "Not Verified",
-        "description": "An error occurred while validating your listing. Please contact your representative to review the details."
+        "title": "Verification Failed",
+        "description": "An error occurred during the verification of your listing. Please consult your administrator for details."
       },
       "onLive": {
-        "title": "On Live",
-        "description": "Your listing is now publicly available."
+        "title": "Live",
+        "description": "Your listing is currently live and visible to everyone."
       },
       "deleted": {
         "title": "Deleted",
-        "description": "Deleted listing. To republish, go to the detail page."
+        "description": "Deleted listing. Go to the details page to republish."
       },
       "active": {
         "title": "Active",
-        "description": "Your listing is active and ready to be published."
+        "description": "Your listing is active and ready for publication."
       },
       "passive": {
         "title": "Disabled",
-        "description": "Your listing is disabled and not ready to be published."
+        "description": "Your listing is disabled and not ready for publication."
       }
     },
     "fields": {
@@ -134,52 +183,61 @@
     "description": "Description",
     "meta": {
       "title": "Meta Information",
-      "subtitle": "In this section, you can enter the meta information of your listing."
+      "subtitle": "Enter meta information for your listing in this section."
     },
     "images": {
       "title": "Listing Images",
-      "subtitle": "In this section, you can upload images of your listing.",
+      "subtitle": "Upload images for your listing in this section.",
       "error": {
         "title": "Title Required",
-        "description": "To upload an image, you must enter a title of at least 5 characters."
+        "description": "To upload an image, you must enter a title with at least 5 characters."
       }
+    },
+    "currency": {
+      "title": "Currency",
+      "subtitle": "Specify the currency for your listing in this section.",
+      "alert": {
+        "title": "Inflation Warning",
+        "description": "When determining the currency for your listing, please consider inflation. Due to potential inflation differences in selecting Turkish Lira, you may incur losses as payments may be delayed. Therefore, we recommend choosing Euro or Dollar."
+      },
+      "label": "Currency"
     },
     "calendar": {
       "title": "Calendar & Pricing",
-      "subtitle": "In this section, you can determine the calendar and pricing of your listing.",
+      "subtitle": "Set the calendar and pricing for your listing in this section.",
       "startDate": "Start Date",
       "endDate": "End Date",
       "price": "Price",
       "add": "Add",
-      "price-list-item": "<0>{{startDate}}</0> to <1>{{endDate}}</1> for <2>{{price}}</2> ₺",
+      "price-list-item": "<0>{{startDate}}</0> - <1>{{endDate}}</1> for <2>{{price}}</2> ₺",
       "info": {
         "title": "Price Range Tip",
         "description": "You can set different prices for specific date ranges using the fields below.",
-        "example": "For example, between June 1 - June 30, it is 100 ₺, and between July 1 - July 31, it is 200 ₺.",
-        "float": "Use dots for decimal numbers. For example, $100.50."
+        "example": "For example, 100 ₺ from June 1 - June 30, 200 ₺ from July 1 - July 31, and so on.",
+        "float": "Use periods for decimal numbers. For example, 100.50 ₺."
       },
       "error": {
         "startDateGreaterThanEndDate": "Start date cannot be greater than end date.",
-        "endDateLessThanNow": "The end date cannot be less than the current date.",
-        "startDateLessThanNow": "The start date cannot be less than the current date.",
+        "endDateLessThanNow": "End date cannot be less than the current date.",
+        "startDateLessThanNow": "Start date cannot be less than the current date.",
         "unique": "At least one of the days in this date range has already been added.",
-        "priceNaN": "The price field is incorrect. This field should be like this: 10,000 (ten thousand ₺) or 10,000.50 (ten thousand ₺ 50 kr).",
+        "priceNaN": "The price field is invalid. It should be in the format: 10,000 (ten thousand ₺) or 10,000.50 (ten thousand ₺ 50 kuruş), etc.",
         "priceNegative": "The price field cannot be negative."
       }
     },
     "category": {
       "title": "Category Information",
-      "subtitle": "In this section, you can enter the category information of your listing."
+      "subtitle": "Enter category information for your listing in this section."
     },
     "category-alerts": {
-      "title": "Category Warnings",
-      "subtitle": "In this section, you can enter the category warnings of your listing.",
-      "category": "{{name}} category"
+      "title": "Category Alerts",
+      "subtitle": "Enter category alerts for your listing in this section.",
+      "category": "Category: {{name}}"
     },
     "category-rules": {
       "title": "Category Rules",
       "subtitle": "Please read and accept the category rules.",
-      "category": "{{name}} category"
+      "category": "Category: {{name}}"
     },
     "category-inputs": {
       "options": {
@@ -189,39 +247,39 @@
         "electro": "Electronic",
         "options": {
           "exists": "Exists",
-          "not-exists": "None"
+          "not-exists": "Doesn't Exist"
         },
         "heating": {
-          "air-conditioning": "With air conditioning",
-          "stove": "With stove",
-          "gas": "With natural gas"
+          "air-conditioning": "With Air Conditioning",
+          "stove": "With Stove",
+          "gas": "With Natural Gas"
         }
       }
     },
     "location": {
       "title": "Listing Location",
-      "subtitle": "In this section you can determine the location of your listing.",
+      "subtitle": "Specify the location for your listing in this section.",
       "city": "City",
       "street": "District",
       "address": "Address",
       "latitude": "Latitude",
       "longitude": "Longitude",
-      "grant": "Use My Location",
+      "grant": "Use Current Location",
       "isStrict": {
         "title": "Exact Location",
-        "description": "Is the location of this listing certain?"
+        "description": "Is the location of this listing exact?"
       },
       "error": "Location selection failed. Please try again.",
       "notSupported": "Your browser does not support location selection.",
       "info": {
         "title": "Map Tip",
-        "description": "Click to select a location on the map. The blue pointer shows the location. Drag the pointer to change the location.",
-        "descriptionTwo": "Note: City and County are changed using estimated location information. If it is incorrect, you can change the city and county information manually."
+        "description": "Click on the map to select a location. The blue marker indicates the location. Drag the marker to change the location.",
+        "descriptionTwo": "Note: City and District are estimated location information that can be changed using manual input. If incorrect, you can manually change the city and district information."
       }
     },
     "validation": {
-      "title": "Special Rules",
-      "subtitle": "In this section, you can enter the special rules of your listing.",
+      "title": "Custom Rules",
+      "subtitle": "Enter custom rules for your listing in this section.",
       "minAdult": "Minimum number of adults",
       "maxAdult": "Maximum number of adults",
       "minKid": "Minimum number of children",
@@ -231,32 +289,32 @@
       "minDate": "Minimum number of days",
       "maxDate": "Maximum number of days",
       "onlyFamily": {
-        "title": "Families Only",
-        "description": "This listing is for families only. Non-family members cannot reserve this listing."
+        "title": "Family Only",
+        "description": "This listing is exclusive to families. Non-family members cannot reserve this listing."
       },
       "noPet": {
         "title": "No Pets",
         "description": "This listing does not accept pets."
       },
       "noSmoke": {
-        "title": "Smoking is Prohibited",
-        "description": "People who book this listing cannot smoke during the booking period."
+        "title": "No Smoking",
+        "description": "People reserving this listing cannot smoke during the reservation period."
       },
       "noAlcohol": {
-        "title": "Alcohol is Prohibited",
-        "description": "People who reserve this listing cannot consume alcohol during the reservation period."
+        "title": "No Alcohol",
+        "description": "People reserving this listing cannot consume alcohol during the reservation period."
       },
       "noParty": {
-        "title": "Party Forbidden",
-        "description": "People who book this listing cannot organize a party here."
+        "title": "No Parties",
+        "description": "People reserving this listing cannot organize parties here."
       },
       "noUnmarried": {
-        "title": "Unmarried Persons Prohibited",
-        "description": "People who book this listing must be married."
+        "title": "No Unmarried Individuals",
+        "description": "People reserving this listing must be married."
       },
       "noGuest": {
-        "title": "Guests Forbidden",
-        "description": "People who reserve this listing cannot accept guests."
+        "title": "No Guests",
+        "description": "People reserving this listing cannot accept guests."
       }
     }
   },

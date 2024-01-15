@@ -90,7 +90,9 @@
       "map": "Harita",
       "priceCalendar": "Fiyat Takvimi",
       "rules": "Kurallar",
-      "category": "Kategori"
+      "category": "Kategori",
+      "priceCalendarSelected": "Seçili Tarih",
+      "priceCalendarToday": "Bugün"
     },
     "rules": {
       "yes": "Evet",
@@ -190,6 +192,15 @@
         "title": "Başlık Gerekli",
         "description": "Görsel yükleyebilmek için en az 5 karakterden oluşan bir başlık girmelisiniz."
       }
+    },
+    "currency": {
+      "title": "Para Birimi",
+      "subtitle": "Bu bölümde ilanınızın para birimini belirleyebilirsiniz.",
+      "alert": {
+        "title": "Enflasyon Uyarısı",
+        "description": "İlanınızın para birimini belirlerken lütfen enflasyonu göz önünde bulundurunuz. Ödemeler hesabınıza geç yatacağı için Türk Lirası seçiminde yaşanabilecek enflasyon farkından dolayı zarar edebilirsiniz. Bu yüzden Euro veya Dolar seçmenizi öneririz."
+      },
+      "label": "Para Birimi"
     },
     "calendar": {
       "title": "Takvim & Fiyatlandırma",

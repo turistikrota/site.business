@@ -26,6 +26,7 @@ import ListingCategoryInputGroupSection from './sections/ListingCategoryInputGro
 import ListingCategoryRuleSection from './sections/ListingCategoryRuleSection.tsx'
 import ListingFormCalendarSection from './sections/ListingFormCalendarSection.tsx'
 import ListingFormCategorySection from './sections/ListingFormCategorySection.tsx'
+import ListingFormCurrencySection from './sections/ListingFormCurrencySection.tsx'
 import ListingFormImageSection from './sections/ListingFormImageSection.tsx'
 import ListingFormLocationSection from './sections/ListingFormLocationSection.tsx'
 import ListingFormMetaSection from './sections/ListingFormMetaSection.tsx'
@@ -242,6 +243,7 @@ const ListingCreateForm: React.FC = () => {
           form.setFieldValue(field, value)
         }}
       />
+      <ListingFormCurrencySection values={form.values} errors={form.errors} onChange={form.handleChange} />
       <ListingFormCalendarSection
         values={form.values}
         errors={form.errors}
