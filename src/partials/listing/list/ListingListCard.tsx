@@ -66,13 +66,7 @@ const ListingListCard: React.FC<Props> = ({
 
   return (
     <div className={`flex h-full flex-col ${isDraggable ? 'cursor-move' : 'w-full'}`}>
-      <Carousel
-        imageAltPrefix={translation.title}
-        images={mappedImages}
-        sizeClassName='h-72'
-        imageClassName='rounded-b-none'
-        imgLoadingClassName='rounded-t-md'
-      />
+      <Carousel imageAltPrefix={translation.title} images={mappedImages} variant={Carousel.Variants.List} />
       <TooltipProvider>
         <div className='flex h-full flex-col justify-between gap-2 p-2'>
           <div className='flex flex-col gap-2'>

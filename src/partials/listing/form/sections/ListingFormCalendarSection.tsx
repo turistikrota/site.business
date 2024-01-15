@@ -1,7 +1,8 @@
-import Calendar, { PriceRenderer } from '@/components/calendar/Calendar.tsx'
 import { useListingCalendar } from '@/hooks/calendar.listing.tsx'
 import { ListingFormValues, Price } from '@/types/listing.ts'
+import { Locales } from '@turistikrota/ui'
 import Alert from '@turistikrota/ui/alert'
+import Calendar, { PriceRenderer } from '@turistikrota/ui/calendar'
 import FormSection from '@turistikrota/ui/form/section'
 import { FormikErrors } from 'formik'
 import { useTranslation } from 'react-i18next'
@@ -15,7 +16,7 @@ type Props = {
 }
 
 const ListingFormCalendarSection: React.FC<Props> = ({ errors, values, setFieldValue }) => {
-  const { t } = useTranslation('listings')
+  const { t, i18n } = useTranslation('listings')
   const priceCalendarData = useListingCalendar(values.prices)
 
   const onAdd = (from: string, to: string, price: number) => {
@@ -42,6 +43,10 @@ const ListingFormCalendarSection: React.FC<Props> = ({ errors, values, setFieldV
           setFieldValue={setFieldValue}
         />
         <Calendar<number>
+          textSelected={t('form.calendar.selected')}
+          textToday={t('form.calendar.today')}
+          currency={values.currency}
+          locale={i18n.language as Locales}
           data={priceCalendarData}
           DetailRender={PriceRenderer}
           availableCalc={(date) => {

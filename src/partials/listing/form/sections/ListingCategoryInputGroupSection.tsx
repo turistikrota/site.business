@@ -115,7 +115,7 @@ const Renderer: Record<string, InputRender> = {
             name={formName}
             reverse={!isDesktop}
             effect={isDesktop ? 'hover' : undefined}
-            checked={value === option}
+            value={value === option}
             onChange={(e: boolean) => {
               if (e) setFieldValue(formName, option)
               else setFieldValue(formName, undefined)
