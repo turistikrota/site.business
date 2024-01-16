@@ -17,11 +17,9 @@ export enum ListingRoles {
   Super = 'listing.super',
   Create = 'listing.create',
   Update = 'listing.update',
-  Delete = 'listing.delete',
   Enable = 'listing.enable',
   Disable = 'listing.disable',
   ReOrder = 'listing.reorder',
-  Restore = 'listing.restore',
   List = 'listing.list',
   View = 'listing.view',
 }

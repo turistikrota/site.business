@@ -16,7 +16,7 @@ const UserCollapseItem: React.FC<Props> = ({ user }) => {
   const [current] = useCurrentBusiness()
   const [open, setOpen] = useState<boolean>(false)
   return (
-    <div className='flex flex-col rounded-md bg-second p-2'>
+    <div className='flex flex-col rounded-md border p-2'>
       <div className='flex cursor-pointer items-center gap-2' onClick={() => setOpen(!open)}>
         <div className='max-w-16 min-w-max'>
           <img

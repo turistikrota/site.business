@@ -13,7 +13,6 @@ type Props = {
   title: string
   description: string
   isActive: boolean
-  isDeleted: boolean
   images: string[]
   categoryUUIDs: string[]
   coordinates: Coordinates
@@ -30,7 +29,6 @@ const ListingDetailContent: React.FC<Props> = ({
   description,
   isActive,
   coordinates,
-  isDeleted,
   features,
   currency,
   images,
@@ -46,7 +44,7 @@ const ListingDetailContent: React.FC<Props> = ({
       <ListingDetailMapSection coordinates={coordinates} />
       <ListingDetailCalendarSection prices={prices} currency={currency} />
       <ListingDetailRuleSection validation={validation} />
-      <ListingDetailDangerZone uuid={uuid} title={title} isActive={isActive} isDeleted={isDeleted} onOk={onOk} />
+      <ListingDetailDangerZone uuid={uuid} title={title} isActive={isActive} onOk={onOk} />
     </div>
   )
 }

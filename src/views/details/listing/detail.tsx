@@ -45,7 +45,6 @@ const ListingDetailView = () => {
               title={translations.title}
               description={translations.description}
               isActive={data?.isActive ?? false}
-              isDeleted={data?.isDeleted ?? false}
               coordinates={data?.location.coordinates ?? [0, 0]}
               images={images}
               prices={data?.prices ?? []}

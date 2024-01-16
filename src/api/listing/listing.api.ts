@@ -144,5 +144,6 @@ export const reorderListing = async (uuid: string, order: number): Promise<void>
 
 export const fetchMyListing = async (uuid: string): Promise<ListingDetails | undefined> => {
   const res = await httpClient.get(apiUrl(Services.Listing, `/business/${uuid}`)).catch(() => ({ data: undefined }))
+  res.data.currency = res.data.currency || 'USD'
   return res.data
 }
