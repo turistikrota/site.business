@@ -107,11 +107,11 @@ const Renderer: Record<string, InputRender> = {
     return (
       <div className='col-span-12'>
         <div className='text-sm font-medium text-gray-700 dark:text-gray-300'>{translation.name}</div>
-        <div className='text-xs text-gray-500 dark:text-gray-400'>{translation.help}</div>
+        <div className='text-xs text-gray-500 dark:text-gray-400'>{translation.placeholder}</div>
         {options.map((option) => (
           <Radio
-            key={option}
-            id={option}
+            key={`${formName}-${option}`}
+            id={`${formName}-${option}`}
             name={formName}
             reverse={!isDesktop}
             effect={isDesktop ? 'hover' : undefined}
@@ -132,12 +132,12 @@ const Renderer: Record<string, InputRender> = {
     return (
       <div className='col-span-12'>
         <div className='text-sm font-medium text-gray-700 dark:text-gray-300'>{translation.name}</div>
-        <div className='text-xs text-gray-500 dark:text-gray-400'>{translation.help}</div>
+        <div className='text-xs text-gray-500 dark:text-gray-400'>{translation.placeholder}</div>
         <div className='mt-2 space-y-4'>
           {options.map((option) => (
             <Checkbox
-              key={option}
-              id={option}
+              key={`${formName}-${option}`}
+              id={`${formName}-${option}`}
               name={formName}
               reversed={!isDesktop}
               effect={isDesktop ? 'hover' : undefined}
