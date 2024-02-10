@@ -91,7 +91,11 @@ const Renderer: Record<string, InputRender> = {
           type='number'
           name={formName}
           autoComplete={formName}
-          label={translation.placeholder ? `${translation.name} | ${translation.placeholder}` : translation.name}
+          label={
+            translation.placeholder !== translation.name
+              ? `${translation.name} | ${translation.placeholder}`
+              : translation.name
+          }
           ariaLabel={translation.name}
           value={value}
           error={error}
