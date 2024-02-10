@@ -142,7 +142,6 @@ const ListingCreateForm: React.FC = () => {
     const errors = Object.keys(form.errors)
     if (errors.length === 0) return
     const el = document.getElementById(errors[0])
-    console.log('el::', el, errors[0])
     if (el) {
       el.scrollIntoView({ behavior: 'smooth', block: 'center' })
     }
