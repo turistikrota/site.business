@@ -252,7 +252,9 @@
         "heating": {
           "air-conditioning": "With Air Conditioning",
           "stove": "With Stove",
-          "gas": "With Natural Gas"
+          "gas": "With Natural Gas",
+          "floor": "With Floor Heating",
+          "fireplace": "With Fireplace"
         }
       }
     },
