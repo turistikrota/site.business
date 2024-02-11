@@ -87,16 +87,19 @@ const AccountFetcher: React.FC<React.PropsWithChildren<ProviderProps>> = ({
         }
       })
       .catch((err: any) => {
+        if (
+          err &&
+          err.response &&
+          err.response.data &&
+          (err.response.data.accountSelectRequired || err.response.data.accountNotFound || err.response.data.mustSelect)
+        ) {
+          return openAccountSelectionWithRedirect(i18n.language)
+        }
         if (err && err.response && err.response.status === 401) {
           return openLoginWithRedirect(i18n.language)
         }
-
         localStorage.removeItem(AccountStorage.CurrentAccount)
         setCurrent(undefined)
-
-        if (err.response.data.mustSelect) {
-          return openAccountSelectionWithRedirect(i18n.language)
-        }
       })
       .finally(() => {
         setLoading(false)
