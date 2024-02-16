@@ -55,5 +55,7 @@
   "requiredForIndividual": "The {{field}} field is required for individual businesss",
   "requiredForCorporate": "The {{field}} field is required for enterprise businesss",
   "individual": "Individual",
-  "corporation": "Corporate"
+  "corporation": "Corporate",
+  "invalidPhone": "Please enter a valid phone number",
+  "invalidChatId": "Please enter a valid chat ID"
 }
