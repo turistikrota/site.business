@@ -3,5 +3,83 @@
     "title": "Bildirimler",
     "description": "Bildirim tercihlerinizi görüntüleyin, bildirim tercihlerinizi belirleyin ve hesap ayarlarınızı değiştirin.",
     "keywords": "Bildirimler, Turistik Rota, Tatil Planlama, Tur Rezervasyonu"
+  },
+  "actorConfig": {
+    "new": "Yeni Konfigürasyon",
+    "tools": {
+      "edit": "düzenle",
+      "copy": "kopyala",
+      "copied": "Panoya kopyalandı",
+      "delete": "sil"
+    },
+    "create": {
+      "title": "Yeni Bildirim Konfigürasyonu",
+      "subtitle": "Profilinizdeki güncellemelerin alınacağı e-posta adresi, telefon numarası veya Telegram sohbet ID'si ekleyin.",
+      "submit": "Kaydet",
+      "success": "Yeni konfigürasyon başarıyla oluşturuldu."
+    },
+    "edit": {
+      "title": "Konfigürasyonu Düzenle",
+      "subtitle": "Profilinizdeki güncellemelerin alınacağı e-posta adresi, telefon numarası veya Telegram sohbet ID'si ekleyin.",
+      "submit": "Güncelle",
+      "success": "Konfigürasyon başarıyla güncellendi."
+    },
+    "delete": {
+      "title": "Konfigürasyonu Sil",
+      "subtitle": "Bu konfigürasyonu silmek istediğinizden emin misiniz?",
+      "label": "Onay Metni",
+      "text": "Bir konfigürasyonu sildiğinizde bir daha bu konfigürasyonu geri getiremezsiniz. Yine de silmek istediğinize emin misiniz?",
+      "confirmation": "Konfigürasyonu silebilmek için aşağıdaki kutucuğa '<strong>{{text}}</strong>' yazınız.",
+      "button": "Konfigürasyonu Sil",
+      "confirm": "Evet, Konfigürasyonu Sil",
+      "success": "Konfigürasyon başarıyla silindi."
+    },
+    "form": {
+      "name": "Konfigürasyon Adı",
+      "email": "E-posta Adresi",
+      "phone": "Telefon Numarası",
+      "chatId": "Telegram Sohbet ID",
+      "type": "Bildirim Kanalı",
+      "types": {
+        "mail": "E-posta Bildirimi",
+        "sms": "SMS Bildirimi",
+        "telegram": "Telegram Bildirimi"
+      },
+      "alerts": {
+        "sms": {
+          "title": "Telefon Numarası Hakkında",
+          "description": "Telefon numaranızı başında ülke kodu olacak şekilde giriniz. Örneğin: +905555555555"
+        }
+      }
+    },
+    "summary": {
+      "mail": "Kayıtlı E-posta Sayısı",
+      "sms": "Kayıtlı SMS Sayısı",
+      "telegram": "Kayıtlı Telegram Sayısı",
+      "updatedAt": "Güncelleme Tarihi"
+    },
+    "mail": {
+      "title": "Kayıtlı E-posta Adresleri",
+      "empty": {
+        "title": "Kayıtlı E-posta Adresi Bulunamadı",
+        "description": "Henüz kayıtlı e-posta adresiniz bulunmamaktadır. Hesabınızdaki bildirimleri takip etmek istediğiniz mail adreslerinizi yukarıdaki 'Yeni Konfigürasyon' bölümnden ekleyebilirsiniz."
+      }
+    },
+    "sms": {
+      "title": "Kayıtlı SMS Numaraları",
+      "add": "Yeni SMS Numarası Ekle",
+      "empty": {
+        "title": "Kayıtlı SMS Numarası Bulunamadı",
+        "description": "Henüz kayıtlı SMS numaranız bulunmamaktadır. Hesabınızdaki bildirimleri takip etmek istediğiniz telefon numaralarını yukarıdaki 'Yeni Konfigürasyon' bölümnden ekleyebilirsiniz."
+      }
+    },
+    "telegram": {
+      "title": "Kayıtlı Telegram Kullanıcıları",
+      "add": "Yeni Telegram Kullanıcısı Ekle",
+      "empty": {
+        "title": "Kayıtlı Telegram Kullanıcısı Bulunamadı",
+        "description": "Henüz kayıtlı Telegram kullanıcınız bulunmamaktadır. Hesabınızdaki bildirimleri takip etmek istediğiniz Telegram kullanıcılarını yukarıdaki 'Yeni Konfigürasyon' bölümnden ekleyebilirsiniz."
+      }
+    }
   }
 }

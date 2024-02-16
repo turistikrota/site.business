@@ -55,5 +55,7 @@
   "requiredForIndividual": "{{field}} alanı bireysel işletmelar için zorunludur",
   "requiredForCorporate": "{{field}} alanı kurumsal işletmelar için zorunludur",
   "individual": "Bireysel",
-  "corporation": "Kurumsal"
+  "corporation": "Kurumsal",
+  "invalidPhone": "Geçersiz telefon numarası",
+  "invalidChatId": "Geçersiz chat id"
 }
