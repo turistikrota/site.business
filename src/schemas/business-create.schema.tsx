@@ -1,3 +1,4 @@
+import { BusinessApplication, BusinessType } from '@/types/business'
 import { useTranslation } from 'react-i18next'
 import * as yup from 'yup'
 
@@ -11,7 +12,7 @@ export const useBusinessCreateSchema = () => {
       .string()
       .required(t('required', { field: t('fields.businessType') }))
       .oneOf(
-        ['individual', 'corporation'],
+        [BusinessType.Individual, BusinessType.Corporation],
         t('either', {
           field: t('fields.businessType'),
           value1: t('individual'),
@@ -28,6 +29,18 @@ export const useBusinessCreateSchema = () => {
       then: (schema) => schema.required(t('requiredForIndividual', { field: t('fields.lastName') })),
       otherwise: (schema) => schema.notRequired(),
     }),
+    application: yup
+      .string()
+      .required(t('required', { field: t('fields.application') }))
+      .oneOf(
+        [BusinessApplication.Accommodation, BusinessApplication.Place, BusinessApplication.Advert],
+        t('oneof', {
+          field: t('fields.application'),
+          value1: t('accommodation'),
+          value2: t('place'),
+          value3: t('advert'),
+        }),
+      ),
     identityNumber: yup
       .string()
       .matches(/[0-9]{11}/, t('invalid', { field: t('fields.identityNumber') }))

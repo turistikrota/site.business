@@ -1,6 +1,8 @@
 import { Services, apiUrl } from '@/config/services'
 import { httpClient } from '@/http/client'
 import { useBusinessCreateSchema } from '@/schemas/business-create.schema'
+import { getStaticRoute } from '@/static/page'
+import { BusinessApplication, BusinessType } from '@/types/business'
 import Alert from '@turistikrota/ui/alert'
 import Input from '@turistikrota/ui/form/input'
 import Select from '@turistikrota/ui/form/select'
@@ -8,20 +10,12 @@ import Textarea from '@turistikrota/ui/form/textarea'
 import { useToast } from '@turistikrota/ui/toast'
 import { parseApiError } from '@turistikrota/ui/utils/response'
 import { useFormik } from 'formik'
-import React, { useEffect, useMemo, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useNavigate } from 'react-router-dom'
 import Spin from 'sspin/dist/esm/Spin'
+import BusinessTypeCard from './BusinessTypeCard'
 import { MultiStepForm, Step } from './MultiStepForm'
-
-type BusinessTypeCardProps = {
-  icon: string
-  title: string
-  description: string
-  onClick: () => void
-  selected?: boolean
-}
-
 type CorporationType = {
   name: string
   value: string
@@ -66,26 +60,10 @@ const corporationTypes: CorporationType[] = [
   },
 ]
 
-const BusinessTypeCard: React.FC<BusinessTypeCardProps> = ({ description, icon, onClick, title, selected }) => {
-  return (
-    <div
-      className={`relative flex h-40 w-40 cursor-pointer flex-col items-center justify-center rounded-md border p-2 transition-colors duration-200 hover:bg-second ${
-        selected ? 'bg-second' : ''
-      }`}
-      onClick={onClick}
-    >
-      {selected && <span className='absolute left-2 top-2 rounded-full bg-primary p-2 text-white'></span>}
-      <i className={`bx bx-2xl ${icon}`}></i>
-      <div className='mt-1 font-medium text-gray-900 dark:text-white'>{title}</div>
-      <p className='text-center text-sm text-gray-500 dark:text-gray-400'>{description}</p>
-    </div>
-  )
-}
-
 const BusinessCreateForm = () => {
   const schema = useBusinessCreateSchema()
   const navigate = useNavigate()
-  const { t } = useTranslation('create')
+  const { t, i18n } = useTranslation('create')
   const toast = useToast()
   const [isLoading, setIsLoading] = useState<boolean>(false)
   const [currentStep, setCurrentStep] = useState<number>(0)
@@ -99,12 +77,13 @@ const BusinessCreateForm = () => {
     initialValues: {
       nickName: undefined,
       realName: undefined,
-      businessType: 'corporation',
+      businessType: BusinessType.Corporation,
       firstName: undefined,
       lastName: undefined,
       identityNumber: undefined,
       serialNumber: undefined,
       province: undefined,
+      application: BusinessApplication.Accommodation,
       district: undefined,
       address: undefined,
       dateOfBirth: '',
@@ -116,7 +95,7 @@ const BusinessCreateForm = () => {
     validateOnChange: false,
     validateOnMount: false,
     onSubmit: (values) => {
-      if (values.businessType === 'corporation') {
+      if (values.businessType === BusinessType.Corporation) {
         values.dateOfBirth = maxDate
       }
       setIsLoading(true)
@@ -124,7 +103,7 @@ const BusinessCreateForm = () => {
         .post(apiUrl(Services.Business, `/`), values)
         .then(() => {
           toast.success(t('success'))
-          navigate('/')
+          navigate(getStaticRoute(i18n.language).business.select)
         })
         .catch((err) => {
           parseApiError({
@@ -142,7 +121,7 @@ const BusinessCreateForm = () => {
   useEffect(() => {
     type StepErrorsType = keyof typeof form.errors
     const stepErrors: StepErrorsType[][] = [
-      ['businessType'],
+      ['businessType', 'application'],
       ['firstName', 'lastName', 'identityNumber', 'serialNumber', 'dateOfBirth', 'taxNumber', 'type'],
       ['province', 'district', 'address'],
       ['nickName', 'realName'],
@@ -161,6 +140,13 @@ const BusinessCreateForm = () => {
     form.setFieldValue('businessType', type)
   }
 
+  const selectBusinessApplication = (application: string) => {
+    if (application === BusinessApplication.Accommodation) {
+      form.setFieldValue('businessType', BusinessType.Corporation)
+    }
+    form.setFieldValue('application', application)
+  }
+
   return (
     <Spin loading={isLoading}>
       <div className='border-b py-2'>
@@ -172,32 +158,62 @@ const BusinessCreateForm = () => {
       <MultiStepForm currentStep={currentStep} onStepChange={setCurrentStep} onSubmit={form.handleSubmit}>
         <Step>
           <div className='mb-2 rounded-md'>
+            <h2 className='text-left text-lg font-bold lg:block'>{t('application.title')}</h2>
+            <p className='text-left text-sm text-gray-600 dark:text-gray-400 lg:block'>{t('application.subtitle')}</p>
+            <div className='mb-3 mt-2 flex w-full justify-center gap-3'>
+              <BusinessTypeCard
+                icon='bx-home-smile'
+                title={t(`applications.${BusinessApplication.Accommodation}`)}
+                onClick={() => selectBusinessApplication(BusinessApplication.Accommodation)}
+                selected={form.values.application === BusinessApplication.Accommodation}
+                size='sm'
+              />
+              <BusinessTypeCard
+                icon='bx-map-pin'
+                title={t(`applications.${BusinessApplication.Place}`)}
+                onClick={() => selectBusinessApplication(BusinessApplication.Place)}
+                selected={form.values.application === BusinessApplication.Place}
+                size='sm'
+              />
+              <BusinessTypeCard
+                icon='bxs-megaphone'
+                title={t(`applications.${BusinessApplication.Advert}`)}
+                onClick={() => selectBusinessApplication(BusinessApplication.Advert)}
+                selected={form.values.application === BusinessApplication.Advert}
+                size='sm'
+              />
+            </div>
+          </div>
+          <div className='mb-2 rounded-md'>
             <h2 className='text-left text-lg font-bold lg:block'>{t('type-select.title')}</h2>
             <p className='text-left text-sm text-gray-600 dark:text-gray-400 lg:block'>{t('type-select.subtitle')}</p>
           </div>
-          <Alert type='warning' className='mb-2'>
-            <Alert.Title>{t('type-select.info.title')}</Alert.Title>
-            <Alert.Description>{t('type-select.info.content')}</Alert.Description>
-          </Alert>
+          {form.values.application === BusinessApplication.Accommodation && (
+            <Alert type='info' className='mb-2'>
+              <Alert.Title>{t('applications.error.accommodation.title')}</Alert.Title>
+              <Alert.Description>{t('applications.error.accommodation.content')}</Alert.Description>
+            </Alert>
+          )}
           <div className='flex w-full justify-center gap-3'>
             <BusinessTypeCard
               icon='bx-buildings'
-              title={t('type-select.corporation.title')}
-              description={t('type-select.corporation.subtitle')}
-              onClick={() => selectBusinessType('corporation')}
-              selected={form.values.businessType === 'corporation'}
+              title={t(`type-select.${BusinessType.Corporation}.title`)}
+              description={t(`type-select.${BusinessType.Corporation}.subtitle`)}
+              onClick={() => selectBusinessType(BusinessType.Corporation)}
+              selected={form.values.businessType === BusinessType.Corporation}
             />
             <BusinessTypeCard
               icon='bx-user'
-              title={t('type-select.individual.title')}
-              description={t('type-select.individual.subtitle')}
-              onClick={() => selectBusinessType('individual')}
-              selected={form.values.businessType === 'individual'}
+              title={t(`type-select.${BusinessType.Individual}.title`)}
+              description={t(`type-select.${BusinessType.Individual}.subtitle`)}
+              onClick={() => selectBusinessType(BusinessType.Individual)}
+              selected={form.values.businessType === BusinessType.Individual}
+              disabled={form.values.application === BusinessApplication.Accommodation}
             />
           </div>
         </Step>
         {form.values.businessType === 'individual' ? (
-          <Step className='space-y-2'>
+          <Step className='flex flex-col gap-x-2 gap-y-4'>
             <div className='flex gap-2'>
               <div className='w-full'>
                 <Input
@@ -243,8 +259,6 @@ const BusinessCreateForm = () => {
               error={form.errors.identityNumber}
               ariaLabel={t('individual.identityNumber')}
             />
-            {form.errors.identityNumber && <br />}
-            <small className='text-secondary'>{t('hashInfo')}</small>
             <Input
               label={t('individual.serialNumber')}
               id='serialNumber'
@@ -258,8 +272,6 @@ const BusinessCreateForm = () => {
               error={form.errors.serialNumber}
               ariaLabel={t('individual.serialNumber')}
             />
-            {form.errors.serialNumber && <br />}
-            <small className='text-secondary'>{t('hashInfo')}</small>
             <Input
               label={t('individual.dateOfBirth')}
               id='dateOfBirth'
@@ -276,7 +288,7 @@ const BusinessCreateForm = () => {
             />
           </Step>
         ) : (
-          <Step className='space-y-2'>
+          <Step className='flex flex-col gap-x-2 gap-y-4'>
             <Input
               label={t('corporation.taxNumber')}
               id='taxNumber'
@@ -290,8 +302,6 @@ const BusinessCreateForm = () => {
               error={form.errors.taxNumber}
               ariaLabel={t('corporation.taxNumber')}
             />
-            {form.errors.taxNumber && <br />}
-            <small className='text-secondary'>{t('hashInfo')}</small>
             <Select
               label={t('corporation.corpType')}
               name='type'
@@ -310,8 +320,6 @@ const BusinessCreateForm = () => {
                 </option>
               ))}
             </Select>
-            {form.errors.type && <br />}
-            <small className='text-secondary'>{t('analyticsInfo')}</small>
           </Step>
         )}
         <Step>
@@ -319,7 +327,7 @@ const BusinessCreateForm = () => {
             <h2 className='text-left text-lg font-bold lg:block'>{t('billing.title')}</h2>
             <p className='text-left text-sm text-gray-600 dark:text-gray-400 lg:block'>{t('billing.subtitle')}</p>
           </div>
-          <div className='space-y-2'>
+          <div className='flex flex-col gap-x-2 gap-y-4'>
             <div className='flex gap-2'>
               <div className='w-full'>
                 <Input
@@ -366,7 +374,7 @@ const BusinessCreateForm = () => {
             />
           </div>
         </Step>
-        <Step className='space-y-2'>
+        <Step className='flex flex-col gap-x-2 gap-y-4'>
           <Input
             label={t('general.nickName')}
             id='nickName'

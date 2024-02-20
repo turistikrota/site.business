@@ -43,7 +43,8 @@
     "price": "Fiyat",
     "value": "Değer",
     "categoryInput": "Kategori Seçiniz",
-    "coordinates": "Koordinatlar"
+    "coordinates": "Koordinatlar",
+    "application": "Başvurulan Uygulama"
   },
   "min": "{{field}} alanı en az {{value}} karakter olmalıdır",
   "max": "{{field}} alanı en fazla {{value}} karakter olmalıdır",
@@ -52,10 +53,14 @@
   "required": "{{field}} alanı zorunludur",
   "invalid": "{{field}} alanı geçersizdir",
   "either": "{{field}} alanı {{value1}} veya {{value2}} olmalıdır",
+  "oneof": "{{field}} alanı {{value1}}, {{value2}} veya {{value3}} olmalıdır",
   "requiredForIndividual": "{{field}} alanı bireysel işletmelar için zorunludur",
   "requiredForCorporate": "{{field}} alanı kurumsal işletmelar için zorunludur",
   "individual": "Bireysel",
   "corporation": "Kurumsal",
   "invalidPhone": "Geçersiz telefon numarası",
-  "invalidChatId": "Geçersiz chat id"
+  "invalidChatId": "Geçersiz chat id",
+  "accommodation": "Konaklama",
+  "place": "Yerler",
+  "advert": "Reklam"
 }
