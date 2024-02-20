@@ -43,7 +43,8 @@
     "price": "Price",
     "value": "Value",
     "categoryInput": "Select Category",
-    "coordinates": "Coordinates"
+    "coordinates": "Coordinates",
+    "application": "Referenced Application"
   },
   "min": "{{field}} field must be at least {{value}} characters",
   "max": "{{field}} field must have at most {{value}} characters",
@@ -52,10 +53,14 @@
   "required": "The {{field}} field is required",
   "invalid": "The {{field}} field is invalid",
   "either": "The field {{field}} must be {{value1}} or {{value2}}",
+  "oneof": "The field {{field}} must be {{value1}}, {{value2}}, or {{value3}}",
   "requiredForIndividual": "The {{field}} field is required for individual businesss",
   "requiredForCorporate": "The {{field}} field is required for enterprise businesss",
   "individual": "Individual",
   "corporation": "Corporate",
   "invalidPhone": "Please enter a valid phone number",
-  "invalidChatId": "Please enter a valid chat ID"
+  "invalidChatId": "Please enter a valid chat ID",
+  "accommodation": "Accommodation",
+  "place": "Places",
+  "advert": "Advert"
 }

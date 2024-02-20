@@ -13,6 +13,17 @@ export type BusinessListItem = {
   updatedAt: string
 }
 
+export enum BusinessApplication {
+  Accommodation = 'accommodation',
+  Place = 'place',
+  Advert = 'advert',
+}
+
+export enum BusinessType {
+  Individual = 'individual',
+  Corporation = 'corporation',
+}
+
 export type BusinessUser = {
   uuid: string
   name: string
@@ -63,8 +74,6 @@ export type BusinessErrorResponse = {
   businessNotFound: boolean
   businessSelectRequired: boolean
 }
-
-type BusinessType = 'individual' | 'corporation'
 
 export function isBusinessListResponse(data: any): data is BusinessListResponse {
   return (

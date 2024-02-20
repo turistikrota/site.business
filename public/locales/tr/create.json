@@ -14,11 +14,11 @@
     },
     "corporation": {
       "title": "Kurum",
-      "subtitle": "Bir kurum olarak başvuruyorum."
+      "subtitle": "Vergi mükellefi olarak başvuruyorum."
     },
     "individual": {
       "title": "Birey",
-      "subtitle": "Birey olarak başvuruyorum."
+      "subtitle": "Vergi mükellefi olmayan bir birey olarak başvuruyorum."
     }
   },
   "corporation": {
@@ -31,6 +31,21 @@
     "identityNumber": "Kimlik Numarası",
     "serialNumber": "Seri Numarası",
     "dateOfBirth": "Doğum Tarihi"
+  },
+  "application": {
+    "title": "Başvurulan Uygulama",
+    "subtitle": "Lütfen başvurduğunuz uygulamayı seçin."
+  },
+  "applications": {
+    "accommodation": "Konaklama",
+    "place": "Yerler",
+    "advert": "Reklam",
+    "error": {
+      "accommodation": {
+        "title": "Konaklama Uygulaması Hk.",
+        "content": "Konaklama uygulamasında başvuru yapabilmek için vergi mükellefi olmanız gerekmektedir."
+      }
+    }
   },
   "billing": {
     "title": "Fatura Bilgileri",

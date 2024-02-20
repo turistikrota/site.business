@@ -62,7 +62,11 @@ export function useListQuery<T = any>(getter: Fetcher<T>): ListResult<T> {
     refetch()
   }
 
-  useInfiniteScroll(onScroll, loading, 10)
+  useInfiniteScroll({
+    handle: onScroll,
+    loading,
+    offset: 10,
+  })
 
   useEffect(() => {
     refetch()

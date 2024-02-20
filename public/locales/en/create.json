@@ -13,12 +13,12 @@
       "content": "This selection is important for invoicing purposes. If you cannot issue an invoice with the Turkish Revenue Administration (you do not have a tax identification number registered in the Republic of Turkey), you can choose it individually. In this case, you must be a citizen of the Republic of Turkey."
     },
     "corporation": {
-      "title": "Institution",
-      "subtitle": "I am applying as an institution."
+      "title": "Corporation",
+      "subtitle": "I am applying as a taxpayer."
     },
     "individual": {
       "title": "Individual",
-      "subtitle": "I am applying as an individual."
+      "subtitle": "I am applying as a non-taxpayer individual."
     }
   },
   "corporation": {
@@ -38,6 +38,21 @@
     "province": "Province",
     "district": "District",
     "address": "Address"
+  },
+  "application": {
+    "title": "Referenced Application",
+    "subtitle": "Please select the application you are applying for."
+  },
+  "applications": {
+    "accommodation": "Accommodation",
+    "place": "Places",
+    "advert": "Advert",
+    "error":{
+      "accommodation": {
+        "title": "About the Accommodation Application.",
+        "content": "You must be a taxpayer to apply for the accommodation application."
+      }
+    }
   },
   "general": {
     "nickName": "Unique Nickname",
