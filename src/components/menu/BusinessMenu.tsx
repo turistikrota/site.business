@@ -1,6 +1,6 @@
 import { useBodyguard } from '@/hooks/permission'
 import { RouteType, getStaticRoute } from '@/static/page'
-import { BusinessLogRoles, BusinessRoles, ListingRoles } from '@/static/role'
+import { BookingRoles, BusinessLogRoles, BusinessRoles, ListingRoles } from '@/static/role'
 import { Colors } from '@/types/colors'
 import { isWindowLtLg } from '@/utils/responsive'
 import Condition from '@turistikrota/ui/condition'
@@ -48,6 +48,12 @@ const menuItems: MenuItem[] = [
     icon: 'bx bx-grid',
     roles: [BusinessRoles.Super, ListingRoles.Super, ListingRoles.List],
     href: (r: RouteType) => r.business.details.listing.list,
+  },
+  {
+    title: 'bookings',
+    icon: 'bx bx-calendar',
+    roles: [BusinessRoles.Super, BookingRoles.Super, BookingRoles.List],
+    href: (r: RouteType) => r.business.details.bookings.list,
   },
   {
     title: 'users',
