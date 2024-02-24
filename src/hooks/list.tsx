@@ -1,8 +1,9 @@
 import { useInfiniteScroll } from '@turistikrota/ui/hooks/dom'
 import { ListResponse } from '@turistikrota/ui/types'
+import debounce from '@turistikrota/ui/utils/debounce'
 import { useEffect, useState } from 'react'
 
-type ListResult<T> = {
+type ListResult<T, P = any> = {
   list: T[]
   setList: (list: T[]) => void
   total: number
@@ -11,22 +12,23 @@ type ListResult<T> = {
   isNextVisible: boolean
   isPrevVisible: boolean
   page: number
-  refetch: () => void
+  refetch: (page: number, params?: P) => void
   setPage: (page: number) => void
 }
 
-type Fetcher<T = any> = (page: number) => Promise<ListResponse<T>>
+type Fetcher<T = any, P = any> = (page: number, params?: P) => Promise<ListResponse<T>>
 
-export function useListQuery<T = any>(getter: Fetcher<T>): ListResult<T> {
+export function useListQuery<T = any, P = any>(getter: Fetcher<T, P>, initials?: P): ListResult<T, P> {
   const [firstLoading, setFirstLoading] = useState<boolean>(true)
   const [loading, setLoading] = useState<boolean>(true)
   const [page, setPage] = useState<number>(1)
   const [total, setTotal] = useState<number>(0)
+  const [params, setParams] = useState<P | undefined>(initials)
   const [isNextVisible, setIsNextVisible] = useState<boolean>(false)
   const [isPrevVisible, setIsPrevVisible] = useState<boolean>(false)
   const [list, setList] = useState<T[]>([])
 
-  const startLoading = () => {
+  const startLoading = (page: number) => {
     if (page === 1) return setFirstLoading(true)
     setLoading(true)
   }
@@ -36,9 +38,10 @@ export function useListQuery<T = any>(getter: Fetcher<T>): ListResult<T> {
     setFirstLoading(false)
   }
 
-  const refetch = () => {
-    startLoading()
-    getter(page)
+  const refetch = (page: number, params?: P) => {
+    startLoading(page)
+    const p = params ? 1 : page
+    getter(p, params)
       .then((res) => {
         if (res) {
           if (page === 1) {
@@ -59,8 +62,9 @@ export function useListQuery<T = any>(getter: Fetcher<T>): ListResult<T> {
   const onScroll = () => {
     if (!isNextVisible) return
     setPage(page + 1)
-    refetch()
   }
+
+  const debouncedRefetch = debounce(refetch, 500)
 
   useInfiniteScroll({
     handle: onScroll,
@@ -69,8 +73,16 @@ export function useListQuery<T = any>(getter: Fetcher<T>): ListResult<T> {
   })
 
   useEffect(() => {
-    refetch()
-  }, [page])
+    debouncedRefetch(page, params)
+  }, [page, params])
+
+  useEffect(() => {
+    if (initials) {
+      setParams(initials)
+    } else {
+      setParams(undefined)
+    }
+  }, [initials])
 
   return {
     firstLoading,
