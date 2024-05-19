@@ -20,7 +20,7 @@ type TelegramProps = {
 }
 
 export const MailForm: React.FC<MailProps> = ({ email, onChange, error }) => {
-  const { t } = useTranslation('notification')
+  const { t } = useTranslation('notifications')
   return (
     <Input
       name='email'

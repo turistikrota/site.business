@@ -29,7 +29,7 @@ type Props = {
 }
 
 const ActorConfigEditModal: FC<Props> = ({ open, name, type, chatId, email, phone, onClose, onOk }) => {
-  const { t } = useTranslation('notification')
+  const { t } = useTranslation('notifications')
   const [isLoading, setIsLoading] = useState(false)
   const toast = useToast()
   const schema = useActorConfigSchema()

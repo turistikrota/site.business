@@ -11,7 +11,7 @@ type Props = {
 }
 
 const ActorConfigSummary: FC<Props> = ({ mailCount, smsCount, telegramCount, updatedAt }) => {
-  const { t, i18n } = useTranslation('notification')
+  const { t, i18n } = useTranslation('notifications')
   const dayjs = useDayJS(i18n.language)
   return (
     <div className='grid grid-cols-4 gap-2'>

@@ -16,7 +16,7 @@ type Props = {
 }
 
 const ActorConfigDeleteModal: FC<Props> = ({ name, type, open, onClose, onOk }) => {
-  const { t } = useTranslation('notification')
+  const { t } = useTranslation('notifications')
   const [isLoading, setIsLoading] = useState(false)
   const toast = useToast()
 

@@ -24,7 +24,7 @@ type Props = {
 }
 
 const ActorConfigCreateModal: FC<Props> = ({ open, onClose, onOk }) => {
-  const { t } = useTranslation('notification')
+  const { t } = useTranslation('notifications')
   const [isLoading, setIsLoading] = useState(false)
   const toast = useToast()
   const schema = useActorConfigSchema()

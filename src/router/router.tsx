@@ -73,7 +73,7 @@ const trRoutes: RouteObject[] = [
         lazy: () => import('@/views/app/settings/index'),
       },
       {
-        path: 'ayarlar/bildirim',
+        path: 'ayarlar/bildirim-tercihleri',
         lazy: () => import('@/views/app/settings/notifications'),
       },
       {
@@ -173,7 +173,7 @@ const enRoutes: RouteObject[] = [
         lazy: () => import('@/views/app/settings/index'),
       },
       {
-        path: 'settings/notification',
+        path: 'settings/notification-preferences',
         lazy: () => import('@/views/app/settings/notifications'),
       },
       {
