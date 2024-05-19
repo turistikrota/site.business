@@ -16,6 +16,7 @@ export type Pages =
   | 'users'
   | 'listings'
   | 'business-logs'
+  | 'bookings'
 
 type Props = {
   page: Pages

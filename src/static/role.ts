@@ -40,3 +40,10 @@ export enum BusinessUploadRoles {
   Avatar = 'business.upload.avatar',
   Cover = 'business.upload.cover',
 }
+
+export enum BookingRoles {
+  List = 'booking.list',
+  View = 'booking.view',
+  Cancel = 'booking.cancel',
+  Super = 'booking.super',
+}

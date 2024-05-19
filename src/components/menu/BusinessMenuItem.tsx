@@ -1,5 +1,5 @@
 import { Colors } from '@/types/colors'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 
 type BusinessMenuItemType = React.FC<React.PropsWithChildren<Props>> & {
   Content: typeof Content
@@ -119,8 +119,17 @@ const DefaultProvider = ({ children, className, title, onClick }: React.PropsWit
 }
 
 const LinkProvider = ({ children, onClick, title, className, alt, href }: React.PropsWithChildren<LinkProps>) => {
+  const path = useLocation().pathname
   return (
-    <Link to={href} title={title} onClick={onClick} className={className} aria-label={alt ? alt : title}>
+    <Link
+      to={href}
+      title={title}
+      onClick={onClick}
+      className={`${className ? className : ''} ${
+        path === href ? '!dark:bg-opacity-10 border border-primary !bg-primary !bg-opacity-10' : ''
+      }`}
+      aria-label={alt ? alt : title}
+    >
       {children}
     </Link>
   )

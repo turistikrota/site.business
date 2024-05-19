@@ -25,6 +25,7 @@
     "listing-edit": "İlan Düzenle",
     "listing-logs": "İlan Logları",
     "business-logs": "İşletme Logları",
+    "bookings": "Rezervasyonlar",
     "subtitles": {
       "edit": "İşletme profil resminizi, bilgilerinizi ve sosyal medya hesaplarınızı düzenleyin.",
       "security": "Şifrenizi değiştirin, iki faktörlü kimlik doğrulamayı etkinleştirin ve oturum açma cihazlarınızı yönetin.",
@@ -41,7 +42,8 @@
       "listing-detail": "Bu işletmenin ilanını görüntüleyin ve yönetin.",
       "listing-edit": "Bu işletmenin ilanını düzenleyin.",
       "listing-logs": "Bu ilanın loglarını görüntüleyin.",
-      "business-logs": "Bu işletmenin loglarını görüntüleyin."
+      "business-logs": "Bu işletmenin loglarını görüntüleyin.",
+      "bookings": "Bu işletmenin rezervasyonlarını görüntüleyin."
     }
   },
   "meta": {

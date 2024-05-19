@@ -10,6 +10,7 @@ export enum Services {
   ListingLog = 'listing-log',
   BusinessLog = 'business-log',
   Notify = 'notify',
+  Booking = 'booking',
 }
 
 export const ApiUrls: Record<Services, string> = {
@@ -22,6 +23,7 @@ export const ApiUrls: Record<Services, string> = {
   [Services.ListingLog]: import.meta.env.VITE_API_LISTING_LOG_SRV_URL as string,
   [Services.BusinessLog]: import.meta.env.VITE_API_BUSINESS_LOG_SRV_URL as string,
   [Services.Notify]: import.meta.env.VITE_API_NOTIFY_SRV_URL as string,
+  [Services.Booking]: import.meta.env.VITE_API_BOOKING_SRV_URL as string,
 }
 
 export enum Sites {

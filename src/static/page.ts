@@ -30,6 +30,9 @@ export type RouteType = {
       security: string
       settings: string
       businessLogs: string
+      bookings: {
+        list: string
+      }
       listing: {
         list: string
         create: string
@@ -83,6 +86,9 @@ const Routes: Record<Locales, RouteType> = {
         edit: '/duzenle',
         notification: '/bildirim-tercihleri',
         privacy: '/gizlilik',
+        bookings: {
+          list: '/rezervasyonlar',
+        },
         security: '/guvenlik',
         settings: '/ayarlar',
         invite: '/davetler',
@@ -134,6 +140,9 @@ const Routes: Record<Locales, RouteType> = {
         security: '/security',
         settings: '/settings',
         invite: '/invites',
+        bookings: {
+          list: '/bookings',
+        },
         inviteCreate: '/invite',
         users: '/users',
         listing: {

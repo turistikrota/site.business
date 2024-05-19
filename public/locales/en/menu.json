@@ -25,6 +25,7 @@
     "business-logs": "Business Logs",
     "listing-edit": "Edit Listing",
     "listing-logs": "Listing Logs",
+    "bookings": "Bookings",
     "subtitles": {
       "edit": "Edit your business profile picture, information and social media accounts.",
       "security": "Change your password, enable two-factor authentication, and manage your sign-in devices.",
@@ -41,7 +42,8 @@
       "listing-create": "Create a new listing in this business.",
       "listing-logs": "View listing logs.",
       "business-logs": "View business logs.",
-      "listing-edit": "Edit a listing in this business."
+      "listing-edit": "Edit a listing in this business.",
+      "bookings": "View and manage bookings in this business."
     }
   },
   "meta": {
