@@ -12,6 +12,14 @@
     "email": "The user's e-mail address registered in turistikrota. If the user is not registered in turistikrota, the invited user will register in turistikrota with this e-mail address.",
     "locale": "The invitation email will be sent to the user in this language."
   },
+  "form": {
+    "title": "Create Invitation",
+    "subtitle": "You can invite a user to your Business through this page."
+  },
+  "breadcrumb": {
+    "invites": "Invitations",
+    "create": "Create Invitation"
+  },
   "loading": "Creating invitation...",
   "invite": "Invite",
   "success": "The invitation was sent successfully. The invited user will receive an invitation to their email address and must accept your invitation within 24 hours."

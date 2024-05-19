@@ -41,6 +41,7 @@ export const BottomItems: Item[] = [
     title: 'invites',
     icon: 'bx-envelope',
     href: (r) => r.invite.list,
+    contains: true,
   },
   {
     title: 'settings',
