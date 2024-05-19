@@ -68,9 +68,9 @@ const Routes: Record<Locales, RouteType> = {
     },
     listing: {
       create: '/ilanlar/olustur',
-      edit: '/ilanlar/duzenle',
+      edit: 'duzenle',
       list: '/ilanlar',
-      logs: '/ilanlar/kayitlar',
+      logs: 'kayitlar',
     },
     payment: {
       list: '/odemeler',
@@ -118,9 +118,9 @@ const Routes: Record<Locales, RouteType> = {
     },
     listing: {
       create: '/listings/create',
-      edit: '/listings/edit',
+      edit: 'edit',
       list: '/listings',
-      logs: '/listings/logs',
+      logs: 'logs',
     },
     payment: {
       list: '/payments',

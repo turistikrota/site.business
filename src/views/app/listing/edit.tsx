@@ -17,7 +17,7 @@ const ListingEditView: FC = () => {
   const params = useParams()
   const { t, i18n } = useTranslation(['listings', 'general'])
   const path = useLocation().pathname
-  const { data, loading, notFound, refetch } = useQuery(() => fetchMyListing(params.id ?? ''))
+  const { data, loading, notFound, refetch } = useQuery(() => fetchMyListing(params.uuid ?? ''))
 
   if (loading) return <ContentLoader noMargin />
   if (!data || notFound) return <NotFoundView />
@@ -35,6 +35,13 @@ const ListingEditView: FC = () => {
           </Breadcrumb.Item>
           <Breadcrumb.Item Link={DomLink} href={getStaticRoute(i18n.language).listing.list} currentPath={path}>
             {t('breadcrumb.listings')}
+          </Breadcrumb.Item>
+          <Breadcrumb.Item
+            Link={DomLink}
+            href={`${getStaticRoute(i18n.language).listing.list}/${params.uuid}`}
+            currentPath={path}
+          >
+            {t('breadcrumb.detail')}
           </Breadcrumb.Item>
           <Breadcrumb.Item>{t('breadcrumb.edit')}</Breadcrumb.Item>
         </Breadcrumb>
