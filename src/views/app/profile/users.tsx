@@ -4,20 +4,25 @@ import { Services, apiUrl } from '@/config/services'
 import { useCurrentBusiness } from '@/contexts/currentBusiness'
 import { httpClient } from '@/http/client'
 import RoleGuardView from '@/layouts/RoleGuard'
+import { getStaticRoute } from '@/static/page'
 import { BusinessRoles } from '@/static/role'
 import { BusinessUserListItem, isBusinessUserListResponse } from '@/types/business'
+import DomLink from '@/utils/link'
+import Breadcrumb from '@turistikrota/ui/breadcrumb'
 import ContentLoader from '@turistikrota/ui/loader'
 import { useToast } from '@turistikrota/ui/toast'
 import { parseApiError } from '@turistikrota/ui/utils/response'
 import React, { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
+import { useLocation } from 'react-router-dom'
 
-const UsersView: React.FC = () => {
-  const { t } = useTranslation('users')
+const ProfleUsersView: React.FC = () => {
+  const { t, i18n } = useTranslation(['profile', 'general'])
   const [users, setUsers] = useState<BusinessUserListItem[]>([])
   const [loading, setLoading] = useState<boolean>(false)
   const [current] = useCurrentBusiness()
   const toast = useToast()
+  const path = useLocation().pathname
 
   useEffect(() => {
     fetchUsers()
@@ -46,8 +51,21 @@ const UsersView: React.FC = () => {
 
   return (
     <RoleGuardView roles={[BusinessRoles.Super, BusinessRoles.UserList]}>
-      <MetaWrapper title={t('meta.title')} description={t('meta.description')} keywords={t('meta.keywords')}>
-        <section className='container relative mx-auto space-y-5 p-2'>
+      <MetaWrapper
+        title={t('meta.users.title')}
+        description={t('meta.users.description')}
+        keywords={t('meta.users.keywords')}
+      >
+        <section className='relative space-y-4'>
+          <Breadcrumb>
+            <Breadcrumb.Item Link={DomLink} icon='bx-home' href='/' currentPath={path}>
+              {t('general:utils.breadcrumb.home')}
+            </Breadcrumb.Item>
+            <Breadcrumb.Item Link={DomLink} href={getStaticRoute(i18n.language).profile.edit} currentPath={path}>
+              {t('breadcrumb.profile')}
+            </Breadcrumb.Item>
+            <Breadcrumb.Item>{t('breadcrumb.users')}</Breadcrumb.Item>
+          </Breadcrumb>
           {users.map((user) => (
             <UserCollapseItem user={user} key={user.name} />
           ))}
@@ -57,6 +75,6 @@ const UsersView: React.FC = () => {
   )
 }
 
-UsersView.displayName = 'UsersView'
+ProfleUsersView.displayName = 'ProfleUsersView'
 
-export { UsersView as Component }
+export { ProfleUsersView as Component }
