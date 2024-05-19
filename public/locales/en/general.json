@@ -5,6 +5,7 @@
     "delete": "Delete",
     "confirmation": "Please type '<strong>{{text}}</strong>' in the box below to complete the deletion process."
   },
+  "footer": "© {{year}} Turistikrota. All rights reserved.",
   "key-value": {
     "nickName": "Unique Nickname",
     "realName": "Real Name",
