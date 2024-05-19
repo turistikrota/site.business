@@ -24,9 +24,7 @@ const ListingDetailBaseSection: React.FC<Props> = ({ uuid, title, images, descri
         <div className='mt-2 flex gap-2'>
           <RoleGuard roles={ListingEditViewRoles}>
             <Link
-              to={`${getStaticRoute(i18n.language).business.details.listing.detail}${uuid}/${
-                getStaticRoute(i18n.language).business.details.listing.edit
-              }`}
+              to={`${getStaticRoute(i18n.language).listing.list}/${uuid}/${getStaticRoute(i18n.language).listing.edit}`}
               target='_blank'
             >
               <Button block={false} className='flex items-center justify-center gap-2'>
@@ -37,9 +35,7 @@ const ListingDetailBaseSection: React.FC<Props> = ({ uuid, title, images, descri
           </RoleGuard>
           <RoleGuard roles={ListingLogsViewRoles}>
             <Link
-              to={`${getStaticRoute(i18n.language).business.details.listing.detail}${uuid}/${
-                getStaticRoute(i18n.language).business.details.listing.logs
-              }`}
+              to={`${getStaticRoute(i18n.language).listing.list}/${uuid}/${getStaticRoute(i18n.language).listing.logs}`}
               target='_blank'
             >
               <Button block={false} className='flex items-center justify-center gap-2' variant='secondary'>

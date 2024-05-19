@@ -5,6 +5,7 @@
     "delete": "Sil",
     "confirmation": "Silme işlemini tamamlamak için lütfen aşağıdaki kutucuğa '<strong>{{text}}</strong>' yazın."
   },
+  "footer": "© {{year}} Turistikrota. Tüm hakları saklıdır.",
   "key-value": {
     "nickName": "Benzersiz Takma Ad",
     "realName": "Gerçek İsim",
@@ -60,6 +61,92 @@
       "air-conditioning": "Klima ile",
       "stove": "Soba ile",
       "gas": "Doğalgaz ile"
+    }
+  },
+  "texts": {
+    "notFound": "Bulunamadı",
+    "notFoundSpecial": "{{special}} Bulunamadı",
+    "notFoundDescription": "Aradığınız kriterlere uygun bir sonuç bulunamadı.",
+    "notFoundDescriptionSpecial": "{{special}} için bir sonuç bulunamadı.",
+    "error": "Hata"
+  },
+
+  "utils": {
+    "validation":{
+      "invalidEmail": "Geçersiz e-posta adresi",
+      "invalidPhone": "Geçersiz telefon numarası",
+      "invalidChatId": "Geçersiz chat id",
+      "passwordMin": "Şifre en az {{min}} karakter olmalıdır",
+      "required": "Bu alan zorunludur"
+    },
+    "breadcrumb": {
+      "home":"Ana Sayfa",
+      "settings": "Ayarlar",
+      "profile": "İşletme Profili",
+      "notifications": "İşletme Bildirim Ayarları",
+      "supports": "Talepler",
+      "listings": "İlanlar",
+      "payments": "Ödemeler",
+      "bookings": "Rezervasyonlar",
+      "invoices": "Faturalar"
+    }    
+  },
+  "sections": {
+    "maintaining": {
+      "title": "Bakımdayız",
+      "description": "Bu sayfa şu anda bakım nedeniyle kullanılamıyor. Lütfen daha sonra tekrar deneyin."
+    },
+    "cropper": {
+      "button": {
+        "show": "Göster",
+        "hide": "Gizle",
+        "close": "Kapat",
+        "save": "Kaydet",
+        "cancel": "İptal",
+        "zoom-in": "Yakınlaştır",
+        "zoom-out": "Uzaklaştır",
+        "rotate-left": "Sola döndür",
+        "rotate-right": "Sağa döndür",
+        "flip-horizontal": "Yatay çevir",
+        "flip-vertical": "Dikey çevir"
+      }
+    },
+    "server-error": {
+      "title": "Bir şeyler ters gitti!",
+      "subtitle": "Üzgünüz, bir hata oluştu. Lütfen daha sonra tekrar deneyin.",
+      "button": "Ana Sayfaya Dön"
+    },
+    "notfound": {
+      "title": "Bir şey eksik.",
+      "subtitle": "Üzgünüz, o sayfayı bulamıyoruz. Ana sayfada keşfedilecek çok şey bulacaksınız.",
+      "button": "Ana Sayfaya Dön",
+      "meta": {
+        "title": "404 - Sayfa Bulunamadı",
+        "description": "Üzgünüz, o sayfayı bulamıyoruz. Ana sayfada keşfedilecek çok şey bulacaksınız.",
+        "keywords": "404, Sayfa Bulunamadı, Turistik Rota, Tatil Planlama, Tur Rezervasyonu"
+      }
+    },
+    "menu": {
+      "home": "Ana Sayfa",
+      "bookings": "Rezervasyonlar",
+      "supports": "Destek Talepleri",
+      "payments": "Ödemeler",
+      "notifications": "Bildirimler",
+      "settings": "Ayarlar",
+      "invoices": "Faturalar",
+      "invites": "Davetler",
+      "profile": {
+        "change": "Profil Değiştir",
+        "edit": "Profili Düzenle"
+      }
+    },
+    "logout": {
+      "text": "Çıkış Yap",
+      "dialog": {
+        "title": "Çıkış Onayı",
+        "message": "Çıkış yapmak istediğinize emin misiniz?"
+      },
+      "success": "Çıkış başarılı!"
     }
   }
 }

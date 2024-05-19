@@ -115,7 +115,7 @@ const ListingListCard: React.FC<Props> = ({
                 />
               )}
               <Link
-                to={getStaticRoute(i18n.language).business.details.listing.detail + uuid}
+                to={`${getStaticRoute(i18n.language).listing.list}/${uuid}`}
                 target='_blank'
                 className='col-span-12'
               >

@@ -1,0 +1,11 @@
+{
+    "meta": {
+        "title": "Dashboard"
+    },
+    "sections": {
+        "welcome": {
+            "greeting": "Welcome to {{business}} dashboard, {{name}}!",
+            "description": "This control panel allows you to manage your reservations, payments and other information."
+        }
+    }
+}

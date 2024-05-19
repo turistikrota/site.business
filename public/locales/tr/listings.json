@@ -5,6 +5,26 @@
     "loading": "İlan Oluşturuluyor...",
     "disabled": "Lütfen tüm kategori kurallarını kabul ediniz. ({{accepted}}/{{total}})"
   },
+  "breadcrumb": {
+    "listings": "İlanlar",
+    "create": "İlan Oluştur",
+    "edit": "İlan Düzenle",
+    "detail": "İlan Detayları",
+    "logs": "İlan Kayıtları"
+  },
+  "fields": {
+    "create": "İlan Oluştur"
+  },
+  "forms": {
+    "create": {
+      "title": "İlan Oluştur",
+      "subtitle": "Bu sayfayı kullanarak yeni bir ilan oluşturabilirsiniz."
+    },
+    "edit": {
+      "title": "İlan Düzenle",
+      "subtitle": "Bu sayfayı kullanarak ilanınızı düzenleyebilirsiniz."
+    }
+  },
   "logs": {
     "meta": {
       "title": "İlan Kayıtları",

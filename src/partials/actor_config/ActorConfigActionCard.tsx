@@ -10,7 +10,7 @@ type Props = {
 }
 
 const ActorConfigActionCard: FC<PropsWithChildren<Props>> = ({ children, text, onEdit, onDelete }) => {
-  const { t } = useTranslation('notification')
+  const { t } = useTranslation('notifications')
   const toast = useToast()
 
   const copyToClipboard = () => {

@@ -12,6 +12,14 @@
     "email": "Kullanıcının turistikrota'da kayıtlı e-posta adresi. Eğer kullanıcı turistikrota'da kayıtlı değilse, davet edilen kullanıcı bu e-posta adresiyle turistikrota'ya kayıt olacaktır.",
     "locale": "Kullanıcıya davet e-posta bu dilde gönderilecektir."
   },
+  "form": {
+    "title":"Davet Oluştur",
+    "subtitle": "Bu sayfa aracılığıyla İşletmenize bir kullanıcıyı davet edebilirsiniz."
+  },
+  "breadcrumb": {
+    "invites": "Davetler",
+    "create": "Davet Oluştur"
+  },
   "loading": "Davet oluşturuluyor...",
   "invite": "Davet Et",
   "success": "Davet başarıyla gönderildi. Davet edilen kullanıcı e-posta adresine bir davet alacak ve 24 saat içinde davetinizi kabul etmesi gerekecek."

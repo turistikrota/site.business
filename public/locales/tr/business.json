@@ -11,6 +11,10 @@
       "button": "Oturumu Yenile"
     }
   },
+  "breadcrumb": {
+    "logs": "İşletme Log Kayıtları",
+    "profile": "İşletme Profili"
+  },
   "logs": {
     "meta": {
       "title": "İşletme Log Kayıtları",

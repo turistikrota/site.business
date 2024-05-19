@@ -21,6 +21,10 @@
     "minutes_ago": "{{minutes}} minutes ago",
     "hours_ago": "{{hours}} hours ago"
   },
+  "breadcrumb": {
+    "invites": "Invitations",
+    "create": "Create Invitation"
+  },
   "delete_success": "Invitation was successfully invalidated.",
   "states": {
     "used": "Used",

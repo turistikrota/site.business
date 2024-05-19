@@ -21,6 +21,10 @@
     "minutes_ago": "{{minutes}} dakika önce",
     "hours_ago": "{{hours}} saat önce"
   },
+  "breadcrumb": {
+    "invites": "Davetler",
+    "create": "Davet Oluştur"
+  },
   "delete_success": "Davet başarıyla geçersiz kılındı.",
   "states": {
     "used": "Kullanıldı",

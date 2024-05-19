@@ -103,7 +103,7 @@ const BusinessCreateForm = () => {
         .post(apiUrl(Services.Business, `/`), values)
         .then(() => {
           toast.success(t('success'))
-          navigate(getStaticRoute(i18n.language).business.select)
+          navigate(getStaticRoute(i18n.language).profile.select)
         })
         .catch((err) => {
           parseApiError({

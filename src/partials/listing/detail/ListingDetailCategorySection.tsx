@@ -1,4 +1,5 @@
 import {
+  BaseTranslation,
   CategoryFields,
   CategoryListItem,
   fetchCategoryFields,
@@ -18,6 +19,11 @@ import { useTranslation } from 'react-i18next'
 type Props = {
   categoryUUIDs: string[]
   features: ListingFeature[]
+}
+
+const emptyTranslation: BaseTranslation = {
+  description: '',
+  name: '',
 }
 
 const ListingDetailCategorySection: FC<Props> = ({ categoryUUIDs, features }) => {
@@ -44,10 +50,10 @@ const ListingDetailCategorySection: FC<Props> = ({ categoryUUIDs, features }) =>
           {fields.inputGroups.map((group, groupIdx) => (
             <section key={groupIdx}>
               <FormSection.Head.Title className='text-lg font-semibold'>
-                {getI18nTranslation(group.translations, i18n.language).name}
+                {(getI18nTranslation(group.translations, i18n.language).name, emptyTranslation.name)}
               </FormSection.Head.Title>
               <FormSection.Head.Subtitle>
-                {getI18nTranslation(group.translations, i18n.language).description}
+                {(getI18nTranslation(group.translations, i18n.language).description, emptyTranslation.description)}
               </FormSection.Head.Subtitle>
               <section className={'mt-4 grid grid-cols-12 gap-2'}>
                 {filterByGroup(group.uuid).map((feature, featureIdx) => (

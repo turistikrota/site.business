@@ -1,12 +1,12 @@
-import { FC, useState } from 'react'
-import { useTranslation } from 'react-i18next'
-import { useToast } from '@turistikrota/ui/toast'
 import { uploadProfileAvatar } from '@/api/upload/upload.api.ts'
+import ImageUploaderWithCropper from '@/components/image/ImageUploaderWithCropper.tsx'
+import { makeBusinessAvatar } from '@/utils/cdn.ts'
+import { useToast } from '@turistikrota/ui/toast'
 import { parseApiError } from '@turistikrota/ui/utils/response'
 import { toFormData } from '@turistikrota/ui/utils/transform'
+import { FC, useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import Spin from 'sspin'
-import { makeBusinessAvatar } from '@/utils/cdn.ts'
-import ImageUploaderWithCropper from '@/components/image/ImageUploaderWithCropper.tsx'
 
 type Props = {
   nickName: string
@@ -14,7 +14,7 @@ type Props = {
 }
 
 const BusinessProfileImageUploadSection: FC<Props> = ({ nickName, onOk }) => {
-  const { t } = useTranslation('edit')
+  const { t } = useTranslation('profile')
   const [src, setSrc] = useState(makeBusinessAvatar(nickName))
   const [inputError, setInputError] = useState<string | null>(null)
   const [isLoading, setIsLoading] = useState(false)

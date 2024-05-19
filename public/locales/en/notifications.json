@@ -1,0 +1,85 @@
+{
+  "meta": {
+    "title": "Notifications",
+    "description": "View your notification preferences, set your notification preferences, and change your account settings.",
+    "keywords": "Notifications, Turistik Rota, Vacation Planning, Tour Reservation"
+  },
+  "actorConfig": {
+    "new": "New Configuration",
+    "tools": {
+      "edit": "edit",
+      "copy": "copy",
+      "copied": "Copied to Clipboard",
+      "delete": "delete"
+    },
+    "create": {
+      "title": "New Notification Configuration",
+      "subtitle": "Add the email address, phone number, or Telegram chat ID where you want to receive updates on your profile.",
+      "submit": "Save",
+      "success": "New configuration created successfully."
+    },
+    "edit": {
+      "title": "Edit Configuration",
+      "subtitle": "Add the email address, phone number, or Telegram chat ID where you want to receive updates on your profile.",
+      "submit": "Update",
+      "success": "Configuration updated successfully."
+    },
+    "delete": {
+      "title": "Delete Configuration",
+      "subtitle": "Are you sure you want to delete this configuration?",
+      "label": "Confirmation Text",
+      "text": "Once you delete a configuration, you cannot retrieve it. Are you sure you want to proceed with the deletion?",
+      "confirmation": "To be able to delete the configuration, please type '<strong>{{text}}</strong>' in the box below.",
+      "button": "Delete Configuration",
+      "confirm": "Yes, Delete Configuration",
+      "success": "Configuration deleted successfully."
+    },
+    "form": {
+      "name": "Configuration Name",
+      "email": "Email Address",
+      "phone": "Phone Number",
+      "chatId": "Telegram Chat ID",
+      "type": "Notification Channel",
+      "types": {
+        "mail": "Email Notification",
+        "sms": "SMS Notification",
+        "telegram": "Telegram Notification"
+      },
+      "alerts": {
+        "sms": {
+          "title": "About Phone Number",
+          "description": "Enter your phone number with the country code at the beginning. For example: +905555555555"
+        }
+      }
+    },
+    "summary": {
+      "mail": "Registered Email Count",
+      "sms": "Registered SMS Count",
+      "telegram": "Registered Telegram Count",
+      "updatedAt": "Update Date"
+    },
+    "mail": {
+      "title": "Registered Email Addresses",
+      "empty": {
+        "title": "No Registered Email Address Found",
+        "description": "You currently have no registered email addresses. You can add the email addresses you want to receive notifications for in the 'New Configuration' section above."
+      }
+    },
+    "sms": {
+      "title": "Registered SMS Numbers",
+      "add": "Add New SMS Number",
+      "empty": {
+        "title": "No Registered SMS Number Found",
+        "description": "You currently have no registered SMS numbers. You can add the phone numbers you want to receive notifications for in the 'New Configuration' section above."
+      }
+    },
+    "telegram": {
+      "title": "Registered Telegram Users",
+      "add": "Add New Telegram User",
+      "empty": {
+        "title": "No Registered Telegram User Found",
+        "description": "You currently have no registered Telegram users. You can add the Telegram users you want to receive notifications for in the 'New Configuration' section above."
+      }
+    }
+  }
+}

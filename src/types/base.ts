@@ -4,9 +4,12 @@ export type ListResponse<T> = {
   count: number
 }
 
-export const getI18nTranslation = <T>(data: I18nTranslation<T>, locale: string): T => {
+export const getI18nTranslation = <T>(data: I18nTranslation<T>, locale: string, defaults?: T): T => {
   if (isLocale(locale)) {
     return data[locale]
+  }
+  if (!data && defaults) {
+    return defaults
   }
   return data.tr
 }

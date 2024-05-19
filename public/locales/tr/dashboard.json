@@ -1,0 +1,11 @@
+{
+    "meta": {
+        "title": "Kontrol Paneli"
+    },
+    "sections": {
+        "welcome": {
+            "greeting": "{{business}} Kontrol Paneline Hoşgeldin, {{name}}!",
+            "description": "Bu kontrol paneli, rezervasyonlarınızı, ödemelerinizi ve diğer bilgilerinizi yönetmenize olanak tanır."
+        }
+    }
+}

@@ -1,0 +1,12 @@
+{
+    "list": {
+        "meta": {
+            "title": "Payments",
+            "description": "List of payments",
+            "keywords": "payments, list"
+        }
+    },
+    "breadcrumb": {
+        "payments": "Payments"
+    }
+}

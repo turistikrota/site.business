@@ -10,7 +10,8 @@
         "error": "Hata"
     },
     "breadcrumb": {
-        "detail": "Detay"
+        "detail": "Detay",
+        "list": "Rezervasyonlar"
     },
     "filter": {
         "reset": "Filtreleri Temizle",

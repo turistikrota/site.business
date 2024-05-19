@@ -1,7 +1,37 @@
 {
   "meta": {
+    "titles": {
+      "privacy": "Gizlilik",
+      "security": "Güvenlik"
+    },
     "title": "Ayarlar",
     "description": "Hesap ayarlarınızı görüntüleyin, hesap ayarlarınızı yapın ve hesap ayarlarınızı değiştirin.",
     "keywords": "Ayarlar, Turistik Rota, Tatil Planlama, Tur Rezervasyonu"
+  },
+  "breadcrumb": {
+    "settings": "Ayarlar",
+    "privacy": "Gizlilik",
+    "security": "Güvenlik",
+    "notifications": "Bildirimler",
+    "notifyConfig": "Bildirim Ayarları"
+  },
+  "modules": {
+    "notifications": {
+      "title": "Bildirimler",
+      "text": "Bildirim ayarlarınızı düzenleyin."
+    },
+    "privacy": {
+      "title": "Gizlilik",
+      "text": "Gizlilik ayarlarınızı düzenleyin."
+    },
+    "security": {
+      "title": "Güvenlik",
+      "text": "Güvenlik ayarlarınızı düzenleyin."
+    },
+    "devices": {
+      "title": "Cihazlar",
+      "text": "Oturum açtığınız cihazları görüntüleyin ve yönetin."
+    },
+    "open": "Görüntüle"
   }
 }

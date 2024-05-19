@@ -3,45 +3,42 @@ import { Locales } from '@turistikrota/ui/types'
 
 export type RouteType = {
   account: {
-    create: string
-    details: {
-      edit: string
-      notifications: string
-      privacy: string
-      security: string
-      settings: string
-      default: string
-      vip: string
-    }
     select: string
   }
   business: {
-    select: string
     create: string
-    details: {
-      default: string
-      deluxe: string
-      edit: string
-      notification: string
-      invite: string
-      inviteCreate: string
-      privacy: string
-      users: string
-      security: string
-      settings: string
-      businessLogs: string
-      bookings: {
-        list: string
-      }
-      listing: {
-        list: string
-        create: string
-        edit: string
-        detail: string
-        logs: string
-      }
-    }
-    inviteUse: string
+  }
+  settings: {
+    notifications: string
+    privacy: string
+    security: string
+    base: string
+  }
+  profile: {
+    edit: string
+    logs: string
+    users: string
+    select: string
+  }
+  payment: {
+    list: string
+  }
+  listing: {
+    create: string
+    edit: string
+    list: string
+    logs: string
+  }
+  invoice: {
+    create: string
+    list: string
+  }
+  invite: {
+    create: string
+    list: string
+  }
+  booking: {
+    list: string
   }
   auth: {
     base: string
@@ -58,68 +55,58 @@ const Routes: Record<Locales, RouteType> = {
     auth: {
       base: `${SiteHosts.auth.tr}?redirect=`,
     },
+    business: {
+      create: '/basvuru',
+    },
     account: {
-      create: '/olustur',
-      details: {
-        edit: '/duzenle',
-        notifications: '/bildirim-tercihleri',
-        privacy: '/gizlilik',
-        security: '/guvenlik',
-        settings: '/ayarlar',
-        vip: '/vip',
-        default: '/menu',
-      },
-      select: `${SiteHosts.account.tr}/sec?redirect=`,
+      select: `${SiteHosts.account.en}/sec?redirect=`,
+    },
+    booking: {
+      list: '/rezervasyonlar',
+    },
+    invite: {
+      create: '/davetler/olustur',
+      list: '/davetler',
+    },
+    invoice: {
+      create: '/faturalar/olustur',
+      list: '/faturalar',
+    },
+    listing: {
+      create: '/ilanlar/olustur',
+      edit: 'duzenle',
+      list: '/ilanlar',
+      logs: 'kayitlar',
+    },
+    payment: {
+      list: '/odemeler',
+    },
+    profile: {
+      edit: '/profil/duzenle',
+      logs: '/profil/kayitlar',
+      users: '/profil/kullanicilar',
+      select: '/sec',
+    },
+    settings: {
+      base: '/ayarlar',
+      notifications: '/ayarlar/bildirim-tercihleri',
+      privacy: '/ayarlar/gizlilik',
+      security: '/ayarlar/guvenlik',
     },
     contracts: {
       terms: 'https://turistikrota.com/sozlesmeler/kullanim-kosullari',
       privacyNotify: 'https://turistikrota.com/sozlesmeler/gizlilik-bildirimi',
       privacy: 'https://turistikrota.com/sozlesmeler/kisisel-verilerin-korunmasi-ve-gizlilik-politikasi',
     },
-    business: {
-      select: '/sec',
-      create: '/basvuru',
-      details: {
-        businessLogs: '/kayitlar',
-        default: '/menu',
-        deluxe: '/deluxe',
-        edit: '/duzenle',
-        notification: '/bildirim-tercihleri',
-        privacy: '/gizlilik',
-        bookings: {
-          list: '/rezervasyonlar',
-        },
-        security: '/guvenlik',
-        settings: '/ayarlar',
-        invite: '/davetler',
-        inviteCreate: '/davet-et',
-        users: '/kullanicilar',
-        listing: {
-          create: '/ilan-ekle',
-          list: '/ilanlar',
-          detail: '/ilanlar/',
-          edit: 'duzenle',
-          logs: 'kayitlar',
-        },
-      },
-      inviteUse: '/davet',
-    },
   },
   en: {
     auth: {
       base: `${SiteHosts.auth.en}?redirect=`,
     },
+    business: {
+      create: '/apply',
+    },
     account: {
-      create: '/create',
-      details: {
-        edit: '/edit',
-        notifications: '/notifications',
-        privacy: '/privacy',
-        security: '/security',
-        settings: '/settings',
-        vip: '/vip',
-        default: '/menu',
-      },
       select: `${SiteHosts.account.en}/select?redirect=`,
     },
     contracts: {
@@ -127,33 +114,37 @@ const Routes: Record<Locales, RouteType> = {
       privacyNotify: 'https://turistikrota.com/contracts/privacy-notice',
       privacy: 'https://turistikrota.com/contracts/privacy-and-protection-of-personal-data',
     },
-    business: {
+    booking: {
+      list: '/bookings',
+    },
+    invite: {
+      create: '/invites/create',
+      list: '/invites',
+    },
+    invoice: {
+      create: '/invoices/create',
+      list: '/invoices',
+    },
+    listing: {
+      create: '/listings/create',
+      edit: 'edit',
+      list: '/listings',
+      logs: 'logs',
+    },
+    payment: {
+      list: '/payments',
+    },
+    profile: {
+      edit: '/profile/edit',
+      logs: '/profile/logs',
+      users: '/profile/users',
       select: '/select',
-      create: '/apply',
-      details: {
-        businessLogs: '/logs',
-        default: '/menu',
-        deluxe: '/deluxe',
-        edit: '/edit',
-        notification: '/notification-preferences',
-        privacy: '/privacy',
-        security: '/security',
-        settings: '/settings',
-        invite: '/invites',
-        bookings: {
-          list: '/bookings',
-        },
-        inviteCreate: '/invite',
-        users: '/users',
-        listing: {
-          create: '/add-listing',
-          list: '/listings',
-          detail: '/listings/',
-          edit: 'edit',
-          logs: 'logs',
-        },
-      },
-      inviteUse: '/invite',
+    },
+    settings: {
+      base: '/settings',
+      notifications: '/settings/notification-preferences',
+      privacy: '/settings/privacy',
+      security: '/settings/security',
     },
   },
 }

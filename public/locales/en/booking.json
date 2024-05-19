@@ -10,7 +10,8 @@
         "error": "Error"
     },
     "breadcrumb": {
-        "detail": "Detail"
+        "detail": "Detail",
+        "list": "Bookings"
     },
     "filter": {
         "reset": "Clear Filters",

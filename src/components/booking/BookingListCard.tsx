@@ -36,7 +36,7 @@ const BookingListCard: FC<Props> = ({
   const peopleData = usePeople(people)
   return (
     <Link
-      to={`${getStaticRoute(i18n.language).business.details.bookings.list}/${uuid}`}
+      to={`${getStaticRoute(i18n.language).booking.list}/${uuid}`}
       className='col-span-12 flex justify-between rounded-md border bg-second p-2 transition-all duration-200'
     >
       <div className='grid w-full grid-cols-12 gap-2'>

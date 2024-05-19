@@ -15,7 +15,7 @@ type Item = {
 }
 
 const BusinessDetailInformationSection: FC<Props> = ({ business }) => {
-  const { t, i18n } = useTranslation(['edit', 'general'])
+  const { t, i18n } = useTranslation(['profile', 'general'])
   const dayjs = useDayJS(i18n.language)
 
   const items = useMemo<Item[]>(() => {
@@ -116,7 +116,7 @@ const BusinessDetailInformationSection: FC<Props> = ({ business }) => {
 
   return (
     <section>
-      <h2 className='mb-3 text-xl font-semibold'>{t('edit:sections.info')}</h2>
+      <h2 className='mb-3 text-xl font-semibold'>{t('profile:sections.info')}</h2>
       <div className='grid grid-cols-12 gap-2'>
         {items.map((item, idx) => (
           <Card key={idx} className='col-span-12 md:col-span-6'>

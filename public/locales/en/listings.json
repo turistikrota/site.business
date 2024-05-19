@@ -5,6 +5,26 @@
     "loading": "Creating Listing...",
     "disabled": "Please accept all category rules. ({{accepted}}/{{total}})"
   },
+  "breadcrumb": {
+    "listings": "Listings",
+    "create": "Create Listing",
+    "edit": "Edit Listing",
+    "detail": "Listing Details",
+    "logs": "Listing Logs"
+  },
+  "fields": {
+    "create":"Create Listing"
+  },
+  "forms": {
+    "create": {
+      "title": "Create Listing",
+      "subtitle": "Create a new listing using this form."
+    },
+    "edit": {
+      "title": "Edit Listing",
+      "subtitle": "Edit your listing using this form."
+    }
+  },
   "logs": {
     "meta": {
       "title": "Listing Logs",

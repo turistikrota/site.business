@@ -31,7 +31,7 @@ type EditModal = {
 }
 
 const ActorConfigContainer: FC = () => {
-  const { t } = useTranslation('notification')
+  const { t } = useTranslation('notifications')
   const [isLoading, setIsLoading] = useState(true)
   const toast = useToast()
   const [config, setConfig] = useState<ActorConfig | null>(null)
