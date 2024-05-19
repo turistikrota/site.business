@@ -1,7 +1,7 @@
 import { Colors } from '@/types/colors'
 import { Link, useLocation } from 'react-router-dom'
 
-type BusinessMenuItemType = React.FC<React.PropsWithChildren<Props>> & {
+type ProfileMenuItemType = React.FC<React.PropsWithChildren<Props>> & {
   Content: typeof Content
   Icon: typeof Icon
   IconWrapper: typeof IconWrapper
@@ -58,7 +58,6 @@ const BadgeStyles: Record<Colors, string> = {
   danger: 'bg-danger-500',
   warning: 'bg-warning-500',
   info: 'bg-info-500',
-  deluxe: 'bg-deluxe-400',
 }
 
 const IconWrapper = ({ children, open }: React.PropsWithChildren<IconWrapperProps>) => {
@@ -70,7 +69,7 @@ const IconWrapper = ({ children, open }: React.PropsWithChildren<IconWrapperProp
 }
 
 const Icon = ({ icon, className }: IconProps) => {
-  return <i className={`${icon} bx-sm ${className ? className : 'text-gray-700 dark:text-white'}`}></i>
+  return <i className={`${icon} bx bx-sm ${className ? className : 'text-gray-700 dark:text-white'}`}></i>
 }
 
 const Badge = ({ type = 'primary', visible = true, children }: React.PropsWithChildren<BadgeProps>) => {
@@ -135,8 +134,8 @@ const LinkProvider = ({ children, onClick, title, className, alt, href }: React.
   )
 }
 
-const BusinessMenuItem: BusinessMenuItemType = ({ children, ...props }) => {
-  const classes = `w-full rounded-md grid grid-cols-4 py-3 hover:bg-third transition-colors duration-200 bg-second`
+const ProfileMenuItem: ProfileMenuItemType = ({ children, ...props }) => {
+  const classes = `w-full rounded-md grid grid-cols-4 py-3 hover:bg-third transition-colors duration-200 bg-second  z-1`
   if (isLinkProps(props)) {
     return (
       <LinkProvider {...props} className={classes}>
@@ -151,10 +150,10 @@ const BusinessMenuItem: BusinessMenuItemType = ({ children, ...props }) => {
   )
 }
 
-BusinessMenuItem.Content = Content
-BusinessMenuItem.IconWrapper = IconWrapper
-BusinessMenuItem.Badge = Badge
-BusinessMenuItem.Icon = Icon
-BusinessMenuItem.LinkIcon = LinkIcon
+ProfileMenuItem.Content = Content
+ProfileMenuItem.IconWrapper = IconWrapper
+ProfileMenuItem.Badge = Badge
+ProfileMenuItem.Icon = Icon
+ProfileMenuItem.LinkIcon = LinkIcon
 
-export default BusinessMenuItem
+export default ProfileMenuItem

@@ -50,5 +50,80 @@
       "description": "Your business is disabled. Updates you make for this business may cause errors. Please activate your business to complete all transactions successfully.",
       "link": "Edit Business"
     }
+  },
+  "texts": {
+    "notFound": "Not Found",
+    "notFoundSpecial": "{{special}} Not Found",
+    "notFoundDescription": "No results were found matching your search criteria.",
+    "notFoundDescriptionSpecial": "No results found for {{special}}.",
+    "error": "Error"
+  },
+  "utils": {
+    "breadcrumb": {
+      "home": "Home",
+      "settings": "Settings",
+      "notifications": "My Business' Notification Settings",
+      "payments": "Payments",
+      "bookings": "Bookings",
+      "invoices": "Invoices"
+    }
+  },
+  "sections": {
+        "maintaining": {
+      "title": "We are under maintenance",
+      "description": "This page is currently unavailable for maintenance. Please try again later."
+    },
+    "cropper": {
+      "button": {
+        "show": "Show",
+        "hide": "Hide",
+        "close": "Close",
+        "save": "Save",
+        "cancel": "Cancel",
+        "zoom-in": "Zoom In",
+        "zoom-out": "Zoom Out",
+        "rotate-left": "Rotate Left",
+        "rotate-right": "Rotate Right",
+        "flip-horizontal": "Flip Horizontal",
+        "flip-vertical": "Flip Vertical"
+      }
+    },
+    "server-error": {
+      "title": "Something went wrong!",
+      "subtitle": "Sorry, an error occurred. Please try again later.",
+      "button": "Back to Home"
+    },
+    "notfound": {
+      "title": "Something's missing.",
+      "subtitle": "Sorry, we can't find that page. You'll find lots to explore on the home page.",
+      "button": "Back to Homepage",
+      "meta": {
+        "title": "404",
+        "description": "Sorry, we can't find that page. You'll find lots to explore on the home page.",
+        "keywords": "404, Not Found, Page Not Found, Turistik Rota"
+      }
+    },
+    "menu": {
+      "home": "Home",
+      "bookings": "Bookings",
+      "supports": "Support Requests",
+      "payments": "Payments",
+      "notifications": "Notifications",
+      "settings": "Settings",
+      "invoices": "My Invoices",
+      "chats": "My Chats",
+      "profile": {
+        "change": "Change Profile",
+        "edit": "Edit Profile"
+      }
+    },
+    "logout": {
+      "text": "Log Out",
+      "dialog": {
+        "title": "Logout Confirmation",
+        "message": "Are you sure you want to log out?"
+      },
+      "success": "Logout successful!"
+    } 
   }
 }

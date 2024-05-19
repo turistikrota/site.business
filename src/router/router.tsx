@@ -6,136 +6,83 @@ import { RouteObject, createBrowserRouter } from 'react-router-dom'
 const trRoutes: RouteObject[] = [
   {
     path: '/',
-    lazy: () => import('@/layouts/BusinessLayout'),
+    lazy: () => import('@/layouts/BusinessDetailLayout'),
     children: [
       {
-        path: 'menu',
-        lazy: () => import('@/views/details/menu'),
+        path: '',
+        lazy: () => import('@/views/app/dashboard'),
       },
       {
-        path: '',
-        lazy: () => import('@/layouts/BusinessSubDetailLayout'),
-        children: [
-          {
-            path: '',
-            lazy: () => import('@/views/details/edit'),
-            handle: {
-              page: 'edit',
-            },
-          },
-          {
-            path: 'duzenle',
-            lazy: () => import('@/views/details/edit'),
-            handle: {
-              page: 'edit',
-            },
-          },
-          {
-            path: 'ayarlar',
-            lazy: () => import('@/views/details/settings'),
-            handle: {
-              page: 'settings',
-            },
-          },
-          {
-            path: 'bildirim-tercihleri',
-            lazy: () => import('@/views/details/notification'),
-            handle: {
-              page: 'notification',
-            },
-          },
-          {
-            path: 'gizlilik',
-            lazy: () => import('@/views/details/privacy'),
-            handle: {
-              page: 'privacy',
-            },
-          },
-          {
-            path: 'guvenlik',
-            lazy: () => import('@/views/details/security'),
-            handle: {
-              page: 'security',
-            },
-          },
-          {
-            path: 'deluxe',
-            lazy: () => import('@/views/details/deluxe'),
-            handle: {
-              page: 'deluxe',
-            },
-          },
-          {
-            path: 'davetler',
-            lazy: () => import('@/views/details/invite/invite.tsx'),
-            handle: {
-              page: 'invite',
-            },
-          },
-          {
-            path: 'davet-et',
-            lazy: () => import('@/views/details/invite/invite-create'),
-            handle: {
-              page: 'invite-create',
-            },
-          },
-          {
-            path: 'ilanlar',
-            lazy: () => import('@/views/details/listing/listings'),
-            handle: {
-              page: 'listings',
-            },
-          },
-          {
-            path: 'ilanlar/:id',
-            lazy: () => import('@/views/details/listing/detail'),
-            handle: {
-              page: 'listing-detail',
-            },
-          },
-          {
-            path: 'ilanlar/:id/duzenle',
-            lazy: () => import('@/views/details/listing/listing-edit'),
-            handle: {
-              page: 'listing-edit',
-            },
-          },
-          {
-            path: 'ilanlar/:id/kayitlar',
-            lazy: () => import('@/views/details/listing/listing-logs'),
-            handle: {
-              page: 'listing-logs',
-            },
-          },
-          {
-            path: 'ilan-ekle',
-            lazy: () => import('@/views/details/listing/listing-create'),
-            handle: {
-              page: 'listing-create',
-            },
-          },
-          {
-            path: 'kullanicilar',
-            lazy: () => import('@/views/details/users'),
-            handle: {
-              page: 'users',
-            },
-          },
-          {
-            path: 'kayitlar',
-            lazy: () => import('@/views/details/logs/business_logs'),
-            handle: {
-              page: 'business-logs',
-            },
-          },
-          {
-            path: 'rezervasyonlar',
-            lazy: () => import('@/views/details/booking/list'),
-            handle: {
-              page: 'bookings',
-            },
-          },
-        ],
+        path: 'rezervasyonlar',
+        lazy: () => import('@/views/app/booking/list'),
+      },
+      {
+        path: 'rezervasyonlar/:uuid',
+        lazy: () => import('@/views/app/booking/detail'),
+      },
+      {
+        path: 'davetler',
+        lazy: () => import('@/views/app/invite/list'),
+      },
+      {
+        path: 'davetler/olustur',
+        lazy: () => import('@/views/app/invite/create'),
+      },
+      {
+        path: 'ilanlar',
+        lazy: () => import('@/views/app/listing/list'),
+      },
+      {
+        path: 'ilanlar/olustur',
+        lazy: () => import('@/views/app/listing/create'),
+      },
+      {
+        path: 'ilanlar/:uuid',
+        lazy: () => import('@/views/app/listing/detail'),
+      },
+      {
+        path: 'ilanlar/:uuid/duzenle',
+        lazy: () => import('@/views/app/listing/edit'),
+      },
+      {
+        path: 'ilanlar/:uuid/kayitlar',
+        lazy: () => import('@/views/app/listing/logs'),
+      },
+      {
+        path: 'odemeler',
+        lazy: () => import('@/views/app/payment/list'),
+      },
+      {
+        path: 'faturalar',
+        lazy: () => import('@/views/app/invoice/list'),
+      },
+      {
+        path: 'profil/duzenle',
+        lazy: () => import('@/views/app/profile/edit'),
+      },
+      {
+        path: 'profil/kayitlar',
+        lazy: () => import('@/views/app/profile/logs'),
+      },
+      {
+        path: 'profil/kullanicilar',
+        lazy: () => import('@/views/app/profile/users'),
+      },
+      {
+        path: 'ayarlar',
+        lazy: () => import('@/views/app/settings/index'),
+      },
+      {
+        path: 'ayarlar/bildirim',
+        lazy: () => import('@/views/app/settings/notifications'),
+      },
+      {
+        path: 'ayarlar/gizlilik',
+        lazy: () => import('@/views/app/settings/privacy'),
+      },
+      {
+        path: 'ayarlar/guvenlik',
+        lazy: () => import('@/views/app/settings/security'),
       },
     ],
   },
@@ -159,136 +106,83 @@ const trRoutes: RouteObject[] = [
 const enRoutes: RouteObject[] = [
   {
     path: '/',
-    lazy: () => import('@/layouts/BusinessLayout'),
+    lazy: () => import('@/layouts/BusinessDetailLayout'),
     children: [
       {
-        path: 'menu',
-        lazy: () => import('@/views/details/menu'),
+        path: '',
+        lazy: () => import('@/views/app/dashboard'),
       },
       {
-        path: '',
-        lazy: () => import('@/layouts/BusinessSubDetailLayout'),
-        children: [
-          {
-            path: 'edit',
-            lazy: () => import('@/views/details/edit'),
-            handle: {
-              page: 'edit',
-            },
-          },
-          {
-            path: '',
-            lazy: () => import('@/views/details/edit'),
-            handle: {
-              page: 'edit',
-            },
-          },
-          {
-            path: 'settings',
-            lazy: () => import('@/views/details/settings'),
-            handle: {
-              page: 'settings',
-            },
-          },
-          {
-            path: 'notification-preferences',
-            lazy: () => import('@/views/details/notification'),
-            handle: {
-              page: 'notification',
-            },
-          },
-          {
-            path: 'privacy',
-            lazy: () => import('@/views/details/privacy'),
-            handle: {
-              page: 'privacy',
-            },
-          },
-          {
-            path: 'security',
-            lazy: () => import('@/views/details/security'),
-            handle: {
-              page: 'security',
-            },
-          },
-          {
-            path: 'deluxe',
-            lazy: () => import('@/views/details/deluxe'),
-            handle: {
-              page: 'deluxe',
-            },
-          },
-          {
-            path: 'invites',
-            lazy: () => import('@/views/details/invite/invite.tsx'),
-            handle: {
-              page: 'invite',
-            },
-          },
-          {
-            path: 'invite',
-            lazy: () => import('@/views/details/invite/invite-create'),
-            handle: {
-              page: 'invite-create',
-            },
-          },
-          {
-            path: 'listings',
-            lazy: () => import('@/views/details/listing/listings'),
-            handle: {
-              page: 'listings',
-            },
-          },
-          {
-            path: 'listings/:id',
-            lazy: () => import('@/views/details/listing/detail'),
-            handle: {
-              page: 'listing-detail',
-            },
-          },
-          {
-            path: 'listings/:id/edit',
-            lazy: () => import('@/views/details/listing/listing-edit'),
-            handle: {
-              page: 'listing-edit',
-            },
-          },
-          {
-            path: 'listings/:id/logs',
-            lazy: () => import('@/views/details/listing/listing-logs'),
-            handle: {
-              page: 'listing-logs',
-            },
-          },
-          {
-            path: 'add-listing',
-            lazy: () => import('@/views/details/listing/listing-create'),
-            handle: {
-              page: 'listing-create',
-            },
-          },
-          {
-            path: 'users',
-            lazy: () => import('@/views/details/users'),
-            handle: {
-              page: 'users',
-            },
-          },
-          {
-            path: 'logs',
-            lazy: () => import('@/views/details/logs/business_logs'),
-            handle: {
-              page: 'business-logs',
-            },
-          },
-          {
-            path: 'bookings',
-            lazy: () => import('@/views/details/booking/list'),
-            handle: {
-              page: 'bookings',
-            },
-          },
-        ],
+        path: 'bookings',
+        lazy: () => import('@/views/app/booking/list'),
+      },
+      {
+        path: 'bookings/:uuid',
+        lazy: () => import('@/views/app/booking/detail'),
+      },
+      {
+        path: 'invites',
+        lazy: () => import('@/views/app/invite/list'),
+      },
+      {
+        path: 'invites/create',
+        lazy: () => import('@/views/app/invite/create'),
+      },
+      {
+        path: 'listings',
+        lazy: () => import('@/views/app/listing/list'),
+      },
+      {
+        path: 'listings/create',
+        lazy: () => import('@/views/app/listing/create'),
+      },
+      {
+        path: 'listings/:uuid',
+        lazy: () => import('@/views/app/listing/detail'),
+      },
+      {
+        path: 'listings/:uuid/edit',
+        lazy: () => import('@/views/app/listing/edit'),
+      },
+      {
+        path: 'listings/:uuid/logs',
+        lazy: () => import('@/views/app/listing/logs'),
+      },
+      {
+        path: 'payments',
+        lazy: () => import('@/views/app/payment/list'),
+      },
+      {
+        path: 'invoices',
+        lazy: () => import('@/views/app/invoice/list'),
+      },
+      {
+        path: 'profile/edit',
+        lazy: () => import('@/views/app/profile/edit'),
+      },
+      {
+        path: 'profile/logs',
+        lazy: () => import('@/views/app/profile/logs'),
+      },
+      {
+        path: 'profile/users',
+        lazy: () => import('@/views/app/profile/users'),
+      },
+      {
+        path: 'settings',
+        lazy: () => import('@/views/app/settings/index'),
+      },
+      {
+        path: 'settings/notification',
+        lazy: () => import('@/views/app/settings/notifications'),
+      },
+      {
+        path: 'settings/privacy',
+        lazy: () => import('@/views/app/settings/privacy'),
+      },
+      {
+        path: 'settings/security',
+        lazy: () => import('@/views/app/settings/security'),
       },
     ],
   },

@@ -1,7 +1,33 @@
 {
   "meta": {
+    "titles": {
+      "privacy": "Privacy",
+      "security": "Security"
+    },
     "title": "Settings",
     "description": "View your account settings, set your account settings, and change your account settings.",
     "keywords": "Settings, Turistik Rota, Vacation Planning, Tour Reservation"
+  },
+  "breadcrumb": {
+    "settings": "Settings",
+    "privacy": "Privacy",
+    "security": "Security",
+    "notifications": "Notifications",
+    "notifyConfig": "Notification Settings"
+  },
+  "modules": {
+    "notifications": {
+      "title": "Notifications",
+      "text": "Edit your notification settings."
+    },
+    "privacy": {
+      "title": "Privacy",
+      "text": "Edit your privacy settings."
+    },
+    "security": {
+      "title": "Security",
+      "text": "Edit your security settings."
+    },
+    "open": "View"
   }
 }

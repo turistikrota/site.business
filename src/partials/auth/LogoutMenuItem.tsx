@@ -1,3 +1,4 @@
+import ProfileMenuItem from '@/components/ProfileMenuItem'
 import { Services, apiUrl } from '@/config/services'
 import { httpClient } from '@/http/client'
 import { openLogin } from '@/utils/auth'
@@ -6,14 +7,13 @@ import { parseApiError } from '@turistikrota/ui/utils/response'
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import Spin from 'sspin/dist/esm/Spin'
-import BusinessMenuItem from './BusinessMenuItem'
 
 type Props = {
   hideContent?: boolean
 }
 
 export default function LogoutButton({ hideContent }: Props) {
-  const { t, i18n } = useTranslation('menu')
+  const { t, i18n } = useTranslation('general')
   const toast = useToast()
   const [isLoading, setIsLoading] = useState(false)
 
@@ -23,7 +23,7 @@ export default function LogoutButton({ hideContent }: Props) {
       .post(apiUrl(Services.Auth, '/logout'), null)
       .then((res) => {
         if (res.status === 200) {
-          toast.success(t('logout.success'))
+          toast.success(t('sections.logout.success'))
           openLogin(i18n.language)
         }
       })
@@ -38,12 +38,17 @@ export default function LogoutButton({ hideContent }: Props) {
   return (
     <div className='spin-sm'>
       <Spin loading={isLoading}>
-        <BusinessMenuItem isLink={false} onClick={handleLogout} title={t('logout.text')} aria-label={t('logout.text')}>
-          <BusinessMenuItem.IconWrapper open={hideContent}>
-            <BusinessMenuItem.Icon icon='bx bx-log-out'></BusinessMenuItem.Icon>
-          </BusinessMenuItem.IconWrapper>
-          <BusinessMenuItem.Content hidden={hideContent}>{t('logout.text')}</BusinessMenuItem.Content>
-        </BusinessMenuItem>
+        <ProfileMenuItem
+          isLink={false}
+          onClick={handleLogout}
+          title={t('sections.logout.text')}
+          aria-label={t('sections.logout.text')}
+        >
+          <ProfileMenuItem.IconWrapper open={hideContent}>
+            <ProfileMenuItem.Icon icon='bx bx-log-out'></ProfileMenuItem.Icon>
+          </ProfileMenuItem.IconWrapper>
+          <ProfileMenuItem.Content hidden={hideContent}>{t('sections.logout.text')}</ProfileMenuItem.Content>
+        </ProfileMenuItem>
       </Spin>
     </div>
   )

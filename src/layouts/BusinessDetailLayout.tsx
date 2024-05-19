@@ -16,6 +16,7 @@ import { useEffect, useMemo, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Outlet, useNavigate } from 'react-router-dom'
 import { Spinner } from 'sspin'
+import BusinessLayout from './BusinessLayout'
 
 type ErrorView = {
   title: string
@@ -56,7 +57,7 @@ function BusinessDetailLayout() {
         if (checkUnauthorized(err, i18n.language)) return
         if (err && err.response && err.response.data) {
           if (isMustSelectResponse(err.response.data)) {
-            navigate(getStaticRoute(i18n.language).business.select)
+            navigate(getStaticRoute(i18n.language).profile.select)
             return
           }
           if (isAccountErrorResponse(err.response.data)) {
@@ -125,7 +126,9 @@ function BusinessDetailLayout() {
 
   return (
     <CurrentBusinessProvider detail={detail!}>
-      <Outlet />
+      <BusinessLayout>
+        <Outlet />
+      </BusinessLayout>
     </CurrentBusinessProvider>
   )
 }
