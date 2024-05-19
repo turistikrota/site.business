@@ -60,7 +60,7 @@ function InviteCreateView() {
   return (
     <RoleGuardView roles={[BusinessRoles.Super, BusinessRoles.InviteCreate]}>
       <MetaWrapper title={t('meta.title')} description={t('meta.description')} keywords={t('meta.keywords')}>
-        <section className='relative space-y-5'>
+        <section className='relative space-y-4'>
           <Breadcrumb>
             <Breadcrumb.Item Link={DomLink} icon='bx-home' href='/' currentPath={path}>
               {t('general:utils.breadcrumb.home')}

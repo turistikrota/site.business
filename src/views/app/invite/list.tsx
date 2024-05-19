@@ -108,7 +108,7 @@ function InviteListView() {
   return (
     <RoleGuardView roles={[BusinessRoles.Super, BusinessRoles.InviteView]}>
       <MetaWrapper title={t('meta.title')} description={t('meta.description')} keywords={t('meta.keywords')}>
-        <section className='relative space-y-5'>
+        <section className='relative space-y-4'>
           <Breadcrumb
             actions={
               <RoleGuard roles={[BusinessRoles.Super, BusinessRoles.InviteCreate]}>
@@ -123,7 +123,7 @@ function InviteListView() {
             </Breadcrumb.Item>
             <Breadcrumb.Item>{t('breadcrumb.invites')}</Breadcrumb.Item>
           </Breadcrumb>
-          <div className='grid w-full grid-cols-12 gap-3'>
+          <div className='grid w-full grid-cols-12 gap-4'>
             {invites.reverse().map((invite) => (
               <div key={invite.uuid} className='col-span-12 rounded-md bg-second p-2 md:col-span-6'>
                 <KeyValue>
