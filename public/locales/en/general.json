@@ -67,6 +67,7 @@
       "payments": "Payments",
       "bookings": "Bookings",
       "invoices": "Invoices",
+      "invites": "Invites",
       "listings": "Listings"
     }
   },
@@ -111,6 +112,7 @@
       "supports": "Support Requests",
       "payments": "Payments",
       "listings": "Listings",
+      "invites": "Invites",
       "notifications": "Notifications",
       "settings": "Settings",
       "invoices": "My Invoices",
