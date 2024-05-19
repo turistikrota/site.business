@@ -15,6 +15,16 @@
   "fields": {
     "create":"Create Listing"
   },
+  "forms": {
+    "create": {
+      "title": "Create Listing",
+      "subtitle": "Create a new listing using this form."
+    },
+    "edit": {
+      "title": "Edit Listing",
+      "subtitle": "Edit your listing using this form."
+    }
+  },
   "logs": {
     "meta": {
       "title": "Listing Logs",

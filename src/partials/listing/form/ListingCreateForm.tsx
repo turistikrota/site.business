@@ -12,6 +12,7 @@ import {
   isImages,
 } from '@/types/listing.ts'
 import Button from '@turistikrota/ui/button'
+import FormSection from '@turistikrota/ui/form/section/index'
 import { useToast } from '@turistikrota/ui/toast'
 import { isCoordinates } from '@turistikrota/ui/types'
 import { deepEqual } from '@turistikrota/ui/utils'
@@ -70,7 +71,7 @@ const ListingCreateForm: React.FC = () => {
         .then(() => {
           autoSave.remove()
           toast.success(t('create.success'))
-          navigate(getStaticRoute(i18n.language).business.details.listing.list)
+          navigate(getStaticRoute(i18n.language).listing.list)
         })
         .catch((err) => {
           parseApiError({
@@ -207,82 +208,92 @@ const ListingCreateForm: React.FC = () => {
 
   return (
     <form onSubmit={onSubmit} className='flex flex-col gap-8 pb-10'>
-      <ListingFormMetaSection values={form.values} errors={form.errors} onChange={form.handleChange} />
-      <ListingFormCategorySection
-        initialSelectedCategories={initialCategories}
-        values={form.values}
-        errors={form.errors}
-        onChange={form.handleChange}
-        setFieldValue={(field, value) => {
-          form.setFieldValue(field, value)
-        }}
-      />
-      <ListingCategoryAlertSection alerts={categoryFields.alerts} />
-      <ListingCategoryInputGroupSection
-        inputGroups={categoryFields.inputGroups}
-        errors={(form.errors?.features as FormikErrors<ListingFeature>[]) || []}
-        values={form.values}
-        inputIndex={inputIndexes}
-        onChange={form.handleChange}
-        setFieldValue={(field, value) => {
-          form.setFieldValue(field, value)
-        }}
-      />
-      <ListingFormImageSection
-        images={images}
-        errors={form.errors}
-        setImages={onImagesChange}
-        title={form.values.meta.tr.title}
-      />
-      <ListingFormLocationSection
-        values={form.values}
-        errors={form.errors}
-        onChange={form.handleChange}
-        setFieldValue={(field, value) => {
-          form.setFieldValue(field, value)
-        }}
-      />
-      <ListingFormCurrencySection values={form.values} errors={form.errors} onChange={form.handleChange} />
-      <ListingFormCalendarSection
-        values={form.values}
-        errors={form.errors}
-        setFieldValue={(field, value) => {
-          form.setFieldValue(field, value)
-        }}
-      />
-      <ListingFormValidationSection
-        values={form.values}
-        errors={form.errors}
-        onChange={form.handleChange}
-        onBoolFieldChange={(field, value) => {
-          form.setFieldValue(field, value)
-        }}
-      />
-      <ListingCategoryRuleSection
-        rules={categoryFields.rules}
-        acceptedRules={acceptedRules}
-        toggleRule={(rule: CategoryRule, direction: boolean) => {
-          setAcceptedRules({
-            ...acceptedRules,
-            [rule.uuid]: direction,
-          })
-        }}
-      />
-      <Button
-        htmlType='submit'
-        variant='primary'
-        disabled={!isAllRulesAccepted || loading}
-        className='disabled:opacity-50'
-      >
-        {isAllRulesAccepted
-          ? t('button.create')
-          : loading
-            ? t('button.loading')
-            : t('button.disabled', {
-                total: categoryFields.rules.length,
-                accepted: Object.keys(acceptedRules).length,
-              })}
-      </Button>
+      <FormSection className='bg-second'>
+        <FormSection.Head>
+          <FormSection.Head.Title>{t('forms.create.title')}</FormSection.Head.Title>
+          <FormSection.Head.Subtitle>{t('forms.create.subtitle')}</FormSection.Head.Subtitle>
+        </FormSection.Head>
+        <FormSection.Body>
+          <ListingFormMetaSection values={form.values} errors={form.errors} onChange={form.handleChange} />
+          <ListingFormCategorySection
+            initialSelectedCategories={initialCategories}
+            values={form.values}
+            errors={form.errors}
+            onChange={form.handleChange}
+            setFieldValue={(field, value) => {
+              form.setFieldValue(field, value)
+            }}
+          />
+          <ListingCategoryAlertSection alerts={categoryFields.alerts} />
+          <ListingCategoryInputGroupSection
+            inputGroups={categoryFields.inputGroups}
+            errors={(form.errors?.features as FormikErrors<ListingFeature>[]) || []}
+            values={form.values}
+            inputIndex={inputIndexes}
+            onChange={form.handleChange}
+            setFieldValue={(field, value) => {
+              form.setFieldValue(field, value)
+            }}
+          />
+          <ListingFormImageSection
+            images={images}
+            errors={form.errors}
+            setImages={onImagesChange}
+            title={form.values.meta.tr.title}
+          />
+          <ListingFormLocationSection
+            values={form.values}
+            errors={form.errors}
+            onChange={form.handleChange}
+            setFieldValue={(field, value) => {
+              form.setFieldValue(field, value)
+            }}
+          />
+          <ListingFormCurrencySection values={form.values} errors={form.errors} onChange={form.handleChange} />
+          <ListingFormCalendarSection
+            values={form.values}
+            errors={form.errors}
+            setFieldValue={(field, value) => {
+              form.setFieldValue(field, value)
+            }}
+          />
+          <ListingFormValidationSection
+            values={form.values}
+            errors={form.errors}
+            onChange={form.handleChange}
+            onBoolFieldChange={(field, value) => {
+              form.setFieldValue(field, value)
+            }}
+          />
+          <ListingCategoryRuleSection
+            rules={categoryFields.rules}
+            acceptedRules={acceptedRules}
+            toggleRule={(rule: CategoryRule, direction: boolean) => {
+              setAcceptedRules({
+                ...acceptedRules,
+                [rule.uuid]: direction,
+              })
+            }}
+          />
+        </FormSection.Body>
+        <FormSection.Footer>
+          <Button
+            htmlType='submit'
+            variant='primary'
+            disabled={!isAllRulesAccepted || loading}
+            className='disabled:opacity-50'
+          >
+            {isAllRulesAccepted
+              ? t('button.create')
+              : loading
+                ? t('button.loading')
+                : t('button.disabled', {
+                    total: categoryFields.rules.length,
+                    accepted: Object.keys(acceptedRules).length,
+                  })}
+          </Button>
+        </FormSection.Footer>
+      </FormSection>
     </form>
   )
 }

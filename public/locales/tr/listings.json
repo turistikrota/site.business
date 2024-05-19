@@ -15,6 +15,16 @@
   "fields": {
     "create": "İlan Oluştur"
   },
+  "forms": {
+    "create": {
+      "title": "İlan Oluştur",
+      "subtitle": "Bu sayfayı kullanarak yeni bir ilan oluşturabilirsiniz."
+    },
+    "edit": {
+      "title": "İlan Düzenle",
+      "subtitle": "Bu sayfayı kullanarak ilanınızı düzenleyebilirsiniz."
+    }
+  },
   "logs": {
     "meta": {
       "title": "İlan Kayıtları",

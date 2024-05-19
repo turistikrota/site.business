@@ -67,10 +67,10 @@ const Routes: Record<Locales, RouteType> = {
       list: '/fatura',
     },
     listing: {
-      create: '/ilan/olustur',
-      edit: '/ilan/duzenle',
+      create: '/ilanlar/olustur',
+      edit: '/ilanlar/duzenle',
       list: '/ilanlar',
-      logs: '/ilan/kayitlar',
+      logs: '/ilanlar/kayitlar',
     },
     payment: {
       list: '/odemeler',
