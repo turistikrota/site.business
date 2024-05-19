@@ -1,9 +1,9 @@
-import { FC, useMemo } from 'react'
-import { useTranslation } from 'react-i18next'
 import { useBodyguard } from '@/hooks/permission.tsx'
-import { BusinessRoles } from '@/static/role.ts'
 import BusinessDisableForm from '@/partials/business/edit/BusinessDisableForm.tsx'
 import BusinessEnableForm from '@/partials/business/edit/BusinessEnableForm.tsx'
+import { BusinessRoles } from '@/static/role.ts'
+import { FC, useMemo } from 'react'
+import { useTranslation } from 'react-i18next'
 
 type Props = {
   isEnabled: boolean
@@ -12,7 +12,7 @@ type Props = {
 }
 
 const BusinessEditDangerZone: FC<Props> = ({ isEnabled, nickName, onOk }) => {
-  const { t } = useTranslation('edit')
+  const { t } = useTranslation('profile')
   const bodyguard = useBodyguard()
   const isEnableActive = useMemo(() => {
     return bodyguard.check(BusinessRoles.Super, BusinessRoles.Enable) && !isEnabled

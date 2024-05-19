@@ -46,6 +46,7 @@ export const BottomItems: Item[] = [
     title: 'settings',
     icon: 'bx-cog',
     href: (r) => r.settings.base,
+    contains: true,
   },
 ]
 

@@ -82,7 +82,8 @@
     "breadcrumb": {
       "home":"Ana Sayfa",
       "settings": "Ayarlar",
-      "notifications": "Bildirim Ayarları",
+      "profile": "İşletme Profili",
+      "notifications": "İşletme Bildirim Ayarları",
       "supports": "Talepler",
       "listings": "İlanlar",
       "payments": "Ödemeler",

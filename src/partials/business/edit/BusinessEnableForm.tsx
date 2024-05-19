@@ -14,7 +14,7 @@ type Props = {
 }
 
 const BusinessEnableForm: FC<Props> = ({ nickName, onOk }) => {
-  const { t } = useTranslation('edit')
+  const { t } = useTranslation('profile')
   const toast = useToast()
   const [visible, setVisible] = useState<boolean>(false)
   const [isLoading, setIsLoading] = useState<boolean>(false)
