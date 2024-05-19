@@ -2,12 +2,29 @@
   "meta": {
     "title": "Edit Profile",
     "description": "Edit your tourist route profile, set your avatar, nickname and change your account settings.",
-    "keywords": "Edit Profile, Turistik Rota, Vacation Planning, Tour Reservation"
+    "keywords": "Edit Profile, Turistik Rota, Vacation Planning, Tour Reservation",
+    "users": {
+      "title": "Users",
+      "description": "View, edit and manage users belonging to the business.",
+      "keywords": "users, business users"
+    }
   },
   "sections": {
     "danger": "Danger Zone",
     "info": "Business Information",
-    "action": "Actions"
+    "action": "Actions",
+    "role": {
+      "title": "Role Management",
+      "description": "In the field below, you can see and edit which privileges this user has in which modules.",
+      "info": {
+        "title": "About Role Editing.",
+        "desc": "You may not have a role to add or remove roles. If you encounter an error when you try to add or remove roles, please contact your business administrator."
+      }
+    }
+  },
+  "breadcrumb": {
+    "profile": "Business Profile",
+    "users": "Users"
   },
   "activation": {
     "enable": {
@@ -34,6 +51,15 @@
       "title": "Business Logs",
       "text": "You can view the logs of your business here.",
       "button": "View Logs"
+    },
+    "read-users": {
+      "title": "Business Users",
+      "text": "You can view the users of your business here.",
+      "button": "View Users"
     }
+  },
+  "utils": {
+    "joinAt": "Joined on {{date}}.",
+    "totalRole": "There are a total of {{total}} roles."
   }
 }

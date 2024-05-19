@@ -1,5 +1,6 @@
 import { useCurrentBusiness } from '@/contexts/currentBusiness'
 import { BusinessUserListItem } from '@/types/business'
+import { makeUserAvatar } from '@/utils/cdn'
 import { useDayJS } from '@/utils/dayjs'
 import Alert from '@turistikrota/ui/alert'
 import React, { useState } from 'react'
@@ -11,31 +12,27 @@ type Props = {
 }
 
 const UserCollapseItem: React.FC<Props> = ({ user }) => {
-  const { t, i18n } = useTranslation('users')
+  const { t, i18n } = useTranslation('profile')
   const dayjs = useDayJS(i18n.language)
   const [current] = useCurrentBusiness()
   const [open, setOpen] = useState<boolean>(false)
   return (
-    <div className='flex flex-col rounded-md border p-2'>
+    <div className='flex flex-col rounded-md border bg-second p-2'>
       <div className='flex cursor-pointer items-center gap-2' onClick={() => setOpen(!open)}>
         <div className='max-w-16 min-w-max'>
-          <img
-            src={`https://avatar.turistikrota.com/@${user.name}.png`}
-            alt=''
-            className='h-16 w-16 rounded-md object-cover'
-          />
+          <img src={makeUserAvatar(user.name)} alt='' className='h-16 w-16 rounded-md object-cover' />
         </div>
         <div className='flex w-full  flex-col justify-center md:flex-row md:items-center md:justify-between'>
           <div className='flex flex-col'>
             <span className='font-bold'>{user.name}</span>
             <span className='text-muted'>
-              {t(`joinAt`, {
+              {t(`utils.joinAt`, {
                 date: dayjs(user.joinAt).format('DD MMMM YYYY'),
               })}
             </span>
           </div>
           <p className='text-muted'>
-            {t('totalRole', {
+            {t('utils.totalRole', {
               total: user.roles.length,
             })}
           </p>
@@ -51,11 +48,11 @@ const UserCollapseItem: React.FC<Props> = ({ user }) => {
       <div className={` transition-all duration-200 ${open ? 'block opacity-100' : 'hidden opacity-0'}`}>
         <div className='mt-2 flex flex-col gap-2'>
           <div>
-            <h2 className='text-lg font-bold text-gray-800 dark:text-gray-200'>{t('role.title')}</h2>
-            <p className='text-sm text-gray-600 dark:text-gray-400'>{t('role.description')}</p>
+            <h2 className='text-lg font-bold text-gray-800 dark:text-gray-200'>{t('sections.role.title')}</h2>
+            <p className='text-sm text-gray-600 dark:text-gray-400'>{t('sections.role.description')}</p>
             <Alert type='info' className='mt-2' showIcon>
-              <Alert.Title>{t('role.info.title')}</Alert.Title>
-              <Alert.Description>{t('role.info.desc')}</Alert.Description>
+              <Alert.Title>{t('sections.role.info.title')}</Alert.Title>
+              <Alert.Description>{t('sections.role.info.desc')}</Alert.Description>
             </Alert>
           </div>
           <BusinessRoleToggle

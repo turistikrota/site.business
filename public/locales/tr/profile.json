@@ -2,12 +2,29 @@
   "meta": {
     "title": "Profili Düzenle",
     "description": "Turist güzergahı profilinizi düzenleyin, avatarınızı, işletme adınızı ve hesap ayarlarınızı değiştirin.",
-    "keywords": "Profili Düzenle, Turistik Rota, Tatil Planlama, Tur Rezervasyonu"
+    "keywords": "Profili Düzenle, Turistik Rota, Tatil Planlama, Tur Rezervasyonu",
+    "users": {
+      "title": "Kullanıcılar",
+      "description": "İşletmeye ait kullanıcıları görüntüleyin, düzenleyin ve yönetin.",
+      "keywords": "kullanıcılar, işletme kullanıcıları"
+    }
   },
   "sections": {
     "danger": "Tehlikeli Bölge",
     "info": "İşletme Bilgileri",
-    "action": "İşlemler"
+    "action": "İşlemler",
+    "role": {
+      "title": "Rol Yönetimi",
+      "description": "Aşağıdaki alanda bu kullanıcının hangi modüllerde hangi yetkilere sahip olduğunu görebilir ve düzenleyebilirsiniz.",
+      "info": {
+        "title": "Rol Düzenleme Hk.",
+        "desc": "Rol ekleme veya kaldırma rolünüz olmayabilir. Rol eklemeye veya kaldırmaya çalıştığınızda bir hata ile karşılaşırsanız lütfen işletme yöneticiniz ile iletişime geçin."
+      }
+    }
+  },
+  "breadcrumb": {
+    "profile": "İşletme Profili",
+    "users": "Kullanıcılar"
   },
   "uploads": {
     "avatar": "Avatar Yükle",
@@ -40,6 +57,15 @@
       "title": "İşletme Kayıtları",
       "text": "İşletmenizde yapılan tüm işlemleri ve değişiklikleri görebilirsiniz.",
       "button": "Kayıtları Görüntüle"
+    },
+    "read-users": {
+      "title": "İşletme Kullanıcıları",
+      "text": "İşletmenize ait tüm kullanıcıları görüntüleyebilir, düzenleyebilir ve yönetebilirsiniz.",
+      "button": "Kullanıcıları Görüntüle"
     }
+  },
+  "utils": {
+    "joinAt": "{{date}} tarihinde katıldı.",
+    "totalRole": "Toplam {{total}} rolü var."
   }
 }

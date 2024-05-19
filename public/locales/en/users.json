@@ -12,6 +12,10 @@
       "desc": "You may not have a role to add or remove roles. If you encounter an error when you try to add or remove roles, please contact your business administrator."
     }
   },
+  "breadcrumb": {
+    "profile": "Business Profile",
+    "users": "Users"
+  },
   "joinAt": "Joined on {{date}}.",
   "totalRole": "There are a total of {{total}} roles."
 }
