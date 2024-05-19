@@ -6,7 +6,8 @@
   },
   "sections": {
     "danger": "Tehlikeli Bölge",
-    "info": "İşletme Bilgileri"
+    "info": "İşletme Bilgileri",
+    "action": "İşlemler"
   },
   "uploads": {
     "avatar": "Avatar Yükle",
@@ -32,6 +33,13 @@
       "label": "Onay Metni",
       "confirm": "Evet, Pasif Et",
       "confirmation": "İşletmenizi pasif edebilmek için lütfen aşağıdaki kutucuğa '<strong>{{text}}</strong>' yazınız."
+    }
+  },
+  "action": {
+    "logs": {
+      "title": "İşletme Kayıtları",
+      "text": "İşletmenizde yapılan tüm işlemleri ve değişiklikleri görebilirsiniz.",
+      "button": "Kayıtları Görüntüle"
     }
   }
 }

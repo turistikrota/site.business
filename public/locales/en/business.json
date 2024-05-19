@@ -11,6 +11,10 @@
       "button": "Refresh Session"
     }
   },
+  "breadcrumb": {
+    "logs": "Business Profile Logs",
+    "profile": "Business Profile"
+  },
   "logs": {
     "meta": {
       "title": "Business Log Records",

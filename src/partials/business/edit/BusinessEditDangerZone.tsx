@@ -25,7 +25,7 @@ const BusinessEditDangerZone: FC<Props> = ({ isEnabled, nickName, onOk }) => {
   return (
     <section>
       <h2 className='mb-3 text-xl font-semibold'>{t('sections.danger')}</h2>
-      <div className='rounded-md border dark:border-red-900'>
+      <div className='rounded-md border border-red-200 dark:border-red-900'>
         {isEnableActive && <BusinessEnableForm onOk={onOk} nickName={nickName} />}
         {isDisableActive && <BusinessDisableForm onOk={onOk} nickName={nickName} />}
       </div>

@@ -5,6 +5,7 @@ import { useCurrentBusiness } from '@/contexts/currentBusiness.tsx'
 import { useQuery } from '@/hooks/query.tsx'
 import RoleGuardView from '@/layouts/RoleGuard.tsx'
 import BusinessDetailInformationSection from '@/partials/business/detail/BusinessDetailInformationSection.tsx'
+import BusinessActionZone from '@/partials/business/edit/BusinessActionZone'
 import BusinessEditDangerZone from '@/partials/business/edit/BusinessEditDangerZone.tsx'
 import BusinessProfileCoverUploadSection from '@/partials/business/upload/BusinessProfileCoverUploadSection.tsx'
 import BusinessProfileImageUploadSection from '@/partials/business/upload/BusinessProfileImageUploadSection.tsx'
@@ -48,6 +49,7 @@ function BusinessEditView() {
           />
         </RoleGuard>
         <BusinessDetailInformationSection business={data} />
+        <BusinessActionZone nickName={current.business.nickName} />
         <BusinessEditDangerZone
           onOk={() => window.location.reload()}
           nickName={current.business.nickName}

@@ -6,7 +6,8 @@
   },
   "sections": {
     "danger": "Danger Zone",
-    "info": "Business Information"
+    "info": "Business Information",
+    "action": "Actions"
   },
   "activation": {
     "enable": {
@@ -26,6 +27,13 @@
       "label": "Approval Text",
       "confirm": "Yes, Disable",
       "confirmation": "To deactivate your business, please write '<strong>{{text}}</strong>' in the box below."
+    }
+  },
+  "action": {
+    "logs": {
+      "title": "Business Logs",
+      "text": "You can view the logs of your business here.",
+      "button": "View Logs"
     }
   }
 }
