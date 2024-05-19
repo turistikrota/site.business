@@ -13,6 +13,12 @@
         "detail": "Detay",
         "list": "Rezervasyonlar"
     },
+    "list": {
+        "empty": {
+            "title": "Sonuç Bulunamadı",
+            "description": "Bir kullanıcı bir ilanınızı rezerve ettiğinde burada görünecektir."
+        }
+    },
     "filter": {
         "reset": "Filtreleri Temizle",
         "text": "Filtrele",
