@@ -6,6 +6,12 @@
             "title": "Reservation Detail"
         }
     },
+    "list": {
+        "empty": {
+            "title": "No Results Found",
+            "description": "When a user creates a reservation with your listing, it will appear here."
+        }
+    },
     "texts": {
         "error": "Error"
     },
