@@ -1,0 +1,12 @@
+{
+    "list": {
+        "meta": {
+            "title": "Ödemeler",
+            "description": "Ödemelerinizi görüntüleyebilir ve ödeyebilirsiniz.",
+            "keywords": "ödemeler, ödeme, ödeme geçmişi, ödeme listesi"
+        }
+    },
+    "breadcrumb": {
+        "payments": "Ödemeler"
+    }
+}

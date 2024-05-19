@@ -51,7 +51,7 @@ const BusinessSelection = () => {
       .put(apiUrl(Services.Business, `/~${item.nickName}/select`))
       .then((res) => {
         if (res.status === 200) {
-          navigate(getStaticRoute(i18n.language).business.details.default)
+          navigate('/')
         }
       })
       .catch((err: any) => {

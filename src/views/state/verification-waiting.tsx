@@ -23,7 +23,7 @@ const VerificationWaiting: React.FC = () => {
         </div>
         <p className='text-center text-secondary-600 dark:text-secondary-300'>{t('waiting.description')}</p>
         <div className='mt-2 flex justify-center'>
-          <Link to={getStaticRoute(i18n.language).business.select}>
+          <Link to={getStaticRoute(i18n.language).profile.select}>
             <Button block={false}>{t('back')}</Button>
           </Link>
         </div>

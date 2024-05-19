@@ -5,6 +5,9 @@ export type RouteType = {
   account: {
     select: string
   }
+  business: {
+    create: string
+  }
   settings: {
     notifications: string
     privacy: string
@@ -52,6 +55,9 @@ const Routes: Record<Locales, RouteType> = {
     auth: {
       base: `${SiteHosts.auth.tr}?redirect=`,
     },
+    business: {
+      create: '/basvuru',
+    },
     account: {
       select: `${SiteHosts.account.en}/sec?redirect=`,
     },
@@ -63,8 +69,8 @@ const Routes: Record<Locales, RouteType> = {
       list: '/davetler',
     },
     invoice: {
-      create: '/fatura/olustur',
-      list: '/fatura',
+      create: '/faturalar/olustur',
+      list: '/faturalar',
     },
     listing: {
       create: '/ilanlar/olustur',
@@ -79,7 +85,7 @@ const Routes: Record<Locales, RouteType> = {
       edit: '/profil/duzenle',
       logs: '/profil/kayitlar',
       users: '/profil/kullanicilar',
-      select: '/profil/sec',
+      select: '/sec',
     },
     settings: {
       base: '/ayarlar',
@@ -96,6 +102,9 @@ const Routes: Record<Locales, RouteType> = {
   en: {
     auth: {
       base: `${SiteHosts.auth.en}?redirect=`,
+    },
+    business: {
+      create: '/apply',
     },
     account: {
       select: `${SiteHosts.account.en}/select?redirect=`,
@@ -129,7 +138,7 @@ const Routes: Record<Locales, RouteType> = {
       edit: '/profile/edit',
       logs: '/profile/logs',
       users: '/profile/users',
-      select: '/profile/select',
+      select: '/select',
     },
     settings: {
       base: '/settings',

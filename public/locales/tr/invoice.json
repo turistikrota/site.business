@@ -1,0 +1,13 @@
+{
+    "list": {
+        "meta": {
+            "title": "Faturalar",
+            "description": "Faturalarınızı görüntüleyin ve ödeme yapın.",
+            "keywords": "fatura, ödeme, fatura ödeme, fatura görüntüleme"
+        }
+    },
+    "breadcrumb": {
+        "invoices": "Faturalar",
+        "create": "Fatura Oluştur"
+    }
+}

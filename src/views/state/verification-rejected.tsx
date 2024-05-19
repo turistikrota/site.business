@@ -29,7 +29,7 @@ const VerificationRejected: React.FC<Props> = ({ reason }) => {
           <p className='text-red-500'>{reason}</p>
         </div>
         <div className='mt-2 flex justify-center'>
-          <Link to={getStaticRoute(i18n.language).business.select}>
+          <Link to={getStaticRoute(i18n.language).profile.select}>
             <Button block={false}>{t('back')}</Button>
           </Link>
         </div>

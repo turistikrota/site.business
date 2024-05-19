@@ -1,0 +1,13 @@
+{
+    "list": {
+        "meta": {
+            "title": "Invoices",
+            "description": "List of invoices",
+            "keywords": "invoices, list"
+        }
+    },
+    "breadcrumb": {
+        "invoices": "Invoices",
+        "create": "Create Invoice"
+    }
+}
