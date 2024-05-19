@@ -1,1 +1,151 @@
-{}
+{
+    "meta": {
+        "title": "Rezervasyonlar",
+        "description": "Rezervasyonlarınızı görüntüleyin ve yönetin",
+        "detail": {
+            "title": "Rezervasyon Detayı"
+        }
+    },
+    "texts": {
+        "error": "Hata"
+    },
+    "breadcrumb": {
+        "detail": "Detay"
+    },
+    "filter": {
+        "reset": "Filtreleri Temizle",
+        "text": "Filtrele",
+        "clear": "Temizle",
+        "query": {
+          "title": "Kelime ile Ara",
+          "text": "Kelime ile Ara",
+          "description": "İlan başlığı, açıklama, şehir, ilçe veya ülke adında arama yapın.",
+          "label": "Kelime"
+        },
+        "state": {
+            "title": "Durum",
+            "canceled": "İptal Edildi",
+            "not_valid": "Doğrulanamadı",
+            "created": "Oluşturuldu",
+            "pay_expired": "Ödeme Süresi Doldu",
+            "pay_cancelled": "Ödeme İptal Edildi",
+            "pay_pending": "Ödeme Bekliyor",
+            "pay_paid": "Ödendi",
+             "pay_refunded": "Ödeme İade Edildi"
+        },
+        "type": {
+            "title": "Katılım Tipi",
+            "organizer": "Düzenleyici Olduklarım",
+            "guest": "Misafir Olduklarım",
+            "any": "Tümü"
+        }
+    },
+    "states": {
+        "canceled": {
+            "title": "İptal Edildi"
+        },
+        "not_valid": {
+            "title": "Rezervasyon Doğrulanamadı"
+        },
+        "created": {
+            "title": "Oluşturuldu"
+        },
+        "pay_expired": {
+            "title": "Ödeme Süresi Doldu"
+        },
+        "pay_cancelled": {
+            "title": "Ödeme İptal Edildi"
+        },
+        "pay_pending": {
+            "title": "Ödeme Bekliyor"
+        },
+        "pay_paid": {
+            "title": "Ödendi"
+        },
+        "pay_refunded": {
+            "title": "Ödeme İade Edildi"
+        }
+    },
+    "listing": {
+        "from-business": "İşletmesinden"
+    },
+    "actions": {
+        "checker": {
+            "cancel": {
+                "title": "Rezervasyon İptali",
+                "description": "Bu işlem geri alınamaz. Rezervasyonu iptal etmek istediğinize emin misiniz?"
+            }
+        },
+        "title": "İşlemler",
+        "payment-view": "Ödeme Detayları",
+        "cancel": {
+            "title": "Rezervasyonu İptal Et",
+            "subtitle": "Rezervasyonunuzu iptal etmek istediğinize emin misiniz?",
+            "label": "Onay Metni",
+            "text": "Rezervasyonunuzu iptal ettiğinizde bunu bir daha geri alamazsınız. Rezervasyonunuzu iptal etmeden önce emin olunuz.",
+            "confirmation":"Rezervasyonunuzu iptal edebilmemiz için lütfen aşağıdaki kutucuğa '<strong>{{text}}</strong>' yazınız.",
+            "button": "İptal Et",
+            "confirm": "Evet, İptal Etmek İstiyorum"
+        },
+        "mark-private": {
+            "title": "Görünürlüğü Gizle",
+            "subtitle": "Rezervasyonunuzu gizlemek istediğinize emin misiniz?",
+            "label": "Onay Metni",
+            "text": "Rezervasyonunuzu diğer insanların görmesini istemiyorsanız gizleyebilirsiniz. Rezervasyonunuzu gizlediğinizde sadece siz, işletme sahibi ve yetkili yöneticilerimiz görebilir.",
+            "confirmation":"Rezervasyonunuzu gizleyebilmemiz için lütfen aşağıdaki kutucuğa '<strong>{{text}}</strong>' yazınız.",
+            "button": "Gizle",
+            "confirm": "Evet, Gizlemek İstiyorum"
+        },
+        "mark-public": {
+            "title": "Görünürlüğü Herkese Aç",
+            "subtitle": "Rezervasyonunuzu herkese açık hale getirmek istediğinize emin misiniz?",
+            "label": "Onay Metni",
+            "text": "Rezervasyonunuzu diğer insanların görmesini istiyorsanız herkese açık hale getirebilirsiniz. Rezervasyonunuzu herkese açık hale getirdiğinizde herkes rezervasyonunuzu görebilir.",
+            "confirmation":"Rezervasyonunuzu herkese açık hale getirebilmemiz için lütfen aşağıdaki kutucuğa '<strong>{{text}}</strong>' yazınız.",
+            "button": "Herkese Aç",
+            "confirm": "Evet, Herkese Açmak İstiyorum"
+        }
+    },
+    "details": {
+        "anError": "Detay verileri alınırken bir hata oluştu",
+        "notFound": "Rezervasyon bulunamadı"
+    },
+    "pricing": {
+        "total": "Toplam",
+        "notHaveComission": "Hesaplamaya komisyon dahil değildir",
+        "alert": {
+            "title": "Bilgilendirme",
+            "message": "Bu fiyata komisyon dahil değildir. Ödeyeceğiniz net tutarı görmek için lütfen ödeme sayfasına gidiniz."
+        }
+    },
+    "days": {
+        "title": "Gün / Fiyat Listesi"
+    },
+    "info": {
+        "title": "Genel Bilgiler",
+        "created-at": "Oluşturulma Tarihi",
+        "updated-at": "Güncellenme Tarihi",
+        "isPublic": "Görünürlük",
+        "isPublic-true": "Herkese Açık",
+        "isPublic-false": "Gizli"
+    },
+    "people": {
+        "title": "Katılımcılar",
+        "organizer": "Düzenleyici",
+        "private": "Gizli Katılımcı",
+        "public": "Herkese Açık Katılımcı",
+        "text": {
+            "adult": "{{count}} Yetişkin",
+            "kid": "{{count}} Çocuk",
+            "baby": "{{count}} Bebek"
+        }
+    },
+    "empty": "Empty",
+    "noResults": {
+        "title": "Sonuç Bulunamadı",
+        "description": "Bir rezervasyon oluşturduğunuzda burada görünecektir. Rezervasyon oluşturmak için lütfen ilan sitemizi ziyaret edin.",
+        "descriptionFiltered": "Filtrelerinize uygun bir rezervasyon bulunamadı.",
+        "clear": "Filtreleri Temizle",
+        "create": "İlanları Listele"
+    }
+}

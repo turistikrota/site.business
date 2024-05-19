@@ -1,1 +1,151 @@
-{}
+{
+    "meta": {
+        "title": "Bookings",
+        "description": "Manage your reservations, view details, and take action on your reservations.",
+        "detail": {
+            "title": "Reservation Detail"
+        }
+    },
+    "texts": {
+        "error": "Error"
+    },
+    "breadcrumb": {
+        "detail": "Detail"
+    },
+    "filter": {
+        "reset": "Clear Filters",
+        "text": "Filter",
+        "clear": "Clear",
+        "query": {
+          "title": "Search by Keyword",
+          "text": "Search by Keyword",
+          "description": "Search by listing title, description, city, district, or country name.",
+          "label": "Keyword"
+        },
+        "state": {
+            "title": "Status",
+            "canceled": "Canceled",
+            "not_valid": "Not Verified",
+            "created": "Created",
+            "pay_expired": "Payment Expired",
+            "pay_cancelled": "Payment Cancelled",
+            "pay_pending": "Payment Pending",
+            "pay_paid": "Paid",
+             "pay_refunded": "Payment Refunded"
+        },
+        "type": {
+            "title": "Participation Type",
+            "organizer": "Events I Organized",
+            "guest": "Events I Attended",
+            "any": "All"
+        }
+    },
+    "states": {
+        "canceled": {
+            "title": "Canceled"
+        },
+        "not_valid": {
+            "title": "Reservation Not Verified"
+        },
+        "created": {
+            "title": "Created"
+        },
+        "pay_expired": {
+            "title": "Payment Expired"
+        },
+        "pay_cancelled": {
+            "title": "Payment Cancelled"
+        },
+        "pay_pending": {
+            "title": "Payment Pending"
+        },
+        "pay_paid": {
+            "title": "Paid"
+        },
+        "pay_refunded": {
+            "title": "Payment Refunded"
+        }
+    },
+    "listing": {
+        "from-business": "From Business"
+    },
+    "actions": {
+        "checker": {
+            "cancel": {
+                "title": "Cancel Reservation",
+                "description": "This action cannot be undone. Are you sure you want to cancel the reservation?"
+            }
+        },
+        "title": "Actions",
+        "payment-view": "Payment Details",
+        "cancel": {
+            "title": "Cancel Reservation",
+            "subtitle": "Are you sure you want to cancel your reservation?",
+            "label": "Confirmation Text",
+            "text": "Once you cancel your reservation, you cannot undo this action. Please be sure before canceling.",
+            "confirmation":"To cancel your reservation, please type '<strong>{{text}}</strong>' in the box below.",
+            "button": "Cancel",
+            "confirm": "Yes, I Want to Cancel"
+        },
+        "mark-private": {
+            "title": "Hide Visibility",
+            "subtitle": "Are you sure you want to hide your reservation?",
+            "label": "Confirmation Text",
+            "text": "If you don't want others to see your reservation, you can hide it. When you hide your reservation, only you, the business owner, and our authorized managers can see it.",
+            "confirmation":"To hide your reservation, please type '<strong>{{text}}</strong>' in the box below.",
+            "button": "Hide",
+            "confirm": "Yes, I Want to Hide"
+        },
+        "mark-public": {
+            "title": "Make Public",
+            "subtitle": "Are you sure you want to make your reservation public?",
+            "label": "Confirmation Text",
+            "text": "If you want others to see your reservation, you can make it public. When you make your reservation public, everyone can see it.",
+            "confirmation":"To make your reservation public, please type '<strong>{{text}}</strong>' in the box below.",
+            "button": "Make Public",
+            "confirm": "Yes, I Want to Make Public"
+        }
+    },
+    "details": {
+        "anError": "An error occurred while retrieving the detail data",
+        "notFound": "Reservation not found"
+    },
+    "pricing": {
+        "total": "Total",
+        "notHaveComission": "Commission is not included in the calculation",
+        "alert": {
+            "title": "Notification",
+            "message": "Commission is not included in this price. Please proceed to the payment page to see the net amount you will pay."
+        }
+    },
+    "days": {
+        "title": "Day / Price List"
+    },
+    "info": {
+        "title": "General Information",
+        "created-at": "Creation Date",
+        "updated-at": "Updated Date",
+        "isPublic": "Visibility",
+        "isPublic-true": "Public",
+        "isPublic-false": "Private"
+    },
+    "people": {
+        "title": "Participants",
+        "organizer": "Organizer",
+        "private": "Private Participant",
+        "public": "Public Participant",
+        "text": {
+            "adult": "{{count}} Adults",
+            "kid": "{{count}} Children",
+            "baby": "{{count}} Babies"
+        }
+    },
+    "empty": "Empty",
+    "noResults": {
+        "title": "No Results Found",
+        "description": "When you create a reservation, it will appear here. Please visit our website to create a reservation.",
+        "descriptionFiltered": "No reservation found matching your filters.",
+        "clear": "Clear Filters",
+        "create": "View Listings"
+    }
+}

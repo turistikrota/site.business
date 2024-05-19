@@ -132,7 +132,7 @@ const trRoutes: RouteObject[] = [
             path: 'rezervasyonlar',
             lazy: () => import('@/views/details/booking/list'),
             handle: {
-              page: 'booking-list',
+              page: 'bookings',
             },
           },
         ],
@@ -285,7 +285,7 @@ const enRoutes: RouteObject[] = [
             path: 'bookings',
             lazy: () => import('@/views/details/booking/list'),
             handle: {
-              page: 'booking-list',
+              page: 'bookings',
             },
           },
         ],

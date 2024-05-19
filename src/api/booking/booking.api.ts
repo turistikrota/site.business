@@ -1,6 +1,7 @@
 import { Services, apiUrl } from '@/config/services'
 import { httpClient } from '@/http/client'
-import { BookingFilter, toFilterQuery } from '@/types/booking'
+import { BookingFilter, BookingStatus, toFilterQuery } from '@/types/booking'
+import { Currency } from '@/types/listing'
 import { ListResponse } from '@turistikrota/ui/types'
 
 /*
@@ -82,10 +83,11 @@ export type BookingListItem = {
   user: BookingUser
   listing: BookingListing
   guests: BookingGuest[]
-  state: string
+  state: BookingStatus
   isPublic: boolean
   price: number
-  currency: string
+  currency: Currency
+  totalPrice?: number
   startDate: string
   endDate: string
   createdAt: string
