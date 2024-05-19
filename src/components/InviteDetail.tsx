@@ -1,7 +1,7 @@
 import { Services, apiUrl } from '@/config/services'
+import { useAuth } from '@/hooks/auth.tsx'
 import { httpClient } from '@/http/client'
 import { useAccount } from '@/layouts/AccountSelectionLayout'
-import { getStaticRoute } from '@/static/page'
 import { InviteItem, isInviteItem } from '@/types/business'
 import { useDayJS } from '@/utils/dayjs'
 import Alert from '@turistikrota/ui/alert'
@@ -12,7 +12,6 @@ import React, { useEffect, useMemo, useState } from 'react'
 import { Trans, useTranslation } from 'react-i18next'
 import { useNavigate, useParams } from 'react-router-dom'
 import Spin from 'sspin'
-import { useAuth } from '@/hooks/auth.tsx'
 
 const InviteDetail: React.FC = () => {
   const [loading, setLoading] = useState<boolean>(true)
@@ -52,7 +51,7 @@ const InviteDetail: React.FC = () => {
         if (res.status === 200) {
           toast.success(t('success'))
           auth.refresh(() => {
-            navigate(getStaticRoute(i18n.language).business.details.default)
+            navigate('/')
           })
         }
       })
