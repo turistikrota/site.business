@@ -24,7 +24,7 @@ const BookingListView: FC = () => {
   const { query } = useBookingFilter()
   const { push } = useBookingPusher()
   const path = useLocation().pathname
-  const { firstLoading, loading, list, isNextVisible } = useListQuery<BookingListItem, BookingFilter>(
+  const { firstLoading, loading, list, total, isNextVisible } = useListQuery<BookingListItem, BookingFilter>(
     fetchMyBookings,
     query,
   )
@@ -58,14 +58,14 @@ const BookingListView: FC = () => {
           <div className='col-span-12'>
             <BookingFilterSection />
           </div>
-          {list.length === 0 && (
+          {total === 0 && (
             <EmptyContent
               className='col-span-12'
               title={t('list.empty.title')}
               description={t('list.empty.description')}
             />
           )}
-          {list.length > 0 && list.map((booking, idx) => <BookingListCard key={idx} {...booking} />)}
+          {total > 0 && list.map((booking, idx) => <BookingListCard key={idx} {...booking} />)}
         </div>
       </section>
     </MetaWrapper>

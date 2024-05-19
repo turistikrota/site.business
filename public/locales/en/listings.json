@@ -135,15 +135,15 @@
     "meta": {
       "title": "Edit Listing",
       "description": "Edit your listing using this page.",
-      "keywords": "listing, edit, edit listing, edit my listing"
+      "keywords": "listing, edit, edit listing"
     },
     "success": "Your listing has been successfully updated. If no issues are detected during category checks, it will be published."
   },
   "list": {
     "meta": {
-      "title": "My Ads",
-      "description": "Manage your ads using this page.",
-      "keywords": "my ads, manage my ads, view my ads"
+      "title": "Listings",
+      "description": "Manage your listings using this page.",
+      "keywords": "listings"
     },
     "reorder": {
       "info": {
