@@ -5,6 +5,16 @@
     "loading": "İlan Oluşturuluyor...",
     "disabled": "Lütfen tüm kategori kurallarını kabul ediniz. ({{accepted}}/{{total}})"
   },
+  "breadcrumb": {
+    "listings": "İlanlar",
+    "create": "İlan Oluştur",
+    "edit": "İlan Düzenle",
+    "detail": "İlan Detayları",
+    "logs": "İlan Kayıtları"
+  },
+  "fields": {
+    "create": "İlan Oluştur"
+  },
   "logs": {
     "meta": {
       "title": "İlan Kayıtları",

@@ -16,8 +16,9 @@ export const MediumItems: Item[] = [
   },
   {
     title: 'listings',
-    icon: 'bx-list-ul',
+    icon: 'bx-grid',
     href: (r) => r.listing.list,
+    contains: true,
   },
   {
     title: 'bookings',
